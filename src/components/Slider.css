@@ -1,0 +1,152 @@
+.container {
+    position: absolute;
+    width: 100vw;
+    height: 92vh;
+    /* top: 52%; */
+    left: 50%;
+    bottom: -48.5%;
+    transform: translate(-50%, -50%);
+    /* background-color: #fff; */
+    /* box-shadow: 0 3rem 5rem #bcbaba; */
+    /* border-radius: 1rem; */
+}
+
+.container .slider .item {
+    position: absolute;
+    height: 30rem;
+    width: 20rem;
+    top: 75%;
+    transform: translate(0, -50%);
+    /* border-radius: 1rem; */
+    box-shadow: 0 1rem 3rem #757373;
+    padding: 1rem;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+.slider .item:nth-child(1),
+.slider .item:nth-child(2) {
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+}
+
+.slider .item:nth-child(3) {
+    left: 70%;
+    z-index: 3;
+    border-radius: 1rem;
+}
+
+.slider .item:nth-child(4) {
+    left: calc(65% + 30rem);
+    z-index: 3;
+    border-radius: 1rem;
+}
+
+.slider .item:nth-child(5) {
+    left: calc(60% + 60rem);
+    z-index: 3;
+    border-radius: 1rem;
+}
+
+.slider .item:nth-child(n + 6) {
+    left: calc(55% + 90rem);
+    opacity: 0;
+}
+
+.item .content {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 10rem;
+    text-align: left;
+    color: #fff;
+    width: 30rem;
+    display: none;
+}
+
+.item:nth-child(2) .content {
+    display: block;
+    position: absolute;
+    z-index: 2;
+}
+
+.item .content .name {
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.item .content .des {
+    margin: 1rem 0 1rem;
+    font-size: 1.8rem;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.item .content button {
+    padding: 1rem 2rem;
+    border: none;
+    background: #fff;
+    font-weight: 400;
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+.item .content button:hover {
+    background-color: rgba(255, 166, 0, 0.766);   
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 10rem);
+        filter: blur(3.3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+.arrows {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 1rem;
+}
+
+.arrows button {
+    margin: 0 1.5rem;
+    font-size: 3.5rem;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: all 0.5s;
+}
+
+.arrows button:hover {
+    opacity: 0.9;
+}
+
+.item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Example: black overlay with 50% opacity */
+    z-index: 1;
+    /* border-radius: 1rem; */
+}
