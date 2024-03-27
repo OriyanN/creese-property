@@ -18,7 +18,7 @@
 }
 
 .logo img {
-    height: 24vh;
+    height: 20vh;
 }
 
 .navbar a {
@@ -57,8 +57,7 @@
 }
 
 .header.shrunk .logo img {
-    height: 18vh;
-    transition: height 0.3s ease;
+    color: var(--white);
 }
 
 .header.shrunk .navbar a {

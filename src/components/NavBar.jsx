@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import "./NavBar.css";
 import "/src/index.css";
 
+import logoWhite from "../assets/Creese Property Logo- White White.png";
+import logoBeige from "../assets/Creese Property Logo-Beige.png";
+
 function NavBar() {
     const [activeLink, setActiveLink] = useState("");
     const location = useLocation();
@@ -11,6 +14,8 @@ function NavBar() {
     const [isShrunk, setIsShrunk] = useState(false);
 
     const [menuOpen, setMenuOpen] = useState(false);
+
+    const [logo, setLogo] = useState(logoWhite);
 
     const setActive = (link) => {
         setActiveLink(link);
@@ -25,8 +30,20 @@ function NavBar() {
     };
 
     useEffect(() => {
+        const root = document.documentElement;
+    
+        if (location.pathname === "/about" || location.pathname === "/contact") {
+          root.style.setProperty('--white', '#a4a4a4');
+          setLogo(logoBeige);
+        }else {
+          root.style.setProperty('--white', '#ffffff');
+          setLogo(logoWhite);
+        }
+    }, [location.pathname]);
+
+    useEffect(() => {
         const handleScroll = () => {
-          setIsShrunk(window.scrollY > 90);
+          setIsShrunk(window.scrollY > 120);
         };
       
         window.addEventListener("scroll", handleScroll);
@@ -55,7 +72,7 @@ function NavBar() {
         <div>
             <div>
                 <header className={`header ${isShrunk ? 'shrunk' : ''}`}>
-                    <Link to="/" className="logo"><img src="src/assets/Creese Property Logo- White White.png" alt="" /></Link>
+                    <Link to="/" className="logo"><img src={logo} alt="Logo" /></Link>
                     <div className="menu-btn" onClick={toggleMenu}>
                         <div className={`menu-burger ${menuOpen ? 'open' : ''}`}></div>
                     </div>
