@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState, } from 'react';
 
 import "./HomePage.css";
 import Slider from '../components/Slider';
