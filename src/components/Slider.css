@@ -6,7 +6,7 @@
     left: 50%;
     bottom: -48.5%;
     transform: translate(-50%, -50%);
-    /* background-color: #fff; */
+    background-color: rgba(0, 0, 0, 0.5);
     /* box-shadow: 0 3rem 5rem #bcbaba; */
     /* border-radius: 1rem; */
 }
