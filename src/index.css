@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "VersaillesBold";
+  src: local("VersaillesBold"),
+  url("/src/fonts/Versailles\ Bold.ttf") format("opentype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "VersaillesRegular";
+  src: local("VersaillesRegular"),
+  url("/src/fonts/Versailles-Regular.ttf") format("opentype");
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'VersaillesRegular', sans-serif;
+}
+
+:root {
+  --light-blue: #4379bd;
+  --blue: #294162;
+  --grey-blue: #616e89;
+  --grey-beige: #a4a4a4;
+  --beige: #d6d0c8;
+  --white: #ffffff;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
