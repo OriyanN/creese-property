@@ -10,12 +10,10 @@ import logoBeige from "../assets/Creese Property Logo-Beige.png";
 function NavBar() {
     const [activeLink, setActiveLink] = useState("");
     const location = useLocation();
-
     const [isShrunk, setIsShrunk] = useState(false);
-
     const [menuOpen, setMenuOpen] = useState(false);
-
     const [logo, setLogo] = useState(logoWhite);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const setActive = (link) => {
         setActiveLink(link);
@@ -27,6 +25,11 @@ function NavBar() {
 
     const handleLinkClick = () => {
         setMenuOpen(false);
+    };
+
+    const toggleDropdown = (event) => {
+        event.preventDefault();
+        setDropdownOpen(!dropdownOpen);
     };
 
     useEffect(() => {
@@ -98,13 +101,26 @@ function NavBar() {
                     >
                         Services
                     </Link>
-                    <Link 
-                    to="/locations" 
-                    className={isActive("/locations") ? "active" : ""}
-                    onClick={handleLinkClick}
-                    >
-                        Locations
-                    </Link>
+                    <div className="dropdown">
+                        <Link 
+                        to="/locations" 
+                        className={`dropdown-toggle ${isActive("/locations") ? "active" : ""}`} 
+                        onClick={toggleDropdown}
+                        >
+                            Locations
+                        </Link>
+                        {dropdownOpen && (
+                            <div className="dropdown-content-hover">
+                                <div className="dropdown-content">
+                                    <Link to="/locations/gold-coast">Gold Coast</Link>
+                                    <Link to="/locations/logan">Logan</Link>
+                                    <Link to="/locations/Ipswich">Ipswich</Link>
+                                    <Link to="/locations/brisbane">Brisbane</Link>
+                                    <Link to="/locations/sunshine-coast">Sunshine Coast</Link>
+                                </div>
+                            </div>
+                        )}
+                    </div>
                     <Link 
                     to="/contact" 
                     className={isActive("/contact") ? "active" : ""}

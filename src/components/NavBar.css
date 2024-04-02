@@ -18,17 +18,17 @@
 }
 
 .logo img {
-    height: 20vh;
+    height: 8vh;
 }
 
-.navbar a {
+.navbar a, .navbar .dropdown-toggle {
     font-size: 2.3rem;
     color: var(--white);
     margin-left: 4rem;
     transition: 0.3s;
     text-decoration: none;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     text-transform: uppercase;
 }
 
@@ -58,10 +58,76 @@
 
 .header.shrunk .logo img {
     color: var(--white);
+    height: 5.5vh;
+    transition: height 0.3s ease;
 }
 
 .header.shrunk .navbar a {
     font-size: 2rem;
     transition: font-size 0.3s ease;
 }
-  
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content-hover {
+    display: none;
+}
+
+.dropdown-content {
+    display: flex;
+    position: absolute;
+    background-color: black;
+    min-width: 20rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 0.5rem;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.dropdown-content a {
+    color: var(--white);
+    font-size: 2.15rem;
+    padding: 1.5rem 0;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin: 0;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--grey-beige);
+}
+
+/* .dropdown:hover .dropdown-content-hover {
+    display: block;
+} */
+
+.dropdown-content-hover {
+    display: block;
+}
+
+.navbar .dropdown-content a:hover {
+    background-color: var(--grey-beige);
+}
+
+.dropdown-content a::after {
+    content: none; 
+}
+
+.dropdown-content a:hover {
+    background-color: var(--grey-beige); 
+}
+
+.navbar .dropdown-content a::after {
+    content: none; 
+}
+
+.navbar .dropdown-content a:hover {
+    background-color: var(--grey-beige);
+}
