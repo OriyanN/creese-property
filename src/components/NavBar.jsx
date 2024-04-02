@@ -95,13 +95,13 @@ function NavBar() {
                     >
                         About
                     </Link>
-                    <Link 
+                    {/* <Link 
                     to="/services" 
                     className={isActive("/services") ? "active" : ""}
                     onClick={handleLinkClick}
                     >
                         Services
-                    </Link>
+                    </Link> */}
                     <div className="dropdown">
                         <Link 
                         to="#" 
