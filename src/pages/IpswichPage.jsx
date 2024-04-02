@@ -101,7 +101,7 @@ const IpswichPage = () => {
                             className={!bedsFilter ? 'placeholder' : ''}
                             aria-label="Filter by number of beds"
                         >
-                            <option value="" >{bedsFilter ? `Show All` : "Beds"}</option>
+                            <option value="" >{bedsFilter ? `Show All` : "Bed"}</option>
                             {createOptions('beds').map(beds => (
                                 <option key={beds} value={beds}>{beds}</option>
                             ))}
@@ -115,7 +115,7 @@ const IpswichPage = () => {
                             setBathsFilter(e.target.value)} 
                             className={!bathsFilter ? 'placeholder' : ''}
                         >
-                            <option value="" >{bathsFilter ? `Show All` : "Baths"}</option>
+                            <option value="" >{bathsFilter ? `Show All` : "Bath"}</option>
                             {createOptions('baths').map(baths => (
                                 <option key={baths} value={baths}>{baths}</option>
                             ))}
@@ -128,7 +128,7 @@ const IpswichPage = () => {
                             onChange={e => setParkingFilter(e.target.value)} 
                             className={!parkingFilter ? 'placeholder' : ''}
                         >
-                            <option value="" >{parkingFilter ? `Show All` : "Parking"}</option>
+                            <option value="" >{parkingFilter ? `Show All` : "Car"}</option>
                             {createOptions('parking').map(parking => (
                                 <option key={parking} value={parking}>{parking}</option>
                             ))}
@@ -140,10 +140,10 @@ const IpswichPage = () => {
                 {filteredImages.length > 0 ? (
                     filteredImages.map((image, index) => (
                     <div key={image.address} className="image-item-container">
-                        <img src={image.url} alt={`Ipswich ${index}`} className="image-item" />
+                        <img src={image.url} alt={`Brisbane ${index}`} className="image-item" />
                         <div className="location-details">
                             <h4>{image.address}</h4>
-                            <p>{image.beds} Beds - {image.baths} Baths - {image.parking} Parking</p>
+                            <p>{image.beds} Bed - {image.baths} Bath - {image.parking} Car</p>
                         </div>
                     </div>
                 ))) : (
