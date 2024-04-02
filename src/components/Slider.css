@@ -39,19 +39,19 @@
 .slider .item:nth-child(3) {
     left: 70%;
     z-index: 3;
-    border-radius: 1rem;
+    border-radius: 0.25rem;
 }
 
 .slider .item:nth-child(4) {
     left: calc(65% + 30rem);
     z-index: 3;
-    border-radius: 1rem;
+    border-radius: 0.25rem;
 }
 
 .slider .item:nth-child(5) {
     left: calc(60% + 60rem);
     z-index: 3;
-    border-radius: 1rem;
+    border-radius: 0.25rem;
 }
 
 .slider .item:nth-child(n + 6) {
