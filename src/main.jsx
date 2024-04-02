@@ -5,7 +5,7 @@ import './index.css'
 
 import HomePage from "./pages/HomePage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
-import LocationsPage from "./pages/LocationsPage.jsx";
+import GoldCoastPage from './pages/GoldCoastPage.jsx';
 import ContactPage from "./pages/ContactPage.jsx";
 
 
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       { path:"/", element: <HomePage /> },
       { path: "/about", element: <AboutPage /> },
-      { path: "/locations", element: <LocationsPage /> },
+      { path: "/locations/gold-coast", element: <GoldCoastPage /> },
       { path: "/contact", element: <ContactPage /> },
       // { path: "/project/:id", element: <ProjectPage /> },
       // { path: "/project/:id/update", element: <UpdateProject /> },
