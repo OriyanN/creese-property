@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
 import "./LocationsPage.css";
 
-import mainInitialImage from "../assets/aerial-view-of-surfers-paradise-the-gold-coast-q-2023-11-27-04-49-20-utc.jpg";
+import mainInitialImage from "../assets/gold-coast.jpg";
 import image1 from "../assets/1.jpg"
 import image2 from "../assets/backyard-2023-11-27-04-52-38-utc.jpg"
 import image3 from "../assets/facade-2023-11-27-05-20-28-utc.jpg"
@@ -95,31 +94,48 @@ const GoldCoastPage = () => {
                 </div>
                 <div className="filters">
                     <div className="beds-filter">
-                        <select id="bedsFilter" value={bedsFilter} onChange={e => setBedsFilter(e.target.value)} className={!bedsFilter ? 'placeholder' : ''}>
-                            <option value="" disabled={bedsFilter}>{bedsFilter ? `${bedsFilter}` : "Beds"}</option>
+                        <select 
+                            id="bedsFilter" 
+                            value={bedsFilter} 
+                            onChange={e => setBedsFilter(e.target.value)} 
+                            className={!bedsFilter ? 'placeholder' : ''}
+                            aria-label="Filter by number of beds"
+                        >
+                            <option value="" >{bedsFilter ? `Show All` : "Beds"}</option>
                             {createOptions('beds').map(beds => (
                                 <option key={beds} value={beds}>{beds}</option>
                             ))}
                         </select>
                     </div>
                     <div className="baths-filter">
-                        <select id="bathsFilter" value={bathsFilter} onChange={e => setBathsFilter(e.target.value)} className={!bathsFilter ? 'placeholder' : ''}>
-                        <option value="" disabled={bedsFilter}>{bedsFilter ? `${bedsFilter}` : "Baths"}</option>
+                        <select 
+                            id="bathsFilter" 
+                            value={bathsFilter} 
+                            onChange={e => 
+                            setBathsFilter(e.target.value)} 
+                            className={!bathsFilter ? 'placeholder' : ''}
+                        >
+                            <option value="" >{bathsFilter ? `Show All` : "Baths"}</option>
                             {createOptions('baths').map(baths => (
                                 <option key={baths} value={baths}>{baths}</option>
                             ))}
                         </select>
                     </div>
                     <div className="parking-filter">
-                        <select id="parkingFilter" value={parkingFilter} onChange={e => setParkingFilter(e.target.value)} className={!parkingFilter ? 'placeholder' : ''}>
-                        <option value="" disabled={parkingFilter}>{parkingFilter ? `${parkingFilter}` : "Parking"}</option>
+                        <select 
+                            id="parkingFilter" 
+                            value={parkingFilter} 
+                            onChange={e => setParkingFilter(e.target.value)} 
+                            className={!parkingFilter ? 'placeholder' : ''}
+                        >
+                            <option value="" >{parkingFilter ? `Show All` : "Parking"}</option>
                             {createOptions('parking').map(parking => (
                                 <option key={parking} value={parking}>{parking}</option>
                             ))}
                         </select>
                     </div>
                 </div>
-                </div>
+            </div>
             <div className="images-container">
                 {filteredImages.length > 0 ? (
                     filteredImages.map((image, index) => (
