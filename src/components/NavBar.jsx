@@ -25,6 +25,7 @@ function NavBar() {
 
     const handleLinkClick = () => {
         setMenuOpen(false);
+        setDropdownOpen(false);
     };
 
     const toggleDropdown = (event) => {
@@ -103,7 +104,7 @@ function NavBar() {
                     </Link>
                     <div className="dropdown">
                         <Link 
-                        to="/locations" 
+                        to="#" 
                         className={`dropdown-toggle ${isActive("/locations") ? "active" : ""}`} 
                         onClick={toggleDropdown}
                         >
@@ -112,11 +113,11 @@ function NavBar() {
                         {dropdownOpen && (
                             <div className="dropdown-content-hover">
                                 <div className="dropdown-content">
-                                    <Link to="/locations/gold-coast">Gold Coast</Link>
-                                    <Link to="/locations/logan">Logan</Link>
-                                    <Link to="/locations/Ipswich">Ipswich</Link>
-                                    <Link to="/locations/brisbane">Brisbane</Link>
-                                    <Link to="/locations/sunshine-coast">Sunshine Coast</Link>
+                                    <Link to="/locations/gold-coast" onClick={handleLinkClick}>Gold Coast</Link>
+                                    <Link to="/locations/logan" onClick={handleLinkClick}>Logan</Link>
+                                    <Link to="/locations/Ipswich" onClick={handleLinkClick}>Ipswich</Link>
+                                    <Link to="/locations/brisbane" onClick={handleLinkClick}>Brisbane</Link>
+                                    <Link to="/locations/sunshine-coast" onClick={handleLinkClick}>Sunshine Coast</Link>
                                 </div>
                             </div>
                         )}
