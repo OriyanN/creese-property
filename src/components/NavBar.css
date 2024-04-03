@@ -132,3 +132,8 @@
 .navbar .dropdown-content a::after {
     content: none; 
 }
+
+.dropdown-toggle::after {
+    border-top: none;
+    margin-left: 0;
+}
