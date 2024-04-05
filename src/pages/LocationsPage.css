@@ -18,9 +18,9 @@
     z-index: 10;
     color: var(--white);
     display: flex;
-    font-size: 12rem;
+    font-size: 8rem;
     font-weight: normal;
-    padding: 35vh 9% 0 9%;
+    padding: 40vh 9% 0 9%;
 }
 
 .overlay {
@@ -57,8 +57,8 @@
 }
 
 .search input {
-    border-bottom: 1px solid var(--grey-blue);
     width: 16vw;
+    border-bottom: 1px solid var(--grey-blue);
     text-transform: uppercase;
     font-size: 2.25rem;
     color: var(--grey-blue);
@@ -80,6 +80,7 @@
 
 .image-item {
     width: 100%;
+    height: 30vh;
     border-radius: 0.25rem;
 }
 
