@@ -1,0 +1,74 @@
+.wrapper {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper button {
+    width: 17.5vw;
+    height: 7vh;
+    border: none;
+    outline: none;
+    background: var(--grey-blue);
+    color: var(--white);
+    font-size: 2.25rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s linear;
+}
+
+.wrapper button:hover {
+    background-color: var(--blue);
+    scale: 1.1;
+}
+
+.wrapper .check-box {
+    width: 7vh;
+    height: 7vh;
+    border-radius: 0.25;
+    box-shadow: 0 0 12px -2px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    right: -40px;
+    opacity: 0;
+}
+
+.wrapper .check-box svg {
+    width: 40px;
+    margin: 20px;
+}
+
+.wrapper svg path {
+    stroke-width: 3;
+    stroke: #fff;
+    stroke-dasharray: 34;
+    stroke-dashoffset: 34;
+    stroke-linecap: round;
+}
+
+.wrapper .active {
+    background: var(--light-blue);
+    transition: 1s;
+}
+
+.wrapper .active .check-box {
+    right: 0;
+    opacity: 1;
+    transition: 1s;
+}
+
+.wrapper .active p {
+    margin-right: 125px;
+    transition: 1s;
+}
+
+.wrapper .active svg path {
+    stroke-dashoffset: 0;
+    transition: 1s;
+    transition-delay: 1s;
+}
