@@ -23,7 +23,7 @@
     padding: 40vh 9% 0 9%;
 }
 
-.overlay {
+.initial-image .overlay {
     position: absolute;
     top: 0;
     left: 0;
