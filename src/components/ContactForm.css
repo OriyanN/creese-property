@@ -1,0 +1,42 @@
+.contact-form {
+    padding: 1.2rem 9%;
+}
+
+.contact-form h2 {
+    font-size: 8rem;
+    font-weight: 100;
+    color: var(--grey-blue);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4rem;
+}
+
+.name-section, .details-section, .dropdowns-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 0;
+}
+
+.contact-form input, .dropdown-section, .message-section textarea {
+    border-bottom: 1px solid var(--grey-blue);
+    width: 40%;
+    font-size: 2.5rem;
+    padding: 1rem 3rem;
+}
+
+.message-section {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form .message-section textarea {
+    width: 90%;
+}
+
+.contact-form input::placeholder, .contact-form select.dropdown-section, .contact-form textarea::placeholder {
+    color: var(--grey-beige);
+}
