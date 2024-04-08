@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import logo from "../assets/Creese Property Logo- White White.png";
 
