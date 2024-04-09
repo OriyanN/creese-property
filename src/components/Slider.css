@@ -37,25 +37,25 @@
 }
 
 .slider .item:nth-child(3) {
-    left: 70%;
+    left: 69.5%;
     z-index: 3;
     border-radius: 0.25rem;
 }
 
 .slider .item:nth-child(4) {
-    left: calc(65% + 30rem);
+    left: calc(64.5% + 30rem);
     z-index: 3;
     border-radius: 0.25rem;
 }
 
 .slider .item:nth-child(5) {
-    left: calc(60% + 60rem);
+    left: calc(59.5% + 60rem);
     z-index: 3;
     border-radius: 0.25rem;
 }
 
 .slider .item:nth-child(n + 6) {
-    left: calc(55% + 90rem);
+    left: calc(54.5% + 90rem);
     opacity: 0;
 }
 
@@ -66,7 +66,7 @@
     left: 10rem;
     text-align: left;
     color: #fff;
-    width: 30rem;
+    width: 30vw;
     display: none;
 }
 
@@ -76,18 +76,20 @@
     z-index: 2;
 }
 
-.item .content .name {
+.item .content .address {
     text-transform: uppercase;
-    font-size: 4rem;
+    font-size: 3.25rem;
     font-weight: bold;
     opacity: 0;
+    color: var(--white);
     animation: animate 1s ease-in-out 1 forwards;
 }
 
 .item .content .des {
-    margin: 1rem 0 1rem;
-    font-size: 1.8rem;
+    margin: 1.5rem 0 2.5rem;
     opacity: 0;
+    color: var(--white);
+    font-size: 2.5rem;
     animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 
@@ -99,10 +101,14 @@
     font-size: 1.5rem;
     opacity: 0;
     animation: animate 1s ease-in-out 0.6s 1 forwards;
+    text-transform: uppercase;
+    transition: all 0.3s linear;
 }
 
 .item .content button:hover {
-    background-color: rgba(255, 166, 0, 0.766);   
+    background-color: rgba(66, 120, 188, 0.75);
+    color: var(--white); 
+    scale: 1.1;
 }
 
 @keyframes animate {
@@ -140,6 +146,10 @@
     opacity: 0.9;
 }
 
+.svg-inline--fa.fa-circle-chevron-left path, .svg-inline--fa.fa-circle-chevron-right path {
+    color: var(--white);
+}
+
 .item .overlay {
     position: absolute;
     top: 0;
@@ -148,5 +158,5 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Example: black overlay with 50% opacity */
     z-index: 1;
-    /* border-radius: 1rem; */
+    border-radius: 0.25rem;
 }
