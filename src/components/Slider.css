@@ -37,13 +37,13 @@
 }
 
 .slider .item:nth-child(3) {
-    left: 69.5%;
+    left: 69%;
     z-index: 3;
     border-radius: 0.25rem;
 }
 
 .slider .item:nth-child(4) {
-    left: calc(64.5% + 30rem);
+    left: calc(64.25% + 30rem);
     z-index: 3;
     border-radius: 0.25rem;
 }
