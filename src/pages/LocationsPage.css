@@ -18,9 +18,9 @@
     z-index: 10;
     color: var(--white);
     display: flex;
-    font-size: 8rem;
+    font-size: 12rem;
     font-weight: normal;
-    padding: 40vh 9% 0 9%;
+    padding: 35vh 9% 0 9%;
 }
 
 .initial-image .overlay {

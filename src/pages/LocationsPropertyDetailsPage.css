@@ -53,13 +53,13 @@
 .property-details p {
     font-size: 2.5rem;
     text-align: justify;
-    padding: 1rem 2rem;
+    padding: 2rem 2rem 4rem;
 }
 
 .property-features {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 2rem 2rem 1rem;;
+    padding: 4rem 2rem 2rem;;
 }
 
 .feature-box {
@@ -85,4 +85,45 @@
 
 .gallery-button:hover {
     background-position: 0;
+}
+
+.property-contact-form {
+    padding: 4rem 26%;
+}
+
+.property-contact-form h2 {
+    font-size: 4rem;
+    padding-bottom: 2rem;
+    color: var(--grey-blue);
+    text-transform: uppercase;
+}
+
+.property-contact-form form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4rem;
+}
+
+.property-name-section, .property-details-section, .property-dropdowns-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.property-contact-form form input, .property-dropdown-section, .property-message-section textarea {
+    margin: 1rem;
+}
+
+.property-contact-form input, .property-dropdown-section, .property-message-section textarea {
+    border-bottom: 1px solid var(--grey-blue);
+    width: 45%;
+    font-size: 2.5rem;
+    padding: 1rem 1.75rem;
+}
+
+.property-message-section textarea {
+    width: 97.5%;
+}
+
+.property-contact-form input::placeholder, .property-contact-form select.property-dropdown-section, .property-contact-form textarea::placeholder {
+    color: var(--grey-beige);
 }

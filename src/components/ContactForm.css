@@ -3,9 +3,9 @@
 }
 
 .contact-form h2 {
-    font-size: 8rem;
-    font-weight: 100;
+    font-size: 4rem;
     color: var(--grey-blue);
+    text-transform: uppercase;
 }
 
 .contact-form form {
@@ -23,7 +23,7 @@
 
 .contact-form input, .dropdown-section, .message-section textarea {
     border-bottom: 1px solid var(--grey-blue);
-    width: 40%;
+    width: 45%;
     font-size: 2.5rem;
     padding: 1rem 3rem;
 }
@@ -34,7 +34,7 @@
 }
 
 .contact-form .message-section textarea {
-    width: 90%;
+    width: 95%;
 }
 
 .contact-form input::placeholder, .contact-form select.dropdown-section, .contact-form textarea::placeholder {
