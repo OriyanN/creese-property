@@ -5,7 +5,7 @@ import "./NavBar.css";
 import "/src/index.css";
 
 import logoWhite from "../assets/Creese Property Logo- White White.png";
-import logoBeige from "../assets/Creese Property Logo-Beige.png";
+import logoGreyBeige from "../assets/CP (2).png";
 
 function NavBar() {
     const [activeLink, setActiveLink] = useState("");
@@ -39,12 +39,10 @@ function NavBar() {
     
         if (location.pathname === "/privacy" || location.pathname === "/terms-conditions") {
             root.style.setProperty('--white', '#a4a4a4');
-            setLogo(logoBeige);
-            navbar.style.backgroundColor = '#FFFFFF';
+            setLogo(logoGreyBeige);
         } else {
             root.style.setProperty('--white', '#ffffff');
             setLogo(logoWhite);
-            navbar.style.backgroundColor = 'transparent';
         }
     }, [location.pathname]);
     
