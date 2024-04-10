@@ -35,15 +35,19 @@ function NavBar() {
 
     useEffect(() => {
         const root = document.documentElement;
+        const navbar = document.querySelector('.header')
     
         if (location.pathname === "/privacy" || location.pathname === "/terms-conditions") {
-          root.style.setProperty('--white', '#a4a4a4');
-          setLogo(logoBeige);
-        }else {
-          root.style.setProperty('--white', '#ffffff');
-          setLogo(logoWhite);
+            root.style.setProperty('--white', '#a4a4a4');
+            setLogo(logoBeige);
+            navbar.style.backgroundColor = '#FFFFFF';
+        } else {
+            root.style.setProperty('--white', '#ffffff');
+            setLogo(logoWhite);
+            navbar.style.backgroundColor = 'transparent';
         }
     }, [location.pathname]);
+    
 
     useEffect(() => {
         const handleScroll = () => {
