@@ -1,0 +1,33 @@
+.privacy {
+    padding: 15vh 9% 2rem 9%;
+}
+.privacy h1 {
+    font-size: 10rem;
+    padding-bottom: 5rem;
+    color: var(--grey-blue);
+}
+
+ol.privacy-section {
+    counter-reset: item;
+}
+
+.privacy-section li {
+    display: block;
+}
+
+.privacy-section li:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item;
+}
+
+.heading-privacy {
+    font-size: 2.75rem;
+    font-weight: bold;
+}
+
+.text {
+    font-size: 2.25rem;
+    font-weight: 100;
+    padding-inline-start: 3rem;
+    text-align: justify;
+}
