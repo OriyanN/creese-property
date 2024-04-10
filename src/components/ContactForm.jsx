@@ -22,6 +22,7 @@ function ContactForm() {
     const [selectedLocation, setSelectedLocation] = useState('');
     const [selectedProperty, setSelectedProperty] = useState('');
     const [propertiesOptions, setPropertiesOptions] = useState([]);
+    const [enquiryType, setEnquiryType] = useState('');
 
     useEffect(() => {
         if (selectedLocation) {
@@ -33,7 +34,8 @@ function ContactForm() {
     }, [selectedLocation]);
 
     const handleFormSubmit = () => {
-        
+        e.preventDefault(); // Prevent default form submission behavior
+        // Form submission logic here
       };
 
     return (
@@ -66,7 +68,7 @@ function ContactForm() {
                 </div>
                 <div className="dropdowns-section">
                     {/* Dropdown for selecting a location */}
-                    <select 
+                    {/* <select 
                         className="dropdown-section" 
                         value={selectedLocation} 
                         onChange={e => setSelectedLocation(e.target.value)}
@@ -76,9 +78,9 @@ function ContactForm() {
                         {Object.keys(PropertiesData).map((location) => (
                             <option key={location} value={location}>{location}</option>
                         ))}
-                    </select>
+                    </select> */}
                     {/* Dropdown for selecting a property based on location */}
-                    <select 
+                    {/* <select 
                         className="dropdown-section" 
                         value={selectedProperty} 
                         onChange={e => setSelectedProperty(e.target.value)} 
@@ -88,10 +90,23 @@ function ContactForm() {
                         {propertiesOptions.map((property) => (
                             <option key={property.id} value={property.id}>{property.address}</option>
                         ))}
+                    </select> */}
+                    
+                    {/* Enquiry Type Dropdown */}
+                    <select
+                        className="dropdown-section"
+                        value={enquiryType}
+                        onChange={e => setEnquiryType(e.target.value)}
+                        name="enquiryType"
+                    >
+                        <option value="">Select Enquiry Type</option>
+                        <option value="rental">Rental Enquiry</option>
+                        <option value="general">General Enquiry</option>
+                        <option value="other">Other</option>
                     </select>
                 </div>
                 <div className='message-section'>
-                    <textarea type="text" name='message' rows='3' placeholder='Message'/>
+                    <textarea type="text" name='message' rows='6' placeholder='Message'/>
                 </div>
                 <AnimatedButton onSubmit={handleFormSubmit} />
             </form>

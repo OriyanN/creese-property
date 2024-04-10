@@ -21,9 +21,23 @@
     padding: 3rem 0;
 }
 
-.contact-form input, .dropdown-section, .message-section textarea {
+/* .contact-form input, .dropdown-section, .message-section textarea {
     border-bottom: 1px solid var(--grey-blue);
     width: 45%;
+    font-size: 2.5rem;
+    padding: 1rem 3rem;
+} */
+
+.contact-form input, .message-section textarea {
+    border-bottom: 1px solid var(--grey-blue);
+    width: 45%;
+    font-size: 2.5rem;
+    padding: 1rem 3rem;
+}
+
+.dropdown-section {
+    border-bottom: 1px solid var(--grey-blue);
+    width: 95%;
     font-size: 2.5rem;
     padding: 1rem 3rem;
 }
