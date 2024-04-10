@@ -108,7 +108,7 @@ function NavBar() {
                     </Link>
                     <Link 
                     to="/portfolio" 
-                    className={isActive("/services") ? "active" : ""}
+                    className={isActive("/portfolio") ? "active" : ""}
                     onClick={handleLinkClick}
                     >
                         Portfolio
