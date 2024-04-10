@@ -103,7 +103,7 @@
 }
 
 .dropdown-content a:hover {
-    background-color: var(--grey-beige);
+    background-color: var(--beige);
     color: var(--white);
 }
 
@@ -116,17 +116,12 @@
 }
 
 .navbar .dropdown-content a:hover {
-    background-color: var(--grey-beige);
+    background-color: var(--beige);
     color: var(--white);
 }
 
 .dropdown-content a::after {
     content: none; 
-}
-
-.dropdown-content a:hover {
-    background-color: var(--grey-beige); 
-    color: var(--white);
 }
 
 .navbar .dropdown-content a::after {

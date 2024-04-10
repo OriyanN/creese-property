@@ -33,17 +33,17 @@ function NavBar() {
         setDropdownOpen(!dropdownOpen);
     };
 
-    // useEffect(() => {
-    //     const root = document.documentElement;
+    useEffect(() => {
+        const root = document.documentElement;
     
-    //     if (location.pathname === "/about" || location.pathname === "/contact") {
-    //       root.style.setProperty('--white', '#a4a4a4');
-    //       setLogo(logoBeige);
-    //     }else {
-    //       root.style.setProperty('--white', '#ffffff');
-    //       setLogo(logoWhite);
-    //     }
-    // }, [location.pathname]);
+        if (location.pathname === "/privacy" || location.pathname === "/terms-conditions") {
+          root.style.setProperty('--white', '#a4a4a4');
+          setLogo(logoBeige);
+        }else {
+          root.style.setProperty('--white', '#ffffff');
+          setLogo(logoWhite);
+        }
+    }, [location.pathname]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -95,13 +95,20 @@ function NavBar() {
                     >
                         About
                     </Link>
-                    {/* <Link 
+                    <Link 
                     to="/services" 
                     className={isActive("/services") ? "active" : ""}
                     onClick={handleLinkClick}
                     >
                         Services
-                    </Link> */}
+                    </Link>
+                    <Link 
+                    to="/portfolio" 
+                    className={isActive("/services") ? "active" : ""}
+                    onClick={handleLinkClick}
+                    >
+                        Portfolio
+                    </Link>
                     <div className="dropdown">
                         <Link 
                         to="#" 
