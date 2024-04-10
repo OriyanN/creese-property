@@ -41,6 +41,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding-top: 1rem;
 }
 
 .footer-bottom p, .footer-bottom a {
@@ -49,6 +50,13 @@
 
 .footer-bottom-links a{
     padding-left: 1.25rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.footer-bottom-links a:hover {
+    color: var(--white);
 }
 
 .social-media ul {

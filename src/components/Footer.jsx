@@ -18,7 +18,7 @@ const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Optional: Adds a smooth scrolling effect
+      behavior: "smooth",
     });
   };
     
