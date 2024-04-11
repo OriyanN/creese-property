@@ -50,24 +50,6 @@
     border-bottom: 1px solid var(--grey-blue);
 }
 
-.property-details p {
-    font-size: 2.5rem;
-    text-align: justify;
-    padding: 2rem 2rem 4rem;
-}
-
-.property-features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 4rem 2rem 2rem;;
-}
-
-.feature-box {
-    text-align: left;
-    font-size: 2.5rem;
-    padding: 1rem 0;
-}
-
 .gallery-button {
     color: var(--blue);
     background-image: linear-gradient(
@@ -85,6 +67,24 @@
 
 .gallery-button:hover {
     background-position: 0;
+}
+
+.property-details p {
+    font-size: 2.5rem;
+    text-align: justify;
+    padding: 4rem 2rem 2rem;
+}
+
+.property-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem 2rem 2rem;;
+}
+
+.feature-box {
+    text-align: left;
+    font-size: 2.5rem;
+    padding: 1rem 0;
 }
 
 .property-contact-form {
@@ -126,17 +126,4 @@
 
 .property-contact-form input::placeholder, .property-contact-form select.property-dropdown-section, .property-contact-form textarea::placeholder {
     color: var(--grey-beige);
-}
-
-.images-container .image-item-container .image-item {
-    transition: filter 0.3s ease;
-    filter: grayscale(0%); 
-}
-  
-.images-container:hover .image-item-container .image-item {
-    filter: grayscale(100%);
-}
-  
-.images-container .image-item-container:hover .image-item {
-    filter: grayscale(0%);
 }
