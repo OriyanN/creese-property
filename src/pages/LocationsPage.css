@@ -99,7 +99,19 @@
     color: var(--grey-blue);
 }
 
-
 .location .images-container p {
     font-size: 3rem;
+}
+
+.images-container .image-item-container .image-item {
+    transition: filter 0.3s ease;
+    filter: grayscale(0%); 
+}
+  
+.images-container:hover .image-item-container .image-item {
+    filter: grayscale(100%);
+}
+  
+.images-container .image-item-container:hover .image-item {
+    filter: grayscale(0%);
 }
