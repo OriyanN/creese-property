@@ -35,7 +35,7 @@
     width: 47.5%;
 }
 
-.contact-text h2, .about-text h2, .services-container h2, .team-container h2 {
+.contact-text h2, .about-text h2, .team-container h2, .careers-container h2 {
     font-size: 4rem;
     padding-bottom: 3rem;
     text-transform: uppercase;
@@ -57,38 +57,21 @@
 }
 
 .about-body img {
-    height: 70vh;
+    padding-top: 1rem;
+    height: 72.5vh;
 }
 
 .about-text {
-    width: 56%;
+    width: 58.5%;
 }
 
-.services-container, .team-container {
+.team-container, .careers-container {
     padding: 4rem 9%;
 }
 
-.services, .team {
+.team, .what-who {
     display: flex;
     padding: 2rem 0;
-}
-
-.service {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 2rem;
-    height: 40vh;
-}
-
-.service h3 {
-    font-size: 3rem;
-}
-
-.service p {
-    font-size: 2.25rem;
-    text-align: center;
 }
 
 .team-member {
@@ -107,7 +90,7 @@
     padding-bottom: 2rem;
 }
 
-.team-member h3 {
+.team-member h3, .why h3, .what-who h3 {
     font-size: 3rem;
     padding-bottom: 0.5rem;
 }
@@ -116,7 +99,23 @@
     font-size: 2.5rem;
 }
 
-.team-member p {
+.team-member p, .careers-container p {
     font-size: 2.25rem;
     text-align: justify;
+}
+
+.careers-container h3 {
+    padding-bottom: 1.5rem;
+}
+
+.why {
+    padding-bottom: 1rem;
+}
+
+.who {
+    padding-right: 1.5rem;
+}
+
+.what {
+    padding-left: 1.5rem;
 }
