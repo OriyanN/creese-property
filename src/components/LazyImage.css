@@ -1,0 +1,17 @@
+.image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-container img {
+  opacity: 0;
+  filter: blur(5px);
+  transition: opacity 0.5s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.image-container img.loaded {
+  opacity: 1;
+  filter: blur(0px);
+}
+
