@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Footer from '../components/Footer';
-import "./PortfolioPage.css"
 import ScrollToTop from '../components/ScrollToTop';
+import LazyImage from '../components/LazyImage';
+
+import "./PortfolioPage.css"
 
 import bri1 from '../assets/Brisbane/bri1/backyard-2023-11-27-04-52-38-utc.jpg';
 import bri2 from '../assets/Brisbane/bri2/modern-house-exterior-2023-11-27-05-08-12-utc.jpg';
@@ -35,7 +37,7 @@ function PortfolioPage() {
                     {data.map(item => (
                         <div key={item.id} className="image-item-container">
                             <Link to={item.link}>
-                                <img src={item.image} alt={`Property ${item.id}`} className="image-item" />
+                                <LazyImage src={item.image} alt={`Property ${item.id}`} className="image-item" />
                             </Link>
                             <div className="location-details">
                                 <h4>{item.address}</h4>
