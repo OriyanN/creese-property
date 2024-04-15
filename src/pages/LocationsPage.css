@@ -105,13 +105,13 @@
 
 .images-container .image-item-container .image-item {
     transition: filter 0.3s ease;
-    filter: grayscale(0%); 
+    filter: grayscale(0%) blur(0px);
 }
-  
+
 .images-container:hover .image-item-container .image-item {
-    filter: grayscale(100%);
+    filter: grayscale(100%) blur(1px);
 }
-  
+
 .images-container .image-item-container:hover .image-item {
-    filter: grayscale(0%);
+    filter: grayscale(0%) blur(0px);
 }
