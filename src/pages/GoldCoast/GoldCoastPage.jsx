@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Footer from '../../components/Footer';
 import ScrollToTop from '../../components/ScrollToTop';
+import LazyImage from '../../components/LazyImage';
 
 import GoldCoastPropertiesData from './GoldCoastPropertiesData';
 import "../LocationsPage.css";
@@ -91,10 +92,10 @@ const GoldCoastPage = () => {
                 </div>
                 <div className="images-container">
                     {filteredImages.length > 0 ? (
-                        filteredImages.map((property) => ( 
-                        <div key={property.id} className="image-item-container"> 
+                        filteredImages.map((property) => (
+                        <div key={property.id} className="image-item-container">
                             <Link to={`/locations/gold-coast/properties/${property.id}`}>
-                                <img src={property.images[0]} alt={`Property ${property.id}`} className="image-item" />
+                                <LazyImage src={property.images[0]} alt={`Property ${property.id}`} className="image-item" />
                             </Link>
                             <div className="location-details">
                                 <h4>{property.address}</h4>
