@@ -21,14 +21,6 @@ function HomePage() {
         return () => clearTimeout(timer);
     }, []);
 
-    // if (loading) {
-    //     return (
-    //       <div style={styles.preloader}>
-    //         <img src={preloaderImage} alt="Loading" style={styles.image} />
-    //       </div>
-    //     );
-    // }
-
     return (
         <>
             {loading && (

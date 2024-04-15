@@ -82,10 +82,8 @@
 @keyframes zoomIn {
     from {
       transform: scale(1);
-      /* opacity: 1; */
     }
     to {
       transform: scale(35);
-      /* opacity: 0; */
     }
  }  
