@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 import Lightbox from "yet-another-react-lightbox";
@@ -85,8 +85,10 @@ const GoldCoastPropertyDetailsPage = () => {
     <>
       <ScrollToTop />
       <div>
-        <img className="main-property-image" src={property.images[0]} alt="Main Property" style={{ height: '100vh', width: '100%' }} />
-        <div className="main-property-overlay"></div>
+        <Link href="#!" className='gallery-button' ref={galleryButtonRef} onClick={() => setOpen(true)}>
+          <img className="main-property-image" src={property.images[0]} alt="Main Property" style={{ height: '100vh', width: '100%' }} />
+          <div className="main-property-overlay"></div>
+        </Link>
 
         {/* Property Details */}
         <div className="property-details">
@@ -123,6 +125,7 @@ const GoldCoastPropertyDetailsPage = () => {
                 />
             </div>
           </div>
+          <p>{property.description}</p>
           <div className="property-features">
             {property.features.map((feature, index) => (
               <div key={index} className="feature-box">
@@ -130,13 +133,12 @@ const GoldCoastPropertyDetailsPage = () => {
               </div>
             ))}
           </div>
-          <p>{property.description}</p>
         </div>
 
         <div ref={mapContainerRef} style={{ margin: '2rem 26%', height: '60vh', width: '48%', borderRadius: '0.25rem', padding: '1rem 0'}}></div>
         
         <div className='property-contact-form'>
-          <h2>Contact Us</h2>
+          <h2>Enquire Now</h2>
           <form action=''>
             <div className="property-name-section">
                 <input 
@@ -175,7 +177,7 @@ const GoldCoastPropertyDetailsPage = () => {
             </div>
 
             <div className='property-message-section'>
-              <textarea type="text" name='message' rows='3' placeholder='Message'/>
+              <textarea type="text" name='message' rows='6' placeholder='Message'/>
             </div>
             
             <AnimatedButton />
