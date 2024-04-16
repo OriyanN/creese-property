@@ -127,3 +127,7 @@
 .property-contact-form input::placeholder, .property-contact-form select.property-dropdown-section, .property-contact-form textarea::placeholder {
     color: var(--grey-beige);
 }
+
+.yarl__container.yarl__flex_center path {
+    color: var(--white);
+}
