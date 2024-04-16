@@ -110,16 +110,23 @@ const GoldCoastPropertyDetailsPage = () => {
                 slideshow={{ ref: slideshowRef }}
                 thumbnails={{ ref: thumbnailsRef }}
                 on={{
-                  click: () => fullscreenRef.current?.enter(),
                   click: () => {
-                    (slideshowRef.current?.playing
-                      ? slideshowRef.current?.pause
-                      : slideshowRef.current?.play)?.();
-                  },
-                  click: () => {
-                    (thumbnailsRef.current?.visible
-                      ? thumbnailsRef.current?.hide
-                      : thumbnailsRef.current?.show)?.();
+                    // Enter fullscreen mode
+                    fullscreenRef.current?.enter();
+              
+                    // Toggle slideshow play/pause
+                    if (slideshowRef.current?.playing) {
+                      slideshowRef.current?.pause();
+                    } else {
+                      slideshowRef.current?.play();
+                    }
+              
+                    // Toggle visibility of thumbnails
+                    if (thumbnailsRef.current?.visible) {
+                      thumbnailsRef.current?.hide();
+                    } else {
+                      thumbnailsRef.current?.show();
+                    }
                   },
                 }}
                 />
