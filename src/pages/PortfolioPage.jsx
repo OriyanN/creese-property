@@ -33,11 +33,11 @@ function PortfolioPage() {
                     <h1>Portfolio</h1>
                     <div className="overlay"></div>
                 </div>
-                <div className="images-container portfolio">
+                <div className="images-container images-container-portfolio">
                     {data.map(item => (
-                        <div key={item.id} className="image-item-container">
+                        <div key={item.id} className="image-item-container image-item-container-portfolio">
                             <Link to={item.link}>
-                                <LazyImage src={item.image} alt={`Property ${item.id}`} className="image-item" />
+                                <LazyImage src={item.image} alt={`Property ${item.id}`} className="image-item image-item-portfolio" />
                             </Link>
                             <div className="location-details">
                                 <h4>{item.address}</h4>
