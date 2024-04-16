@@ -16,7 +16,6 @@
 .footer-links {
     display: flex;
     justify-content: center;
-    font-size: 2rem;
     font-weight: 100;
     border-bottom: 1px solid var(--beige);
     width: 100%;
@@ -44,7 +43,7 @@
     padding-top: 1rem;
 }
 
-.footer-bottom p, .footer-bottom a {
+.footer-links, .footer-bottom p, .footer-bottom a {
     font-size: 1.85rem;
 }
 
