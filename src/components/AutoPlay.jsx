@@ -18,6 +18,20 @@ import The_Urban_Developer from '../assets/Featured/1.png';
 import './AutoPlay.css';
 
 function AutoPlay() {
+
+    const images = [
+        { src: ABC, alt: 'ABC' },
+        { src: Australian_Financial_Review, alt: 'Australian Financial Review' },
+        { src: Australian_Property_Institute, alt: 'Australian Property Institute' },
+        { src: COHORT_Innovation_Spaces, alt: 'COHORT Innovation Spaces' },
+        { src: Gold_Coast_Bulletin, alt: 'Gold Coast Bulletin' },
+        { src: Property_Investment_Professionals_of_Australia, alt: 'Property Investment Professionals of Australia' },
+        { src: Real_Estate_Institute_of_Queensland, alt: 'Real Estate Institute of Queensland' },
+        { src: Realestate_com_au, alt: 'Realestate.com.au' },
+        { src: The_Australian, alt: 'The Australian' },
+        { src: The_Urban_Developer, alt: 'The Urban Developer' }
+    ];
+
     const settings = {
         dots: false,
         infinite: true,
@@ -49,16 +63,9 @@ function AutoPlay() {
         <div className="block-featured-container">    
             <div className="featured-container">
                 <Slider {...settings}>
-                    <img src={ABC} alt="ABC" />
-                    <img src={Australian_Financial_Review} alt="Australian Financial Review" />
-                    <img src={Australian_Property_Institute} alt="Australian Property Institute" />
-                    <img src={COHORT_Innovation_Spaces} alt="COHORT Innovation Spaces" />
-                    <img src={Gold_Coast_Bulletin} alt="Gold Coast Bulletin" />
-                    <img src={Property_Investment_Professionals_of_Australia} alt="Property Investment Professionals of Australia" />
-                    <img src={Real_Estate_Institute_of_Queensland} alt="Real Estate Institute of Queensland" />
-                    <img src={Realestate_com_au} alt="Realestate.com.au" />
-                    <img src={The_Australian} alt="The Australian" />
-                    <img src={The_Urban_Developer} alt="The Urban Developer" />
+                    {images.map((image, index) => (
+                        <img key={index} src={image.src} alt={image.alt} />
+                    ))}
                 </Slider>
             </div>
         </div>
