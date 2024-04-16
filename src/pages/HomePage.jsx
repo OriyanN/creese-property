@@ -9,7 +9,7 @@ import AutoPlay from '../components/AutoPlay.jsx';
 import Accordion from '../components/Accordion.jsx';
 
 import videoBg from "../assets/creese-property-video.mp4";
-import preloaderImage from '../assets/CP Transparent.png';
+import preloaderImage from '../assets/CP Transparent(1).png';
 
 function HomePage() {
     const [loading, setLoading] = useState(true);
@@ -17,7 +17,7 @@ function HomePage() {
     useEffect(() => {
         const timer = setTimeout(() => {
         setLoading(false);
-        }, 4750); // Adjust the timeout to match your animation duration
+        }, 5000); 
         return () => clearTimeout(timer);
     }, []);
 
@@ -68,27 +68,5 @@ function HomePage() {
         </>
     );
 }
-
-// Styles
-// const styles = {
-//     preloader: {
-//       position: 'fixed',
-//       top: 0,
-//       left: 0,
-//       width: '100%',
-//       height: '100%',
-//       backgroundColor: 'transparent', 
-//       display: 'flex',
-//       justifyContent: 'center',
-//       alignItems: 'center',
-//       zIndex: 9999,
-//     },
-//     image: {
-//       width: '100%',
-//       height: '100%',
-//       objectFit: 'cover',
-//       animation: 'zoomIn 3s forwards', 
-//     },
-// };
 
 export default HomePage;
