@@ -8,65 +8,61 @@ import Footer from '../../components/Footer';
 import ScrollToTop from '../../components/ScrollToTop';
 import LazyImage from '../../components/LazyImage';
 
-import GoldCoastPropertiesData from './GoldCoastPropertiesData';
+import SunshineCoastPropertiesData from './SunshineCoastPropertiesData';
 import "../LocationsPage.css";
 
-import mainInitialImage from "../../assets/GoldCoast/gold-coast.jpg";
+import mainInitialImage from "../../assets/SunshineCoast/sunshine-coast1.png";
 
-const GoldCoastPage = () => {
+const SunshineCoastPage = () => {
 
     const [filters, setFilters] = useState({
         suburbSearch: '',
         bedsFilter: '',
         bathsFilter: '',
         carFilter: '',
-    });    
+    });
 
-    const createOptions = (key) => {
-        const optionsSet = new Set(GoldCoastPropertiesData.map(property => property[key]));
-        return [...optionsSet].sort((a, b) => a - b).map(option => 
-            <option key={option} value={option}>{option}</option>
-        );
-    };
-
-    const filteredProperties = GoldCoastPropertiesData.filter(property =>
+    const filteredProperties = SunshineCoastPropertiesData.filter(property => 
         (filters.suburbSearch === '' || property.address.toLowerCase().includes(filters.suburbSearch.toLowerCase())) &&
         (filters.bedsFilter === '' || (property.beds || '').toString() === filters.bedsFilter) &&
         (filters.bathsFilter === '' || (property.baths || '').toString() === filters.bathsFilter) &&
         (filters.carFilter === '' || (property.car || '').toString() === filters.carFilter)
     );    
 
+    const createOptions = (key) => {
+        const optionsSet = new Set(SunshineCoastPropertiesData.map(property => property[key]));
+        return [...optionsSet].sort((a, b) => a - b).map(option => 
+            <option key={option} value={option}>{option}</option>
+        );
+    };
+
     const mapContainer = useRef(null);
     const map = useRef(null);
     const markers = useRef([]);
 
-    // Initialize map only once
     useEffect(() => {
         mapboxgl.accessToken = 'pk.eyJ1IjoicHJvcGVsbHByb3BlcnR5IiwiYSI6ImNsdWttNWs1cjA1dGcycW9hZnRwZ2theHgifQ.erDmDuOiR1yww8zsDYuIaA';
         map.current = new mapboxgl.Map({
             container: mapContainer.current,
             style: 'mapbox://styles/propellproperty/clukscow600cw01pw1cai5fqu',
-            center: [153.399994, -28.016666], // Centered at Gold Coast
+            center: [153.091837, -26.655976], 
             zoom: 10
         });
 
         return () => map.current?.remove();
     }, []);
 
-    // Update markers based on filters
     useEffect(() => {
-        // Remove all current markers
         markers.current.forEach(marker => marker.remove());
         markers.current = [];
 
-        // Add new markers based on filtered properties
         filteredProperties.forEach(property => {
 
             if (isNaN(property.lng) || isNaN(property.lat)) {
                 console.error("Invalid coordinates for property:", property);
-                return; // Skip creating a marker for this property
+                return;
             }
-
+            
             const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
                 `<div>
                     <img src="${property.images[0]}" alt="Property Image" style="width: 100%; height: auto;" />
@@ -88,9 +84,9 @@ const GoldCoastPage = () => {
         <>
             <ScrollToTop />
             <section className="section location">
-                <h1 className='location-name'>Gold Coast</h1>
+                <h1 className='location-name'>Sunshine Coast</h1>
                 <div className="initial-image">
-                    <img src={mainInitialImage} alt="Gold Coast" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img src={mainInitialImage} alt="Sunshine Coast" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     <div className="overlay"></div>
                 </div>
                 <div className="search">
@@ -167,4 +163,4 @@ const GoldCoastPage = () => {
     );
 };
 
-export default GoldCoastPage;
+export default SunshineCoastPage;

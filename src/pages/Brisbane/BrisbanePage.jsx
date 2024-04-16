@@ -8,12 +8,12 @@ import Footer from '../../components/Footer';
 import ScrollToTop from '../../components/ScrollToTop';
 import LazyImage from '../../components/LazyImage';
 
-import GoldCoastPropertiesData from './GoldCoastPropertiesData';
+import BrisbanePropertiesData from './BrisbanePropertiesData';
 import "../LocationsPage.css";
 
-import mainInitialImage from "../../assets/GoldCoast/gold-coast.jpg";
+import mainInitialImage from "../../assets/Brisbane/brisbane.jpg";
 
-const GoldCoastPage = () => {
+const BrisbanePage = () => {
 
     const [filters, setFilters] = useState({
         suburbSearch: '',
@@ -23,13 +23,13 @@ const GoldCoastPage = () => {
     });    
 
     const createOptions = (key) => {
-        const optionsSet = new Set(GoldCoastPropertiesData.map(property => property[key]));
+        const optionsSet = new Set(BrisbanePropertiesData.map(property => property[key]));
         return [...optionsSet].sort((a, b) => a - b).map(option => 
             <option key={option} value={option}>{option}</option>
         );
     };
 
-    const filteredProperties = GoldCoastPropertiesData.filter(property =>
+    const filteredProperties = BrisbanePropertiesData.filter(property =>
         (filters.suburbSearch === '' || property.address.toLowerCase().includes(filters.suburbSearch.toLowerCase())) &&
         (filters.bedsFilter === '' || (property.beds || '').toString() === filters.bedsFilter) &&
         (filters.bathsFilter === '' || (property.baths || '').toString() === filters.bathsFilter) &&
@@ -46,7 +46,7 @@ const GoldCoastPage = () => {
         map.current = new mapboxgl.Map({
             container: mapContainer.current,
             style: 'mapbox://styles/propellproperty/clukscow600cw01pw1cai5fqu',
-            center: [153.399994, -28.016666], // Centered at Gold Coast
+            center: [153.025131, -27.469770],
             zoom: 10
         });
 
@@ -64,9 +64,9 @@ const GoldCoastPage = () => {
 
             if (isNaN(property.lng) || isNaN(property.lat)) {
                 console.error("Invalid coordinates for property:", property);
-                return; // Skip creating a marker for this property
+                return; 
             }
-
+            
             const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
                 `<div>
                     <img src="${property.images[0]}" alt="Property Image" style="width: 100%; height: auto;" />
@@ -88,9 +88,9 @@ const GoldCoastPage = () => {
         <>
             <ScrollToTop />
             <section className="section location">
-                <h1 className='location-name'>Gold Coast</h1>
+                <h1 className='location-name'>Brisbane</h1>
                 <div className="initial-image">
-                    <img src={mainInitialImage} alt="Gold Coast" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img src={mainInitialImage} alt="Brisbane" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     <div className="overlay"></div>
                 </div>
                 <div className="search">
@@ -146,7 +146,7 @@ const GoldCoastPage = () => {
                         {filteredProperties.length > 0 ? (
                             filteredProperties.map((property) => (
                                 <div key={property.id} className="image-item-container">
-                                    <Link to={`/locations/gold-coast/properties/${property.id}`}>
+                                    <Link to={`/locations/brisbane/properties/${property.id}`}>
                                         <LazyImage src={property.images[0]} alt={`Property ${property.id}`} className="image-item" />
                                     </Link>
                                     <div className="location-details">
@@ -167,4 +167,4 @@ const GoldCoastPage = () => {
     );
 };
 
-export default GoldCoastPage;
+export default BrisbanePage;
