@@ -43,6 +43,7 @@
 .faqs .faq .faq-question {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
   
   
@@ -54,8 +55,48 @@
 .faqs .faq .faq-question .arrow {
     height: 2rem;
     transition: transform 0.3s ease;
+    padding: 0 0 0 1rem;
 }
   
 .faqs .faq.open .faq-question .arrow.rotate {
     transform: rotate(180deg);
+}
+
+@media (max-width: 1350px) {
+    .accordion h2 {
+        font-size: 7.5rem;
+    }
+}
+
+@media (max-width: 1130px) {
+    .accordion {
+        padding: 4rem 3%;
+        font-size: 7rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .accordion h2 {
+        font-size: 6rem;
+    }
+
+    .faqs .faq .faq-answer {
+        font-size: 2.5rem;
+    }
+
+    .faqs .faq .faq-question {
+        font-size: 2.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .accordion h2 {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .accordion h2 {
+        font-size: 4.5rem;
+    }
 }
