@@ -169,6 +169,10 @@
     .header {
         padding: 2rem 3%;
     }
+
+    .header.shrunk {
+        padding: 0.6rem 3%;
+    }
 }
 
 @media (max-width: 950px) {
