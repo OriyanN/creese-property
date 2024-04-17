@@ -161,7 +161,11 @@
 
 @media (max-width: 1300px) {
     .logo img {
-        height: 6.5vh;
+        height: 5.5vh;
+    }
+
+    .header.shrunk .logo img {
+        height: 4.75vh;
     }
 }
 
