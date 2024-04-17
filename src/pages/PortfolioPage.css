@@ -10,3 +10,21 @@
     padding-bottom: 4rem;
     width: 100vw;
 }
+
+@media (max-width: 1130px) {
+    .images-container.images-container-portfolio {
+        padding: 1.2rem 3%;
+    }
+}
+
+@media (max-width: 700px) {
+    .images-container.images-container-portfolio {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .images-container.images-container-portfolio {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
