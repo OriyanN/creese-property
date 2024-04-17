@@ -20,7 +20,9 @@ function AboutPage() {
                     <div className="overlay"></div>
                 </div>
                 <div className="about-body">
-                    <img src="src/assets/Lachie Black.png" alt="" />
+                    <div>
+                        <img className="about-image" src="src/assets/Lachie Black.png" alt="" />
+                    </div>
                     <div className="about-text">
                         <h2>Lorem Ipsum</h2>
                         <p>
