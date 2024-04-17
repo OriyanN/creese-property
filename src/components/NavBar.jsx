@@ -119,7 +119,7 @@ function NavBar() {
                             Portfolio
                         </Link>
                         <div 
-                            className="dropdown" 
+                            className={`dropdown ${dropdownOpen ? 'open' : ''}`} 
                             aria-haspopup="true" 
                             aria-expanded={dropdownOpen}>
                             <Link 
