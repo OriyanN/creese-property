@@ -242,6 +242,10 @@
         height: 4.75vh;
     }
     
+    .header.shrunk .navbar a {
+        font-size: 3.5rem;
+    }
+
     .dropdown {
         display: flex;
         align-items: flex-start;
@@ -306,6 +310,14 @@
     .dropdown.open .dropdown-content-hover {
         max-height: 100%; 
         padding: 8rem 0 22rem 0; 
+    }
+
+    .no-scroll {
+        overflow: hidden;
+        height: 100%;
+        position: fixed;
+        width: 100%;
+        top: 0;
     }
     
 }

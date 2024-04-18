@@ -25,11 +25,6 @@ function NavBar() {
         setMenuOpen(!menuOpen);
     };
 
-    // const handleLinkClick = () => {
-    //     setMenuOpen(false);
-    //     setDropdownOpen(false);
-    // };
-
     const handleLinkClick = (path) => {
         setMenuOpen(false);
         setDropdownOpen(false);
@@ -69,9 +64,11 @@ function NavBar() {
         if (menuOpen) {
             navbar.classList.add('active');
             mobileNavbar.classList.add('active');
+            document.body.classList.add('no-scroll');
         } else {
             navbar.classList.remove('active');
             mobileNavbar.classList.remove('active');
+            document.body.classList.remove('no-scroll');
         }
     }, [menuOpen]);
 
