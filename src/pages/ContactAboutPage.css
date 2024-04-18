@@ -36,7 +36,8 @@
 } */
 
 .contact-text h2, .about-text h2, .team-container h2, .careers-container h2 {
-    font-size: 4rem;
+    font-size: 6rem;
+    font-weight: 100;
     padding-bottom: 3rem;
     text-transform: uppercase;
     color: var(--grey-blue);
@@ -158,6 +159,12 @@
     }
 }
 
+@media (max-width: 900px) {
+    .contact-text h2, .about-text h2, .team-container h2, .careers-container h2 {
+        font-size: 5rem;
+    }
+}
+
 @media (max-width: 690px) {
     .contact-about-header h1 {
         font-size: 10rem;
@@ -181,6 +188,12 @@
 
     .why, .who, .what {
         padding: 1.5rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-text h2, .about-text h2, .team-container h2, .careers-container h2 {
+        font-size: 4rem;
     }
 }
 
