@@ -54,3 +54,31 @@
 .contact-form input::placeholder, .contact-form select.dropdown-section, .contact-form textarea::placeholder {
     color: var(--grey-beige);
 }
+
+@media (max-width: 1130px) {
+    .contact-form {
+        padding: 1.2rem 3%;
+    }    
+}
+
+@media (max-width: 550px) {
+    .name-section, .details-section {
+        flex-direction: column;
+    }
+    .name-section, .details-section, .dropdowns-section {
+        padding: 2rem 0;
+    }
+
+    .name-section, .details-section, .dropdown-section, .message-section {
+        align-items: center;
+    }
+
+    .name-section input, .details-section input {
+        width: 95%;
+        padding: 1rem 3rem;
+    }
+
+    .lastName, .phoneNumber {
+        padding-top: 4rem !important;
+    }
+}

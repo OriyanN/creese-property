@@ -38,11 +38,13 @@ function ContactPage() {
                     <div className="overlay"></div>
                 </div>
                 <div className="contact-body">
+                    <div>
+                        <div className="contact-map" ref={mapContainerRef} ></div>
+                    </div>
                     <div className="contact-text">
                         <h2>Lorem Ipsum</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed risus ultricies tristique nulla. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Mattis pellentesque id nibh tortor id aliquet. Pellentesque habitant morbi tristique senectus et netus et malesuada. Urna porttitor rhoncus dolor purus non enim praesent elementum. Scelerisque purus semper eget duis at tellus. At imperdiet dui accumsan sit amet nulla. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra. Curabitur gravida arcu ac tortor dignissim convallis. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim. Risus feugiat in ante metus dictum at tempor commodo. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Leo vel fringilla est ullamcorper eget nulla facilisi. Mauris a diam maecenas sed. Faucibus a pellentesque sit amet porttitor eget.</p>
                     </div>
-                    <div className="contact-map" ref={mapContainerRef} ></div>
                 </div>
                 <ContactForm />
                 <Footer />

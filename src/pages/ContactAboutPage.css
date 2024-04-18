@@ -31,9 +31,9 @@
     padding: 4rem 9%;
 }
 
-.contact-text {
+/* .contact-text {
     width: 47.5%;
-}
+} */
 
 .contact-text h2, .about-text h2, .team-container h2, .careers-container h2 {
     font-size: 4rem;
@@ -47,16 +47,16 @@
     text-align: justify;
 }
 
-.contact-map {
+/* .contact-map {
     position: relative;
     right: 0;
     height: 60vh;
     width: 47.5%; 
     border-radius: 0.25rem;
     padding: 1rem 0;
-}
+} */
 
-.about-body {
+.about-body, .contact-body {
     display: inline-block;
     overflow: auto;
     width: 100%;
@@ -69,7 +69,14 @@
     padding: 1rem 4rem 1rem 0;
 }
 
-.about-text {
+.contact-map {
+    float: right !important; 
+    width: 47.5%; 
+    height: 60vh;
+    margin: 1rem 0 1rem 3rem;
+}
+
+.about-text, .contact-text {
     display: inline;
     width: auto; 
     font-size: 2.25rem;
@@ -174,6 +181,19 @@
 
     .why, .who, .what {
         padding: 1.5rem 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-body {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .contact-map {
+        width: 100%; 
+        height: 35vh;
+        margin: 2rem 0 1rem;
     }
 }
 

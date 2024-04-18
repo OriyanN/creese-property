@@ -72,3 +72,21 @@
     transition: 1s;
     transition-delay: 1s;
 }
+
+@media (max-width: 1000px) {
+    .wrapper button {
+        width: 27.5vw;
+    }
+}
+
+@media (max-width: 825px) {
+    .wrapper button {
+        width: 35vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper button {
+        width: 45vw;
+    }
+}

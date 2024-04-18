@@ -51,6 +51,7 @@ function ContactForm() {
                     <input 
                         type="text"
                         name="lastName"
+                        className='lastName'
                         placeholder='Last Name'
                     />
                 </div>
@@ -63,6 +64,7 @@ function ContactForm() {
                     <input 
                         type="number"
                         name="phoneNumber"
+                        className='phoneNumber'
                         placeholder='Phone Number'
                     />
                 </div>
