@@ -86,7 +86,7 @@ const GoldCoastPropertyDetailsPage = () => {
       <ScrollToTop />
       <div>
         <Link href="#!" className='gallery-button' ref={galleryButtonRef} onClick={() => setOpen(true)}>
-          <img className="main-property-image" src={property.images[0]} alt="Main Property" style={{ height: '100vh', width: '100%' }} />
+          <img className="main-property-image" src={property.images[0]} alt="Main Property" style={{ height: '100vh', width: '100%', objectFit: 'cover'}} />
           <div className="main-property-overlay"></div>
         </Link>
 
@@ -142,7 +142,7 @@ const GoldCoastPropertyDetailsPage = () => {
           </div>
         </div>
 
-        <div ref={mapContainerRef} style={{ margin: '2rem 26%', height: '60vh', width: '48%', borderRadius: '0.25rem', padding: '1rem 0'}}></div>
+        <div ref={mapContainerRef} className='map-property' style={{ margin: '2rem 26%', height: '60vh', width: '48%', borderRadius: '0.25rem', padding: '1rem 0'}}></div>
         
         <div className='property-contact-form'>
           <h2>Enquire Now</h2>
