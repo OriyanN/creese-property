@@ -161,11 +161,7 @@
 
 @media (max-width: 1300px) {
     .logo img {
-        height: 5.5vh;
-    }
-
-    .header.shrunk .logo img {
-        height: 4.75vh;
+        height: 6.5vh;
     }
 }
 
@@ -236,6 +232,14 @@
         justify-content: flex-start;
         flex-direction: column;
         text-align: center;
+    }
+
+    .logo img {
+        height: 5.5vh;
+    }
+
+    .header.shrunk .logo img {
+        height: 4.75vh;
     }
     
     .dropdown {
