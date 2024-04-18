@@ -3,7 +3,8 @@
 }
 
 .contact-form h2 {
-    font-size: 4rem;
+    font-size: 6rem;
+    font-weight: 100;
     color: var(--grey-blue);
     text-transform: uppercase;
 }
@@ -59,6 +60,18 @@
     .contact-form {
         padding: 1.2rem 3%;
     }    
+}
+
+@media (max-width: 900px) {
+    .contact-form h2 {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-form h2 {
+        font-size: 4rem;
+    }
 }
 
 @media (max-width: 550px) {
