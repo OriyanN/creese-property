@@ -128,6 +128,12 @@
     }
 }
 
+@media (max-width: 850px) {
+    .preloader {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     .divider-section h2, .divider-section span {
         font-size: 5rem;
