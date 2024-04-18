@@ -4,7 +4,8 @@
 }
 
 .accordion h2 {
-    font-size: 8rem;
+    font-size: 6rem;
+    font-weight: 100;
     color: var(--grey-blue);
     padding: 0rem 0.5rem;
 }
