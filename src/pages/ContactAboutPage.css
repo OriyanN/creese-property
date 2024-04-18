@@ -94,11 +94,15 @@
     padding: 2rem 0;
 }
 
+.team {
+    padding-top: 0rem !important;
+}
+
 .team-member {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 2rem;
+    padding: 0rem 2rem;
 }
 
 .team-member img {
@@ -176,6 +180,10 @@
 
     .team, .what-who {
         flex-direction: column;
+    }
+
+    .team-member {
+        padding: 2rem 0;
     }
 
     .what-who {
