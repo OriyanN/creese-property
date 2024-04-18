@@ -41,3 +41,9 @@ html {
 a {
   cursor: pointer;
 }
+
+@media (max-width: 1300px) {
+  html {
+      font-size: 55%;
+  }
+}
