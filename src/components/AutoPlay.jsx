@@ -1,8 +1,9 @@
-import React from "react";
-import Slider from "react-slick";
 
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, FreeMode } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/free-mode';
 
 import ABC from '../assets/Featured/9.png';
 import Australian_Financial_Review from '../assets/Featured/10.png';
@@ -32,41 +33,41 @@ function AutoPlay() {
         { src: The_Urban_Developer, alt: 'The Urban Developer' }
     ];
 
-    const settings = {
-        dots: false,
-        infinite: true,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        autoplay: true,
-        speed: 4000,
-        autoplaySpeed: 4000,
-        cssEase: "linear",
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                },
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                },
-            },
-        ],
-    };
-    
     return (
         <div className="block-featured-container">    
-            <div className="featured-container">
-                <Slider {...settings}>
+            <div className="featured-container swiper-wrapper">
+                <Swiper
+                    modules = {[ Autoplay, FreeMode ]}
+                    grabCursor={true}
+                    centeredSlides={true}
+                    loop={true}
+                    slidesPerView={5}
+                    autoplay={{
+                        delay: 1,
+                        disableOnInteraction: false,
+                        reverseDirection: false,
+                    }}
+                    speed={2500}
+                    freeMode={true}
+                    freeModeMomentum={false}
+                    breakpoints={{
+                        380: {
+                            slidesPerView: 3,
+                        },
+                        650: {
+                            slidesPerView: 4,
+                        },  
+                        950: {
+                            slidesPerView: 5,
+                        },
+                    }}
+                >
                     {images.map((image, index) => (
-                        <img key={index} src={image.src} alt={image.alt} />
+                        <SwiperSlide key={index}>
+                            <img src={image.src} alt={image.alt} />
+                        </SwiperSlide>
                     ))}
-                </Slider>
+                </Swiper>
             </div>
         </div>
     );
