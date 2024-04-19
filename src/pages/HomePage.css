@@ -86,7 +86,7 @@
     width: 100%;
     height: auto;
     background-color: transparent;
-    animation: zoomIn 4s forwards;
+    animation: zoomIn 2.75s forwards;
     animation-delay: 1s;
 }
 
