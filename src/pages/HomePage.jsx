@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 import "./HomePage.css";
 
@@ -23,6 +24,11 @@ function HomePage() {
 
     return (
         <>
+            <Helmet>
+                <title>Home | Creese Property</title>
+                <meta name="description" content="Home page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <link rel="canonical" href="/" />
+            </Helmet>
             {loading && (
                 <div className="preloader">
                     <img src={preloaderImage} alt="Loading" />

@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 import ScrollToTop from "../components/ScrollToTop.jsx";
 
@@ -7,7 +8,12 @@ import './PrivacyTermsPage.css';
 function PrivacyPage() {
     return (
         <>
-        <ScrollToTop />
+            <Helmet>
+                <title>Privacy | Creese Property</title>
+                <meta name="description" content="Privacy page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <link rel="canonical" href="/privacy" />
+            </Helmet>
+            <ScrollToTop />
             <div>
                 <div className="privacy">
                     <h1>Privacy Policy</h1>

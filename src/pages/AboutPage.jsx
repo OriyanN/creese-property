@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
@@ -11,6 +12,11 @@ function AboutPage() {
 
     return (
         <>
+            <Helmet>
+                <title>About | Creese Property</title>
+                <meta name="description" content="About page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <link rel="canonical" href="/about" />
+            </Helmet>
             {/* <Preloader /> */}
             <ScrollToTop />
             <div>

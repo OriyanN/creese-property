@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
@@ -25,7 +26,12 @@ function PortfolioPage() {
     ];
 
     return (
-        <>
+        <> 
+            <Helmet>
+                <title>Portfolio | Creese Property</title>
+                <meta name="description" content="Portfolio page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <link rel="canonical" href="/portfolio" />
+            </Helmet>
             <ScrollToTop />
             <div>
                 <div className="contact-about-header">

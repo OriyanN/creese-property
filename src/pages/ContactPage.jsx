@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 
@@ -30,6 +31,11 @@ function ContactPage() {
 
     return (
         <>
+            <Helmet>
+                <title>Contact | Creese Property</title>
+                <meta name="description" content="Contact page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <link rel="canonical" href="/contact" />
+            </Helmet>
             <ScrollToTop />
             <div>
                 <div className="contact-about-header">

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -86,6 +87,11 @@ const BrisbanePage = () => {
     
     return (
         <>
+            <Helmet>
+                <title>Brisbane | Creese Property</title>
+                <meta name="description" content="Brisbane page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <link rel="canonical" href="/locations/brisbane" />
+            </Helmet>
             <ScrollToTop />
             <section className="section location">
                 <h1 className='location-name'>Brisbane</h1>

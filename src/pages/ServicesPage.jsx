@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 import Footer from '../components/Footer';
 import "./ServicePage.css"
@@ -8,6 +9,11 @@ function ServicePage() {
 
     return (
         <>
+            <Helmet>
+                <title>Services | Creese Property</title>
+                <meta name="description" content="Services page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <link rel="canonical" href="/services" />
+            </Helmet>
             <ScrollToTop />
             <div>
                 <div className="contact-about-header">
