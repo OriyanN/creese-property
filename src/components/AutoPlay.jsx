@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, FreeMode } from 'swiper/modules';
@@ -47,7 +46,7 @@ function AutoPlay() {
                         disableOnInteraction: false,
                         reverseDirection: false,
                     }}
-                    speed={2500}
+                    speed={4000}
                     freeMode={true}
                     freeModeMomentum={false}
                     breakpoints={{
