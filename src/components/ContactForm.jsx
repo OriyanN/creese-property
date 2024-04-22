@@ -23,6 +23,9 @@ function ContactForm() {
     const [selectedProperty, setSelectedProperty] = useState('');
     const [propertiesOptions, setPropertiesOptions] = useState([]);
     const [enquiryType, setEnquiryType] = useState('');
+    const [locationProperty, setLocationProperty] = useState('');
+    const [bedsNumber, setBedsNumber] = useState('');
+    const [bathsNumber, setBathsNumber] = useState('');
 
     useEffect(() => {
         if (selectedLocation) {
@@ -33,15 +36,19 @@ function ContactForm() {
         setSelectedProperty('');
     }, [selectedLocation]);
 
-    const handleFormSubmit = () => {
+    const handleFormSubmit = (e) => {
         e.preventDefault(); // Prevent default form submission behavior
         // Form submission logic here
-      };
+    };
+
+    useEffect(() => {
+        console.log("Enquiry Type Changed:", enquiryType);
+    }, [enquiryType]);    
 
     return (
         <div className='contact-form'>
             <h2>Contact Us</h2>
-            <form action=''>
+            <form onSubmit={handleFormSubmit}>
                 <div className="name-section">
                     <input 
                         type="text"
@@ -104,11 +111,65 @@ function ContactForm() {
                         <option value="">Select Enquiry Type</option>
                         <option value="rental">Rental Enquiry</option>
                         <option value="general">General Enquiry</option>
+                        <option value="propertyNotification">Be Notified About a Property</option>
                         <option value="other">Other</option>
                     </select>
                 </div>
+                {enquiryType === "propertyNotification" && (
+                    <div className="additional-selects">
+                        <select
+                            className="additional-selects-dropdown location"
+                            value={locationProperty}
+                            onChange={e => setLocationProperty(e.target.value)}
+                            name="locationProperty"
+                        >
+                            <option value="">Location</option>
+                            <option value="GoldCoast">Gold Coast</option>
+                            <option value="Logan">Logan</option>
+                            <option value="Ipswich">Ipswich</option>
+                            <option value="Brisbane">Brisbane</option>
+                            <option value="SunshineCoast">Sunshine Coast</option>
+                        </select>
+                        <select
+                            className="additional-selects-dropdown beds"
+                            value={bedsNumber}
+                            onChange={e => setBedsNumber(e.target.value)}
+                            name="bedsNumber"
+                        >
+                            <option value="">Beds</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                        <select
+                            className="additional-selects-dropdown baths"
+                            value={bathsNumber}
+                            onChange={e => setBathsNumber(e.target.value)}
+                            name="bathsNumber"
+                        >
+                            <option value="">Baths</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                    </div>
+                )}
                 <div className='message-section'>
                     <textarea type="text" name='message' rows='6' placeholder='Message'/>
+                </div>
+                <div className="newsletter-signup">
+                    <label htmlFor="">
+                        <input type="checkbox" name="newsletterSignup" id="newsletterSignup" />
+                        I  would like to sign up for news and updates from Creese Property and agree to the Privacy Policy.
+                    </label>
                 </div>
                 <AnimatedButton onSubmit={handleFormSubmit} />
             </form>

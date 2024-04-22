@@ -15,7 +15,7 @@
     padding-bottom: 4rem;
 }
 
-.name-section, .details-section, .dropdowns-section {
+.name-section, .details-section, .dropdowns-section, .additional-selects, .newsletter-signup {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -43,6 +43,13 @@
     padding: 1rem 3rem;
 }
 
+.additional-selects-dropdown {
+    border-bottom: 1px solid var(--grey-blue);
+    width: 28.25%;
+    font-size: 2.5rem;
+    padding: 1rem 3rem;
+}
+
 .message-section {
     display: flex;
     justify-content: center;
@@ -52,8 +59,19 @@
     width: 95%;
 }
 
-.contact-form input::placeholder, .contact-form select.dropdown-section, .contact-form textarea::placeholder {
+.contact-form input::placeholder, .contact-form select.dropdown-section, .contact-form select.additional-selects-dropdown, .contact-form textarea::placeholder, .newsletter-signup {
     color: var(--grey-beige);
+}
+
+.newsletter-signup label {
+    font-size: 2rem;
+    width: 95%;
+}
+
+.contact-form .newsletter-signup input {
+    width: 1.5rem;
+    margin-right: 1.5rem;
+    accent-color: var(--light-blue);
 }
 
 @media (max-width: 1130px) {
@@ -75,23 +93,27 @@
 }
 
 @media (max-width: 550px) {
-    .name-section, .details-section {
+    .name-section, .details-section, .additional-selects {
         flex-direction: column;
     }
     .name-section, .details-section, .dropdowns-section {
         padding: 2rem 0;
     }
 
-    .name-section, .details-section, .dropdown-section, .message-section {
+    .name-section, .details-section, .dropdown-section, .message-section, .additional-selects {
         align-items: center;
     }
 
-    .name-section input, .details-section input {
+    .name-section input, .details-section input, .additional-selects select {
         width: 95%;
         padding: 1rem 3rem;
     }
 
-    .lastName, .phoneNumber {
+    .lastName, .phoneNumber, .beds, .baths {
         padding-top: 4rem !important;
+    }
+
+    .additional-selects {
+        margin-top: -2rem;
     }
 }
