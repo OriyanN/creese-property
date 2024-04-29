@@ -146,10 +146,6 @@
     opacity: 0.9;
 }
 
-.svg-inline--fa.fa-circle-chevron-left path, .svg-inline--fa.fa-circle-chevron-right path {
-    color: var(--white);
-}
-
 .item .overlay {
     position: absolute;
     top: 0;

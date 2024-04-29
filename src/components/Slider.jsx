@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleChevronLeft, faCircleChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate, Link } from 'react-router-dom';
 
 import './Slider.css';
+
+import LeftArrow from "../assets/left-arrow.png";
+import RightArrow from "../assets/right-arrow.png";
 
 import GoldCoastProperty from '../assets/GoldCoast/gc1/1.jpg';
 import BrisbaneProperty from '../assets/Brisbane/bri1/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg';
@@ -57,8 +57,16 @@ const Slider = () => {
                 ))}
             </div>
             <div className="arrows">
-                <button className="prev" onClick={handlePrev}><FontAwesomeIcon icon={faCircleChevronLeft} /></button>
-                <button className="next" onClick={handleNext}><FontAwesomeIcon icon={faCircleChevronRight} /></button>
+                <button className="prev" onClick={handlePrev}>
+                    <Link href="">
+                        <img className="slider-arrow" width="40" height="40" src={LeftArrow} alt="Left arrow"/>
+                    </Link>
+                </button>
+                <button className="next" onClick={handleNext}>
+                    <Link href="">
+                        <img className="slider-arrow" width="40" height="40" src={RightArrow} alt="Right arrow"/>
+                    </Link>
+                </button>
             </div>
         </div>
     );
