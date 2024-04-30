@@ -86,13 +86,14 @@ const LoganPage = () => {
             <Helmet>
                 <title>Logan | Creese Property</title>
                 <meta name="description" content="Logan page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <meta name="robots" content="noindex"/>
                 <link rel="canonical" href="/locations/logan" />
             </Helmet>
             <ScrollToTop />
             <section className="section location">
                 <h1 className='location-name'>Logan</h1>
                 <div className="initial-image">
-                    <img src={mainInitialImage} alt="Logan" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img src={mainInitialImage} alt="Creese Property - Logan" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     <div className="overlay"></div>
                 </div>
                 <div className="search">

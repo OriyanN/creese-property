@@ -90,13 +90,14 @@ const GoldCoastPage = () => {
             <Helmet>
                 <title>Gold Coast | Creese Property</title>
                 <meta name="description" content="Gold Coast page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <meta name="robots" content="noindex"/>
                 <link rel="canonical" href="/locations/gold-coast" />
             </Helmet>
             <ScrollToTop />
             <section className="section location">
                 <h1 className='location-name'>Gold Coast</h1>
                 <div className="initial-image">
-                    <img src={mainInitialImage} alt="Gold Coast" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img src={mainInitialImage} alt="Creese Property - Gold Coast" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     <div className="overlay"></div>
                 </div>
                 <div className="search">
