@@ -346,3 +346,9 @@
 .menu-burger.open::after {
     transform: rotate(-45deg);
 }
+
+.header, .header.shrunk, .grey-theme {
+    transition: height 0.3s ease, padding 0.3s ease;
+    backdrop-filter: blur(5px);  
+    background-color: rgba(164, 164, 164, .5);
+}

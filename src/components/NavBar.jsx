@@ -41,11 +41,20 @@ function NavBar() {
         setDropdownOpen(!dropdownOpen);
     };
 
+    // useEffect(() => {
+    //     const className = location.pathname === "/privacy" || location.pathname === "/terms-conditions" ? 'grey-theme' : 'white-theme';
+    //     document.documentElement.className = className;
+    //     setLogo(className === 'grey-theme' ? logoGreyBeige : logoWhite);
+    // }, [location.pathname]);    
+
     useEffect(() => {
-        const className = location.pathname === "/privacy" || location.pathname === "/terms-conditions" ? 'grey-theme' : 'white-theme';
-        document.documentElement.className = className;
-        setLogo(className === 'grey-theme' ? logoGreyBeige : logoWhite);
-    }, [location.pathname]);    
+        // Detect specific pages
+        const isSpecialPage = location.pathname === "/privacy" || location.pathname === "/terms-conditions";
+        
+        // Set the navbar style state
+        setIsShrunk(isSpecialPage); 
+    }, [location.pathname]);
+    ;    
     
     useEffect(() => {
         const handleScroll = () => {
@@ -82,7 +91,7 @@ function NavBar() {
             <div>
                 <div>
                     <header className={`header ${isShrunk ? 'shrunk' : ''}`}>
-                        <Link to="/" className="logo"><img src={logo} alt="Logo" /></Link>
+                        <Link to="/" className="logo"><img src={logo} alt="Creese Property Logo" /></Link>
                         <div className="menu-btn" onClick={toggleMenu}>
                             <div className={`menu-burger ${menuOpen ? 'open' : ''}`}></div>
                         </div>
