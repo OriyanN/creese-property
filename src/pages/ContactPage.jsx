@@ -39,7 +39,7 @@ function ContactPage() {
             <ScrollToTop />
             <div>
                 <div className="contact-about-header">
-                    <img src="src/assets/contact-image.jpg" alt="" />
+                    <img src="src/assets/contact-image.jpg" alt="Creese Property Contact" />
                     <h1>Contact</h1>
                     <div className="overlay"></div>
                 </div>

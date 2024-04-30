@@ -35,7 +35,7 @@ function PortfolioPage() {
             <ScrollToTop />
             <div>
                 <div className="contact-about-header">
-                    <img src="src/assets/portfolio-image.jpg" alt="" />
+                    <img src="src/assets/portfolio-image.jpg" alt="Creese Property Portfolio" />
                     <h1>Portfolio</h1>
                     <div className="overlay"></div>
                 </div>

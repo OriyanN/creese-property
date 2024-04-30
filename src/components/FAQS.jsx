@@ -13,7 +13,7 @@ const FAQS = ({ faq, index, toggleFAQ }) => {
         >
             <div className="faq-question">
                 {faq.question}
-                <img src={arrowDown} alt="Toggle" className={`arrow ${faq.open ? "rotate" : ""}`} />
+                <img src={arrowDown} alt="Creese Property FAQS Toggle" className={`arrow ${faq.open ? "rotate" : ""}`} />
             </div>
             <div className="faq-answer">{faq.answer}</div>
         </div>

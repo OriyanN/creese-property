@@ -21,13 +21,13 @@ function AboutPage() {
             <ScrollToTop />
             <div>
                 <div className="contact-about-header">
-                    <img src="src/assets/about-image.jpg" alt="" />
+                    <img src="src/assets/about-image.jpg" alt="Creese Property Lachlan Creese" />
                     <h1>About Us</h1>
                     <div className="overlay"></div>
                 </div>
                 <div className="about-body">
                     <div>
-                        <img className="about-image" src="src/assets/Lachie Black.png" alt="" />
+                        <img className="about-image" src="src/assets/Lachie Black.png" alt="Creese Property About Us" />
                     </div>
                     <div className="about-text">
                         <h2>Lorem Ipsum</h2>
@@ -43,7 +43,7 @@ function AboutPage() {
                     <h2>Team</h2>
                     <div className="team">
                         <div className="team-member">
-                            <LazyImageAbout src="src/assets/Lachie Black.png" alt="" />
+                            <LazyImageAbout src="src/assets/Lachie Black.png" alt="Creese Property Lachlan Creese" />
                             <div className="team-headings">
                                 <h3>Lachlan Creese</h3>
                                 <h4>Licensee</h4>
@@ -51,7 +51,7 @@ function AboutPage() {
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at urna condimentum mattis. Etiam non quam lacus suspendisse faucibus. Est ultricies integer quis auctor elit. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Non quam lacus suspendisse faucibus interdum posuere. Posuere urna nec tincidunt praesent semper. Sodales ut eu sem integer vitae. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. </p>
                         </div>
                         <div className="team-member">
-                            <LazyImageAbout src="src/assets/Michael Black.png" alt="" />
+                            <LazyImageAbout src="src/assets/Michael Black.png" alt="Creese Property Michael Pell" />
                             <div className="team-headings">
                                 <h3>Michael Pell</h3>
                                 <h4>Lorem ipsum</h4>
@@ -59,7 +59,7 @@ function AboutPage() {
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at urna condimentum mattis. Etiam non quam lacus suspendisse faucibus. Est ultricies integer quis auctor elit. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Non quam lacus suspendisse faucibus interdum posuere. Posuere urna nec tincidunt praesent semper. Sodales ut eu sem integer vitae. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. </p>
                         </div>
                         <div className="team-member">
-                            <LazyImageAbout src="src/assets/Lachie Black.png" alt="" />
+                            <LazyImageAbout src="src/assets/Lachie Black.png" alt="Creese Property Lachlan Creese" />
                             <div className="team-headings">
                                 <h3>Lorem ipsum</h3>
                                 <h4>Property Manager</h4>
