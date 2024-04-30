@@ -26,27 +26,27 @@ const Footer = () => {
     <>
       <ScrollToTop />
       <footer className="footer">
-        <Link to="/" className="logo"><img src={logo} alt="Logo" /></Link>
+        <Link to="/" className="logo"><img src={logo} alt="Creese Property Logo" /></Link>
         <div className="social-media">
           <ul>
             <li className="facebook-icon">
               <Link href="">
-                <img className="social-media-white" width="20" height="20" src={facebook_white} alt="facebook-new--v3-icon8"/>
-                <img className="social-media-blue" width="20" height="20" src={facebook_blue} alt="facebook-new--v3-icon8"/>
+                <img className="social-media-white" width="20" height="20" src={facebook_white} alt="facebook Icon (icon8)"/>
+                <img className="social-media-blue" width="20" height="20" src={facebook_blue} alt="facebook Icon (icon8)"/>
               </Link>
             </li>
             <li className="linkedin-icon">
               <div className="linkedin-icon">
                 <Link href="">
-                  <img className="social-media-white" width="20" height="20" src={linkedin_white} alt="linkedin-2--v2-icon8"/>
-                  <img className="social-media-blue" width="20" height="20" src={linkedin_blue} alt="linkedin-2--v2-icon8"/>
+                  <img className="social-media-white" width="20" height="20" src={linkedin_white} alt="Linkedin Icon (icon8)"/>
+                  <img className="social-media-blue" width="20" height="20" src={linkedin_blue} alt="Linkedin Icon (icon8)"/>
                 </Link>
               </div>
             </li>
             <li className="instagram-icon">
               <Link href="">
-                  <img className="social-media-white" width="20" height="20" src={instagram_white} alt="instagram-new--v3-icon8"/>
-                  <img className="social-media-blue" width="20" height="20" src={instagram_blue} alt="instagram-new--v3-icon8"/>
+                  <img className="social-media-white" width="20" height="20" src={instagram_white} alt="Instagram Icon (icon8)"/>
+                  <img className="social-media-blue" width="20" height="20" src={instagram_blue} alt="Instagram Icon (icon8)"/>
               </Link>
             </li>
           </ul> 
