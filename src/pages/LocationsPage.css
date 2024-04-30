@@ -147,9 +147,7 @@
 }
 
 @media (max-width: 950px) {
-    .location-name {
-        font-size: 10rem;
-    }
+
 
     .search {
         height: 15vh;
@@ -170,6 +168,19 @@
     }
 }
 
+@media (max-width: 600px) {
+    .location-name {
+        font-size: 10rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .location-name {
+        font-size: 9rem;
+        padding: 45vh 3% 0 3%;
+    }
+}
+
 @media (max-width: 550px) {
     .map-container {
         display: none;
@@ -182,7 +193,7 @@
 
 @media (max-width: 500px) {
     .location-name {
-        font-size: 10rem;
+        font-size: 8rem;
     }
 
     .search {
@@ -192,7 +203,7 @@
 
 @media (max-width: 450px) {
     .location-name {
-        font-size: 8rem;
+        font-size: 7rem;
     }
 
     .location-details p {

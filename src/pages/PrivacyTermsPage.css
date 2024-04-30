@@ -1,8 +1,9 @@
 .privacy {
     padding: 15vh 9% 2rem 9%;
 }
+
 .privacy h1 {
-    font-size: 10rem;
+    font-size: 12rem;
     padding-bottom: 5rem;
     color: var(--grey-blue);
 }
@@ -39,4 +40,34 @@ ol.privacy-section {
 .privacy p {
     font-size: 2rem;
     text-align: justify;
+}
+
+@media (max-width: 1130px) {
+    .privacy {
+        padding: 15vh 3% 2rem 3%;
+    }
+}
+
+@media (max-width: 690px) {
+    .privacy h1 {
+        font-size: 10rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .privacy h1 {
+        font-size: 9rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .privacy h1 {
+        font-size: 8rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .privacy h1 {
+        font-size: 7rem;
+    }
 }
