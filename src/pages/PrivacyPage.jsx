@@ -11,6 +11,7 @@ function PrivacyPage() {
             <Helmet>
                 <title>Privacy | Creese Property</title>
                 <meta name="description" content="Privacy page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <meta name="robots" content="noindex"/>
                 <link rel="canonical" href="/privacy" />
             </Helmet>
             <ScrollToTop />
