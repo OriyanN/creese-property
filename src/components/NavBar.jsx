@@ -39,22 +39,19 @@ function NavBar() {
     const toggleDropdown = (event) => {
         event.preventDefault();
         setDropdownOpen(!dropdownOpen);
-    };
-
-    // useEffect(() => {
-    //     const className = location.pathname === "/privacy" || location.pathname === "/terms-conditions" ? 'grey-theme' : 'white-theme';
-    //     document.documentElement.className = className;
-    //     setLogo(className === 'grey-theme' ? logoGreyBeige : logoWhite);
-    // }, [location.pathname]);    
+    };  
 
     useEffect(() => {
-        // Detect specific pages
-        const isSpecialPage = location.pathname === "/privacy" || location.pathname === "/terms-conditions";
-        
-        // Set the navbar style state
-        setIsShrunk(isSpecialPage); 
-    }, [location.pathname]);
-    ;    
+        const handleScroll = () => {
+            const shouldBeShrunk = window.scrollY > 120;
+            setIsShrunk(shouldBeShrunk);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const isSpecialPage = location.pathname === "/privacy" || location.pathname === "/terms-conditions";
     
     useEffect(() => {
         const handleScroll = () => {
@@ -90,7 +87,7 @@ function NavBar() {
             <ScrollToTop />
             <div>
                 <div>
-                    <header className={`header ${isShrunk ? 'shrunk' : ''}`}>
+                    <header className={`header ${isShrunk ? 'shrunk' : ''} ${isSpecialPage && !isShrunk ? 'transparent' : ''}`}>
                         <Link to="/" className="logo"><img src={logo} alt="Creese Property Logo" /></Link>
                         <div className="menu-btn" onClick={toggleMenu}>
                             <div className={`menu-burger ${menuOpen ? 'open' : ''}`}></div>
@@ -104,58 +101,58 @@ function NavBar() {
                                 Home
                             </Link>
                             <Link 
-                        to="/about"
-                        className={isActive("/about") ? "active" : ""}
-                        onClick={handleLinkClick}
-                        >
-                            About
-                        </Link>
-                        <Link 
-                        to="/services" 
-                        className={isActive("/services") ? "active" : ""}
-                        onClick={handleLinkClick}
-                        >
-                            Services
-                        </Link>
-                        <Link 
-                        to="/portfolio" 
-                        className={isActive("/portfolio") ? "active" : ""}
-                        onClick={handleLinkClick}
-                        >
-                            Portfolio
-                        </Link>
-                        <div 
-                            className={`dropdown ${dropdownOpen ? 'open' : ''}`} 
-                            aria-haspopup="true" 
-                            aria-expanded={dropdownOpen}>
-                            <Link 
-                                to="#" 
-                                className={`dropdown-toggle ${isActive("/locations") ? "active" : ""}`} 
-                                onClick={toggleDropdown}
-                                aria-haspopup="true"
-                                aria-expanded={dropdownOpen}
-                            >
-                                Locations
-                            </Link>
-                            {dropdownOpen && (
-                                <div className="dropdown-content-hover">
-                                    <div className="dropdown-content" role="menu">
-                                        <Link to="/locations/gold-coast" onClick={handleLinkClick} role="menuitem">Gold Coast</Link>
-                                        <Link to="/locations/logan" onClick={handleLinkClick} role="menuitem">Logan</Link>
-                                        <Link to="/locations/Ipswich" onClick={handleLinkClick} role="menuitem">Ipswich</Link>
-                                        <Link to="/locations/brisbane" onClick={handleLinkClick} role="menuitem">Brisbane</Link>
-                                        <Link to="/locations/sunshine-coast" onClick={handleLinkClick} role="menuitem">Sunshine Coast</Link>
+                                to="/about"
+                                className={isActive("/about") ? "active" : ""}
+                                onClick={handleLinkClick}
+                                >
+                                    About
+                                </Link>
+                                <Link 
+                                to="/services" 
+                                className={isActive("/services") ? "active" : ""}
+                                onClick={handleLinkClick}
+                                >
+                                    Services
+                                </Link>
+                                <Link 
+                                to="/portfolio" 
+                                className={isActive("/portfolio") ? "active" : ""}
+                                onClick={handleLinkClick}
+                                >
+                                    Portfolio
+                                </Link>
+                            <div 
+                                className={`dropdown ${dropdownOpen ? 'open' : ''}`} 
+                                aria-haspopup="true" 
+                                aria-expanded={dropdownOpen}>
+                                <Link 
+                                    to="#" 
+                                    className={`dropdown-toggle ${isActive("/locations") ? "active" : ""}`} 
+                                    onClick={toggleDropdown}
+                                    aria-haspopup="true"
+                                    aria-expanded={dropdownOpen}
+                                >
+                                    Locations
+                                </Link>
+                                {dropdownOpen && (
+                                    <div className="dropdown-content-hover">
+                                        <div className="dropdown-content" role="menu">
+                                            <Link to="/locations/gold-coast" onClick={handleLinkClick} role="menuitem">Gold Coast</Link>
+                                            <Link to="/locations/logan" onClick={handleLinkClick} role="menuitem">Logan</Link>
+                                            <Link to="/locations/Ipswich" onClick={handleLinkClick} role="menuitem">Ipswich</Link>
+                                            <Link to="/locations/brisbane" onClick={handleLinkClick} role="menuitem">Brisbane</Link>
+                                            <Link to="/locations/sunshine-coast" onClick={handleLinkClick} role="menuitem">Sunshine Coast</Link>
+                                        </div>
                                     </div>
-                                </div>
-                            )}
-                        </div>
-                        <Link 
-                        to="/contact" 
-                        className={isActive("/contact") ? "active" : ""}
-                        onClick={handleLinkClick}
-                        >
-                            Contact
-                        </Link>
+                                )}
+                            </div>
+                            <Link 
+                            to="/contact" 
+                            className={isActive("/contact") ? "active" : ""}
+                            onClick={handleLinkClick}
+                            >
+                                Contact
+                            </Link>
                         </nav>
                     </header>
                     <Outlet />
