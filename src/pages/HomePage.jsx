@@ -10,7 +10,7 @@ import AutoPlay from '../components/AutoPlay.jsx';
 import Accordion from '../components/Accordion.jsx';
 
 import videoBg from "../assets/creese-property-video.mp4";
-import preloaderImage from '../assets/CP Transparent(1).png';
+import preloaderImage from '../assets/CP Transparent(2).png';
 
 function HomePage() {
     const [loading, setLoading] = useState(true);
