@@ -64,7 +64,7 @@
     background-position: -100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: all 0.55s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .gallery-button:hover {
