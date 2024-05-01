@@ -1,0 +1,31 @@
+.notfound-background {
+    background-color: var(--grey-blue);
+    height: 100vh;
+    padding: 35rem 9%;
+}
+
+.notfound-header {
+    font-size: 10rem;
+    color: var(--white);
+    font-family: VersaillesBold;
+}
+
+.notfound-background p {
+    font-size: 2.25rem;
+    color: var(--white);
+    padding: 0.5rem 0 3rem 0;
+    font-family: VersaillesBold;
+}
+
+.notfound-background a.gallery-button {
+    color: var(--white);
+    background-image: linear-gradient(
+    to right,
+    #294162,
+    #294162 50%,
+    #ffffff 50%
+    );
+    font-size: 2.25rem;
+    font-family: VersaillesBold;
+    text-decoration: underline !important;
+}
