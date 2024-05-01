@@ -46,7 +46,7 @@ const Slider = () => {
         <div className="container">
             <div className="slider">
                 {items.map((item, index) => (
-                    <div key={item.id} className="item" alt={item.address} style={{ backgroundImage: `url(${item.url})` }}>
+                    <div key={item.id} className="item" aria-label={item.address} alt={item.address} style={{ backgroundImage: `url(${item.url})` }}>
                     {index < 2 && <div className="overlay"></div>}
                     <div className="content">
                         <div className="address">{item.address}</div>
@@ -58,14 +58,10 @@ const Slider = () => {
             </div>
             <div className="arrows">
                 <button className="prev" onClick={handlePrev}>
-                    <Link href="">
-                        <img className="slider-arrow" width="40" height="40" src={LeftArrow} alt="Left arrow"/>
-                    </Link>
+                    <img className="slider-arrow" width="40" height="40" src={LeftArrow} alt="Left arrow"/>
                 </button>
                 <button className="next" onClick={handleNext}>
-                    <Link href="">
-                        <img className="slider-arrow" width="40" height="40" src={RightArrow} alt="Right arrow"/>
-                    </Link>
+                    <img className="slider-arrow" width="40" height="40" src={RightArrow} alt="Right arrow"/>
                 </button>
             </div>
         </div>
