@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 import Lightbox from "yet-another-react-lightbox";
@@ -83,10 +84,16 @@ const GoldCoastPropertyDetailsPage = () => {
   
   return (
     <>
+      <Helmet>
+          <title>Gold Coast | Creese Property</title>
+          <meta name="description" content="Gold Coast page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+          <meta name="robots" content="noindex"/>
+          <link rel="canonical" href={'/locations/gold-coast/properties/${property.id}'} />
+      </Helmet>
       <ScrollToTop />
       <div>
         <Link href="#!" className='gallery-button' ref={galleryButtonRef} onClick={() => setOpen(true)}>
-          <img className="main-property-image" src={property.images[0]} alt="Main Property" style={{ height: '100vh', width: '100%', objectFit: 'cover'}} />
+          <img className="main-property-image" src={property.images[0]} alt={`Creese Property ${property.address}`} style={{ height: '100vh', width: '100%', objectFit: 'cover'}} />
           <div className="main-property-overlay"></div>
         </Link>
 
