@@ -4,9 +4,8 @@ import './AnimatedButton.css'; // Assuming you have converted your CSS into a CS
 function AnimatedButton({ onSubmit }) {
   const [buttonState, setButtonState] = useState('normal');
 
-  const handleClick = () => {
-    // Dummy logic for demonstration. You should replace this with your actual form submission logic.
-    const isSuccess = Math.random() > 0.5;
+  const handleClick = (e) => {
+    e.preventDefault();
 
     if (isSuccess) {
       setButtonState('success');
