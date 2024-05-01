@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /locations/
+Disallow: /privacy
+Disallow: /terms-conditions
+Sitemap: https://www.creeseproperty.com/sitemap.xml
+Host: https://www.creeseproperty.com
