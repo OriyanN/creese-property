@@ -46,8 +46,8 @@ const Slider = () => {
         <div className="container">
             <div className="slider">
                 {items.map((item, index) => (
-                    <div key={item.id} className="item" aria-label={item.address} alt={item.address} style={{ backgroundImage: `url(${item.url})` }}>
-                    {index < 2 && <div className="overlay"></div>}
+                    <div key={item.id} onClick={handleNext} className="item" aria-label={item.address} alt={item.address} style={{ backgroundImage: `url(${item.url})` }}>
+                    {index < 2 && <div className="overlay" ></div>}
                     <div className="content">
                         <div className="address">{item.address}</div>
                         <div className="des">{item.description}</div>
