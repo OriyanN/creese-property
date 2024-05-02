@@ -29,13 +29,16 @@ function HomePage() {
                 <meta name="description" content="Home page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
                 <link rel="canonical" href="/" />
             </Helmet>
+            <ScrollToTop />
             {loading && (
                 <div className="preloader">
-                    <img src={preloaderImage} alt="Loading" />
+                    <img src={preloaderImage} alt="Loading"/>
                 </div>
             )}
-            <ScrollToTop />
             <section className="section home">
+                    <div className="video-text">
+                        Creese Property
+                    </div>
                 <div className="welcome">
                     <video className="header-video" src={videoBg} autoPlay loop muted alt="Creese Property Videou6" />
                     <div className="overlay-home"></div>

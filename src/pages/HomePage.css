@@ -15,9 +15,29 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
     z-index: 1;
     height: 100vh;
+}
+
+@keyframes zoomInFadeOut {
+    0%, 20% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+    40% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 0; }
+}
+
+.video-text {
+    position: absolute;
+    z-index: 10;
+    top: 12.5%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    color: white;
+    font-size: 7rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+    animation: zoomInFadeOut 15s ease-in-out forwards;
 }
 
 .text-home {
@@ -26,7 +46,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* background-color: rgba(164, 164, 164, 0.2); */
     background-color: rgba(214, 208, 201, 0.3);
     margin-bottom: -3rem;
 }
@@ -106,6 +125,10 @@
 }
 
 @media (max-width: 1130px) {
+    .video-text {
+        font-size: 6rem;
+    }
+
     .text-home p {
         font-size: 5rem;
         width: 100%;
@@ -126,6 +149,10 @@
 }
 
 @media (max-width: 900px) {
+    .video-text {
+        font-size: 5rem;
+    }
+
     .divider-section {
         height: 65vh;
     }
@@ -146,6 +173,10 @@
 }
 
 @media (max-width: 768px) {
+    .video-text {
+        font-size: 4.25rem;
+    }
+
     .divider-section h2, .divider-section span {
         font-size: 4rem;
     }
@@ -179,6 +210,10 @@
 }
 
 @media (max-width: 650px) {
+    .video-text {
+        font-size: 4rem;
+    }
+
     .text-home p {
         font-size: 4.5rem;
         padding: 0 3%;
@@ -187,6 +222,19 @@
     .divider-section h2, .divider-section span {
         font-size: 4.5rem;
         text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .video-text {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .video-text {
+        font-size: 3rem;
+        top: 11.5%;
     }
 }
 
@@ -213,6 +261,12 @@
 @media (max-width: 500px) {
     .text-home p {
         font-size: 3.25rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .video-text {
+        font-size: 2.5rem;
     }
 }
 
