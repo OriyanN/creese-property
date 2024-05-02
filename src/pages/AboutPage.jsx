@@ -46,7 +46,7 @@ function AboutPage() {
                             <LazyImageAbout src="src/assets/Lachie Black.png" alt="Creese Property Lachlan Creese" />
                             <div className="team-headings">
                                 <h3>Lachlan Creese</h3>
-                                <h4>Licensee</h4>
+                                <h4>Managing Director</h4>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at urna condimentum mattis. Etiam non quam lacus suspendisse faucibus. Est ultricies integer quis auctor elit. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Non quam lacus suspendisse faucibus interdum posuere. Posuere urna nec tincidunt praesent semper. Sodales ut eu sem integer vitae. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. </p>
                         </div>
