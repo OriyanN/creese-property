@@ -11,6 +11,15 @@
     width: 100vw;
 }
 
+.portfolio-text {
+    padding: 5.5rem 9% 2rem 9%;
+}
+
+.portfolio-text h2 {
+    font-size: 5.5rem;
+    color: var(--grey-blue);
+}
+
 @media (max-width: 1130px) {
     .images-container.images-container-portfolio {
         padding: 1.2rem 3%;

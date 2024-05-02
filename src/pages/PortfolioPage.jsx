@@ -39,6 +39,9 @@ function PortfolioPage() {
                     <h1>Portfolio</h1>
                     <div className="overlay"></div>
                 </div>
+                <div className='portfolio-text'>
+                    <h2>A Selection of Our Leases Across Australia</h2>
+                </div>
                 <div className="images-container images-container-portfolio">
                     {data.map(item => (
                         <div key={item.id} className="image-item-container image-item-container-portfolio">
