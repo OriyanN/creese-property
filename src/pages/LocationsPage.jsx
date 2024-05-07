@@ -359,6 +359,9 @@ const LocationsPage = () => {
         ...SunshineCoastPropertiesData.map(item => ({ ...item, location: 'SunshineCoast' })),
     ];
 
+    const [featureFilters, setFeatureFilters] = useState([]);
+    const allFeatures = Array.from(new Set(allPropertiesData.flatMap(property => property.features))).sort();
+
     const [currentMainImage, setCurrentMainImage] = useState(mainInitialImage);
 
     const locationImages = {
@@ -393,43 +396,72 @@ const LocationsPage = () => {
         );
     };
 
+    const [selectedFeatures, setSelectedFeatures] = useState([]);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setDropdownOpen(prev => !prev);
+    };    
+
+    const toggleFeature = feature => {
+        setSelectedFeatures(prev => {
+            if (prev.includes(feature)) {
+                return prev.filter(f => f !== feature);
+            } else {
+                return [...prev, feature];
+            }
+        });
+    };
+
+    const dropdownRef = useRef();
+
+    useEffect(() => {
+        const handleOutsideClick = event => {
+            if (dropdownOpen && dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setDropdownOpen(false);
+            }
+        };
+    
+        document.addEventListener('mousedown', handleOutsideClick);
+        return () => {
+            document.removeEventListener('mousedown', handleOutsideClick);
+        };
+    }, [dropdownOpen, dropdownRef]); 
+
     const filteredProperties = allPropertiesData.filter(property =>
         (filters.locationFilter === 'All' || property.location === filters.locationFilter) &&
         (filters.suburbSearch === '' || property.address.toLowerCase().includes(filters.suburbSearch.toLowerCase())) &&
-        (filters.bedsFilter === '' || (property.beds || '').toString() === filters.bedsFilter) &&
-        (filters.bathsFilter === '' || (property.baths || '').toString() === filters.bathsFilter) &&
-        (filters.carFilter === '' || (property.car || '').toString() === filters.carFilter)
-    );       
+        (filters.bedsFilter === '' || property.beds.toString() === filters.bedsFilter) &&
+        (filters.bathsFilter === '' || property.baths.toString() === filters.bathsFilter) &&
+        (filters.carFilter === '' || property.car.toString() === filters.carFilter) &&
+        selectedFeatures.every(feature => property.features.includes(feature))
+    );   
 
     const mapContainer = useRef(null);
     const map = useRef(null);
     const markers = useRef([]);
 
-    // Initialize map only once
     useEffect(() => {
         mapboxgl.accessToken = 'pk.eyJ1IjoicHJvcGVsbHByb3BlcnR5IiwiYSI6ImNsdWttNWs1cjA1dGcycW9hZnRwZ2theHgifQ.erDmDuOiR1yww8zsDYuIaA';
         map.current = new mapboxgl.Map({
             container: mapContainer.current,
             style: 'mapbox://styles/propellproperty/clukscow600cw01pw1cai5fqu',
-            center: [153.1, -27.4], // Centered at Southeast Queensland
+            center: [153.1, -27.4],
             zoom: 8
         });
 
         return () => map.current?.remove();
     }, []);
 
-    // Update markers based on filters
     useEffect(() => {
-        // Remove all current markers
         markers.current.forEach(marker => marker.remove());
         markers.current = [];
 
-        // Add new markers based on filtered properties
         filteredProperties.forEach(property => {
 
             if (isNaN(property.lng) || isNaN(property.lat)) {
                 console.error("Invalid coordinates for property:", property);
-                return; // Skip creating a marker for this property
+                return;
             }
 
             const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
@@ -480,13 +512,31 @@ const LocationsPage = () => {
                                 <option value="SunshineCoast">Sunshine Coast</option>
                             </select>
                         </div>
-                        <div className="suburb-filter">
-                            <input
-                                type="text"
-                                placeholder="Suburb"
-                                value={filters.suburbSearch}
-                                onChange={(e) => setFilters({ ...filters, suburbSearch: e.target.value })}
-                            />
+                        <div className="bottom-filtering">
+                            <div className="suburb-filter">
+                                <input
+                                    type="text"
+                                    placeholder="Suburb"
+                                    value={filters.suburbSearch}
+                                    onChange={(e) => setFilters({ ...filters, suburbSearch: e.target.value })}
+                                />
+                            </div>
+                            <div className="feature-dropdown" ref={dropdownRef}>
+                                <button onClick={toggleDropdown} className="dropdown-toggle">Features</button>
+                                {dropdownOpen && (
+                                    <ul className="dropdown-menu">
+                                        {allFeatures.map(feature => (
+                                            <li
+                                                key={feature}
+                                                onClick={() => toggleFeature(feature)}
+                                                className={selectedFeatures.includes(feature) ? 'selected' : ''}
+                                            >
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>
                         </div>
                     </div>
                     <div className="filters">

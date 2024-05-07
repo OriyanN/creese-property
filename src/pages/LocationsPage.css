@@ -62,7 +62,7 @@
 }
 
 .search input::placeholder {
-    padding-left: 0.75rem;
+    padding-left: 1rem;
 }
 
 .suburb-filter input {
@@ -71,6 +71,11 @@
 
 .beds-filter select, .location-filter select {
     width: 33vw;
+    padding-left: 0.65rem;
+}
+
+.baths-filter select, .car-filter select {
+    padding-left: 0.65rem;
 }
 
 .beds-filter, .location-filter {
@@ -88,6 +93,62 @@
     width: 15vw; 
     position: relative;
     margin-left: 3vw;
+}
+
+.bottom-filtering {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    background-color: transparent;
+    border-bottom: 1px solid var(--grey-blue);
+    width: 15vw;
+    text-transform: uppercase;
+    font-size: 2.25rem;
+    color: var(--grey-blue);
+    padding-bottom: 1.35rem;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.dropdown-toggle button {
+    text-align: end;
+}
+
+.dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    background-color: white;
+    display: block;
+    padding: 10px;
+    list-style: none;
+    border-radius: 0.25rem;
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    font-size: 1.5rem;
+}
+
+.dropdown-menu li:hover {
+    background-color: var(--grey-blue);
+    color: var(--white);
+}
+
+.dropdown-menu li.selected {
+    background-color: var(--grey-blue);
+    color: white;
 }
 
 .properties-container {
