@@ -43,30 +43,51 @@
     padding: 3rem 9%;
 }
 
-.filters {
+.filters select, .search input::placeholder, .location-filter select {
+    /* border-bottom: 1px solid var(--grey-blue); */
+    width: 15vw;
+    text-transform: uppercase;
+    font-size: 2.25rem;
+    color: var(--grey-blue);
+    padding-bottom: 0.75rem;
+}
+
+.suburb-filter input, .beds-filter, .baths-filter, .car-filter, .feature-filter, .location-filter {
+    width: 15vw;
+    border-bottom: 1px solid var(--grey-blue);
+    text-transform: uppercase;
+    font-size: 2.25rem;
+    color: var(--grey-blue);
+    padding-bottom: 0.75rem;
+}
+
+.search input::placeholder {
+    padding-left: 0.75rem;
+}
+
+.suburb-filter input {
+    padding-bottom: 1.35rem;
+}
+
+.beds-filter select, .location-filter select {
+    width: 33vw;
+}
+
+.beds-filter, .location-filter {
+    width: 33vw;
+    margin-bottom: 2.25rem;
+}
+
+.car-bath-filter {
     display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
-.filters select, .search input::placeholder {
-    border-bottom: 1px solid var(--grey-blue);
-    width: 16vw;
-    text-transform: uppercase;
-    font-size: 2.25rem;
-    color: var(--grey-blue);
-    padding-bottom: 0.75rem;
-}
-
-.search input {
-    width: 16vw;
-    border-bottom: 1px solid var(--grey-blue);
-    text-transform: uppercase;
-    font-size: 2.25rem;
-    color: var(--grey-blue);
-    padding-bottom: 0.75rem;
-}
-
-.filters select {
-    margin-left: 4rem;
+.car-filter {
+    width: 15vw; 
+    position: relative;
+    margin-left: 3vw;
 }
 
 .properties-container {

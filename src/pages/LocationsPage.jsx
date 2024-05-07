@@ -1,155 +1,562 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+// import React, { useState, useEffect, useRef } from 'react';
+// import { Link } from 'react-router-dom';
+// import { Helmet } from 'react-helmet-async';
+// import Select from 'react-select';
 
+// import mapboxgl from 'mapbox-gl';
+// import 'mapbox-gl/dist/mapbox-gl.css';
+
+// import Footer from '../components/Footer';
+// import ScrollToTop from '../components/ScrollToTop';
+// import LazyImage from '../components/LazyImage';
+
+// import GoldCoastPropertiesData from '../pages/GoldCoast/GoldCoastPropertiesData';
+// import BrisbanePropertiesData from '../pages/Brisbane/BrisbanePropertiesData';
+// import IpswichPropertiesData from '../pages/Ipswich/IpswichPropertiesData';
+// import LoganPropertiesData from '../pages/Logan/LoganPropertiesData';
+// import SunshineCoastPropertiesData from '../pages/SunshineCoast/SunshineCoastPropertiesData';
+// import "./LocationsPage.css";
+
+// // import mainInitialImage from "../assets/Brisbane/brisbane.jpg";
+// import mainInitialImage from "../assets/gold-coast4.png";
+// import mainGoldCoast from "../assets/GoldCoast/gold-coast.jpg";
+// import mainBrisbane from "../assets/Brisbane/brisbane.jpg";
+// import mainIpswich from "../assets/Ipswich/ipswich.jpg";
+// import mainLogan from "../assets/Logan/logan.jpg";
+// import mainSunshineCoast from "../assets/SunshineCoast/sunshine-coast1.png";
+// import PropertyFeatures from '../components/PropertyFeatures';
+// import PropertyBeds from '../components/PropertyBeds';
+// import PropertyBaths from '../components/PropertyBaths';
+// import PropertyCars from '../components/PropertyCars';
+// import PropertyLocations from '../components/PropertyLocations';
+
+// const LocationsPage = () => {
+//     const allPropertiesData = [
+//         ...GoldCoastPropertiesData,
+//         ...BrisbanePropertiesData,
+//         ...IpswichPropertiesData,
+//         ...LoganPropertiesData,
+//         ...SunshineCoastPropertiesData
+//     ];
+
+//     const extractUniqueFeatures = () => {
+//         const featuresSet = new Set();
+//         allPropertiesData.forEach(property => property.features.forEach(feature => featuresSet.add(feature)));
+//         return Array.from(featuresSet);
+//     };
+
+//     const [filters, setFilters] = useState({
+//         locationFilter: 'All',
+//         suburbSearch: '',
+//         featuresFilter: [],
+//         bedsFilter: '',
+//         bathsFilter: '',
+//         carFilter: '',
+//     });    
+
+//     const [currentMainImage, setCurrentMainImage] = useState(mainInitialImage);
+//     const [dropdownOpen, setDropdownOpen] = useState(false);
+//     const [selectedFeatures, setSelectedFeatures] = useState([]);
+//     const features = ["Air Conditioning", "Pool", "Garage", "Garden", "Balcony"]; // Example features
+
+//     const handleLocationChange = (event) => {
+//         const newLocation = event.target.value;
+//         setFilters(prevFilters => ({
+//             ...prevFilters,
+//             locationFilter: newLocation
+//         }));
+//     };
+
+//     useEffect(() => {
+//         const locationImages = {
+//             "All": mainInitialImage,
+//             "Gold Coast": mainGoldCoast,
+//             "Brisbane": mainBrisbane,
+//             "Ipswich": mainIpswich,
+//             "Logan": mainLogan,
+//             "SunshineCoast": mainSunshineCoast,
+//         };
+//         setCurrentMainImage(locationImages[filters.locationFilter] || mainInitialImage);
+//     }, [filters.locationFilter]);
+
+//     const createOptions = (key) => {
+//         const optionsSet = new Set(allPropertiesData.map(property => property[key]));
+//         return [...optionsSet].sort((a, b) => a - b).map(option => 
+//             <option key={option} value={option}>{option}</option>
+//         );
+//     };
+
+//     const filteredProperties = allPropertiesData.filter(property =>
+//         (filters.locationFilter === 'All' || property.location === filters.locationFilter) &&
+//         (filters.suburbSearch === '' || property.address.toLowerCase().includes(filters.suburbSearch.toLowerCase())) &&
+//         (filters.featuresFilter.length === 0 || filters.featuresFilter.every(feat => property.features.includes(feat))) &&
+//         (filters.bedsFilter === '' || (property.beds || '').toString() === filters.bedsFilter) &&
+//         (filters.bathsFilter === '' || (property.baths || '').toString() === filters.bathsFilter) &&
+//         (filters.carFilter === '' || (property.car || '').toString() === filters.carFilter)
+//     );
+
+//     const handleFeatureChange = (event) => {
+//         const { value, checked } = event.target;
+//         const newFeatures = checked
+//             ? [...selectedFeatures, value]
+//             : selectedFeatures.filter(f => f !== value);
+//         setSelectedFeatures(newFeatures);
+//     };
+
+//     const toggleDropdown = () => {
+//         setDropdownOpen(!dropdownOpen);
+//     };
+
+//     useEffect(() => {
+//         const closeDropdown = (e) => {
+//             if (e.target.closest('.feature-dropdown') === null) {
+//                 setDropdownOpen(false);
+//             }
+//         };
+
+//         document.addEventListener('click', closeDropdown);
+//         return () => document.removeEventListener('click', closeDropdown);
+//     }, []);
+
+//     const selectedText = selectedFeatures.length > 0 ? selectedFeatures.join(', ') : "Features";
+
+//     const mapContainer = useRef(null);
+//     const map = useRef(null);
+//     const markers = useRef([]);
+
+//     // Initialize map only once
+//     useEffect(() => {
+//         mapboxgl.accessToken = 'pk.eyJ1IjoicHJvcGVsbHByb3BlcnR5IiwiYSI6ImNsdWttNWs1cjA1dGcycW9hZnRwZ2theHgifQ.erDmDuOiR1yww8zsDYuIaA';
+//         map.current = new mapboxgl.Map({
+//             container: mapContainer.current,
+//             style: 'mapbox://styles/propellproperty/clukscow600cw01pw1cai5fqu',
+//             center: [153.1, -27.4], // Centered at Southeast Queensland
+//             zoom: 8
+//         });
+
+//         return () => map.current?.remove();
+//     }, []);
+
+//     // Update markers based on filters
+//     useEffect(() => {
+//         // Remove all current markers
+//         markers.current.forEach(marker => marker.remove());
+//         markers.current = [];
+
+//         // Add new markers based on filtered properties
+//         filteredProperties.forEach(property => {
+
+//             if (isNaN(property.lng) || isNaN(property.lat)) {
+//                 console.error("Invalid coordinates for property:", property);
+//                 return; // Skip creating a marker for this property
+//             }
+
+//             const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
+//                 `<div>
+//                     <img src="${property.images[0]}" alt="Property Image" style="width: 100%; height: auto;" />
+//                     <h3>${property.address}</h3>
+//                     <p>Beds: ${property.beds}, Baths: ${property.baths}, Cars: ${property.car}</p>
+//                 </div>`
+//             );
+
+//             const marker = new mapboxgl.Marker()
+//                 .setLngLat([property.lng, property.lat])
+//                 .setPopup(popup)
+//                 .addTo(map.current);
+
+//             markers.current.push(marker);
+//         });
+//     }, [filteredProperties]);
+    
+//     return (
+//         <>
+//             <Helmet>
+//                 <title>Leasing | Creese Property</title>
+//                 <meta name="description" content="Leasing page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+//                 <meta name="robots" content="noindex"/>
+//                 <link rel="canonical" href="/locations" />
+//             </Helmet>
+//             <ScrollToTop />
+//             <section className="section location">
+//                 <h1 className='location-name'>Leasing</h1>
+//                 <div className="initial-image">
+//                     <img src={currentMainImage} alt="Creese Property - Leasing" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+//                     <div className="overlay"></div>
+//                 </div>
+//                 <div className="search">
+//                     <div className="location-search">
+//                         <div className="leasing-location-filtering">
+//                             <div className="location-filter">
+//                                 {/* <PropertyLocations /> */}
+//                                 {/* <PropertyLocations onChange={setLocationFilter} /> */}
+//                                 <select 
+//                                     id="locationFilter"
+//                                     value={filters.locationFilter}
+//                                     onChange={handleLocationChange}
+//                                 >
+//                                     <option value="All">All Locations</option>
+//                                     <option value="Gold Coast">Gold Coast</option>
+//                                     <option value="Brisbane">Brisbane</option>
+//                                     <option value="Ipswich">Ipswich</option>
+//                                     <option value="Logan">Logan</option>
+//                                     <option value="SunshineCoast">Sunshine Coast</option>
+//                                 </select>
+//                             </div>
+//                         </div>
+//                         <div className="leasing-location-filtering">
+//                             <div className="suburb-filter">
+//                                 <input
+//                                     type="text"
+//                                     placeholder="Suburb"
+//                                     value={filters.suburbSearch}
+//                                     onChange={(e) => setFilters({ ...filters, suburbSearch: e.target.value })}
+//                                 />
+//                             </div>
+//                             <div className="feature-filter">
+//                                 {/* <PropertyFeatures /> */}
+//                                 <div className="feature-dropdown">
+//                                     <button
+//                                         onClick={toggleDropdown}
+//                                         style={{ width: '100%', textAlign: 'left', fontSize: '2.25rem'}}
+//                                         className={selectedFeatures.length > 0 ? '' : 'underline-only'}
+//                                     >
+//                                         {selectedText}
+//                                     </button>
+//                                     {dropdownOpen && (
+//                                         <div style={{
+//                                             position: 'absolute',
+//                                             width: '100%',
+//                                             border: '1px solid #ccc',
+//                                             backgroundColor: '#fff',
+//                                             zIndex: 1000,
+//                                             overflowY: 'auto',
+//                                             maxHeight: '200px'
+//                                         }}>
+//                                             {features.map(feature => (
+//                                                 <label key={feature} style={{ display: 'flex', padding: '10px', fontSize: '2.25rem' }}>
+//                                                     <input
+//                                                         type="checkbox"
+//                                                         value={feature}
+//                                                         checked={selectedFeatures.includes(feature)}
+//                                                         onChange={handleFeatureChange}
+//                                                         style={{ marginRight: '15px' }}
+//                                                     />
+//                                                     {feature}
+//                                                 </label>
+//                                             ))}
+//                                         </div>
+//                                     )}
+//                                 </div>
+//                             </div>
+//                         </div>
+//                     </div>
+//                     <div className="filters">
+//                         <div className="leasing-location-filtering">
+//                             <div className="beds-filter">
+//                                 {/* <PropertyBeds /> */}
+//                                  <select 
+//                                     id="bedsFilter"
+//                                     value={filters.bedsFilter}
+//                                     onChange={(e) => setFilters({ ...filters, bedsFilter: e.target.value })}
+//                                     className={!filters.bedsFilter ? '' : ''}
+//                                     aria-label="Filter by number of beds"
+//                                 >
+//                                     <option value="">Bed</option>
+//                                     {createOptions('beds')}
+//                                 </select>
+//                             </div>
+//                         </div>
+//                         <div className="leasing-location-filtering">
+//                             <div className="car-filter">
+//                                 {/* <PropertyCars /> */}
+//                                 <select 
+//                                     id="carFilter"
+//                                     value={filters.carFilter}
+//                                     onChange={(e) => setFilters({ ...filters, carFilter: e.target.value })}
+//                                     className={!filters.carFilter ? '' : ''}
+//                                     aria-label="Filter by car spaces"
+//                                 >
+//                                     <option value="">Car</option>
+//                                     {createOptions('car')}
+//                                 </select>
+//                             </div>
+//                             <div className="baths-filter">
+//                                 {/* <PropertyBaths /> */}
+//                                 <select 
+//                                     id="bathsFilter"
+//                                     value={filters.bathsFilter}
+//                                     onChange={(e) => setFilters({ ...filters, bathsFilter: e.target.value })}
+//                                     className={!filters.bathsFilter ? '' : ''}
+//                                     aria-label="Filter by number of baths"
+//                                 >
+//                                     <option value="">Bath</option>
+//                                     {createOptions('baths')}
+//                                 </select>
+//                             </div>
+//                         </div>
+//                     </div>
+//                 </div>
+//                 <div className="properties-container">
+//                     <div className="images-container">
+//                         {filteredProperties.length > 0 ? (
+//                             filteredProperties.map((property) => (
+//                                 <div key={property.id} className="image-item-container">
+//                                     <Link to={`/locations/gold-coast/properties/${property.id}`}>
+//                                         <LazyImage src={property.images[0]} alt={`Property ${property.id}`} className="image-item" />
+//                                     </Link>
+//                                     <div className="location-details">
+//                                         <h4>{property.address}</h4>
+//                                         <p>{property.beds} Bed - {property.baths} Bath - {property.car} Car</p>
+//                                     </div>
+//                                 </div>
+//                             ))
+//                         ) : (
+//                             <p>No properties match your criteria.</p>
+//                         )}
+//                     </div>
+//                     <div ref={mapContainer} className="map-container" style={{ height: '85vh', width: '100%', borderRadius: '0.25rem', position: 'sticky' }} />
+//                 </div>
+//                 <Footer />
+//             </section>
+//         </>
+//     );
+// };
+
+// export default LocationsPage;
+
+import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
+import mapboxgl from 'mapbox-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
+
+import Footer from '../components/Footer';
+import ScrollToTop from '../components/ScrollToTop';
+import LazyImage from '../components/LazyImage';
+
+import GoldCoastPropertiesData from '../pages/GoldCoast/GoldCoastPropertiesData';
+import BrisbanePropertiesData from '../pages/Brisbane/BrisbanePropertiesData';
+import IpswichPropertiesData from '../pages/Ipswich/IpswichPropertiesData';
+import LoganPropertiesData from '../pages/Logan/LoganPropertiesData';
+import SunshineCoastPropertiesData from '../pages/SunshineCoast/SunshineCoastPropertiesData';
 import "./LocationsPage.css";
 
-function LocationsPage() {
+// import mainInitialImage from "../assets/Brisbane/brisbane.jpg";
+import mainInitialImage from "../assets/gold-coast4.png";
+import mainGoldCoast from "../assets/GoldCoast/gold-coast.jpg";
+import mainBrisbane from "../assets/Brisbane/brisbane.jpg";
+import mainIpswich from "../assets/Ipswich/ipswich.jpg";
+import mainLogan from "../assets/Logan/logan.jpg";
+import mainSunshineCoast from "../assets/SunshineCoast/sunshine-coast1.png";
 
-    const initialImage = 'src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg';
-    
-    const locations = [
-        {
-            name: "Sunshine Coast",
-            mainImage: "src/assets/sydney-harbour-bridge-with-an-amazing-sunset-2023-11-27-05-03-12-utc.jpg",
-            images: [
-                {
-                  url: "src/assets/1.jpg",
-                  address: "Address 1, Sunshine Coast",
-                  beds: 3,
-                  baths: 2,
-                },
-                {
-                    url: "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg",
-                    address: "Address 2, Sunshine Coast",
-                    beds: 4,
-                    baths: 3,
-                },
-                {
-                    url: "src/assets/backyard-2023-11-27-04-52-38-utc.jpg",
-                    address: "Address 3, Sunshine Coast",
-                    beds: 5,
-                    baths: 4,
-                },
-                {
-                    url: "src/assets/1.jpg",
-                    address: "Address 1, Sunshine Coast",
-                    beds: 6,
-                    baths: 7,
-                },
-                {
-                    url: "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg",
-                    address: "Address 2, Sunshine Coast",
-                    beds: 7,
-                    baths: 8,
-                },
-                {
-                    url: "src/assets/backyard-2023-11-27-04-52-38-utc.jpg",
-                    address: "Address 3, Sunshine Coast",
-                    beds: 8,
-                    baths: 9,
-                },
-            ],
-        },
-        {
-            name: "Somerset",
-            mainImage: "src/assets/sydney-harbour-bridge-with-an-amazing-sunset-2023-11-27-05-03-12-utc.jpg",
-            images: ["src/assets/2.jpg", "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg", "src/assets/backyard-2023-11-27-04-52-38-utc.jpg", "src/assets/1.jpg", "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg", "src/assets/backyard-2023-11-27-04-52-38-utc.jpg"],
-        },
-        {
-            name: "Moreton Bay",
-            mainImage: "src/assets/sydney-harbour-bridge-with-an-amazing-sunset-2023-11-27-05-03-12-utc.jpg",
-            images: ["src/assets/3.jpg", "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg", "src/assets/backyard-2023-11-27-04-52-38-utc.jpg", "src/assets/1.jpg", "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg", "src/assets/backyard-2023-11-27-04-52-38-utc.jpg"],
-        },
-        {
-            name: "Lockyer Valley",
-            mainImage: "src/assets/sydney-harbour-bridge-with-an-amazing-sunset-2023-11-27-05-03-12-utc.jpg",
-            images: ["src/assets/4.jpg", "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg", "src/assets/backyard-2023-11-27-04-52-38-utc.jpg", "src/assets/1.jpg", "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg", "src/assets/backyard-2023-11-27-04-52-38-utc.jpg"],
-        },
-        {
-            name: "Brisbane",
-            mainImage: "src/assets/beautiful-shot-of-the-story-bridge-in-australia-un-2023-11-27-05-24-06-utc.jpg",
-            images: ["src/assets/5.jpg", "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg", "src/assets/backyard-2023-11-27-04-52-38-utc.jpg", "src/assets/1.jpg", "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg", "src/assets/backyard-2023-11-27-04-52-38-utc.jpg"],
-            address: "123 Brisbane Rd, Brisbane",
-            beds: 3,
-            baths: 2,
-        },
-        {
-            name: "Ipswich",
-            mainImage: "src/assets/sydney-harbour-bridge-with-an-amazing-sunset-2023-11-27-05-03-12-utc.jpg",
-            images: ["src/assets/6.jpg", "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg", "src/assets/backyard-2023-11-27-04-52-38-utc.jpg", "src/assets/1.jpg", "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg", "src/assets/backyard-2023-11-27-04-52-38-utc.jpg"],
-        },
-        {
-            name: "Logan",
-            mainImage: "src/assets/sydney-harbour-bridge-with-an-amazing-sunset-2023-11-27-05-03-12-utc.jpg",
-            images: ["src/assets/7.JPG", "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg", "src/assets/backyard-2023-11-27-04-52-38-utc.jpg", "src/assets/1.jpg", "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg", "src/assets/backyard-2023-11-27-04-52-38-utc.jpg"],
-        },
-        {
-            name: "Redland",
-            mainImage: "src/assets/sydney-harbour-bridge-with-an-amazing-sunset-2023-11-27-05-03-12-utc.jpg",
-            images: ["src/assets/8.jpg", "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg", "src/assets/backyard-2023-11-27-04-52-38-utc.jpg", "src/assets/1.jpg", "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg", "src/assets/backyard-2023-11-27-04-52-38-utc.jpg"],
-        },
-        {
-            name: "Gold Coast",
-            mainImage: "src/assets/aerial-view-of-surfers-paradise-the-gold-coast-q-2023-11-27-04-49-20-utc.jpg",
-            images: ["src/assets/2.jpg", "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg", "src/assets/backyard-2023-11-27-04-52-38-utc.jpg", "src/assets/1.jpg", "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg", "src/assets/backyard-2023-11-27-04-52-38-utc.jpg"],
-            address: "456 Gold Coast Blvd, Gold Coast",
-            beds: 4,
-            baths: 3,
-        },
-        {
-            name: "Scenic Rim",
-            mainImage: "src/assets/sydney-harbour-bridge-with-an-amazing-sunset-2023-11-27-05-03-12-utc.jpg",
-            images: ["src/assets/3.jpg", "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg", "src/assets/backyard-2023-11-27-04-52-38-utc.jpg", "src/assets/1.jpg", "src/assets/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg", "src/assets/backyard-2023-11-27-04-52-38-utc.jpg"],
-        },
+const LocationsPage = () => {
+    const allPropertiesData = [
+        ...GoldCoastPropertiesData.map(item => ({ ...item, location: 'Gold Coast' })),
+        ...BrisbanePropertiesData.map(item => ({ ...item, location: 'Brisbane' })),
+        ...IpswichPropertiesData.map(item => ({ ...item, location: 'Ipswich' })),
+        ...LoganPropertiesData.map(item => ({ ...item, location: 'Logan' })),
+        ...SunshineCoastPropertiesData.map(item => ({ ...item, location: 'SunshineCoast' })),
     ];
 
-    const [currentImage, setCurrentImage] = useState(initialImage);  
-    const [selectedLocation, setSelectedLocation] = useState(null);
-    const [filterQuery, setFilterQuery] = useState('');
-  
-    const handleLocationClick = (location) => {
-        setCurrentImage(location.mainImage);
-        setSelectedLocation(location);
+    const [currentMainImage, setCurrentMainImage] = useState(mainInitialImage);
+
+    const locationImages = {
+        "All": mainInitialImage,
+        "Gold Coast": mainGoldCoast,
+        "Brisbane": mainBrisbane,
+        "Ipswich": mainIpswich,
+        "Logan": mainLogan,
+        "Sunshine Coast": mainSunshineCoast,
     };
 
-    const handleFilter = (query) => {
-        setFilterQuery(query);
+    const handleLocationChange = (e) => {
+        const newLocation = e.target.value;
+        console.log('New Location:', newLocation); // Check what location is selected
+        setFilters(prevFilters => {
+            console.log('Previous Filters:', prevFilters); // Check previous filter state
+            return { ...prevFilters, locationFilter: newLocation };
+        });
+        setCurrentMainImage(locationImages[newLocation] || mainInitialImage);
+        console.log('Image Set To:', locationImages[newLocation]); // Verify the correct image path is set
+    }
+
+    const [filters, setFilters] = useState({
+        locationFilter: 'All',
+        suburbSearch: '',
+        bedsFilter: '',
+        bathsFilter: '',
+        carFilter: '',
+    });    
+
+    const createOptions = (key) => {
+        const optionsSet = new Set(allPropertiesData.map(property => property[key]));
+        return [...optionsSet].sort((a, b) => a - b).map(option => 
+            <option key={option} value={option}>{option}</option>
+        );
     };
 
+    const filteredProperties = allPropertiesData.filter(property =>
+        (filters.locationFilter === 'All' || property.location === filters.locationFilter) &&
+        (filters.suburbSearch === '' || property.address.toLowerCase().includes(filters.suburbSearch.toLowerCase())) &&
+        (filters.bedsFilter === '' || (property.beds || '').toString() === filters.bedsFilter) &&
+        (filters.bathsFilter === '' || (property.baths || '').toString() === filters.bathsFilter) &&
+        (filters.carFilter === '' || (property.car || '').toString() === filters.carFilter)
+    );       
+
+    const mapContainer = useRef(null);
+    const map = useRef(null);
+    const markers = useRef([]);
+
+    // Initialize map only once
+    useEffect(() => {
+        mapboxgl.accessToken = 'pk.eyJ1IjoicHJvcGVsbHByb3BlcnR5IiwiYSI6ImNsdWttNWs1cjA1dGcycW9hZnRwZ2theHgifQ.erDmDuOiR1yww8zsDYuIaA';
+        map.current = new mapboxgl.Map({
+            container: mapContainer.current,
+            style: 'mapbox://styles/propellproperty/clukscow600cw01pw1cai5fqu',
+            center: [153.1, -27.4], // Centered at Southeast Queensland
+            zoom: 8
+        });
+
+        return () => map.current?.remove();
+    }, []);
+
+    // Update markers based on filters
+    useEffect(() => {
+        // Remove all current markers
+        markers.current.forEach(marker => marker.remove());
+        markers.current = [];
+
+        // Add new markers based on filtered properties
+        filteredProperties.forEach(property => {
+
+            if (isNaN(property.lng) || isNaN(property.lat)) {
+                console.error("Invalid coordinates for property:", property);
+                return; // Skip creating a marker for this property
+            }
+
+            const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
+                `<div>
+                    <img src="${property.images[0]}" alt="Property Image" style="width: 100%; height: auto;" />
+                    <h3>${property.address}</h3>
+                    <p>Beds: ${property.beds}, Baths: ${property.baths}, Cars: ${property.car}</p>
+                </div>`
+            );
+
+            const marker = new mapboxgl.Marker()
+                .setLngLat([property.lng, property.lat])
+                .setPopup(popup)
+                .addTo(map.current);
+
+            markers.current.push(marker);
+        });
+    }, [filteredProperties]);
+    
     return (
-        <section className="section locations">
-            <div className="initial-image">
-                <img src={currentImage} alt="Selected Location" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            </div>
-            <div className="overlay"></div>
-            <div className="location-container">
-                {locations.map((location) => (
-                    <Link
-                        key={location.name}
-                        onClick={() => handleLocationClick(location)}
-                        className={`location-button ${selectedLocation && selectedLocation.name === location.name ? 'active' : ''}`}
-                    >
-                        {location.name}
-                    </Link>
-                ))}
-            </div>
-            {selectedLocation && (
-                <div>
-                    <div className="images-container">
-                    {selectedLocation.images.map((image, index) => (
-                        <div key={index} className="image-item-container">
-                            <img src={image.url} alt={`Location ${selectedLocation.name}`} className="image-item" />
-                            <div className="location-details">
-                                <h4>{image.address}</h4>
-                                <p>{image.beds} Beds • {image.baths} Baths</p>
+        <>
+            <Helmet>
+                <title>Leasing | Creese Property</title>
+                <meta name="description" content="Leasing page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <meta name="robots" content="noindex"/>
+                <link rel="canonical" href="/locations/gold-coast" />
+            </Helmet>
+            <ScrollToTop />
+            <section className="section location">
+                <h1 className='location-name'>Leasing</h1>
+                <div className="initial-image">
+                    <img src={currentMainImage} alt="Creese Property - Gold Coast" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <div className="overlay"></div>
+                </div>
+                <div className="search">
+                    <div className="location-search">
+                        <div className="location-filter">
+                            <select 
+                                id="locationFilter"
+                                value={filters.locationFilter}
+                                onChange={handleLocationChange}
+                            >
+                                <option value="All">All Locations</option>
+                                <option value="Gold Coast">Gold Coast</option>
+                                <option value="Brisbane">Brisbane</option>
+                                <option value="Ipswich">Ipswich</option>
+                                <option value="Logan">Logan</option>
+                                <option value="SunshineCoast">Sunshine Coast</option>
+                            </select>
+                        </div>
+                        <div className="suburb-filter">
+                            <input
+                                type="text"
+                                placeholder="Suburb"
+                                value={filters.suburbSearch}
+                                onChange={(e) => setFilters({ ...filters, suburbSearch: e.target.value })}
+                            />
+                        </div>
+                    </div>
+                    <div className="filters">
+                        <div className="beds-filter">
+                            <select 
+                                id="bedsFilter"
+                                value={filters.bedsFilter}
+                                onChange={(e) => setFilters({ ...filters, bedsFilter: e.target.value })}
+                                className={!filters.bedsFilter ? '' : ''}
+                                aria-label="Filter by number of beds"
+                            >
+                                <option value="">Bed</option>
+                                {createOptions('beds')}
+                            </select>
+                        </div>
+                        <div className="car-bath-filter">
+                            <div className="baths-filter">
+                                <select 
+                                    id="bathsFilter"
+                                    value={filters.bathsFilter}
+                                    onChange={(e) => setFilters({ ...filters, bathsFilter: e.target.value })}
+                                    className={!filters.bathsFilter ? '' : ''}
+                                    aria-label="Filter by number of baths"
+                                >
+                                    <option value="">Bath</option>
+                                    {createOptions('baths')}
+                                </select>
+                            </div>
+                            <div className="car-filter">
+                                <select 
+                                    id="carFilter"
+                                    value={filters.carFilter}
+                                    onChange={(e) => setFilters({ ...filters, carFilter: e.target.value })}
+                                    className={!filters.carFilter ? '' : ''}
+                                    aria-label="Filter by car spaces"
+                                >
+                                    <option value="">Car</option>
+                                    {createOptions('car')}
+                                </select>
                             </div>
                         </div>
-                    ))}
                     </div>
                 </div>
-            )}
-        </section>
+                <div className="properties-container">
+                    <div className="images-container">
+                        {filteredProperties.length > 0 ? (
+                            filteredProperties.map((property) => (
+                                <div key={property.id} className="image-item-container">
+                                    <Link to={`/locations/gold-coast/properties/${property.id}`}>
+                                        <LazyImage src={property.images[0]} alt={`Property ${property.id}`} className="image-item" />
+                                    </Link>
+                                    <div className="location-details">
+                                        <h4>{property.address}</h4>
+                                        <p>{property.beds} Bed - {property.baths} Bath - {property.car} Car</p>
+                                    </div>
+                                </div>
+                            ))
+                        ) : (
+                            <p>No properties match your criteria.</p>
+                        )}
+                    </div>
+                    <div ref={mapContainer} className="map-container" style={{ height: '85vh', width: '100%', borderRadius: '0.25rem', position: 'sticky' }} />
+                </div>
+                <Footer />
+            </section>
+        </>
     );
-}
-  
-  export default LocationsPage;
+};
+
+export default LocationsPage;
