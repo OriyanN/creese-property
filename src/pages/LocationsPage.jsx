@@ -372,13 +372,10 @@ const LocationsPage = () => {
 
     const handleLocationChange = (e) => {
         const newLocation = e.target.value;
-        console.log('New Location:', newLocation); // Check what location is selected
         setFilters(prevFilters => {
-            console.log('Previous Filters:', prevFilters); // Check previous filter state
             return { ...prevFilters, locationFilter: newLocation };
         });
         setCurrentMainImage(locationImages[newLocation] || mainInitialImage);
-        console.log('Image Set To:', locationImages[newLocation]); // Verify the correct image path is set
     }
 
     const [filters, setFilters] = useState({
