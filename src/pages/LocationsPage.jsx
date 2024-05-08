@@ -327,6 +327,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import Select from 'react-select';
 
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -356,14 +357,19 @@ const LocationsPage = () => {
         ...BrisbanePropertiesData.map(item => ({ ...item, location: 'Brisbane' })),
         ...IpswichPropertiesData.map(item => ({ ...item, location: 'Ipswich' })),
         ...LoganPropertiesData.map(item => ({ ...item, location: 'Logan' })),
-        ...SunshineCoastPropertiesData.map(item => ({ ...item, location: 'SunshineCoast' })),
+        ...SunshineCoastPropertiesData.map(item => ({ ...item, location: 'Sunshine Coast' })),
     ];
 
-    const [featureFilters, setFeatureFilters] = useState([]);
-    const allFeatures = Array.from(new Set(allPropertiesData.flatMap(property => property.features))).sort();
+    const [filters, setFilters] = useState({
+        locationFilter: null,
+        suburbSearch: '',
+        bedsFilter: null,
+        bathsFilter: null,
+        carFilter: null,
+        featuresFilter: []
+    });
 
     const [currentMainImage, setCurrentMainImage] = useState(mainInitialImage);
-
     const locationImages = {
         "All": mainInitialImage,
         "Gold Coast": mainGoldCoast,
@@ -373,69 +379,63 @@ const LocationsPage = () => {
         "Sunshine Coast": mainSunshineCoast,
     };
 
-    const handleLocationChange = (e) => {
-        const newLocation = e.target.value;
-        setFilters(prevFilters => {
-            return { ...prevFilters, locationFilter: newLocation };
-        });
-        setCurrentMainImage(locationImages[newLocation] || mainInitialImage);
-    }
+    const [selectedLocation, setSelectedLocation] = useState({ value: 'All', label: 'All Locations' });
 
-    const [filters, setFilters] = useState({
-        locationFilter: 'All',
-        suburbSearch: '',
-        bedsFilter: '',
-        bathsFilter: '',
-        carFilter: '',
-    });    
+    const locationOptions = [
+        { value: 'All', label: 'All Locations' },
+        { value: 'Gold Coast', label: 'Gold Coast' },
+        { value: 'Brisbane', label: 'Brisbane' },
+        { value: 'Ipswich', label: 'Ipswich' },
+        { value: 'Logan', label: 'Logan' },
+        { value: 'Sunshine Coast', label: 'Sunshine Coast' }
+    ];
 
-    const createOptions = (key) => {
-        const optionsSet = new Set(allPropertiesData.map(property => property[key]));
-        return [...optionsSet].sort((a, b) => a - b).map(option => 
-            <option key={option} value={option}>{option}</option>
-        );
-    };
-
-    const [selectedFeatures, setSelectedFeatures] = useState([]);
-    const [dropdownOpen, setDropdownOpen] = useState(false);
-
-    const toggleDropdown = () => {
-        setDropdownOpen(prev => !prev);
-    };    
-
-    const toggleFeature = feature => {
-        setSelectedFeatures(prev => {
-            if (prev.includes(feature)) {
-                return prev.filter(f => f !== feature);
-            } else {
-                return [...prev, feature];
-            }
-        });
-    };
-
-    const dropdownRef = useRef();
+    const bedsOptions = Array.from(new Set(allPropertiesData.map(p => p.beds)))
+        .map(beds => ({ value: beds, label: `${beds}` }));
+    const bathsOptions = Array.from(new Set(allPropertiesData.map(p => p.baths)))
+        .map(baths => ({ value: baths, label: `${baths}` }));
+    const carOptions = Array.from(new Set(allPropertiesData.map(p => p.car)))
+        .map(car => ({ value: car, label: `${car}` }));
+    const featureOptions = Array.from(new Set(allPropertiesData.flatMap(p => p.features)))
+        .map(feature => ({ value: feature, label: feature }));
 
     useEffect(() => {
-        const handleOutsideClick = event => {
-            if (dropdownOpen && dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-                setDropdownOpen(false);
-            }
-        };
-    
-        document.addEventListener('mousedown', handleOutsideClick);
-        return () => {
-            document.removeEventListener('mousedown', handleOutsideClick);
-        };
-    }, [dropdownOpen, dropdownRef]); 
+        if (filters.locationFilter && locationImages[filters.locationFilter]) {
+            setCurrentMainImage(locationImages[filters.locationFilter]);
+        } else {
+            setCurrentMainImage(mainInitialImage);
+        }
+    }, [filters.locationFilter]);
 
-    const filteredProperties = allPropertiesData.filter(property =>
-        (filters.locationFilter === 'All' || property.location === filters.locationFilter) &&
-        (filters.suburbSearch === '' || property.address.toLowerCase().includes(filters.suburbSearch.toLowerCase())) &&
-        (filters.bedsFilter === '' || property.beds.toString() === filters.bedsFilter) &&
-        (filters.bathsFilter === '' || property.baths.toString() === filters.bathsFilter) &&
-        (filters.carFilter === '' || property.car.toString() === filters.carFilter) &&
-        selectedFeatures.every(feature => property.features.includes(feature))
-    );   
+    const handleLocationChange = selectedOption => {
+        setFilters(currentFilters => ({ ...currentFilters, locationFilter: selectedOption ? selectedOption.value : null }));
+    };
+    const handleFeatureChange = selectedOptions => {
+        setFilters(currentFilters => ({ ...currentFilters, featuresFilter: selectedOptions || [] }));
+    };
+
+    const filteredProperties = allPropertiesData.filter(property => {
+        return (
+            (!filters.locationFilter || filters.locationFilter === 'All' || property.location === filters.locationFilter) &&
+            (!filters.suburbSearch || property.address.toLowerCase().includes(filters.suburbSearch.toLowerCase())) &&
+            (!filters.bedsFilter || property.beds === filters.bedsFilter.value) &&
+            (!filters.bathsFilter || property.baths === filters.bathsFilter.value) &&
+            (!filters.carFilter || property.car === filters.carFilter.value) &&
+            (filters.featuresFilter.length === 0 || filters.featuresFilter.every(f => property.features.includes(f.value)))
+        );
+    });
+    
+    const customStyles = {
+        option: (provided, state) => ({
+          ...provided,
+          backgroundColor: state.isSelected ? '#616e89' : (state.isFocused ? '#294162' : provided.backgroundColor),
+          color: state.isSelected ? 'white' : (state.isFocused ? 'white' : provided.color),
+        }),
+    };
+
+    useEffect(() => {
+        setCurrentMainImage(locationImages[selectedLocation.value]);
+    }, [selectedLocation]);
 
     const mapContainer = useRef(null);
     const map = useRef(null);
@@ -499,18 +499,13 @@ const LocationsPage = () => {
                 <div className="search">
                     <div className="location-search">
                         <div className="location-filter">
-                            <select 
-                                id="locationFilter"
-                                value={filters.locationFilter}
+                            <Select
+                                options={locationOptions}
                                 onChange={handleLocationChange}
-                            >
-                                <option value="All">All Locations</option>
-                                <option value="Gold Coast">Gold Coast</option>
-                                <option value="Brisbane">Brisbane</option>
-                                <option value="Ipswich">Ipswich</option>
-                                <option value="Logan">Logan</option>
-                                <option value="SunshineCoast">Sunshine Coast</option>
-                            </select>
+                                styles={customStyles}
+                                placeholder="Location"
+                                isClearable
+                            />
                         </div>
                         <div className="bottom-filtering">
                             <div className="suburb-filter">
@@ -521,61 +516,46 @@ const LocationsPage = () => {
                                     onChange={(e) => setFilters({ ...filters, suburbSearch: e.target.value })}
                                 />
                             </div>
-                            <div className="feature-dropdown" ref={dropdownRef}>
-                                <button onClick={toggleDropdown} className="dropdown-toggle">Features</button>
-                                {dropdownOpen && (
-                                    <ul className="dropdown-menu">
-                                        {allFeatures.map(feature => (
-                                            <li
-                                                key={feature}
-                                                onClick={() => toggleFeature(feature)}
-                                                className={selectedFeatures.includes(feature) ? 'selected' : ''}
-                                            >
-                                                {feature}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                )}
+                            <div className="feature-dropdown">
+                                <Select
+                                    options={featureOptions}
+                                    onChange={handleFeatureChange}
+                                    styles={customStyles}
+                                    placeholder="Features"
+                                    isMulti
+                                    isClearable
+                                />
                             </div>
                         </div>
                     </div>
                     <div className="filters">
                         <div className="beds-filter">
-                            <select 
-                                id="bedsFilter"
-                                value={filters.bedsFilter}
-                                onChange={(e) => setFilters({ ...filters, bedsFilter: e.target.value })}
-                                className={!filters.bedsFilter ? '' : ''}
-                                aria-label="Filter by number of beds"
-                            >
-                                <option value="">Bed</option>
-                                {createOptions('beds')}
-                            </select>
+                            <Select
+                                options={bedsOptions}
+                                onChange={option => setFilters(f => ({ ...f, bedsFilter: option }))}
+                                styles={customStyles}
+                                placeholder="Beds"
+                                isClearable
+                            />
                         </div>
                         <div className="car-bath-filter">
                             <div className="baths-filter">
-                                <select 
-                                    id="bathsFilter"
-                                    value={filters.bathsFilter}
-                                    onChange={(e) => setFilters({ ...filters, bathsFilter: e.target.value })}
-                                    className={!filters.bathsFilter ? '' : ''}
-                                    aria-label="Filter by number of baths"
-                                >
-                                    <option value="">Bath</option>
-                                    {createOptions('baths')}
-                                </select>
+                                <Select
+                                    options={bathsOptions}
+                                    onChange={option => setFilters(f => ({ ...f, bathsFilter: option }))}
+                                    styles={customStyles}
+                                    placeholder="Baths"
+                                    isClearable
+                                />
                             </div>
                             <div className="car-filter">
-                                <select 
-                                    id="carFilter"
-                                    value={filters.carFilter}
-                                    onChange={(e) => setFilters({ ...filters, carFilter: e.target.value })}
-                                    className={!filters.carFilter ? '' : ''}
-                                    aria-label="Filter by car spaces"
-                                >
-                                    <option value="">Car</option>
-                                    {createOptions('car')}
-                                </select>
+                                <Select
+                                    options={carOptions}
+                                    onChange={option => setFilters(f => ({ ...f, carFilter: option }))}
+                                    styles={customStyles}
+                                    placeholder="Cars"
+                                    isClearable
+                                />
                             </div>
                         </div>
                     </div>

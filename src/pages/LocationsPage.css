@@ -52,7 +52,7 @@
     padding-bottom: 0.75rem;
 }
 
-.suburb-filter input, .beds-filter, .baths-filter, .car-filter, .feature-filter, .location-filter {
+.suburb-filter input, .beds-filter, .baths-filter, .car-filter, .feature-dropdown, .location-filter {
     width: 15vw;
     border-bottom: 1px solid var(--grey-blue);
     text-transform: uppercase;
@@ -65,8 +65,8 @@
     padding-left: 1rem;
 }
 
-.suburb-filter input {
-    padding-bottom: 1.35rem;
+.suburb-filter {
+    display: flex;
 }
 
 .beds-filter select, .location-filter select {
@@ -105,50 +105,26 @@
     display: inline-block;
 }
 
-.dropdown-toggle {
-    cursor: pointer;
-    background-color: transparent;
-    border-bottom: 1px solid var(--grey-blue);
-    width: 15vw;
-    text-transform: uppercase;
-    font-size: 2.25rem;
-    color: var(--grey-blue);
-    padding-bottom: 1.35rem;
-    text-align: left;
-    padding-left: 1rem;
+.css-1u9des2-indicatorSeparator {
+    width: 0 !important;
 }
 
-.dropdown-toggle button {
-    text-align: end;
+.css-13cymwt-control {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    border-width: 0 !important;
 }
 
-.dropdown-menu {
-    position: absolute;
-    z-index: 1000;
-    width: 100%;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    background-color: white;
-    display: block;
-    padding: 10px;
-    list-style: none;
-    border-radius: 0.25rem;
+.css-t3ipsp-control {
+    color: transparent !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    border-width: 0 !important;
+    box-shadow: 0 0 0 0px transparent !important;
 }
 
-.dropdown-menu li {
-    padding: 8px 12px;
-    cursor: pointer;
-    border-bottom: 1px solid #eee;
-    font-size: 1.5rem;
-}
-
-.dropdown-menu li:hover {
-    background-color: var(--grey-blue);
-    color: var(--white);
-}
-
-.dropdown-menu li.selected {
-    background-color: var(--grey-blue);
-    color: white;
+.css-1jqq78o-placeholder, .css-w9q2zk-Input2 {
+    color: var(--grey-blue) !important;
 }
 
 .properties-container {
@@ -178,7 +154,7 @@
     height: 100%;
     width: 100%;
     border-radius: 0.25rem;
-    z-index: 99;
+    /* z-index: 99; */
     margin-bottom: 5.2rem;
 }
 
