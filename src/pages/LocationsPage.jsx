@@ -516,25 +516,25 @@ const LocationsPage = () => {
                                     onChange={(e) => setFilters({ ...filters, suburbSearch: e.target.value })}
                                 />
                             </div>
-                            <div className="feature-dropdown">
+                            <div className="beds-filter">
                                 <Select
-                                    options={featureOptions}
-                                    onChange={handleFeatureChange}
+                                    options={bedsOptions}
+                                    onChange={option => setFilters(f => ({ ...f, bedsFilter: option }))}
                                     styles={customStyles}
-                                    placeholder="Features"
-                                    isMulti
+                                    placeholder="Beds"
                                     isClearable
                                 />
                             </div>
                         </div>
                     </div>
                     <div className="filters">
-                        <div className="beds-filter">
+                        <div className="feature-dropdown">
                             <Select
-                                options={bedsOptions}
-                                onChange={option => setFilters(f => ({ ...f, bedsFilter: option }))}
+                                options={featureOptions}
+                                onChange={handleFeatureChange}
                                 styles={customStyles}
-                                placeholder="Beds"
+                                placeholder="Features"
+                                isMulti
                                 isClearable
                             />
                         </div>

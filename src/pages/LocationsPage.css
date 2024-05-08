@@ -62,23 +62,18 @@
 }
 
 .search input::placeholder {
-    padding-left: 1rem;
+    padding-left: 1.2rem;
 }
 
 .suburb-filter {
     display: flex;
 }
 
-.beds-filter select, .location-filter select {
+.feature-dropdown select, .location-filter select {
     width: 33vw;
-    padding-left: 0.65rem;
 }
 
-.baths-filter select, .car-filter select {
-    padding-left: 0.65rem;
-}
-
-.beds-filter, .location-filter {
+.feature-dropdown, .location-filter {
     width: 33vw;
     margin-bottom: 2.25rem;
 }
@@ -92,10 +87,9 @@
 .car-filter {
     width: 15vw; 
     position: relative;
-    margin-left: 3vw;
 }
 
-.bottom-filtering {
+.bottom-filtering, .car-bath-filter {
     display: flex;
     justify-content: space-between;
 }
@@ -199,20 +193,34 @@
         padding: 3rem 3%;
     }
 
+    .feature-dropdown, .location-filter {
+        width: 40vw;
+    }
+
+    .suburb-filter input, .baths-filter, .car-filter, .beds-filter {
+        width: 18.5vw;
+    }
+
     .properties-container {
         padding: 1.2rem 3%;
     }
 }
 
-@media (max-width: 950px) {
-
-
-    .search {
-        height: 15vh;
+@media (max-width: 735px) {
+    .beds-filter, .baths-filter, .car-filter, .feature-dropdown, .search input::placeholder, .location-filter {
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 700px) {
+    .feature-dropdown, .location-filter {
+        width: 45vw;
+    }
+
+    .suburb-filter input, .baths-filter, .car-filter, .beds-filter {
+        width: 20vw;
+    }
+
     .properties-container {
         grid-template-columns: 1fr 1fr;
     }
@@ -226,9 +234,42 @@
     }
 }
 
-@media (max-width: 600px) {
-    .location-name {
-        font-size: 10rem;
+@media (max-width: 630px) {
+    .search {
+        height: 30vh;
+        align-items: flex-end;
+    }
+
+    .bottom-filtering, .car-bath-filter {
+        flex-direction: column;
+    }
+
+    .feature-dropdown, .location-filter, .suburb-filter input, .baths-filter, .car-filter, .beds-filter  {
+        width: 45vw;
+    }
+
+    .filters {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .location-filter, .baths-filter, .suburb-filter input {
+        margin-bottom: 2rem;
+    }
+
+    .suburb-filter input {
+        padding-bottom: 2rem;
+        padding: 10.75px 0;
+    }
+
+    .suburb-filter input::placeholder {
+        width: 100%;
+    }
+
+    .css-w9q2zk-Input2 {
+        margin: 0 !important;
+        padding: 0 !important;
     }
 }
 
@@ -252,10 +293,6 @@
 @media (max-width: 500px) {
     .location-name {
         font-size: 8rem;
-    }
-
-    .search {
-        height: 12.5vh;
     }
 }
 
