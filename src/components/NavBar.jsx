@@ -94,9 +94,9 @@ function NavBar() {
                         </div>
                         <nav className="navbar flex-nav" id="navbar">
                             <Link 
-                            to="/" 
-                            className={isActive("/") ? "active" : ""}
-                            onClick={handleLinkClick}
+                                to="/" 
+                                className={isActive("/") ? "active" : ""}
+                                onClick={handleLinkClick}
                             >
                                 Home
                             </Link>
@@ -104,24 +104,31 @@ function NavBar() {
                                 to="/about"
                                 className={isActive("/about") ? "active" : ""}
                                 onClick={handleLinkClick}
-                                >
-                                    About
-                                </Link>
-                                <Link 
+                            >
+                                About
+                            </Link>
+                            <Link 
                                 to="/services" 
                                 className={isActive("/services") ? "active" : ""}
                                 onClick={handleLinkClick}
-                                >
-                                    Services
-                                </Link>
-                                <Link 
+                            >
+                                Services
+                            </Link>
+                            <Link 
                                 to="/portfolio" 
                                 className={isActive("/portfolio") ? "active" : ""}
                                 onClick={handleLinkClick}
-                                >
-                                    Portfolio
-                                </Link>
-                            <div 
+                            >
+                                Portfolio
+                            </Link>
+                            <Link 
+                                to="/locations" 
+                                className={isActive("/locations") ? "active" : ""}
+                                onClick={handleLinkClick}
+                            >
+                                Leasing
+                            </Link>
+                            {/* <div 
                                 className={`dropdown ${dropdownOpen ? 'open' : ''}`} 
                                 aria-haspopup="true" 
                                 aria-expanded={dropdownOpen}>
@@ -145,7 +152,7 @@ function NavBar() {
                                         </div>
                                     </div>
                                 )}
-                            </div>
+                            </div> */}
                             <Link 
                             to="/contact" 
                             className={isActive("/contact") ? "active" : ""}
