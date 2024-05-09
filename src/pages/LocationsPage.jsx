@@ -343,7 +343,6 @@ import LoganPropertiesData from '../pages/Logan/LoganPropertiesData';
 import SunshineCoastPropertiesData from '../pages/SunshineCoast/SunshineCoastPropertiesData';
 import "./LocationsPage.css";
 
-// import mainInitialImage from "../assets/Brisbane/brisbane.jpg";
 import mainInitialImage from "../assets/gold-coast4.png";
 import mainGoldCoast from "../assets/GoldCoast/gold-coast.jpg";
 import mainBrisbane from "../assets/Brisbane/brisbane.jpg";
@@ -358,6 +357,14 @@ const LocationsPage = () => {
         ...IpswichPropertiesData.map(item => ({ ...item, location: 'Ipswich' })),
         ...LoganPropertiesData.map(item => ({ ...item, location: 'Logan' })),
         ...SunshineCoastPropertiesData.map(item => ({ ...item, location: 'Sunshine Coast' })),
+    ];
+
+    const featureOptions = [
+        { value: 'Air conditioning', label: 'Air conditioning' },
+        { value: 'Outdoor area', label: 'Outdoor area' },
+        { value: 'Pool', label: 'Pool' },
+        { value: 'Garage', label: 'Garage' },
+        { value: 'Pets conceded', label: 'Pets conceded' }
     ];
 
     const [filters, setFilters] = useState({
@@ -396,8 +403,8 @@ const LocationsPage = () => {
         .map(baths => ({ value: baths, label: `${baths}` }));
     const carOptions = Array.from(new Set(allPropertiesData.map(p => p.car)))
         .map(car => ({ value: car, label: `${car}` }));
-    const featureOptions = Array.from(new Set(allPropertiesData.flatMap(p => p.features)))
-        .map(feature => ({ value: feature, label: feature }));
+    // const featureOptions = Array.from(new Set(allPropertiesData.flatMap(p => p.features)))
+    //     .map(feature => ({ value: feature, label: feature }));
 
     useEffect(() => {
         if (filters.locationFilter && locationImages[filters.locationFilter]) {
@@ -427,9 +434,28 @@ const LocationsPage = () => {
     
     const customStyles = {
         option: (provided, state) => ({
-          ...provided,
-          backgroundColor: state.isSelected ? '#616e89' : (state.isFocused ? '#294162' : provided.backgroundColor),
-          color: state.isSelected ? 'white' : (state.isFocused ? 'white' : provided.color),
+            ...provided,
+            backgroundColor: state.isSelected ? '#616e89' : (state.isFocused ? '#294162' : provided.backgroundColor),
+            color: state.isSelected ? 'white' : (state.isFocused ? 'white' : provided.color),
+        }),
+        multiValue: (provided, state) => ({
+            ...provided,
+            backgroundColor: '#a4a4a4',
+            color: 'white'
+        }),
+        multiValueLabel: (provided, state) => ({
+            ...provided,
+            color: 'white',
+        }),
+        multiValueRemove: (provided, state) => ({
+            ...provided,
+            backgroundColor: '#a4a4a4',
+            color: 'white',
+            ':hover': {
+                backgroundColor: '#a4a4a4',
+                color: '#294162',
+                cursor: 'pointer'
+            },
         }),
     };
 

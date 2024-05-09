@@ -35,7 +35,7 @@
 }
 
 .search {
-    height: 20vh;
+    height: 22.5vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -237,7 +237,6 @@
 @media (max-width: 630px) {
     .search {
         height: 30vh;
-        align-items: flex-end;
     }
 
     .bottom-filtering, .car-bath-filter {
@@ -304,4 +303,15 @@
     .location-details p {
         font-size: 1.75rem !important;
     }
+}
+
+.css-tj5bde-Svg path {
+    color: white !important;
+}
+
+.css-1xc3v61-indicatorContainer path {
+    color: #294162 !important;
+}
+.css-tj5bde-Svg path:hover {
+    color: #294162 !important;
 }
