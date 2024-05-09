@@ -9,6 +9,27 @@
     color: var(--grey-blue);
     padding: 0rem 0.5rem;
 }
+
+.accordion-label {
+    padding-top: 1.5rem !important;
+    display: flex;
+}
+
+.accordion-label label {
+    font-size: 3rem;
+    padding-right: 2rem;
+    display: flex;
+    color: var(--grey-blue);
+}
+
+.accordion-label input {
+    margin-right: 0.75rem !important;
+}
+
+.accordion-label input[type="radio"] {
+    accent-color: var(--blue); 
+}
+
   
 .faqs .faq {
     padding-top: 2rem;
