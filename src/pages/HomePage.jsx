@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import Slider from '../components/Slider';
 import ScrollToTop from '../components/ScrollToTop.jsx';
 import AutoPlay from '../components/AutoPlay.jsx';
+import AnimatedButton from '../components/AnimatedButton.jsx';
 import Accordion from '../components/Accordion.jsx';
 
 import videoBg from "../assets/creese-property-video.mp4";
@@ -21,6 +22,16 @@ function HomePage() {
         }, 3750); 
         return () => clearTimeout(timer);
     }, []);
+
+    const [enquiryType, setEnquiryType] = useState('');
+    const [locationProperty, setLocationProperty] = useState('');
+    const [bedsNumber, setBedsNumber] = useState('');
+    const [bathsNumber, setBathsNumber] = useState('');
+
+    const handleFormSubmit = (e) => {
+        e.preventDefault(); // Prevent default form submission behavior
+        // Form submission logic here
+    };
 
     return (
         <>
@@ -69,6 +80,50 @@ function HomePage() {
                             <p>Creese Property values genuine relationships with clients and tenants. We believe in straightforward communication and ethical business practices. Our team is approachable and committed to providing personalised service, ensuring that every client feels listened to, respected, and valued.</p>
                         </div>
                     </div>
+                </div>
+                <div className='contact-form'>
+                    <h2>REQUEST A RENTAL APPRAISAL</h2>
+                    <form onSubmit={handleFormSubmit}>
+                        <div className="name-section">
+                            <input 
+                                type="text"
+                                name="firstName"
+                                placeholder='First Name'
+                            />
+                            <input 
+                                type="text"
+                                name="lastName"
+                                className='lastName'
+                                placeholder='Last Name'
+                            />
+                        </div>
+                        <div className="details-section">
+                            <input 
+                                type="email"
+                                name="email"
+                                placeholder='Contact Email'
+                            />
+                            <input 
+                                type="number"
+                                name="phoneNumber"
+                                className='phoneNumber'
+                                placeholder='Phone Number'
+                            />
+                        </div>
+                        <div className='address-section'>
+                            <input type="text" name='address' rows='1' placeholder='Enter Address of Property to Be Appraised'/>
+                        </div>
+                        <div className='message-section'>
+                            <textarea type="text" name='message' rows='6' placeholder='Message'/>
+                        </div>
+                        <div className="newsletter-signup">
+                            <label htmlFor="">
+                                <input type="checkbox" name="newsletterSignup" id="newsletterSignup" />
+                                I  would like to sign up for news and updates from Creese Property and agree to the Privacy Policy.
+                            </label>
+                        </div>
+                        <AnimatedButton onSubmit={handleFormSubmit} />
+                    </form>
                 </div>
                 <Accordion />
                 <Footer />
