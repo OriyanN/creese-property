@@ -26,6 +26,7 @@ function ContactForm() {
     const [locationProperty, setLocationProperty] = useState('');
     const [bedsNumber, setBedsNumber] = useState('');
     const [bathsNumber, setBathsNumber] = useState('');
+    const [rentalAppraisal, setRentalAppraisal] = useState('');
 
     useEffect(() => {
         if (selectedLocation) {
@@ -112,6 +113,7 @@ function ContactForm() {
                         <option value="rental">Rental Enquiry</option>
                         <option value="general">General Enquiry</option>
                         <option value="propertyNotification">Be Notified About a Property</option>
+                        <option value="requestRentalAppraisal">Request a Rental Appraisal</option>
                         <option value="other">Other</option>
                     </select>
                 </div>
@@ -160,6 +162,19 @@ function ContactForm() {
                             <option value="6">6</option>
                             <option value="7">7</option>
                         </select>
+                    </div>
+                )}
+                {enquiryType === "requestRentalAppraisal" && (
+                    <div className="additional-selects">
+                        <input
+                            className="additional-selects-dropdown appraisal"
+                            type="text"
+                            value={rentalAppraisal}
+                            onChange={e => setRentalAppraisal(e.target.value)}
+                            name="rentalAppraisal"
+                            placeholder='Enter Address of Property to Be Appraised'
+                        >
+                        </input>
                     </div>
                 )}
                 <div className='message-section'>

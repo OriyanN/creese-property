@@ -50,6 +50,14 @@
     padding: 1rem 3rem;
 }
 
+
+.additional-selects-dropdown.appraisal {
+    border-bottom: 1px solid var(--grey-blue);
+    width: 95%;
+    font-size: 2.5rem;
+    padding: 1rem 3rem;
+}
+
 .message-section {
     display: flex;
     justify-content: center;
