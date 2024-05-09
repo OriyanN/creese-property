@@ -111,7 +111,7 @@ function HomePage() {
                             />
                         </div>
                         <div className='address-section'>
-                            <input type="text" name='address' rows='1' placeholder='Enter Address of Property to Be Appraised'/>
+                            <input type="text" name='address' rows='1' placeholder='Address of Property to Be Appraised'/>
                         </div>
                         <div className='message-section'>
                             <textarea type="text" name='message' rows='6' placeholder='Message'/>
