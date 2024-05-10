@@ -40,7 +40,7 @@ function PortfolioPage() {
                     <div className="overlay"></div>
                 </div>
                 <div className='portfolio-text'>
-                    <h2>Browse through our available leases</h2>
+                    <h2>A Curated Portfolio of Our Current Properties Under Management</h2>
                 </div>
                 <div className="images-container images-container-portfolio">
                     {data.map(item => (
