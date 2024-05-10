@@ -43,7 +43,7 @@
     color: var(--grey-blue);
 }
 
-.contact-text p, .about-text p {
+.about-text, .about-text p {
     font-size: 2.25rem;
     text-align: justify;
 }
@@ -71,18 +71,25 @@
 }
 
 .contact-map {
-    float: right !important; 
-    width: 47.5%; 
-    height: 60vh;
-    margin: 1rem 0 1rem 3rem;
+    float: left !important; 
+    width: 65%; 
+    height: 45vh;
+    margin: 1rem 3rem 1rem 0;
 }
 
 .about-text, .contact-text {
     display: inline;
     width: auto; 
     font-size: 2.25rem;
-    text-align: justify;
     float: none;
+}
+
+.contact-text p {
+    padding-top: 0.45rem;
+}
+
+.contact-text h4 {
+    color: var(--grey-blue);
 }
 
 .team-container, .careers-container {
