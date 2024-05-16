@@ -171,9 +171,16 @@
     font-size: 3rem;
 }
 
+.image-item-container {
+    overflow: hidden;
+    position: relative;
+    display: inline-block; 
+}
+
 .images-container .image-item-container .image-item {
-    transition: filter 0.3s ease;
+    transition: filter 0.3s ease, transform 0.5s ease-in-out !important;
     filter: grayscale(0%) blur(0px);
+    transform: scale(1);
 }
 
 .images-container:hover .image-item-container .image-item {
@@ -182,6 +189,7 @@
 
 .images-container .image-item-container:hover .image-item {
     filter: grayscale(0%) blur(0px);
+    transform: scale(1.05);
 }
 
 @media (max-width: 1130px) {

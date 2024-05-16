@@ -449,11 +449,11 @@ const LocationsPage = () => {
         }),
         multiValueRemove: (provided, state) => ({
             ...provided,
-            backgroundColor: '#a4a4a4',
             color: 'white',
+            backgroundColor: '#a4a4a4',
             ':hover': {
-                backgroundColor: '#a4a4a4',
-                color: '#294162',
+                backgroundColor: '#294162',
+                color: 'white',
                 cursor: 'pointer'
             },
         }),
