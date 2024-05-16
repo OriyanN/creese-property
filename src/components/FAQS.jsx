@@ -18,6 +18,6 @@ const FAQS = ({ faq, index, toggleFAQ }) => {
             <div className="faq-answer">{faq.answer}</div>
         </div>
     );
-  };
+};
 
 export default FAQS;
