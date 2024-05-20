@@ -1,5 +1,5 @@
 .images-container-portfolio {
-    margin-top: 4rem;
+    margin: 4rem 0;
 }
 
 .images-container.images-container-portfolio {
@@ -24,16 +24,39 @@
     .images-container.images-container-portfolio {
         padding: 1.2rem 3%;
     }
+
+    .portfolio-text {
+        padding: 5.5rem 3% 2rem 3%;
+    }
+
+    .portfolio-text h2 {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .portfolio-text h2 {
+        font-size: 4rem;
+    }
 }
 
 @media (max-width: 700px) {
     .images-container.images-container-portfolio {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .portfolio-text h2 {
+        font-size: 3.75rem;
+        text-align: center;
+    }
 }
 
 @media (max-width: 550px) {
     .images-container.images-container-portfolio {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .portfolio-text h2 {
+        font-size: 3.25rem;
     }
 }
