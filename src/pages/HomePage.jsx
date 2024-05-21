@@ -135,7 +135,7 @@
 // export default HomePage;
 
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Scrollbar, FreeMode } from 'swiper/modules';
@@ -250,15 +250,17 @@ const HomePage = () => {
                                             <h4>{image.address}</h4>
                                         </div>
                                     </div>
-                                    <div className="image-overlay">
-                                        <div className="address">
-                                            <h4>{image.address}</h4>
+                                    <Link to={image.link}>
+                                        <div className="image-overlay">
+                                            <div className="address">
+                                                <h4>{image.address}</h4>
+                                            </div>
+                                            <div className="des">
+                                                <h5>{image.description}</h5>
+                                            </div>
+                                            {/* <button onClick={() => navigate(image.link)}>See more</button> */}
                                         </div>
-                                        <div className="des">
-                                            <h5>{image.description}</h5>
-                                        </div>
-                                        {/* <button onClick={() => navigate(image.link)}>See more</button> */}
-                                    </div>
+                                    </Link>
                                 </div>
                             </SwiperSlide>
                         ))}
