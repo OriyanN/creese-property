@@ -48,13 +48,20 @@
     border-bottom: 1px solid var(--grey-blue);
     text-transform: uppercase;
     font-size: 2.25rem;
-    padding: 1rem 3rem;
 }
 
 .dropdowns-section .css-w9q2zk-Input2, .dropdowns-section .css-1jqq78o-placeholder, .additional-selects .css-1jqq78o-placeholder  {
     color: var(--grey-beige) !important;
     text-transform: capitalize;
     font-size: 2.5rem;
+}
+
+.dropdowns-section .css-1jqq78o-placeholder {
+    padding: 1rem 3rem;
+}
+
+.dropdowns-section .css-1dimb5e-singleValue {
+    padding-left: 3rem;
 }
 
 .dropdowns-section .css-art2ul-ValueContainer2 {
