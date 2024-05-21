@@ -98,45 +98,6 @@ function ContactForm() {
                     />
                 </div>
                 <div className="dropdowns-section">
-                    {/* Dropdown for selecting a location */}
-                    {/* <select 
-                        className="dropdown-section" 
-                        value={selectedLocation} 
-                        onChange={e => setSelectedLocation(e.target.value)}
-                        name="location"
-                    >
-                        <option value="">Select a Location</option>
-                        {Object.keys(PropertiesData).map((location) => (
-                            <option key={location} value={location}>{location}</option>
-                        ))}
-                    </select> */}
-                    {/* Dropdown for selecting a property based on location */}
-                    {/* <select 
-                        className="dropdown-section" 
-                        value={selectedProperty} 
-                        onChange={e => setSelectedProperty(e.target.value)} 
-                        disabled={!selectedLocation}
-                    >
-                        <option value="">Select a Property</option>
-                        {propertiesOptions.map((property) => (
-                            <option key={property.id} value={property.id}>{property.address}</option>
-                        ))}
-                    </select> */}
-                    
-                    {/* Enquiry Type Dropdown */}
-                    {/* <select
-                        className="dropdown-section"
-                        value={enquiryType}
-                        onChange={e => setEnquiryType(e.target.value)}
-                        name="enquiryType"
-                    >
-                        <option value="">Select Enquiry Type</option>
-                        <option value="rental">Rental Enquiry</option>
-                        <option value="general">General Enquiry</option>
-                        <option value="propertyNotification">Be Notified About a Property</option>
-                        <option value="requestRentalAppraisal">Request a Rental Appraisal</option>
-                        <option value="other">Other</option>
-                    </select> */}
                     <Select
                         options={[
                             { value: "rental", label: "Rental Enquiry" },
@@ -151,53 +112,6 @@ function ContactForm() {
                         isClearable
                     />
                 </div>
-                {/* {enquiryType === "propertyNotification" && (
-                    <div className="additional-selects">
-                        <select
-                            className="additional-selects-dropdown location"
-                            value={locationProperty}
-                            onChange={e => setLocationProperty(e.target.value)}
-                            name="locationProperty"
-                        >
-                            <option value="">Location</option>
-                            <option value="GoldCoast">Gold Coast</option>
-                            <option value="Logan">Logan</option>
-                            <option value="Ipswich">Ipswich</option>
-                            <option value="Brisbane">Brisbane</option>
-                            <option value="SunshineCoast">Sunshine Coast</option>
-                        </select>
-                        <select
-                            className="additional-selects-dropdown beds"
-                            value={bedsNumber}
-                            onChange={e => setBedsNumber(e.target.value)}
-                            name="bedsNumber"
-                        >
-                            <option value="">Beds</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                        </select>
-                        <select
-                            className="additional-selects-dropdown baths"
-                            value={bathsNumber}
-                            onChange={e => setBathsNumber(e.target.value)}
-                            name="bathsNumber"
-                        >
-                            <option value="">Baths</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                        </select>
-                    </div>
-                )} */}
                 {enquiryType === "propertyNotification" && (
                     <div className="additional-selects">
                         <Select
