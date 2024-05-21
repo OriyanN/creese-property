@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Select from 'react-select';
 
 import "./ContactForm.css"
 
@@ -42,9 +43,29 @@ function ContactForm() {
         // Form submission logic here
     };
 
-    useEffect(() => {
-        console.log("Enquiry Type Changed:", enquiryType);
-    }, [enquiryType]);    
+    // useEffect(() => {
+    //     console.log("Enquiry Type Changed:", enquiryType);
+    // }, [enquiryType]);
+
+    const customStyles = {
+        option: (provided, state) => ({
+            ...provided,
+            backgroundColor: state.isSelected ? '#616e89' : (state.isFocused ? '#294162' : provided.backgroundColor),
+            color: state.isSelected ? 'white' : (state.isFocused ? 'white' : provided.color),
+        }),
+        control: styles => ({ ...styles, backgroundColor: 'white' }),
+    };
+    const locationOptions = [
+        { value: "GoldCoast", label: "Gold Coast" },
+        { value: "Logan", label: "Logan" },
+        { value: "Ipswich", label: "Ipswich" },
+        { value: "Brisbane", label: "Brisbane" },
+        { value: "SunshineCoast", label: "Sunshine Coast" }
+    ];
+    
+    const bedsOptions = Array.from({ length: 7 }, (_, i) => ({ value: i + 1, label: `${i + 1}` }));
+    
+    const bathsOptions = Array.from({ length: 7 }, (_, i) => ({ value: i + 1, label: `${i + 1}` }));
 
     return (
         <div className='contact-form'>
@@ -103,7 +124,7 @@ function ContactForm() {
                     </select> */}
                     
                     {/* Enquiry Type Dropdown */}
-                    <select
+                    {/* <select
                         className="dropdown-section"
                         value={enquiryType}
                         onChange={e => setEnquiryType(e.target.value)}
@@ -115,9 +136,22 @@ function ContactForm() {
                         <option value="propertyNotification">Be Notified About a Property</option>
                         <option value="requestRentalAppraisal">Request a Rental Appraisal</option>
                         <option value="other">Other</option>
-                    </select>
+                    </select> */}
+                    <Select
+                        options={[
+                            { value: "rental", label: "Rental Enquiry" },
+                            { value: "general", label: "General Enquiry" },
+                            { value: "propertyNotification", label: "Be Notified About a Property" },
+                            { value: "requestRentalAppraisal", label: "Request a Rental Appraisal" },
+                            { value: "other", label: "Other" }
+                        ]}
+                        styles={customStyles}
+                        onChange={option => setEnquiryType(option ? option.value : '')}
+                        placeholder="Select Enquiry Type"
+                        isClearable
+                    />
                 </div>
-                {enquiryType === "propertyNotification" && (
+                {/* {enquiryType === "propertyNotification" && (
                     <div className="additional-selects">
                         <select
                             className="additional-selects-dropdown location"
@@ -162,6 +196,34 @@ function ContactForm() {
                             <option value="6">6</option>
                             <option value="7">7</option>
                         </select>
+                    </div>
+                )} */}
+                {enquiryType === "propertyNotification" && (
+                    <div className="additional-selects">
+                        <Select
+                            options={locationOptions}
+                            styles={customStyles}
+                            onChange={option => setLocationProperty(option ? option.value : '')}
+                            placeholder="Location"
+                            isClearable={true}
+                            className="additional-selects-dropdown location"
+                        />
+                        <Select
+                            options={bedsOptions}
+                            styles={customStyles}
+                            onChange={option => setBedsNumber(option ? option.value : '')}
+                            placeholder="Beds"
+                            isClearable={true}
+                            className="additional-selects-dropdown beds"
+                        />
+                        <Select
+                            options={bathsOptions}
+                            styles={customStyles}
+                            onChange={option => setBathsNumber(option ? option.value : '')}
+                            placeholder="Baths"
+                            isClearable={true}
+                            className="additional-selects-dropdown baths"
+                        />
                     </div>
                 )}
                 {enquiryType === "requestRentalAppraisal" && (
