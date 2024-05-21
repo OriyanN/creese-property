@@ -43,10 +43,6 @@ function ContactForm() {
         // Form submission logic here
     };
 
-    // useEffect(() => {
-    //     console.log("Enquiry Type Changed:", enquiryType);
-    // }, [enquiryType]);
-
     const customStyles = {
         option: (provided, state) => ({
             ...provided,
