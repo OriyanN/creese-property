@@ -403,8 +403,6 @@ const LocationsPage = () => {
         .map(baths => ({ value: baths, label: `${baths}` }));
     const carOptions = Array.from(new Set(allPropertiesData.map(p => p.car)))
         .map(car => ({ value: car, label: `${car}` }));
-    // const featureOptions = Array.from(new Set(allPropertiesData.flatMap(p => p.features)))
-    //     .map(feature => ({ value: feature, label: feature }));
 
     useEffect(() => {
         if (filters.locationFilter && locationImages[filters.locationFilter]) {

@@ -109,7 +109,7 @@
     border-width: 0 !important;
 }
 
-.css-t3ipsp-control {
+.css-t3ipsp-control, .css-v68sna-control {
     color: transparent !important;
     background-color: transparent !important;
     border-color: transparent !important;
@@ -206,6 +206,7 @@
 .css-1xc3v61-indicatorContainer path {
     color: #294162 !important;
 }
+
 .css-tj5bde-Svg path:hover {
     color: #294162 !important;
 }
