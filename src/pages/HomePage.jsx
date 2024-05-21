@@ -191,7 +191,7 @@ const HomePage = () => {
             const parallax = document.querySelector('.parallax');
             if (parallax) {
                 const offset = window.scrollY - parallax.offsetTop;
-                parallax.style.backgroundPositionY = -offset * 0.00000005 + 'px';
+                parallax.style.backgroundPositionY = -offset * 0.00000001 + 'px';
             }
         };
 
