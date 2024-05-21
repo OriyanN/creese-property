@@ -11,7 +11,7 @@
 }
 
 .accordion-label {
-    padding-top: 1.5rem !important;
+    padding-top: 3rem !important;
     display: flex;
 }
 
@@ -29,7 +29,6 @@
 .accordion-label input[type="radio"] {
     accent-color: var(--blue); 
 }
-
   
 .faqs .faq {
     padding-top: 2rem;
