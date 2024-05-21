@@ -161,12 +161,6 @@ import IpswichProperty from '../assets/Ipswich/ips1/modern-house-exterior-2023-1
 
 const HomePage = () => {
     const [loading, setLoading] = useState(true);
-    const [hoverIndex, setHoverIndex] = useState(null);
-    const navigate = useNavigate();
-
-    const handleSeeMoreClick = (link) => {
-        navigate(link);
-    };
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -191,6 +185,19 @@ const HomePage = () => {
         { id: 4, url: LoganProperty, address: '506-514 Beenleigh Redland Bay Road, Carbrook', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/locations/gold-coast/properties/log1' },
         { id: 5, url: IpswichProperty, address: '22 Kingsmill Road, Coalfalls', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/locations/gold-coast/properties/ips1' },
     ];
+
+    useEffect(() => {
+        const parallaxEffect = () => {
+            const parallax = document.querySelector('.parallax');
+            if (parallax) {
+                const offset = window.scrollY - parallax.offsetTop;
+                parallax.style.backgroundPositionY = -offset * 0.00000005 + 'px';
+            }
+        };
+
+        window.addEventListener('scroll', parallaxEffect);
+        return () => window.removeEventListener('scroll', parallaxEffect);
+    }, []);
 
     return (
         <>
@@ -258,7 +265,6 @@ const HomePage = () => {
                                             <div className="des">
                                                 <h5>{image.description}</h5>
                                             </div>
-                                            {/* <button onClick={() => navigate(image.link)}>See more</button> */}
                                         </div>
                                     </Link>
                                 </div>
@@ -285,6 +291,9 @@ const HomePage = () => {
                              <p>Creese Property values genuine relationships with clients and tenants. We believe in straightforward communication and ethical business practices. Our team is approachable and committed to providing personalised service, ensuring that every client feels listened to, respected, and valued.</p>
                          </div>
                      </div>
+                 </div>
+                 <div className="parallax-section">
+                    <div className="overlay-content"></div>
                  </div>
                  <div className='contact-form'>
                      <h2>REQUEST A RENTAL APPRAISAL</h2>
