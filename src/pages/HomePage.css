@@ -41,24 +41,22 @@
 }
 
 .text-home {
-    height: 35vh;
+    height: 30vh;
+    width: 70vw;
+    padding: 1.2rem 9%;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    background-color: rgba(214, 208, 201, 0.3);
-    margin-bottom: -3rem;
 }
 
 .text-home p {
-    font-size: 6rem;
+    font-size: 3.75rem;
     width: 100%;
-    padding: 1.2rem 9%;
     margin: 0;
 }
 
 .text-home span {
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .slider-container {
@@ -66,6 +64,96 @@
     position: relative;
     z-index: 2;
 }
+
+
+.home-property-slide {
+    display: flex;
+    width: 100vw;
+    padding: 1.2rem 0 4rem 9%;
+}
+
+.text-example {
+    width: 30vw;
+    font-size: 4rem;
+    padding-right: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.swiper-scrollbar-drag {
+    background: var(--beige, rgba(0, 0, 0, 0.5));
+}
+
+.mySwiper {
+    width: 100%;
+    height: 70vh;
+}
+
+.mySwiper .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.home-page-image-container {
+    position: relative;
+    width: 21.5vw;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: bottom 0.5s ease;
+}
+
+.image-overlay .address h4, .image-overlay .des h5 {
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--white);
+    font-size: 2.25rem;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+.mySwiper .swiper-slide:hover .image-overlay {
+    bottom: 0;
+}
+
+.mySwiper .swiper-slide:hover .image-overlay {
+    display: flex;
+}
+
+.image-title, .image-description {
+    margin: 10px 0;
+}
+
+.mySwiper .swiper-slide button {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mySwiper .swiper-slide button:hover {
+    background-color: #ddd;
+}
+
 
 .divider-section {
     /* background-color: rgba(214, 208, 201, 0.3); */
@@ -154,10 +242,26 @@
         font-size: 6rem;
     }
 
+    .text-home {
+        padding: 1.2rem 3%;
+    }
+
     .text-home p {
-        font-size: 5rem;
+        font-size: 3.5rem;
         width: 100%;
-        padding: 0 5%;
+    }
+
+    .text-example {
+        width: 25vw !important;
+    }
+    
+    .mySwiper {
+        width: 85vw !important;
+    }
+
+    .mySwiper img {
+        width: 25vw !important;
+        padding-right: 2rem !important;
     }
 
     .divider-section {
@@ -172,6 +276,14 @@
 @media (max-width: 900px) {
     .video-text {
         font-size: 5rem;
+    }
+
+    .text-home {
+        width: 75vw;
+    }
+
+    .text-home p {
+        font-size: 3.25rem;
     }
 
     .divider-section {
@@ -224,6 +336,18 @@
 }
 
 @media (max-width: 750px) {
+    .text-example {
+        width: 20vw !important;
+    }
+    
+    .mySwiper {
+        width: 80vw !important;
+    }
+    
+    .home-page-image-container {
+        width: 34vw !important;
+    }
+
     .divider-section {
         height: 100%;
     }
@@ -252,9 +376,25 @@
         font-size: 4rem;
     }
 
+    .text-home {
+        width: 80vw;
+    }
+
     .text-home p {
-        font-size: 4.5rem;
+        font-size: 3rem;
         padding: 0 3%;
+    }
+
+    .text-example {
+        width: 20vw !important;
+    }
+    
+    .mySwiper {
+        width: 80vw !important;
+    }
+
+    .mySwiper img {
+        width: 40vw !important;
     }
 }
 
@@ -272,10 +412,6 @@
 }
 
 @media (max-width: 580px) {
-    .text-home p {
-        font-size: 4rem;
-    }
-
     .divider-section {
         height: 122.5vh;
         justify-content: space-evenly;
@@ -292,6 +428,26 @@
 }
 
 @media (max-width: 530px) {
+    .home-property-slide {
+        padding: 1.2rem 0 4rem 0% !important;
+    }
+
+    .text-home {
+        width: 100vw !important;
+    }
+
+    .text-example {
+        width: 0vw !important;
+    }
+    
+    .mySwiper {
+        width: 100vw !important;
+    }
+
+    .home-page-image-container {
+        width: 45vw !important;
+    }
+
     .section.home .contact-form h2 {
         text-align: center;
     }
@@ -314,12 +470,24 @@
 }
 
 @media (max-width: 450px) {
+    .text-home p {
+        font-size: 2.75rem;
+    }
+
     .service {
         height: 42.5vh !important;
     }
 }
 
 @media (max-width: 400px) {
+    .home-property-slide {
+        padding: 1.2rem 0 4rem 0 !important;
+    }
+
+    .home-page-image-container {
+        width: 90.5vw !important;
+    }
+
     .service img {
         height: 8rem;
     }
