@@ -133,7 +133,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 3rem;
-    /* padding-bottom: 5.5rem; */
 }
 
 .image-item {
@@ -144,11 +143,9 @@
 .map-container {
     position: fixed; 
     top: 11.5%;
-    /* right: 9%; */
     height: 100%;
     width: 100%;
     border-radius: 0.25rem;
-    /* z-index: 99; */
     margin-bottom: 5.2rem;
 }
 
