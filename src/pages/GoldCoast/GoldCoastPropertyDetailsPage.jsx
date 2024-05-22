@@ -95,7 +95,7 @@ const GoldCoastPropertyDetailsPage = () => {
   }, [propertyId]);
   
   if (!property) {
-    return <div>Property not found</div>;
+    return <div>There are no current similar properties.</div>;
   }
 
   return (
