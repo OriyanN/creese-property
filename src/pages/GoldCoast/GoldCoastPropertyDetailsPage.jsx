@@ -104,7 +104,7 @@ const GoldCoastPropertyDetailsPage = () => {
           <title>Gold Coast | Creese Property</title>
           <meta name="description" content="Gold Coast page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
           <meta name="robots" content="noindex"/>
-          <link rel="canonical" href={'/locations/gold-coast/properties/${property.id}'} />
+          <link rel="canonical" href={'/leasing/gold-coast/properties/${property.id}'} />
       </Helmet>
       <ScrollToTop />
       <div>
