@@ -13,6 +13,37 @@ function ServicePage() {
                 <title>Services | Creese Property</title>
                 <meta name="description" content="Services page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
                 <link rel="canonical" href="/services" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org/",
+                        "@graph": [
+                          {
+                            "@type": "BreadcrumbList",
+                            "@id": "https://www.creeseproperty.com/about/#breadcrumb",
+                            "itemListElement": [
+                              {
+                                "@type": "ListItem",
+                                "name": "Home",
+                                "position": "1",
+                                "item": "https://www.creeseproperty.com/"
+                              },
+                              {
+                                "@type": "ListItem",
+                                "name": "About",
+                                "position": "2",
+                                "item": "https://www.creeseproperty.com/about/"
+                              },
+                              {
+                                "@type": "ListItem",
+                                "name": "Services",
+                                "position": "3",
+                                "item": "https://www.creeseproperty.com/services/"
+                              }
+                            ]
+                          }
+                        ]
+                    })}
+                </script>
             </Helmet>
             <ScrollToTop />
             <div>

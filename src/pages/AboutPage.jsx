@@ -16,6 +16,31 @@ function AboutPage() {
                 <title>About | Creese Property</title>
                 <meta name="description" content="About page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
                 <link rel="canonical" href="/about" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org/",
+                        "@graph": [
+                          {
+                            "@type": "BreadcrumbList",
+                            "@id": "https://www.creeseproperty.com/about/#breadcrumb",
+                            "itemListElement": [
+                              {
+                                "@type": "ListItem",
+                                "name": "Home",
+                                "position": "1",
+                                "item": "https://www.creeseproperty.com/"
+                              },
+                              {
+                                "@type": "ListItem",
+                                "name": "About",
+                                "position": "2",
+                                "item": "https://www.creeseproperty.com/about/"
+                              }
+                            ]
+                          }
+                        ]
+                    })}
+                </script>
             </Helmet>
             {/* <Preloader /> */}
             <ScrollToTop />
@@ -51,18 +76,18 @@ function AboutPage() {
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at urna condimentum mattis. Etiam non quam lacus suspendisse faucibus. Est ultricies integer quis auctor elit. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Non quam lacus suspendisse faucibus interdum posuere. Posuere urna nec tincidunt praesent semper. Sodales ut eu sem integer vitae. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. </p>
                         </div>
                         <div className="team-member">
-                            <LazyImageAbout src="src/assets/Michael Black.png" alt="Creese Property Michael Pell" />
+                            <LazyImageAbout src="src/assets/Lachie Black.png" alt="Creese Property Michael Pell" />
                             <div className="team-headings">
-                                <h3>Michael Pell</h3>
-                                <h4>Lorem ipsum</h4>
+                                <h3>Lorem ipsum</h3>
+                                <h4>Property Manager</h4>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at urna condimentum mattis. Etiam non quam lacus suspendisse faucibus. Est ultricies integer quis auctor elit. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Non quam lacus suspendisse faucibus interdum posuere. Posuere urna nec tincidunt praesent semper. Sodales ut eu sem integer vitae. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. </p>
                         </div>
                         <div className="team-member">
                             <LazyImageAbout src="src/assets/Lachie Black.png" alt="Creese Property Lachlan Creese" />
                             <div className="team-headings">
-                                <h3>Lorem ipsum</h3>
-                                <h4>Property Manager</h4>
+                                <h3>Curby Creese</h3>
+                                <h4>Lorem ipsum</h4>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at urna condimentum mattis. Etiam non quam lacus suspendisse faucibus. Est ultricies integer quis auctor elit. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Non quam lacus suspendisse faucibus interdum posuere. Posuere urna nec tincidunt praesent semper. Sodales ut eu sem integer vitae. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. </p>
                         </div>

@@ -31,6 +31,43 @@ function PortfolioPage() {
                 <title>Portfolio | Creese Property</title>
                 <meta name="description" content="Portfolio page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
                 <link rel="canonical" href="/portfolio" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org/",
+                        "@graph": [
+                          {
+                            "@type": "BreadcrumbList",
+                            "@id": "https://www.creeseproperty.com/about/#breadcrumb",
+                            "itemListElement": [
+                              {
+                                "@type": "ListItem",
+                                "name": "Home",
+                                "position": "1",
+                                "item": "https://www.creeseproperty.com/"
+                              },
+                              {
+                                "@type": "ListItem",
+                                "name": "About",
+                                "position": "2",
+                                "item": "https://www.creeseproperty.com/about/"
+                              },
+                              {
+                                "@type": "ListItem",
+                                "name": "Services",
+                                "position": "3",
+                                "item": "https://www.creeseproperty.com/services/"
+                              },
+                              {
+                                "@type": "ListItem",
+                                "name": "Portfolio",
+                                "position": "4",
+                                "item": "https://www.creeseproperty.com/portfolio/"
+                              }
+                            ]
+                          }
+                        ]
+                    })}
+                </script>
             </Helmet>
             <ScrollToTop />
             <div>

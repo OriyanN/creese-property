@@ -510,8 +510,50 @@ const LocationsPage = () => {
             <Helmet>
                 <title>Leasing | Creese Property</title>
                 <meta name="description" content="Leasing page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-                <meta name="robots" content="noindex"/>
-                <link rel="canonical" href="/locations/gold-coast" />
+                <link rel="canonical" href="/leasing" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org/",
+                        "@graph": [
+                          {
+                            "@type": "BreadcrumbList",
+                            "@id": "https://www.creeseproperty.com/about/#breadcrumb",
+                            "itemListElement": [
+                              {
+                                "@type": "ListItem",
+                                "name": "Home",
+                                "position": "1",
+                                "item": "https://www.creeseproperty.com/"
+                              },
+                              {
+                                "@type": "ListItem",
+                                "name": "About",
+                                "position": "2",
+                                "item": "https://www.creeseproperty.com/about/"
+                              },
+                              {
+                                "@type": "ListItem",
+                                "name": "Services",
+                                "position": "3",
+                                "item": "https://www.creeseproperty.com/services/"
+                              },
+                              {
+                                "@type": "ListItem",
+                                "name": "Portfolio",
+                                "position": "4",
+                                "item": "https://www.creeseproperty.com/portfolio/"
+                              },
+                              {
+                                "@type": "ListItem",
+                                "name": "Leasing",
+                                "position": "5",
+                                "item": "https://www.creeseproperty.com/leasing/"
+                              }
+                            ]
+                          }
+                        ]
+                    })}
+                </script>
             </Helmet>
             <ScrollToTop />
             <section className="section location">
@@ -589,7 +631,7 @@ const LocationsPage = () => {
                         {filteredProperties.length > 0 ? (
                             filteredProperties.map((property) => (
                                 <div key={property.id} className="image-item-container">
-                                    <Link to={`/locations/gold-coast/properties/${property.id}`}>
+                                    <Link to={`/leasing/gold-coast/properties/${property.id}`}>
                                         <LazyImage src={property.images[0]} alt={`Property ${property.id}`} className="image-item" />
                                     </Link>
                                     <div className="location-details">

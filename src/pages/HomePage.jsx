@@ -205,6 +205,24 @@ const HomePage = () => {
                 <title>Home | Creese Property</title>
                 <meta name="description" content="Home page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
                 <link rel="canonical" href="/" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org/",
+                        "@graph": [
+                          {
+                            "@type": "BreadcrumbList",
+                            "@id": "https://www.creeseproperty.com/#breadcrumb",
+                            "itemListElement": [
+                              {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Home"
+                              }
+                            ]
+                          }
+                        ]
+                    })}
+                </script>
             </Helmet>
             <ScrollToTop />
             {loading && (

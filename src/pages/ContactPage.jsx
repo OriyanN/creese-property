@@ -35,6 +35,55 @@ function ContactPage() {
                 <title>Contact | Creese Property</title>
                 <meta name="description" content="Contact page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
                 <link rel="canonical" href="/contact" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org/",
+                        "@graph": [
+                          {
+                            "@type": "BreadcrumbList",
+                            "@id": "https://www.creeseproperty.com/about/#breadcrumb",
+                            "itemListElement": [
+                              {
+                                "@type": "ListItem",
+                                "name": "Home",
+                                "position": "1",
+                                "item": "https://www.creeseproperty.com/"
+                              },
+                              {
+                                "@type": "ListItem",
+                                "name": "About",
+                                "position": "2",
+                                "item": "https://www.creeseproperty.com/about/"
+                              },
+                              {
+                                "@type": "ListItem",
+                                "name": "Services",
+                                "position": "3",
+                                "item": "https://www.creeseproperty.com/services/"
+                              },
+                              {
+                                "@type": "ListItem",
+                                "name": "Portfolio",
+                                "position": "4",
+                                "item": "https://www.creeseproperty.com/portfolio/"
+                              },
+                              {
+                                "@type": "ListItem",
+                                "name": "Leasing",
+                                "position": "5",
+                                "item": "https://www.creeseproperty.com/leasing/"
+                              },
+                              {
+                                "@type": "ListItem",
+                                "name": "Contact",
+                                "position": "6",
+                                "item": "https://www.creeseproperty.com/contact/"
+                              }
+                            ]
+                          }
+                        ]
+                    })}
+                </script>
             </Helmet>
             <ScrollToTop />
             <div>
