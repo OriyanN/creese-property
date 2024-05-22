@@ -102,6 +102,13 @@
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    transform: translateX(50%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.home-page-image-container.visible {
+    transform: translateX(0%);
+    opacity: 1;
 }
 
 .address-overlay {
@@ -198,7 +205,6 @@
 }
 
 .divider-section {
-    /* background-color: rgba(214, 208, 201, 0.3); */
     height: 67.5vh;
     padding: 4rem 9% 2rem 9%;
     display: flex;
@@ -213,7 +219,6 @@
 }
 
 .divider-section h2 span {
-    /* font-family: VersaillesBold; */
     text-transform: uppercase;
     font-weight: 100;
 }
@@ -254,7 +259,30 @@
     to {
       transform: scale(70);
     }
-}  
+}
+
+.parallax-section {
+    position: relative;
+    height: 40vh;
+    background-image: url('../assets/home-page-gold-coast.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    /* background-color: rgba(41, 65, 98, 0.5); */
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
 
 .section.home .contact-form {
     /* background-color: rgba(214, 208, 201, 0.3); */
@@ -560,27 +588,4 @@
     .service img {
         height: 8rem;
     }
-}
-
-.parallax-section {
-    position: relative;
-    height: 40vh;
-    background-image: url('../assets/home-page-gold-coast.jpg'); /* Replace with your actual image path */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-}
-
-.overlay-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    /* background-color: rgba(41, 65, 98, 0.5); */
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
 }

@@ -150,7 +150,7 @@ import AutoPlay from '../components/AutoPlay.jsx';
 import AnimatedButton from '../components/AnimatedButton.jsx';
 import Accordion from '../components/Accordion.jsx';
 
-import videoBg from "../assets/creese-property-video.mp4";
+import videoBg from "../assets/CreeseHomePageVideo2.mp4";
 import preloaderImage from '../assets/CP Transparent(2).png';
 
 import GoldCoastProperty from '../assets/GoldCoast/gc1/1.jpg';
@@ -185,6 +185,31 @@ const HomePage = () => {
         { id: 4, url: LoganProperty, address: '506-514 Beenleigh Redland Bay Road, Carbrook', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/locations/gold-coast/properties/log1' },
         { id: 5, url: IpswichProperty, address: '22 Kingsmill Road, Coalfalls', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/locations/gold-coast/properties/ips1' },
     ];
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            },
+            {
+                rootMargin: "0px",
+                threshold: 0.1
+            }
+        );
+    
+        const images = document.querySelectorAll('.home-page-image-container');
+        images.forEach(image => observer.observe(image));
+    
+        return () => {
+            images.forEach(image => observer.unobserve(image));
+        };
+    }, []);
 
     useEffect(() => {
         const parallaxEffect = () => {
@@ -270,7 +295,7 @@ const HomePage = () => {
                         {images.map((image, index) => (
                             <SwiperSlide key={index}>
                                 <div className="home-page-image-container" style={{ backgroundImage: `url(${image.url})` }}>
-                                <div class="address-overlay">
+                                    <div class="address-overlay">
                                         <div className="address">
                                             <h4>{image.address}</h4>
                                         </div>
