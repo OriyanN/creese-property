@@ -134,6 +134,26 @@
     color: var(--white);
 }
 
+.you-may-also-like-section {
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem 9%;
+    background-color: rgba(214, 208, 200, 0.25);
+    padding-bottom: 4rem;
+}
+
+.you-may-also-like-section h3 {
+    font-size: 3.5rem;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.you-may-also-like-section .images-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+}
+
 @media (max-width: 1130px) {
     .property-details {
         padding: 1.2rem 17.5%;
@@ -147,6 +167,11 @@
     .property-contact-form {
         padding: 4rem 17.5%;
     }
+
+    .you-may-also-like-section {
+        padding: 1.2rem 3%;
+        padding-bottom: 4rem;
+    }
 }
 
 @media (max-width: 950px) {
@@ -158,6 +183,16 @@
 @media (max-width: 850px) {
     .property-features {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .you-may-also-like-section h3 {
+        font-size: 3.25rem;
+    }
+}
+
+@media (max-width: 660px) {
+    .you-may-also-like-section .images-container {
+        grid-template-columns: 1fr;
     }
 }
 

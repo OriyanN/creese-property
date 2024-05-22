@@ -13,6 +13,7 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 import AnimatedButton from '../../components/AnimatedButton.jsx';
 import Footer from '../../components/Footer.jsx';
 import ScrollToTop from '../../components/ScrollToTop.jsx';
+import LazyImage from '../../components/LazyImage.jsx';
 
 import GoldCoastPropertiesData from "./GoldCoastPropertiesData.js";
 import '../LocationsPropertyDetailsPage.css';
@@ -20,6 +21,7 @@ import '../LocationsPropertyDetailsPage.css';
 const GoldCoastPropertyDetailsPage = () => {
   const { propertyId } = useParams();
   const property = GoldCoastPropertiesData.find((p) => p.id === propertyId);
+  const [suggestedProperties, setSuggestedProperties] = useState([]);
 
   const [open, setOpen] = React.useState(false);
   const galleryButtonRef = useRef(null);
@@ -53,23 +55,21 @@ const GoldCoastPropertyDetailsPage = () => {
     return () => map.remove();
   }, [propertyId, property]);
 
-  // State for contact form fields
   const [contactForm, setContactForm] = useState({
     firstName: '',
     lastName: '',
     email: '',
     phoneNumber: '',
-    location: '', // Pre-select based on the property details
-    property: '', // Pre-select based on the property details
+    location: '', 
+    property: '', 
   });
 
-  // Populate form with pre-selected values when the component mounts or when the propertyId changes
   useEffect(() => {
     if (property) {
       setContactForm(prev => ({
         ...prev,
-        location: 'Gold Coast', // Example static value, adjust as needed
-        property: property.address, // Using address as unique identifier
+        location: 'Gold Coast',
+        property: property.address,
       }));
     }
   }, [propertyId, property]);
@@ -81,7 +81,23 @@ const GoldCoastPropertyDetailsPage = () => {
       [name]: value,
     }));
   };
+
+  useEffect(() => {
+    const getThreeRandomProperties = () => {
+        const otherProperties = GoldCoastPropertiesData.filter(p => p.id !== propertyId);
+        const shuffled = otherProperties.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, 3);
+    };
+
+    if (property) {
+        setSuggestedProperties(getThreeRandomProperties());
+    }
+  }, [propertyId]);
   
+  if (!property) {
+    return <div>Property not found</div>;
+  }
+
   return (
     <>
       <Helmet>
@@ -97,7 +113,6 @@ const GoldCoastPropertyDetailsPage = () => {
           <div className="main-property-overlay"></div>
         </Link>
 
-        {/* Property Details */}
         <div className="property-details">
           <div className="property-heading-details">
             <h1 className='property-addrress'>{property.address}</h1>
@@ -118,17 +133,14 @@ const GoldCoastPropertyDetailsPage = () => {
                 thumbnails={{ ref: thumbnailsRef }}
                 on={{
                   click: () => {
-                    // Enter fullscreen mode
                     fullscreenRef.current?.enter();
               
-                    // Toggle slideshow play/pause
                     if (slideshowRef.current?.playing) {
                       slideshowRef.current?.pause();
                     } else {
                       slideshowRef.current?.play();
                     }
               
-                    // Toggle visibility of thumbnails
                     if (thumbnailsRef.current?.visible) {
                       thumbnailsRef.current?.hide();
                     } else {
@@ -179,12 +191,10 @@ const GoldCoastPropertyDetailsPage = () => {
                 />
             </div>
             <div className="property-dropdowns-section">
-              {/* Pre-selected Location */}
               <select className="property-dropdown-section" name="location" value={contactForm.location} onChange={handleChange} disabled>
                 <option value={contactForm.location}>{contactForm.location}</option>
               </select>
               
-              {/* Pre-selected Property */}
               <select className="property-dropdown-section" name="property" value={contactForm.property} onChange={handleChange} disabled>
                 <option value={contactForm.property}>{contactForm.property}</option>
               </select>
@@ -196,6 +206,22 @@ const GoldCoastPropertyDetailsPage = () => {
             
             <AnimatedButton />
           </form>
+        </div>
+        <div className="you-may-also-like-section images-container">
+          <h3>You May Also Like</h3>
+          <div className="images-container">
+            {suggestedProperties.map((p) => (
+              <div key={p.id} className="image-item-container">
+                <Link to={`/locations/gold-coast/properties/${p.id}`}>
+                  <LazyImage src={p.images[0]} alt={p.address} className="image-item" />
+                </Link>
+                <div className="location-details">
+                  <h4>{p.address}</h4>
+                  <p>{p.beds} Bed - {p.baths} Bath - {p.car} Car</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
         <Footer />
       </div>
