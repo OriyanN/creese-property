@@ -134,7 +134,7 @@
 
 // export default HomePage;
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -161,12 +161,45 @@ import IpswichProperty from '../assets/Ipswich/ips1/modern-house-exterior-2023-1
 
 const HomePage = () => {
     const [loading, setLoading] = useState(true);
+    const videoRef = useRef(null);
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
         }, 3750);
         return () => clearTimeout(timer);
+    }, []);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const video = videoRef.current;
+                        if (video && !video.src) {
+                            video.src = videoBg;
+                            video.load();
+                            video.play().catch(e => console.log('Auto-play was prevented:', e));
+                            observer.unobserve(entry.target);
+                        }
+                    }
+                });
+            },
+            {
+                rootMargin: "100px",
+                threshold: 0.25
+            }
+        );
+
+        if (videoRef.current) {
+            observer.observe(videoRef.current);
+        }
+
+        return () => {
+            if (videoRef.current) {
+                observer.unobserve(videoRef.current);
+            }
+        };
     }, []);
 
     const handleFormSubmit = (e) => {
@@ -258,7 +291,7 @@ const HomePage = () => {
             <section className="section home">
                 <div className="video-text">Creese Property</div>
                 <div className="welcome">
-                    <video className="header-video" src={videoBg} autoPlay loop muted playsInline alt="Creese Property Video" />
+                    <video className="header-video" ref={videoRef} autoPlay loop muted playsInline alt="Creese Property Video" />
                     <div className="overlay-home"></div>
                 </div>
                 <div className="text-home">
