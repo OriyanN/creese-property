@@ -21,8 +21,8 @@
 }
 
 @keyframes zoomInFadeOut {
-    0%, 20% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
-    40% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    0%, 12.5% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+    27.5% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
     100% { transform: translate(-50%, -50%) scale(1); opacity: 0; }
 }
 
@@ -37,7 +37,7 @@
     font-weight: 100;
     text-transform: uppercase;
     text-align: center;
-    animation: zoomInFadeOut 15s ease-in-out forwards;
+    animation: zoomInFadeOut 17.5s ease-in-out forwards;
 }
 
 .text-home {
