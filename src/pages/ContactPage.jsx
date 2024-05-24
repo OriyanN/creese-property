@@ -97,7 +97,7 @@ function ContactPage() {
                         <div className="contact-map" ref={mapContainerRef} ></div>
                     </div>
                     <div className="contact-text">
-                        <p>Located in the central part of the Gold Coast, Bundall. CREESE PROPERTY is open 9am to 5pm every Monday to Friday.</p>
+                        <p>Located in the central part of the Gold Coast, Bundall. Creese Property is open 9am to 5pm every Monday to Friday, excluding publich holidays.</p>
                         <br></br>
                         <br></br>
                         <p>Unit 1, 42 Bundall Rd Bundall, QLD 4217</p>
