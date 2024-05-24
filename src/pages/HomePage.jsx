@@ -163,6 +163,7 @@ const HomePage = () => {
                 </div>
                 <div className="home-property-slide"> 
                     <div className="text-example">
+                        <h4>Leasings</h4>
                         {/* <p>Trust our experienced team at <span>Creese Property</span> to secure the right property for you</p> */}
                     </div>
                     <Swiper

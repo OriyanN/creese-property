@@ -69,14 +69,15 @@
     display: flex;
     width: 100vw;
     padding: 1.2rem 0 4rem 9%;
+    cursor: url('src/assets/right-arrow-home-page3.png'), auto;
 }
 
 .text-example {
     width: 30vw;
-    font-size: 4rem;
+    font-size: 3rem;
     padding-right: 3rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .swiper-scrollbar-drag {
@@ -278,14 +279,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    /* background-color: rgba(41, 65, 98, 0.5); */
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
 }
 
 .section.home .contact-form {
-    /* background-color: rgba(214, 208, 201, 0.3); */
     background-color: rgba(41, 65, 98, 1);
     padding-top: 4rem;
 }
@@ -341,6 +340,10 @@
 
     .text-home {
         padding: 1.2rem 3%;
+    }
+
+    .home-property-slide {
+        padding: 1.2rem 0 4rem 3%;
     }
 
     .text-home p {
@@ -527,6 +530,7 @@
 @media (max-width: 530px) {
     .home-property-slide {
         padding: 1.2rem 0 4rem 0% !important;
+        flex-direction: column;
     }
 
     .text-home {
@@ -535,6 +539,7 @@
 
     .text-example {
         width: 0vw !important;
+        padding: 1.2rem 0 4rem 3% !important;
     }
     
     .mySwiper {
