@@ -4,31 +4,25 @@ import { useEffect, useState } from "react";
 import "./NavBar.css";
 import "/src/index.css";
 
-import logoWhite from "../assets/Creese Property Logo- White White.png";
-import logoGreyBeige from "../assets/CP (2).png";
+import logoWhite from "../assets/Creese Property Logo- White White2.png";
 
 import ScrollToTop from "./ScrollToTop";
 
 function NavBar() {
     const [activeLink, setActiveLink] = useState("");
-    const location = useLocation();
+    const { pathname } = useLocation();
     const [isShrunk, setIsShrunk] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
-    const [logo, setLogo] = useState(logoWhite);
+    const [logo] = useState(logoWhite);
     const [dropdownOpen, setDropdownOpen] = useState(false);
-
-    const setActive = (link) => {
-        setActiveLink(link);
-    };
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
-    const handleLinkClick = (path) => {
+    const handleLinkClick = () => {
         setMenuOpen(false);
         setDropdownOpen(false);
-        history.push(path);
         window.scrollTo({
             top: 0,
             left: 0,
@@ -39,29 +33,16 @@ function NavBar() {
     const toggleDropdown = (event) => {
         event.preventDefault();
         setDropdownOpen(!dropdownOpen);
-    };  
+    };
 
     useEffect(() => {
         const handleScroll = () => {
-            const shouldBeShrunk = window.scrollY > 120;
-            setIsShrunk(shouldBeShrunk);
+            setIsShrunk(window.scrollY > 120);
         };
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-
-    const isSpecialPage = location.pathname === "/privacy" || location.pathname === "/terms-conditions";
-    
-    useEffect(() => {
-        const handleScroll = () => {
-          setIsShrunk(window.scrollY > 120);
-        };
-      
-        window.addEventListener("scroll", handleScroll);
-      
-        return () => window.removeEventListener("scroll", handleScroll);
-      }, []);
 
     useEffect(() => {
         const navbar = document.querySelector('.navbar');
@@ -78,9 +59,8 @@ function NavBar() {
         }
     }, [menuOpen]);
 
-    const isActive = (path) => {
-        return location.pathname === path;
-    };
+    const isSpecialPage = pathname === "/privacy" || pathname === "/terms-conditions";
+    const isActive = (path) => pathname === path;
 
     return (
         <>
@@ -128,35 +108,10 @@ function NavBar() {
                             >
                                 Leasing
                             </Link>
-                            {/* <div 
-                                className={`dropdown ${dropdownOpen ? 'open' : ''}`} 
-                                aria-haspopup="true" 
-                                aria-expanded={dropdownOpen}>
-                                <Link 
-                                    to="#" 
-                                    className={`dropdown-toggle ${isActive("/locations") ? "active" : ""}`} 
-                                    onClick={toggleDropdown}
-                                    aria-haspopup="true"
-                                    aria-expanded={dropdownOpen}
-                                >
-                                    Locations
-                                </Link>
-                                {dropdownOpen && (
-                                    <div className="dropdown-content-hover">
-                                        <div className="dropdown-content" role="menu">
-                                            <Link to="/locations/gold-coast" onClick={handleLinkClick} role="menuitem">Gold Coast</Link>
-                                            <Link to="/locations/logan" onClick={handleLinkClick} role="menuitem">Logan</Link>
-                                            <Link to="/locations/Ipswich" onClick={handleLinkClick} role="menuitem">Ipswich</Link>
-                                            <Link to="/locations/brisbane" onClick={handleLinkClick} role="menuitem">Brisbane</Link>
-                                            <Link to="/locations/sunshine-coast" onClick={handleLinkClick} role="menuitem">Sunshine Coast</Link>
-                                        </div>
-                                    </div>
-                                )}
-                            </div> */}
                             <Link 
-                            to="/contact" 
-                            className={isActive("/contact") ? "active" : ""}
-                            onClick={handleLinkClick}
+                                to="/contact" 
+                                className={isActive("/contact") ? "active" : ""}
+                                onClick={handleLinkClick}
                             >
                                 Contact
                             </Link>
@@ -164,7 +119,7 @@ function NavBar() {
                     </header>
                     <Outlet />
                 </div>
-            </div>  
+            </div>
         </>
     );
 }
