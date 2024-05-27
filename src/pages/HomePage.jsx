@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Scrollbar, FreeMode } from 'swiper/modules';
@@ -13,6 +13,7 @@ import ScrollToTop from '../components/ScrollToTop.jsx';
 import AutoPlay from '../components/AutoPlay.jsx';
 import AnimatedButton from '../components/AnimatedButton.jsx';
 import Accordion from '../components/Accordion.jsx';
+import HomeDividerSection from '../components/HomeDividerSection.jsx';
 
 import videoBg from "../assets/CreeseHomePageVideo2.mp4";
 import preloaderImage from '../assets/CP Transparent(2).png';
@@ -147,142 +148,123 @@ const HomePage = () => {
                 </script>
             </Helmet>
             <ScrollToTop />
-            {loading && (
-                <div className="preloader">
-                    <img src={preloaderImage} alt="Loading" />
-                </div>
-            )}
-            <section className="section home">
-                <div className="video-text">Creese Property</div>
-                <div className="welcome">
-                    <video className="header-video" ref={videoRef} autoPlay loop muted playsInline alt="Creese Property Video" />
-                    <div className="overlay-home"></div>
-                </div>
-                <div className="text-home">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A nulla fugiat, esse dolor excepturi ea sit nihil reprehenderit accusantium dolorum laboriosam eum quae sed!</p>
-                </div>
-                <div className="home-property-slide"> 
-                    <div className="text-example">
-                        <h4>Leasings</h4>
+                {loading && (
+                    <div className="preloader">
+                        <img src={preloaderImage} width={'100%'} height={'auto'} alt="Loading" />
                     </div>
-                    <Swiper
-                        modules={[Mousewheel, Scrollbar, FreeMode]}
-                        scrollbar={{
-                            hide: false,
-                            draggable: true,
-                        }}
-                        direction={"horizontal"}
-                        slidesPerView={3}
-                        mousewheel={true}
-                        freeMode={true}
-                        freeModeMomentum={false}
-                        breakpoints={{
-                            250: {
-                                slidesPerView: 1,
-                            }, 
-                            400: {
-                                slidesPerView: 2,
-                            },  
-                            750: {
-                                slidesPerView: 3,
-                            },
-                        }}
-                        className="mySwiper"
-                    >
-                        {images.map((image, index) => (
-                            <SwiperSlide key={index}>
-                                <div className="home-page-image-container" style={{ backgroundImage: `url(${image.url})` }}>
-                                    <div class="address-overlay">
-                                        <div className="address">
-                                            <h4>{image.address}</h4>
-                                        </div>
-                                    </div>
-                                    <Link to={image.link}>
-                                        <div className="image-overlay">
+                )}
+                <section className="section home">
+                    <div className="video-text">Creese Property</div>
+                    <div className="welcome">
+                        <video className="header-video" ref={videoRef} autoPlay loop muted playsInline alt="Creese Property Video" />
+                        <div className="overlay-home"></div>
+                    </div>
+                    <div className="text-home">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A nulla fugiat, esse dolor excepturi ea sit nihil reprehenderit accusantium dolorum laboriosam eum quae sed!</p>
+                    </div>
+                    <div className="home-property-slide"> 
+                        <div className="text-example">
+                            <h4>- Leasings -</h4>
+                        </div>
+                        <Swiper
+                            modules={[Mousewheel, Scrollbar, FreeMode]}
+                            scrollbar={{
+                                hide: false,
+                                draggable: true,
+                            }}
+                            direction={"horizontal"}
+                            slidesPerView={3}
+                            mousewheel={true}
+                            freeMode={true}
+                            freeModeMomentum={false}
+                            breakpoints={{
+                                250: {
+                                    slidesPerView: 1,
+                                }, 
+                                400: {
+                                    slidesPerView: 2,
+                                },  
+                                750: {
+                                    slidesPerView: 3,
+                                },
+                            }}
+                            className="mySwiper"
+                        >
+                            {images.map((image, index) => (
+                                <SwiperSlide key={index}>
+                                    <div className="home-page-image-container" style={{ backgroundImage: `url(${image.url})` }}>
+                                        <div class="address-overlay">
                                             <div className="address">
                                                 <h4>{image.address}</h4>
                                             </div>
-                                            <div className="des">
-                                                <h5>{image.description}</h5>
-                                            </div>
                                         </div>
-                                    </Link>
-                                </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </div>
-                <div className="divider-section">
-                     <h2>The <span>Creese Property</span> Promise</h2>
-                     <div className="services">
-                         <div className="service home-promise">
-                             <img src="src/assets/1 copy 2.png" height={100} alt="Creese Property Experience" />
-                             <h3>Attention to Detail</h3>
-                             <p>Creese Property commits to every aspect of property management to ensure nothing is overlooked. From the precision in our tenant screening processes to the thoroughness of our property inspections, we prioritise detail to prevent issues and enhance the overall management service.</p>
-                         </div>
-                         <div className="service home-promise">
-                             <img src="src/assets/2 copy 2.png" height={100} alt="Creese Property Off Market Deals" />
-                             <h3>Industry Knowledge</h3>
-                             <p>With extensive experience in the South-East Queensland real estate market, Creese Property offers unmatched expertise and a deep understanding of local market dynamics. Ongoing research and professional development ensure that our team is equipped with the latest knowledge to advise and act effectively.</p>
-                         </div>
-                         <div className="service home-promise">
-                             <img src="src/assets/3 copy 2.png" height={100} alt="Creese Property Specialisation" />
-                             <h3>Authenticity</h3>
-                             <p>Creese Property values genuine relationships with clients and tenants. We believe in straightforward communication and ethical business practices. Our team is approachable and committed to providing personalised service, ensuring that every client feels listened to, respected, and valued.</p>
-                         </div>
-                     </div>
-                 </div>
-                 <div className="parallax-section">
-                    <div className="overlay-content"></div>
-                 </div>
-                 <div className='contact-form'>
-                     <h2>REQUEST A RENTAL APPRAISAL</h2>
-                     <form onSubmit={handleFormSubmit}>
-                         <div className="name-section">
-                             <input 
-                                 type="text"
-                                 name="firstName"
-                                 placeholder='First Name'
-                             />
-                             <input 
-                                 type="text"
-                                 name="lastName"
-                                 className='lastName'
-                                 placeholder='Last Name'
-                             />
-                         </div>
-                         <div className="details-section">
-                             <input 
-                                 type="email"
-                                 name="email"
-                                 placeholder='Contact Email'
-                             />
-                             <input 
-                                 type="number"
-                                 name="phoneNumber"
-                                 className='phoneNumber'
-                                 placeholder='Phone Number'
-                             />
-                         </div>
-                         <div className='address-section'>
-                             <input type="text" name='address' rows='1' placeholder='Address of Property to Be Appraised'/>
-                         </div>
-                         <div className='message-section'>
-                             <textarea type="text" name='message' rows='6' placeholder='Message'/>
-                         </div>
-                         <div className="newsletter-signup">
-                             <label htmlFor="">
-                                 <input type="checkbox" name="newsletterSignup" id="newsletterSignup" />
-                                 I  would like to sign up for news and updates from Creese Property and agree to the Privacy Policy.
-                             </label>
-                         </div>
-                         <AnimatedButton onSubmit={handleFormSubmit} />
-                     </form>
-                 </div>
-                 <AutoPlay />
-                 <Accordion />
-                 <Footer />
-            </section>
+                                        <Link to={image.link}>
+                                            <div className="image-overlay">
+                                                <div className="address">
+                                                    <h4>{image.address}</h4>
+                                                </div>
+                                                <div className="des">
+                                                    <h5>{image.description}</h5>
+                                                </div>
+                                            </div>
+                                        </Link>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+                    <HomeDividerSection />
+                    <div className="parallax-section">
+                        <div className="overlay-content"></div>
+                    </div>
+                    <div className='contact-form'>
+                        <h2>REQUEST A RENTAL APPRAISAL</h2>
+                        <form onSubmit={handleFormSubmit}>
+                            <div className="name-section">
+                                <input 
+                                    type="text"
+                                    name="firstName"
+                                    placeholder='First Name'
+                                />
+                                <input 
+                                    type="text"
+                                    name="lastName"
+                                    className='lastName'
+                                    placeholder='Last Name'
+                                />
+                            </div>
+                            <div className="details-section">
+                                <input 
+                                    type="email"
+                                    name="email"
+                                    placeholder='Contact Email'
+                                />
+                                <input 
+                                    type="number"
+                                    name="phoneNumber"
+                                    className='phoneNumber'
+                                    placeholder='Phone Number'
+                                />
+                            </div>
+                            <div className='address-section'>
+                                <input type="text" name='address' rows='1' placeholder='Address of Property to Be Appraised'/>
+                            </div>
+                            <div className='message-section'>
+                                <textarea type="text" name='message' rows='6' placeholder='Message'/>
+                            </div>
+                            <div className="newsletter-signup">
+                                <label htmlFor="">
+                                    <input type="checkbox" name="newsletterSignup" id="newsletterSignup" />
+                                    I  would like to sign up for news and updates from Creese Property and agree to the Privacy Policy.
+                                </label>
+                            </div>
+                            <AnimatedButton onSubmit={handleFormSubmit} />
+                        </form>
+                    </div>
+                    <AutoPlay />
+                    <Accordion />
+                    <Footer />
+                </section>
         </>
     );
 }

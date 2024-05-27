@@ -68,7 +68,7 @@ function NavBar() {
             <div>
                 <div>
                     <header className={`header ${isShrunk ? 'shrunk' : ''} ${isSpecialPage && !isShrunk ? 'transparent' : ''}`}>
-                        <Link to="/" className="logo"><img src={logo} alt="Creese Property Logo" /></Link>
+                        <Link to="/" className="logo"><img src={logo} height={'8vh'} width={'auto'} alt="Creese Property Logo" /></Link>
                         <div className="menu-btn" onClick={toggleMenu}>
                             <div className={`menu-burger ${menuOpen ? 'open' : ''}`}></div>
                         </div>

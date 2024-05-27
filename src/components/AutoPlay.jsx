@@ -63,7 +63,7 @@ function AutoPlay() {
                 >
                     {images.map((image, index) => (
                         <SwiperSlide key={index}>
-                            <img src={image.src} alt={image.alt} />
+                            <img src={image.src} width={'100%'} height={'auto'} alt={image.alt} />
                         </SwiperSlide>
                     ))}
                 </Swiper>
