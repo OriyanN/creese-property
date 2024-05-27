@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
-// import Preloader from '../components/Preloader';
 import LazyImageAbout from '../components/LazyImageAbout';
 
 import "./ContactAboutPage.css"
@@ -42,7 +41,6 @@ function AboutPage() {
                     })}
                 </script>
             </Helmet>
-            {/* <Preloader /> */}
             <ScrollToTop />
             <div>
                 <div className="contact-about-header">
