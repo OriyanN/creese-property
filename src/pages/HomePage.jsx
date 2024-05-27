@@ -15,7 +15,7 @@ import AnimatedButton from '../components/AnimatedButton.jsx';
 import Accordion from '../components/Accordion.jsx';
 import HomeDividerSection from '../components/HomeDividerSection.jsx';
 
-import videoBg from "../assets/CreeseHomePageVideo2.mp4";
+import videoBg from "../assets/CreeseHomePageVideo3.mp4";
 import preloaderImage from '../assets/CP Transparent(2).png';
 
 import GoldCoastProperty from '../assets/GoldCoast/gc1/1.jpg';
