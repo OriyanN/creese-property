@@ -19,13 +19,7 @@
 
 .notfound-background a.gallery-button {
     color: var(--white);
-    background-image: linear-gradient(
-    to right,
-    #294162,
-    #294162 50%,
-    #ffffff 50%
-    );
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     font-family: VersaillesBold;
     text-decoration: underline !important;
 }
