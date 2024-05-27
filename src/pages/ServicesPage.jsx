@@ -2,7 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 import Footer from '../components/Footer';
-import "./ServicePage.css"
+import "./ServicePage.css";
+import "./HomePage.css";
 import ScrollToTop from '../components/ScrollToTop';
 import ContactForm from '../components/ContactForm';
 
