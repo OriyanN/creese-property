@@ -4,10 +4,13 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="description" content="the page description" data-rh="true" />
+      <link rel="preload" href="/src/assets/CP Icon White.png" as="favicon" type="image/png" />
+      <link rel="preload" href="/react-router-tutorial/src/index.css" as="style" />
+      <link rel="preload" href="/src/main.jsx" as="script" />
+      <link rel="preload" href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" as="style" />
       <link rel="icon" type="image/png" href="/src/assets/CP Icon White.png" />
       <link rel="stylesheet" href="/react-router-tutorial/src/index.css" >
-      <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet" >
-      <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+      <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" >
       <title>Creese Property</title>
       <script type="application/ld+json">
         [{
@@ -18,7 +21,7 @@
               "@id": "https://www.creeseproperty.com/#website",
               "url": "https://www.creeseproperty.com/",
               "name": "Creese Property",
-              "description": "Prestige Real Estate Agents | Gold Coast",
+              "description": "Creese Property prioritises quality outcomes for your residential property success.",
               "publisher": {
                 "@id": "https://www.creeseproperty.com/#organization"
               },
@@ -74,8 +77,7 @@
               "about": {
                 "@id": "https://www.creeseproperty.com/#organization"
               },
-              "datePublished": "2021-11-11T23:34:51+00:00",
-              "dateModified": "2023-09-11T23:10:11+00:00",
+              "datePublished": "2024-05-31T23:34:51+00:00",
               "description": "Creese Property prioritises quality outcomes for your residential property success.",
               "breadcrumb": {
                 "@id": "https://www.creeseproperty.com/#breadcrumb"
@@ -154,11 +156,12 @@
     </head>
     <body>
       <div id="root"></div>
-      <script type="module" src="/src/main.jsx"></script>
+      <script type="module" src="/src/main.jsx" defer></script>
       <script>
         window.onbeforeunload = function () {
           window.scrollTo(0, 0);
         };
       </script>
+      <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js' async></script>
     </body>
 </html>
