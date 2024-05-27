@@ -164,7 +164,7 @@ const HomePage = () => {
                     </div>
                     <div className="home-property-slide"> 
                         <div className="text-example">
-                            <h4>- Leasings -</h4>
+                            <h4>Most Recent Leasings</h4>
                         </div>
                         <Swiper
                             modules={[Mousewheel, Scrollbar, FreeMode]}

@@ -15,7 +15,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    /* background-color: rgba(0, 0, 0, 0.5); */
     z-index: 1;
     height: 100vh;
 }
@@ -30,7 +29,7 @@
     position: absolute;
     z-index: 10;
     top: 9.5%;
-    left: 50%;
+    left: 49.5%;
     transform: translate(-50%, -50%) scale(0.5);
     color: white;
     font-size: 7rem;
@@ -53,10 +52,6 @@
     font-size: 3.75rem;
     width: 100%;
     margin: 0;
-}
-
-.text-home span {
-    text-transform: capitalize;
 }
 
 .slider-container {
@@ -350,10 +345,6 @@
         font-size: 3.5rem;
         width: 100%;
     }
-
-    .text-example {
-        width: 25vw !important;
-    }
     
     .mySwiper {
         width: 85vw !important;
@@ -437,7 +428,7 @@
 
 @media (max-width: 750px) {
     .text-example {
-        width: 20vw !important;
+        width: 25vw !important;
     }
     
     .mySwiper {
@@ -482,11 +473,6 @@
 
     .text-home p {
         font-size: 3rem;
-        padding: 0 3%;
-    }
-
-    .text-example {
-        width: 20vw !important;
     }
     
     .mySwiper {
@@ -500,14 +486,8 @@
 
 @media (max-width: 600px) {
     .video-text {
-        font-size: 3.5rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .video-text {
-        font-size: 2.5rem;
-        top: 11.5%;
+        font-size: 3rem;
+        top: 8.5%;
     }
 }
 
@@ -538,8 +518,8 @@
     }
 
     .text-example {
-        width: 0vw !important;
         padding: 1.2rem 0 4rem 3% !important;
+        width: 100% !important;
     }
     
     .mySwiper {
@@ -572,6 +552,10 @@
 }
 
 @media (max-width: 450px) {
+    .video-text {
+        font-size: 2.5rem;
+    }
+
     .text-home p {
         font-size: 2.75rem;
     }
