@@ -18,12 +18,12 @@ function PrivacyPage() {
             <div>
                 <div className="privacy">
                     <h1>Privacy Policy</h1>
-                    <ol class="privacy-section">
-                        <li class="heading-privacy">
+                    <ol className="privacy-section">
+                        <li className="heading-privacy">
                             We Respect Your Privacy
                         <br />
                         <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     Creese Property Pty Ltd respects your right to privacy and is committed to safeguarding the privacy of our customers and website visitors. We adhere to the Australian Privacy Principles contained in the Privacy Act 1988 (Cth). This policy sets out how we collect and treat your personal information.
                                 </li>
@@ -36,11 +36,11 @@ function PrivacyPage() {
                         </li>
                         <br />
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Collection of Personal Information
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     Creese Property Pty Ltd will, from time to time, receive and store personal information you enter onto our website, provided to us directly or given to us in other forms.
                                 </li>
@@ -56,11 +56,11 @@ function PrivacyPage() {
                             </ol>
                         </li>
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             How We Collect Your Personal Information
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     Creese Property Pty Ltd collects personal information from you in a variety of ways, including when you interact with us electronically or in person, when you access our website and when we provide our services to you. We may receive personal information from third parties. If we do, we will protect it as set out in this Privacy Policy.
                                 </li>
@@ -68,11 +68,11 @@ function PrivacyPage() {
                             </ol>
                         </li>
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Use of Your Personal Information
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     Creese Property Pty Ltd may use personal information collected from you to provide you with information, updates and our services. We may also make you aware of new and additional products, services and opportunities available to you. We may use your personal information to improve our products and services and better understand your needs.
                                 </li>
@@ -84,11 +84,11 @@ function PrivacyPage() {
                             </ol>
                         </li>
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Disclosure of Your Personal Information
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     We may disclose your personal information to any of our employees, officers, insurers, professional advisers, agents, suppliers or subcontractors insofar as reasonably necessary for the purposes set out in this Policy. Personal information is only supplied to a third party when it is required for the delivery of our services.
                                 </li>
@@ -116,11 +116,11 @@ function PrivacyPage() {
                             </ol>
                         </li>
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Security of Your Personal Information
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     Creese Property Pty Ltd is committed to ensuring that the information you provide to us is secure. In order to prevent unauthorised access or disclosure, we have put in place suitable physical, electronic and managerial procedures to safeguard and secure information and protect it from misuse, interference, loss and unauthorised access, modification and disclosure.
                                 </li>
@@ -132,11 +132,11 @@ function PrivacyPage() {
                             </ol>
                         </li>
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Access to Your Personal Information
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     You may request details of personal information that we hold about you in accordance with the provisions of the Privacy Act 1988 (Cth). A small administrative fee may be payable for the provision of information. If you would like a copy of the information, which we hold about you or believe that any information we hold on you is inaccurate, out of date, incomplete, irrelevant or misleading, please email us at hello@creeseproperty.com.
                                 </li>
@@ -148,11 +148,11 @@ function PrivacyPage() {
                             </ol>
                         </li>
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Complaints About Privacy
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     If you have any complaints about our privacy practices, please feel free to send in details of your complaints to 1/42 Bundall Road, Bundall QLD 4217. We take complaints very seriously and will respond shortly after receiving written notice of your complaint.
                                 </li>
@@ -160,11 +160,11 @@ function PrivacyPage() {
                             </ol>
                         </li>
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Changes to Privacy Policy
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     Please be aware that we may change this Privacy Policy in the future. We may modify this Policy at any time, in our sole discretion and all modifications will be effective immediately upon our posting of the modifications on our website or notice board. Please check back from time to time to review our Privacy Policy.
                                 </li>
@@ -172,11 +172,11 @@ function PrivacyPage() {
                             </ol>
                         </li>
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Website
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     When you visit our website
                                     <br />

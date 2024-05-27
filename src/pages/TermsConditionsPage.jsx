@@ -40,12 +40,12 @@ function TermsConditionPage() {
                     <h3>Operative Provisions</h3>
                     <br />
                     <br />
-                    <ol class="privacy-section">
-                        <li class="heading-privacy">
+                    <ol className="privacy-section">
+                        <li className="heading-privacy">
                             Acceptance and Modification of These Terms of Use
                         <br />
                         <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     You may only access, browse and use our Website if You accept these Terms of Use. By accessing, browsing and/or using Our website, You will be deemed to have confirmed that you have read and understand, and wholly and unconditionally agree to be legally bound by, and accept, these Terms of Use and any information linked to from these Terms of Use (including any Privacy Policy).
                                 </li>
@@ -65,11 +65,11 @@ function TermsConditionPage() {
                         </li>
                         <br />
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Accuracy of Content
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     We do not represent that the information on this Website, including images and descriptions of property, is accurate, correct, up-to-date or error free.
                                 </li>
@@ -85,11 +85,11 @@ function TermsConditionPage() {
                         </li>
                         <br />
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Website Availability and Restrictions
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     We do not represent that the Website will be available on an uninterrupted or error-free basis. We may need to take down the Website from time to time.
                                 </li>
@@ -133,11 +133,11 @@ function TermsConditionPage() {
                         </li>
                         <br />
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Acceptable Use Policy
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     You agree that:
                                 </li>
@@ -197,11 +197,11 @@ function TermsConditionPage() {
                         </li>
                         <br />
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Intellectual Property Rights
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     You agree and acknowledge that these Terms of Use do not transfer or assign any Intellectual Property Rights to You.
                                 </li>
@@ -229,11 +229,11 @@ function TermsConditionPage() {
                         </li>
                         <br />
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Responsibility for Other Users
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     We do not accept responsibility for the conduct of any users of Our Website.
                                 </li>
@@ -249,11 +249,11 @@ function TermsConditionPage() {
                             </ol>
                         </li>
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Responsibility for Third Party Claims
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     You agree and acknowledge that You are solely responsible for and You indemnify Us in respect of any loss and damage We may incur in connection with any claims and/or complaints made by any third party where the claim is caused directly or indirectly by:
                                 </li>
@@ -269,11 +269,11 @@ function TermsConditionPage() {
                             </ol>
                         </li>
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Hyperlinks
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     We do not represent, recommend or endorse any websites to which We have linked from the Website via hyperlink or otherwise.
                                 </li>
@@ -281,11 +281,11 @@ function TermsConditionPage() {
                             </ol>
                         </li>
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Changes to Privacy Policy
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     Except in respect of any Non-Excludable Guarantees, We do not represent that the information on this Website, including images and descriptions of property, is accurate, correct, up-to-date or error free.
                                 </li>
@@ -305,11 +305,11 @@ function TermsConditionPage() {
                             </ol>
                         </li>
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Warranties – Australian Comsumer Law
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     Any goods and services supplied by Us through the Website may come with implied non-excludable guarantees which are regulated by the Australian Consumer Law. The extent of the implied guarantees depends on whether You are a ‘consumer’ of goods or services within the meaning of that term pursuant to the Australian Consumer Law as amended.
                                 </li>
@@ -357,11 +357,11 @@ function TermsConditionPage() {
                             </ol>
                         </li>
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Termination
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     We may terminate these Terms of Use and Your access to the Website or any part of it at any time without notice.
                                 </li>
@@ -377,11 +377,11 @@ function TermsConditionPage() {
                             </ol>
                         </li>
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Notices
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     Any notice issued to You from Us or from Us to You shall be in writing and sent by hand delivery, post or email. Where sent from Us to You, We shall use any of Your contact details that You provide to Us.
                                 </li>
@@ -405,11 +405,11 @@ function TermsConditionPage() {
                             </ol>
                         </li>
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             General
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     Other rights: All rights not expressly granted to Us in these Terms of Use are expressly reserved by Us.
                                 </li>
@@ -437,11 +437,11 @@ function TermsConditionPage() {
                             </ol>
                         </li>
                         <br />
-                        <li class="heading-privacy">
+                        <li className="heading-privacy">
                             Dictionary and Interpretation Provisions
                             <br />
                             <br />
-                            <ol class="text privacy-section">
+                            <ol className="text privacy-section">
                                 <li>
                                     Definitions
                                 </li>

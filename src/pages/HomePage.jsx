@@ -193,7 +193,7 @@ const HomePage = () => {
                             {images.map((image, index) => (
                                 <SwiperSlide key={index}>
                                     <div className="home-page-image-container" style={{ backgroundImage: `url(${image.url})` }}>
-                                        <div class="address-overlay">
+                                        <div className="address-overlay">
                                             <div className="address">
                                                 <h4>{image.address}</h4>
                                             </div>
