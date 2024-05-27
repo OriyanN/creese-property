@@ -22,7 +22,7 @@ import mainGoldCoast from "../assets/GoldCoast/gold-coast.jpg";
 import mainBrisbane from "../assets/Brisbane/brisbane.jpg";
 import mainIpswich from "../assets/Ipswich/ipswich.jpg";
 import mainLogan from "../assets/Logan/logan.jpg";
-import mainSunshineCoast from "../assets/SunshineCoast/sunshine-coast1.png";
+import mainSunshineCoast from "../assets/SunshineCoast/sunshine-coast1.jpg";
 
 const LocationsPage = () => {
     const allPropertiesData = [
