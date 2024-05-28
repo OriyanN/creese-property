@@ -4,40 +4,41 @@ import { useEffect, useState } from "react";
 import "./NavBar.css";
 import "/src/index.css";
 
-import logoWhite from "../assets/Creese Property Logo- White White2.png";
-
+import logoWhite from "../assets/Creese Property Logo- White White4.png";
 import ScrollToTop from "./ScrollToTop";
 
 function NavBar() {
-    const [activeLink, setActiveLink] = useState("");
     const { pathname } = useLocation();
-    const [isShrunk, setIsShrunk] = useState(false);
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [logo] = useState(logoWhite);
-    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [state, setState] = useState({
+        isShrunk: false,
+        menuOpen: false,
+    });
 
     const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
+        setState((prevState) => ({
+            ...prevState,
+            menuOpen: !prevState.menuOpen,
+        }));
     };
 
     const handleLinkClick = () => {
-        setMenuOpen(false);
-        setDropdownOpen(false);
+        setState((prevState) => ({
+            ...prevState,
+            menuOpen: false,
+        }));
         window.scrollTo({
             top: 0,
             left: 0,
-            behavior: 'smooth'
+            behavior: "smooth",
         });
-    };
-
-    const toggleDropdown = (event) => {
-        event.preventDefault();
-        setDropdownOpen(!dropdownOpen);
     };
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsShrunk(window.scrollY > 120);
+            setState((prevState) => ({
+                ...prevState,
+                isShrunk: window.scrollY > 120,
+            }));
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -45,19 +46,8 @@ function NavBar() {
     }, []);
 
     useEffect(() => {
-        const navbar = document.querySelector('.navbar');
-        const mobileNavbar = document.querySelector('#navbar');
-
-        if (menuOpen) {
-            navbar.classList.add('active');
-            mobileNavbar.classList.add('active');
-            document.body.classList.add('no-scroll');
-        } else {
-            navbar.classList.remove('active');
-            mobileNavbar.classList.remove('active');
-            document.body.classList.remove('no-scroll');
-        }
-    }, [menuOpen]);
+        document.body.classList.toggle("no-scroll", state.menuOpen);
+    }, [state.menuOpen]);
 
     const isSpecialPage = pathname === "/privacy" || pathname === "/terms-conditions";
     const isActive = (path) => pathname === path;
@@ -65,61 +55,38 @@ function NavBar() {
     return (
         <>
             <ScrollToTop />
-            <div>
-                <div>
-                    <header className={`header ${isShrunk ? 'shrunk' : ''} ${isSpecialPage && !isShrunk ? 'transparent' : ''}`}>
-                        <Link to="/" className="logo"><img src={logo} height={'8vh'} width={'auto'} alt="Creese Property Logo" /></Link>
-                        <div className="menu-btn" onClick={toggleMenu}>
-                            <div className={`menu-burger ${menuOpen ? 'open' : ''}`}></div>
-                        </div>
-                        <nav className="navbar flex-nav" id="navbar">
-                            <Link 
-                                to="/" 
-                                className={isActive("/") ? "active" : ""}
-                                onClick={handleLinkClick}
-                            >
-                                Home
-                            </Link>
-                            <Link 
-                                to="/about"
-                                className={isActive("/about") ? "active" : ""}
-                                onClick={handleLinkClick}
-                            >
-                                About
-                            </Link>
-                            <Link 
-                                to="/services" 
-                                className={isActive("/services") ? "active" : ""}
-                                onClick={handleLinkClick}
-                            >
-                                Services
-                            </Link>
-                            <Link 
-                                to="/portfolio" 
-                                className={isActive("/portfolio") ? "active" : ""}
-                                onClick={handleLinkClick}
-                            >
-                                Portfolio
-                            </Link>
-                            <Link 
-                                to="/leasing" 
-                                className={isActive("/leasing") ? "active" : ""}
-                                onClick={handleLinkClick}
-                            >
-                                Leasing
-                            </Link>
-                            <Link 
-                                to="/contact" 
-                                className={isActive("/contact") ? "active" : ""}
-                                onClick={handleLinkClick}
-                            >
-                                Contact
-                            </Link>
-                        </nav>
-                    </header>
-                    <Outlet />
+            <header
+                className={`header ${state.isShrunk ? "shrunk" : ""} ${
+                    isSpecialPage && !state.isShrunk ? "transparent" : ""
+                }`}
+            >
+                <Link to="/" className="logo">
+                    <img src={logoWhite} height={'100%'} width={'100%'} alt="Creese Property Logo" />
+                </Link>
+                <div className="menu-btn" onClick={toggleMenu}>
+                    <div className={`menu-burger ${state.menuOpen ? "open" : ""}`}></div>
                 </div>
-            </div>
+                <nav className={`navbar flex-nav ${state.menuOpen ? "active" : ""}`} id="navbar">
+                    {[
+                        { to: "/", label: "Home" },
+                        { to: "/about", label: "About" },
+                        { to: "/services", label: "Services" },
+                        { to: "/portfolio", label: "Portfolio" },
+                        { to: "/leasing", label: "Leasing" },
+                        { to: "/contact", label: "Contact" },
+                    ].map(({ to, label }) => (
+                        <Link
+                            key={to}
+                            to={to}
+                            className={isActive(to) ? "active" : ""}
+                            onClick={handleLinkClick}
+                        >
+                            {label}
+                        </Link>
+                    ))}
+                </nav>
+            </header>
+            <Outlet />
         </>
     );
 }
