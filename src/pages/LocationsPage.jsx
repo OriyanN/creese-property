@@ -310,7 +310,10 @@ const LocationsPage = () => {
                                     </Link>
                                     <div className="location-details">
                                         <h4>{property.address}</h4>
-                                        <p>{property.beds} Bed - {property.baths} Bath - {property.car} Car</p>
+                                        <div className="locations-page-properties-details">
+                                            <p>{property.beds} Bed - {property.baths} Bath - {property.car} Car</p>
+                                            <p className='property-bottom-price'>${property.price}/week</p>
+                                        </div>
                                     </div>
                                 </div>
                             ))

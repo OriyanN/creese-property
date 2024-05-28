@@ -168,6 +168,11 @@
     font-size: 3rem;
 }
 
+.locations-page-properties-details {
+    display: flex;
+    justify-content: space-between;
+}
+
 .image-item-container {
     overflow: hidden;
     position: relative;
@@ -227,6 +232,16 @@
 
     .properties-container {
         padding: 1.2rem 3%;
+    }
+}
+
+@media (max-width: 1030px) {
+    .locations-page-properties-details {
+        flex-direction: column;
+    }
+
+    .property-bottom-price {
+        padding-left: 0 !important;
     }
 }
 
@@ -310,6 +325,14 @@
 
     .properties-container {
         grid-template-columns: 1fr;
+    }
+
+    .locations-page-properties-details {
+        flex-direction: row;
+    }
+
+    .property-bottom-price {
+        padding-left: 2rem;
     }
 }
 

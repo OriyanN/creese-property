@@ -117,11 +117,16 @@ const GoldCoastPropertyDetailsPage = () => {
           <div className="property-heading-details">
             <h1 className='property-addrress'>{property.address}</h1>
             <div className="mini-heading">
-              <ul>
-                <li>{property.beds} Beds -</li>
-                <li>{property.car} Baths -</li>
-                <li>{property.car} Cars</li>
-              </ul>
+              <div className='property-details-list'>
+                <ul>
+                  <li className='property-price'>${property.price}/week</li>
+                </ul>
+                <ul>
+                  <li>{property.beds} Beds -</li>
+                  <li>{property.car} Baths -</li>
+                  <li>{property.car} Cars</li>
+                </ul>
+              </div>
               <a href="#!" className='gallery-button' ref={galleryButtonRef} onClick={() => setOpen(true)}>Gallery</a>
                 <Lightbox
                 open={open}
@@ -217,7 +222,10 @@ const GoldCoastPropertyDetailsPage = () => {
                 </Link>
                 <div className="location-details">
                   <h4>{p.address}</h4>
-                  <p>{p.beds} Bed - {p.baths} Bath - {p.car} Car</p>
+                  <div className="locations-page-properties-details">
+                      <p>{p.beds} Bed - {p.baths} Bath - {p.car} Car</p>
+                      <p className='property-bottom-price'>${p.price}/week</p>
+                  </div>
                 </div>
               </div>
             ))}

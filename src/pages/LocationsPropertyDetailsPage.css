@@ -48,6 +48,18 @@
     text-transform: uppercase;
 }
 
+.property-details-list {
+    display: flex;
+}
+
+.property-price {
+    padding-right: 5rem;
+}
+
+.property-bottom-price {
+    padding-left: 2rem;
+}
+
 .property-heading-details {
     border-bottom: 1px solid var(--grey-blue);
 }
@@ -181,6 +193,20 @@
 }
 
 @media (max-width: 850px) {
+    .mini-heading {
+        align-items: flex-start;
+    }
+
+    .property-details-list {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .property-price {
+        padding-right: 0;
+        padding-bottom: 1rem;
+    }
+
     .property-features {
         grid-template-columns: repeat(2, 1fr);
     }
