@@ -24,6 +24,7 @@
 .logo img {
     padding-top: 0.3rem;
     padding-left: 1.25rem;
+    height: 8vh;
 }
 
 .navbar a, .navbar .dropdown-toggle {

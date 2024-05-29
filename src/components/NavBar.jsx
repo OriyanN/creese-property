@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import "./NavBar.css";
 import "/src/index.css";
 
-import logoWhite from "../assets/Creese Property Logo- White White4.png";
+import logoWhite from "../assets/Creese Property Logo- White White2.webp";
 import ScrollToTop from "./ScrollToTop";
 
 function NavBar() {
@@ -61,7 +61,7 @@ function NavBar() {
                 }`}
             >
                 <Link to="/" className="logo">
-                    <img src={logoWhite} height={'100%'} width={'100%'} alt="Creese Property Logo" />
+                    <img src={logoWhite} height={'8vh'} width={'auto'} alt="Creese Property Logo" />
                 </Link>
                 <div className="menu-btn" onClick={toggleMenu}>
                     <div className={`menu-burger ${state.menuOpen ? "open" : ""}`}></div>
