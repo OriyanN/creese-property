@@ -52,7 +52,7 @@
 
 .about-image {
     float: left !important; 
-    width: 45%; 
+    width: 30%; 
     height: 100%;
     padding: 1rem 4rem 1rem 0;
 }
@@ -160,6 +160,10 @@
 @media (max-width: 900px) {
     .contact-text h2, .about-text h2, .team-container h2, .careers-container h2 {
         font-size: 5rem;
+    }
+
+    .about-image {
+        display: none;
     }
 }
 

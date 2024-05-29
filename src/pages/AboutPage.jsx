@@ -55,10 +55,13 @@ function AboutPage() {
                     <div className="about-text">
                         <h2>Our History</h2>
                         <p>
-                            Creese Property Pty Ltd emerges as a tribute to the enduring legacy of its founder's lineage, with Managing Director Lachlan Creese dedicating the company to the memory of his late father, David Creese. David was a pioneering figure in the real estate industry, having established Creese Property Consultants on the 15th of May 1981. His firm became a cornerstone in the Southern Tasmanian Commercial Management sector, extending its expertise to encompass residential and commercial development consultancy. Under David's visionary leadership, Creese Property Consultants became instrumental in the development of what is now known as Rosny Park, a key commercial hub on Hobart’s Eastern shore. David’s contributions to real estate also include the establishment of 'Creese Drive' in Richmond, Tasmania, a testament to his success in private residential development that resulted in the creation of over 100 additional lots, predominantly along Cosgrove Drive. It is in this vibrant community that Lachlan Creese spent his formative years, growing up in the family home and gaining firsthand experience in the construction industry as he accompanied his father to numerous sites. David Creese personally took part in the construction and sale of more than 30 houses, instilling in Lachlan a profound understanding and passion for the real estate sector.
+                            Creese Property Pty Ltd, led by Managing Director Lachlan Creese, honours the legacy of its founder, David Creese. David established Creese Property Consultants in 1981, becoming a key figure in the Southern Tasmanian Commercial Management sector, contributing to the development and continuous expansion of Rosny Park.
                             <br />
                             <br />
-                            With this rich heritage as a foundation, Lachlan Creese, in partnership with Michael Pell, is poised to usher in a new era for the family's legacy with the inauguration of Creese Property Pty Ltd. This new venture marks a significant expansion of the Creese legacy, aiming to specialise in residential property management services across Southeast Queensland. Lachlan is enthusiastic about this opportunity to honour his father’s storied career and impact by steering Creese Property into new territories, ensuring that the legacy of David Creese continues to influence the Australian real estate landscape through innovative services and a commitment to excellence in property management.
+                            More prominently, David was known for his residential property development across many parts, but especially in Richmond, Tasmania. Building over 50 houses himself, and subdividing in excess of 100 parcels of land, David’s most monumental achievement was in his final 43 lot subdivision now known as ‘Creese Drive’.
+                            <br />
+                            <br />
+                            In partnership with Michael Pell, Lachlan is expanding the family legacy with Creese Property, focusing on residential property management amongst other services in South-East Queensland. This venture continues to build on David Creese's impact on the Australian real estate landscape through continued innovation in services and a commitment to excellence. 
                         </p>
                     </div>
                 </div>
@@ -71,7 +74,7 @@ function AboutPage() {
                                 <h3>Lachlan Creese</h3>
                                 <h4>Managing Director</h4>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at urna condimentum mattis. Etiam non quam lacus suspendisse faucibus. Est ultricies integer quis auctor elit. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Non quam lacus suspendisse faucibus interdum posuere. Posuere urna nec tincidunt praesent semper. Sodales ut eu sem integer vitae. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. </p>
+                            <p>Lachlan Creese, Managing Director of Creese Property, although originally from Tasmania has an undeniable love for the Gold Coast. A Bond University graduate, Lachlan is familiar with all things business and understands the importance of a good network. His love for property began all the way back in his early childhood. Growing up on the street his dad developed; Lachlan is well versed in the property sector. Over the years, he has built up his own personal portfolio, having started and sold multiple businesses. However, Lachlan is certain he has found his forever career in property. Turning his childhood passion into a long-life endeavour, Lachlan is well informed and ready to help others discover their dream of having their own property portfolio.</p>
                         </div>
                         <div className="team-member">
                             <LazyImageAbout src="src/assets/Lachie Black.png" alt="Creese Property Michael Pell" />
@@ -84,7 +87,7 @@ function AboutPage() {
                         <div className="team-member">
                             <LazyImageAbout src="src/assets/Lachie Black.png" alt="Creese Property Lachlan Creese" />
                             <div className="team-headings">
-                                <h3>Curby Creese</h3>
+                                <h3>Kirby & Otto Creese</h3>
                                 <h4>Lorem ipsum</h4>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at urna condimentum mattis. Etiam non quam lacus suspendisse faucibus. Est ultricies integer quis auctor elit. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Non quam lacus suspendisse faucibus interdum posuere. Posuere urna nec tincidunt praesent semper. Sodales ut eu sem integer vitae. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. </p>
