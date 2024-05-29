@@ -109,31 +109,42 @@ function ContactForm() {
                     />
                 </div>
                 {enquiryType === "propertyNotification" && (
-                    <div className="additional-selects">
-                        <Select
-                            options={locationOptions}
-                            styles={customStyles}
-                            onChange={option => setLocationProperty(option ? option.value : '')}
-                            placeholder="Location"
-                            isClearable={true}
-                            className="additional-selects-dropdown location"
-                        />
-                        <Select
-                            options={bedsOptions}
-                            styles={customStyles}
-                            onChange={option => setBedsNumber(option ? option.value : '')}
-                            placeholder="Beds"
-                            isClearable={true}
-                            className="additional-selects-dropdown beds"
-                        />
-                        <Select
-                            options={bathsOptions}
-                            styles={customStyles}
-                            onChange={option => setBathsNumber(option ? option.value : '')}
-                            placeholder="Baths"
-                            isClearable={true}
-                            className="additional-selects-dropdown baths"
-                        />
+                    <div className="additional-selects property-notification">
+                        <div className="section-one">
+                            <Select
+                                options={locationOptions}
+                                styles={customStyles}
+                                onChange={option => setLocationProperty(option ? option.value : '')}
+                                placeholder="Location"
+                                isClearable={true}
+                                className="additional-selects-dropdown location"
+                            />
+                            <span style={{ position:'absolute', marginLeft:'10.5rem', marginTop:'1.6rem', fontSize:'2.5rem'}}>$</span>
+                            <input 
+                                type="number"
+                                name="priceRange"
+                                className="additional-selects-dropdown price"
+                                placeholder='Price per Week'
+                            />
+                        </div>
+                        <div className="section-two">
+                            <Select
+                                options={bedsOptions}
+                                styles={customStyles}
+                                onChange={option => setBedsNumber(option ? option.value : '')}
+                                placeholder="Beds"
+                                isClearable={true}
+                                className="additional-selects-dropdown beds"
+                            />
+                            <Select
+                                options={bathsOptions}
+                                styles={customStyles}
+                                onChange={option => setBathsNumber(option ? option.value : '')}
+                                placeholder="Baths"
+                                isClearable={true}
+                                className="additional-selects-dropdown baths"
+                            />
+                        </div>
                     </div>
                 )}
                 {enquiryType === "requestRentalAppraisal" && (

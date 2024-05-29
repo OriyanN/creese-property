@@ -15,21 +15,14 @@
     padding-bottom: 4rem;
 }
 
-.name-section, .details-section, .dropdowns-section, .additional-selects, .newsletter-signup {
+.name-section, .details-section, .dropdowns-section, .additional-selects, .newsletter-signup, .section-one, .section-two {
     width: 100%;
     display: flex;
     justify-content: space-around;
     padding: 3rem 0;
 }
 
-/* .contact-form input, .dropdown-section, .message-section textarea {
-    border-bottom: 1px solid var(--grey-blue);
-    width: 45%;
-    font-size: 2.5rem;
-    padding: 1rem 3rem;
-} */
-
-.contact-form input, .message-section textarea {
+.contact-form input, .message-section textarea, .additional-selects .section-one select, .additional-selects .section-two input {
     border-bottom: 1px solid var(--grey-blue);
     width: 45%;
     font-size: 2.5rem;
@@ -75,13 +68,21 @@
     padding: 1rem 3rem;
 }
 
+.additional-selects {
+    flex-direction: column;
+    align-items: center;
+}
+
+.additional-selects.property-notification {
+    padding: 0;
+}
+
 .additional-selects-dropdown {
     border-bottom: 1px solid var(--grey-blue);
-    width: 28.25%;
+    width: 45%;
     font-size: 2.5rem;
     padding: 1rem 3rem;
 }
-
 
 .additional-selects-dropdown.appraisal {
     border-bottom: 1px solid var(--grey-blue);
@@ -97,6 +98,7 @@
 
 .contact-form .message-section textarea {
     width: 95%;
+    padding: 3rem;
 }
 
 .contact-form input::placeholder, .contact-form select.dropdown-section, .contact-form select.additional-selects-dropdown, .contact-form textarea::placeholder, .newsletter-signup {
