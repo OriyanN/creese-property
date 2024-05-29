@@ -59,18 +59,18 @@ function ServicePage() {
                         <div className="service">
                             <img src="src/assets/Residential Property Management.png" height={100} alt="Creese Property Tailored Solutions" />
                             <h3>Residential Property Management</h3>
-                            <p>We understand that every property owner and tenant has their unique needs. That’s why we offer customised management plans to suit your specific requirements.</p>
+                            <p>Creese Property provides a detailed residential property management service. You can rest assured knowing that your property will be in great care.</p>
                         </div>
                         
                         <div className="service">
                             <img src="src/assets/Buyers Agency.png" height={100} alt="Creese Property Expert Advice" />
                             <h3>Buyers Agency</h3>
-                            <p>Our team stays aware of the latest market trends and regulations to provide you with informed advice, helping you make the best decisions for your property.</p>
+                            <p>Our Buyers Agent service caters to all prospective homeowners within the Gold Coast region and potential investors throughout South-East Queensland.</p>
                         </div>
                         <div className="service">
                             <img src="src/assets/Property Consultancy.png" height={100} alt="Creese Property Community Focus" />
                             <h3>Property Consultancy</h3>
-                            <p>We’re not just managing properties, we’re building communities. Creese Property is committed to creating vibrant living spaces where residents can feel at home.</p>
+                            <p>The Property Consultancy service provides clients with valuable advice and recommendations when looking to purchase or develop their property.</p>
                         </div>
                     </div>
                 </div>
