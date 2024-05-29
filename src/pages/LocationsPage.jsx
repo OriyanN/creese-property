@@ -183,7 +183,7 @@ const LocationsPage = () => {
         <>
             <Helmet>
                 <title>Leasing | Creese Property</title>
-                <meta name="description" content="Leasing page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <meta name="description" content="Discover where Creese Property excels in residential property management across prime locations." />
                 <link rel="canonical" href="/leasing" />
                 <script type="application/ld+json">
                     {JSON.stringify({

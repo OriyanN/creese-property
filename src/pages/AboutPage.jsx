@@ -13,7 +13,7 @@ function AboutPage() {
         <>
             <Helmet>
                 <title>About | Creese Property</title>
-                <meta name="description" content="About page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <meta name="description" content="Discover Creese Property, specialising in residential property management, buyer’s agency, and consultancy." />
                 <link rel="canonical" href="/about" />
                 <script type="application/ld+json">
                     {JSON.stringify({
@@ -77,9 +77,9 @@ function AboutPage() {
                             <p>Lachlan Creese, Managing Director of Creese Property, although originally from Tasmania has an undeniable love for the Gold Coast. A Bond University graduate, Lachlan is familiar with all things business and understands the importance of a good network. His love for property began all the way back in his early childhood. Growing up on the street his dad developed; Lachlan is well versed in the property sector. Over the years, he has built up his own personal portfolio, having started and sold multiple businesses. However, Lachlan is certain he has found his forever career in property. Turning his childhood passion into a long-life endeavour, Lachlan is well informed and ready to help others discover their dream of having their own property portfolio.</p>
                         </div>
                         <div className="team-member">
-                            <LazyImageAbout src="src/assets/Lachie Black.png" alt="Creese Property Michael Pell" />
+                            <LazyImageAbout src="src/assets/Kym (1).png" alt="Creese Property Kym Bayley" />
                             <div className="team-headings">
-                                <h3>Lorem ipsum</h3>
+                                <h3>Kym Bayley</h3>
                                 <h4>Property Manager</h4>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at urna condimentum mattis. Etiam non quam lacus suspendisse faucibus. Est ultricies integer quis auctor elit. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Non quam lacus suspendisse faucibus interdum posuere. Posuere urna nec tincidunt praesent semper. Sodales ut eu sem integer vitae. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. </p>

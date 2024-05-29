@@ -33,7 +33,7 @@ function ContactPage() {
         <>
             <Helmet>
                 <title>Contact | Creese Property</title>
-                <meta name="description" content="Contact page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <meta name="description" content="Connect with Creese Property for expert property solutions and personalised support." />
                 <link rel="canonical" href="/contact" />
                 <script type="application/ld+json">
                     {JSON.stringify({

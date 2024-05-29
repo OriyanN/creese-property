@@ -13,7 +13,7 @@ function ServicePage() {
         <>
             <Helmet>
                 <title>Services | Creese Property</title>
-                <meta name="description" content="Services page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <meta name="description" content="Explore the comprehensive property services offered by Creese Property, tailored to your needs." />
                 <link rel="canonical" href="/services" />
                 <script type="application/ld+json">
                     {JSON.stringify({

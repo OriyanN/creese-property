@@ -29,7 +29,7 @@ function PortfolioPage() {
         <> 
             <Helmet>
                 <title>Portfolio | Creese Property</title>
-                <meta name="description" content="Portfolio page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                <meta name="description" content="Browse Creese Property's portfolio of expertly managed residential properties." />
                 <link rel="canonical" href="/portfolio" />
                 <script type="application/ld+json">
                     {JSON.stringify({
