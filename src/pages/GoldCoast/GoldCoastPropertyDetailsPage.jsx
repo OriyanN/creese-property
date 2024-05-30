@@ -156,7 +156,11 @@ const GoldCoastPropertyDetailsPage = () => {
                 />
             </div>
           </div>
-          <p>{property.description}</p>
+          <div className="property-description">
+            {property.description.map((desc, index) => (
+              <p key={index}>{desc}</p>
+            ))}
+          </div>
           <div className="property-features">
             {property.features.map((feature, index) => (
               <div key={index} className="feature-box">
@@ -211,6 +215,13 @@ const GoldCoastPropertyDetailsPage = () => {
             
             <AnimatedButton />
           </form>
+          <div className="disclaimer">
+            <p>PLEASE NOTE: You must register for inspections. If you do not register for inspections, we cannot notify you of time changes or cancellations to inspections. The property must be inspected prior to an application being submitted.
+              <br />
+              <br />
+              ADVERTISING DISCLAIMER - Please note - All parties should make and rely upon their own enquiries in order to determine the accuracy of the information supplied. Some file photographs in use may have been taken some time ago. Please rely on your own inspection and investigations as the property may have changed since the photographs were taken. Creese Property bears no liability for any loss sustained due to inaccuracy or omission.
+            </p>
+          </div>
         </div>
         <div className="you-may-also-like-section images-container">
           <h3>You May Also Like</h3>
