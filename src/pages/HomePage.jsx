@@ -23,6 +23,7 @@ import BrindisiAvenue17 from '../assets/GoldCoast/17-brindisi-ave/17-brindisi-av
 import AvalineEstate170 from '../assets/GoldCoast/170-avaline-estate/170-avaline-estate.jpg';
 import TysonStreet9 from '../assets/GoldCoast/832-9-tyson-street/832-9-tyson-street.jpg';
 import MilanCourt7 from '../assets/GoldCoast/7-milan-court/7-milan-court.jpeg';
+import NorthcliffeTerrace12_4 from '../assets/GoldCoast/12-4-6-northcliffe-terrace/12-4-6-northcliffe-terrace.jpg';
 
 const HomePage = () => {
     const [loading, setLoading] = useState(true);
@@ -74,9 +75,10 @@ const HomePage = () => {
     const images = [
         { id: 1, url: TysonStreet9, address: '832/9 Tyson Street, Whiterock Ripley', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/leasing/gold-coast/properties/832-9-tyson-street' },
         { id: 2, url: AvalineEstate170, address: '170 Avaline Estate, Burpengary East', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/leasing/gold-coast/properties/170-avaline-estate' },
-        { id: 4, url: MilanCourt9, address: '9 Milan Court, Surfers Paradise', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/leasing/gold-coast/properties/9-milan-court' },
+        { id: 3, url: NorthcliffeTerrace12_4, address: '12/4-6 Northcliffe Terrace, Surfers Paradise', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/leasing/gold-coast/properties/4-12-northcliffe-terrace' },
+        { id: 4, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/leasing/gold-coast/properties/7-milan-court' },
         { id: 5, url: BrindisiAvenue17, address: '17 Brindisi Avenue, Surfers Paradise', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/leasing/gold-coast/properties/17-brindisi-ave' },
-        { id: 6, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/leasing/gold-coast/properties/7-milan-court' },
+        { id: 6, url: MilanCourt9, address: '9 Milan Court, Surfers Paradise', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/leasing/gold-coast/properties/9-milan-court' },
         
     ];
 
