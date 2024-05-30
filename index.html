@@ -4,14 +4,33 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="description" content="the page description" data-rh="true" />
-      <link rel="preload" href="/src/assets/CP Icon White.png" as="favicon" type="image/png" />
+      <!-- Preload critical resources -->
+      <link rel="preload" href="/src/assets/Creese Property Logo- White White2.webp" as="image" type="image/png" />
       <link rel="preload" href="/react-router-tutorial/src/index.css" as="style" />
       <link rel="preload" href="/src/main.jsx" as="script" />
       <link rel="preload" href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" as="style" />
+      <!-- Inline Critical CSS -->
+      <style>
+        .header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 1rem;
+          background-color: #fff;
+        }
+        .logo img {
+          height: 8vh;
+          width: auto;
+        }
+      </style>
+      <!-- Favicon -->
       <link rel="icon" type="image/png" href="/src/assets/CP Icon White.png" />
+      <!-- Stylesheets -->
       <link rel="stylesheet" href="/react-router-tutorial/src/index.css" >
       <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" >
+
       <title>Creese Property</title>
+      <!-- Structured Data -->
       <script type="application/ld+json">
         [{
           "@context": "https://schema.org/",
