@@ -157,9 +157,13 @@ const GoldCoastPropertyDetailsPage = () => {
             </div>
           </div>
           <div className="property-description">
-            {property.description.map((desc, index) => (
-              <p key={index}>{desc}</p>
-            ))}
+            {Array.isArray(property.description) ? (
+              property.description.map((desc, index) => (
+                <p key={index}>{desc}</p>
+              ))
+            ) : (
+              <p>{property.description}</p>
+            )}
           </div>
           <div className="property-features">
             {property.features.map((feature, index) => (
@@ -226,20 +230,24 @@ const GoldCoastPropertyDetailsPage = () => {
         <div className="you-may-also-like-section images-container">
           <h3>You May Also Like</h3>
           <div className="images-container">
-            {suggestedProperties.map((p) => (
-              <div key={p.id} className="image-item-container">
-                <Link to={`/leasing/gold-coast/properties/${p.id}`}>
-                  <LazyImage src={p.images[0]} alt={p.address} className="image-item" />
-                </Link>
-                <div className="location-details">
-                  <h4>{p.address}</h4>
-                  <div className="locations-page-properties-details">
+            {suggestedProperties.length > 0 ? (
+              suggestedProperties.map((p) => (
+                <div key={p.id} className="image-item-container">
+                  <Link to={`/leasing/gold-coast/properties/${p.id}`}>
+                    <LazyImage src={p.images[0]} alt={p.address} className="image-item" />
+                  </Link>
+                  <div className="location-details">
+                    <h4>{p.address}</h4>
+                    <div className="locations-page-properties-details">
                       <p>{p.beds} Bed - {p.baths} Bath - {p.car} Car</p>
                       <p className='property-bottom-price'>${p.price}/week</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))
+            ) : (
+              <p>There are no current similar properties.</p>
+            )}
           </div>
         </div>
         <Footer />
