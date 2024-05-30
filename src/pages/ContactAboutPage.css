@@ -95,7 +95,8 @@
 .team-member {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
+    width: 100%;
     padding: 0rem 2rem;
 }
 
