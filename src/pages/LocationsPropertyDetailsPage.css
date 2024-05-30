@@ -146,6 +146,11 @@
     color: var(--white);
 }
 
+.disclaimer {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
 .you-may-also-like-section {
     display: flex;
     flex-direction: column;
@@ -268,13 +273,12 @@
     }
 
     .map-property {
-        margin: 2rem 5% !important;
         width: 80% !important;
     }
 
-    .property-contact-form {
+    /* .property-contact-form {
         padding: 4rem 5%;
-    }
+    } */
 }
 
 @media (max-width: 360px) {
