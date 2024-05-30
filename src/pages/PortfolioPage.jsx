@@ -8,13 +8,6 @@ import LazyImage from '../components/LazyImage';
 
 import "./PortfolioPage.css"
 
-// import bri1 from '../assets/Brisbane/bri1/backyard-2023-11-27-04-52-38-utc.jpg';
-// import bri2 from '../assets/Brisbane/bri2/modern-house-exterior-2023-11-27-05-08-12-utc.jpg';
-// import gc1 from '../assets/GoldCoast/gc1/1.jpg';
-// import gc2 from '../assets/GoldCoast/gc2/5.jpg';
-// import ips1 from '../assets/Ipswich/ips1/modern-house-exterior-2023-11-27-05-11-35-utc.jpg';
-// import ips2 from '../assets/Ipswich/ips2/modern-house-exterior-2023-11-27-05-28-56-utc.jpg';
-
 function PortfolioPage() {
     const data = [
         { id: 1, image: bri1, address: '1003/66 Manning Street, South Brisbane', link: '/locations/brisbane/properties/bri1' },
