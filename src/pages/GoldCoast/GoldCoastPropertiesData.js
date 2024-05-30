@@ -2,6 +2,7 @@ import * as MilanCourt9 from '../../assets/GoldCoast/9-milan-court';
 import * as BrindisiAvenue17 from '../../assets/GoldCoast/17-brindisi-ave';
 import * as AvalineEstate170 from '../../assets/GoldCoast/170-avaline-estate';
 import * as TysonStreet9 from '../../assets/GoldCoast/832-9-tyson-street';
+import * as MilanCourt7 from '../../assets/GoldCoast/7-milan-court';
 
 const GoldCoastPropertiesData = [
   {
@@ -68,6 +69,19 @@ const GoldCoastPropertiesData = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sodales ut eu sem integer vitae justo eget magna fermentum. Metus dictum at tempor commodo ullamcorper a lacus. Sem nulla pharetra diam sit amet nisl suscipit adipiscing. Etiam tempor orci eu lobortis elementum nibh tellus. Diam maecenas sed enim ut sem viverra aliquet eget. Proin libero nunc consequat interdum varius sit. Sit amet risus nullam eget. Diam volutpat commodo sed egestas egestas fringilla phasellus. Eu nisl nunc mi ipsum. Eget mi proin sed libero enim sed faucibus turpis in. Id semper risus in hendrerit gravida. Sed adipiscing diam donec adipiscing tristique. Convallis convallis tellus id interdum. In vitae turpis massa sed elementum tempus egestas sed. Feugiat nisl pretium fusce id. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Fringilla ut morbi tincidunt augue interdum.',
     lat: -27.416270,
     lng: 153.032310
+  },
+  {
+    id: '7-milan-court',
+    images: Object.values(MilanCourt7),
+    address: '7 Milan Court, Surfers Paradise',
+    price: 1400,
+    beds: 4,
+    baths: 2,
+    car: 2,
+    features: ['Air conditioning', 'Built-in wardrobes', 'Ensuite', 'Study', 'Dishwasher', 'Deck', 'Balcony', 'Water tank', 'Outdoor area', 'Solar panels'],
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sodales ut eu sem integer vitae justo eget magna fermentum. Metus dictum at tempor commodo ullamcorper a lacus. Sem nulla pharetra diam sit amet nisl suscipit adipiscing. Etiam tempor orci eu lobortis elementum nibh tellus. Diam maecenas sed enim ut sem viverra aliquet eget. Proin libero nunc consequat interdum varius sit. Sit amet risus nullam eget. Diam volutpat commodo sed egestas egestas fringilla phasellus. Eu nisl nunc mi ipsum. Eget mi proin sed libero enim sed faucibus turpis in. Id semper risus in hendrerit gravida. Sed adipiscing diam donec adipiscing tristique. Convallis convallis tellus id interdum. In vitae turpis massa sed elementum tempus egestas sed. Feugiat nisl pretium fusce id. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Fringilla ut morbi tincidunt augue interdum.',
+    lat: -28.013310,
+    lng: 153.423160
   },
 ];
   

@@ -76,7 +76,7 @@
 }
 
 .swiper-scrollbar-drag {
-    background: var(--beige, rgba(0, 0, 0, 0.5));
+    background: var(--beige, rgba(0, 0, 0, 0.5)) !important;
 }
 
 .mySwiper {
@@ -191,13 +191,7 @@
 }
 
 .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
-    position: absolute;
-    left: var(--swiper-scrollbar-sides-offset, 1%);
-    bottom: var(--swiper-scrollbar-bottom, 4px);
-    top: var(--swiper-scrollbar-top, auto);
-    z-index: 50;
-    height: var(--swiper-scrollbar-size, 8px);
-    width: calc(100% - 2* var(--swiper-scrollbar-sides-offset, 1%));
+    height: var(--swiper-scrollbar-size, 8px) !important;
 }
 
 .divider-section {
