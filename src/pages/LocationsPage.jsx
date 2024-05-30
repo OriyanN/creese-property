@@ -14,7 +14,6 @@ import GoldCoastPropertiesData from '../pages/GoldCoast/GoldCoastPropertiesData'
 import BrisbanePropertiesData from '../pages/Brisbane/BrisbanePropertiesData';
 import IpswichPropertiesData from '../pages/Ipswich/IpswichPropertiesData';
 import LoganPropertiesData from '../pages/Logan/LoganPropertiesData';
-import SunshineCoastPropertiesData from '../pages/SunshineCoast/SunshineCoastPropertiesData';
 import "./LocationsPage.css";
 
 import mainInitialImage from "../assets/gold-coast4.png";
@@ -22,7 +21,6 @@ import mainGoldCoast from "../assets/GoldCoast/gold-coast.jpg";
 import mainBrisbane from "../assets/Brisbane/brisbane.jpg";
 import mainIpswich from "../assets/Ipswich/ipswich.jpg";
 import mainLogan from "../assets/Logan/logan.jpg";
-import mainSunshineCoast from "../assets/SunshineCoast/sunshine-coast1.jpg";
 
 const LocationsPage = () => {
     const allPropertiesData = [
@@ -30,7 +28,6 @@ const LocationsPage = () => {
         ...BrisbanePropertiesData.map(item => ({ ...item, location: 'Brisbane' })),
         ...IpswichPropertiesData.map(item => ({ ...item, location: 'Ipswich' })),
         ...LoganPropertiesData.map(item => ({ ...item, location: 'Logan' })),
-        ...SunshineCoastPropertiesData.map(item => ({ ...item, location: 'Sunshine Coast' })),
     ];
 
     const featureOptions = [
@@ -57,7 +54,6 @@ const LocationsPage = () => {
         "Brisbane": mainBrisbane,
         "Ipswich": mainIpswich,
         "Logan": mainLogan,
-        "Sunshine Coast": mainSunshineCoast,
     };
 
     const [selectedLocation, setSelectedLocation] = useState({ value: 'All', label: 'All Locations' });
@@ -68,7 +64,6 @@ const LocationsPage = () => {
         { value: 'Brisbane', label: 'Brisbane' },
         { value: 'Ipswich', label: 'Ipswich' },
         { value: 'Logan', label: 'Logan' },
-        { value: 'Sunshine Coast', label: 'Sunshine Coast' }
     ];
 
     const bedsOptions = Array.from(new Set(allPropertiesData.map(p => p.beds)))

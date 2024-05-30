@@ -9,13 +9,11 @@ import GoldCoastPropertiesData from "../pages/GoldCoast/GoldCoastPropertiesData.
 import BrisbanePropertiesData from "../pages/Brisbane/BrisbanePropertiesData.js";
 import IpswichPropertiesData from "../pages/Ipswich/IpswichPropertiesData.js";
 import LoganPropertiesData from "../pages/Logan/LoganPropertiesData.js";
-import SunshineCoastPropertiesData from "../pages/SunshineCoast/SunshineCoastPropertiesData.js";
 
 function ContactForm() {
     const PropertiesData = {
         'Gold Coast': GoldCoastPropertiesData,
         'Brisbane': BrisbanePropertiesData,
-        'Sunshine Coast': SunshineCoastPropertiesData,
         'Logan': LoganPropertiesData,
         'Ipswich': IpswichPropertiesData,
     };
@@ -56,7 +54,6 @@ function ContactForm() {
         { value: "Logan", label: "Logan" },
         { value: "Ipswich", label: "Ipswich" },
         { value: "Brisbane", label: "Brisbane" },
-        { value: "SunshineCoast", label: "Sunshine Coast" }
     ];
     
     const bedsOptions = Array.from({ length: 7 }, (_, i) => ({ value: i + 1, label: `${i + 1}` }));
