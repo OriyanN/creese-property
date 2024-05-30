@@ -82,7 +82,7 @@ function AboutPage() {
                                 <h3>Kym Bayley</h3>
                                 <h4>Property Manager</h4>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at urna condimentum mattis. Etiam non quam lacus suspendisse faucibus. Est ultricies integer quis auctor elit. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Non quam lacus suspendisse faucibus interdum posuere. Posuere urna nec tincidunt praesent semper. Sodales ut eu sem integer vitae. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. </p>
+                            <p>Kym Bayley, Senior Property Manager at Creese Property is the perfect asset to our team. Victorian born, Kym now resides in Northern NSW, and spends her free time in nature and as a deputy unit commander in the SES. Her nurturing heart and kind spirit is reflected in her work. Kym strives to achieve the absolute best for all her clients and has a true passion for Property Management. Previously she was a debt collector for 20 years and then transitioned into Property Management where she has found her ground for the last 10 years. An all rounder and go-getter, Kym also organised a virtual run for men’s mental health working alongside R U OK? Her selflessness is a true testament to who she is. She is the perfect fit for Creese Property Team.</p>
                         </div>
                         <div className="team-member">
                             <LazyImageAbout src="src/assets/Lachie Black.png" alt="Creese Property Lachlan Creese" />
@@ -90,7 +90,7 @@ function AboutPage() {
                                 <h3>Kirby & Otto Creese</h3>
                                 <h4>Lorem ipsum</h4>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus semper eget duis at tellus at urna condimentum mattis. Etiam non quam lacus suspendisse faucibus. Est ultricies integer quis auctor elit. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Non quam lacus suspendisse faucibus interdum posuere. Posuere urna nec tincidunt praesent semper. Sodales ut eu sem integer vitae. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor. </p>
+                            <p>Kirby & Otto Creese are an integral part of the Creese Property team. From quality assurance to tenant screening, they ensure that standards in all aspects of the business are upheld to the highest standard. Sniffing out anything that doesn’t quite add up is their forte, while also keeping Managing Director Lachlan busy and on his toes. Their unique sixth sense also ensuring that tenants match the perfect profile for your investment property.</p>
                         </div>
                     </div>
                 </div>
