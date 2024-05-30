@@ -102,7 +102,7 @@ const GoldCoastPropertyDetailsPage = () => {
     <>
       <Helmet>
           <title>Gold Coast | Creese Property</title>
-          <meta name="description" content="Gold Coast page description. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+          <meta name="description" content="Discover Creese Property's expert residential management and consultancy services in the Gold Coast area." />
           <meta name="robots" content="noindex"/>
           <link rel="canonical" href={'/leasing/gold-coast/properties/${property.id}'} />
       </Helmet>
