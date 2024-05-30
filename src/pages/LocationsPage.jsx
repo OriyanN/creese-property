@@ -100,7 +100,7 @@ const LocationsPage = () => {
             (!filters.bedsFilter || property.beds === filters.bedsFilter.value) &&
             (!filters.bathsFilter || property.baths === filters.bathsFilter.value) &&
             (!filters.carFilter || property.car === filters.carFilter.value) &&
-            (filters.featuresFilter.length === 0 || filters.featuresFilter.every(f => property.features.includes(f.value)))
+            (filters.featuresFilter.length === 0 || filters.featuresFilter.every(f => property.features.some(feature => feature.toLowerCase().includes(f.value.toLowerCase()))))
         );
     });
     
