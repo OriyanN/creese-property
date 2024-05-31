@@ -274,7 +274,7 @@
 }
 
 .section.home .contact-form {
-    background-color: rgba(41, 65, 98, 1);
+    background-color: var(--blue);
     padding-top: 4rem;
 }
 
