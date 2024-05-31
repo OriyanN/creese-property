@@ -1,5 +1,5 @@
-import * as log1Images from '../../assets/Logan/log1';
-import * as log2Images from '../../assets/Logan/log2';
+import * as log1Images from '../../../public/assets/Logan/log1';
+import * as log2Images from '../../../public/assets/Logan/log2';
 
 const LoganPropertiesData = [
   {

@@ -1,4 +1,4 @@
-import * as TysonStreet9 from '../../assets/Ipswich/832-9-tyson-street';
+import * as TysonStreet9 from '../../../public/assets/Ipswich/832-9-tyson-street';
 
 const IpswichPropertiesData = [
   {

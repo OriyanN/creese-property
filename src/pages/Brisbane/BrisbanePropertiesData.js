@@ -1,4 +1,4 @@
-import * as AvalineEstate170 from '../../assets/Brisbane/170-avaline-estate';
+import * as AvalineEstate170 from '../../../public/assets/Brisbane/170-avaline-estate';
 
 const BrisbanePropertiesData = [
   {

@@ -1,7 +1,7 @@
-import * as MilanCourt9 from '../../assets/GoldCoast/9-milan-court';
-import * as BrindisiAvenue17 from '../../assets/GoldCoast/17-brindisi-ave';
-import * as MilanCourt7 from '../../assets/GoldCoast/7-milan-court';
-import * as NorthcliffeTerrace12_4 from '../../assets/GoldCoast/12-4-6-northcliffe-terrace';
+import * as MilanCourt9 from '../../../public/assets/GoldCoast/9-milan-court';
+import * as BrindisiAvenue17 from '../../../public/assets/GoldCoast/17-brindisi-ave';
+import * as MilanCourt7 from '../../../public/assets/GoldCoast/7-milan-court';
+import * as NorthcliffeTerrace12_4 from '../../../public/assets/GoldCoast/12-4-6-northcliffe-terrace';
 
 const GoldCoastPropertiesData = [
   {
