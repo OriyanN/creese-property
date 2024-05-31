@@ -42,6 +42,16 @@ a {
   cursor: pointer;
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: rgba(41, 65, 98, 0.9);
+}
+
+::selection {
+  color: white;
+  background: rgba(41, 65, 98, 0.9);
+}
+
 @media (max-width: 1300px) {
   html {
       font-size: 55%;
