@@ -6,6 +6,9 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
+
+import contactImage from '../../public/assets/contact-image.jpg';
+
 import "./ContactAboutPage.css"
 
 function ContactPage() {
@@ -88,7 +91,7 @@ function ContactPage() {
             <ScrollToTop />
             <div>
                 <div className="contact-about-header">
-                    <img src="src/assets/contact-image.jpg" alt="Creese Property Contact" />
+                    <img src={contactImage} alt="Creese Property Contact" />
                     <h1>Contact</h1>
                     <div className="overlay"></div>
                 </div>

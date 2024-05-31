@@ -15,15 +15,15 @@ import AnimatedButton from '../components/AnimatedButton.jsx';
 import Accordion from '../components/Accordion.jsx';
 import HomeDividerSection from '../components/HomeDividerSection.jsx';
 
-import videoBg from "../assets/CreeseHomePageVideo3.mp4";
-import preloaderImage from '../assets/CP Transparent(2).png';
+import videoBg from "../../public/assets/CreeseHomePageVideo3.mp4";
+import preloaderImage from '../../public/assets/CP Transparent(2).png';
 
-import AvalineEstate170 from '../assets/Brisbane/170-avaline-estate/170-avaline-estate.jpg';
-import TysonStreet9 from '../assets/Ipswich/832-9-tyson-street/832-9-tyson-street.jpg';
-import MilanCourt9 from '../assets/GoldCoast/9-milan-court/9-milan-court.jpeg';
-import BrindisiAvenue17 from '../assets/GoldCoast/17-brindisi-ave/17-brindisi-ave.jpeg';
-import MilanCourt7 from '../assets/GoldCoast/7-milan-court/7-milan-court.jpeg';
-import NorthcliffeTerrace12_4 from '../assets/GoldCoast/12-4-6-northcliffe-terrace/12-4-6-northcliffe-terrace.jpg';
+import AvalineEstate170 from '../../public/assets/Brisbane/170-avaline-estate/170-avaline-estate.jpg';
+import TysonStreet9 from '../../public/assets/Ipswich/832-9-tyson-street/832-9-tyson-street.jpg';
+import MilanCourt9 from '../../public/assets/GoldCoast/9-milan-court/9-milan-court.jpeg';
+import BrindisiAvenue17 from '../../public/assets/GoldCoast/17-brindisi-ave/17-brindisi-ave.jpeg';
+import MilanCourt7 from '../../public/assets/GoldCoast/7-milan-court/7-milan-court.jpeg';
+import NorthcliffeTerrace12_4 from '../../public/assets/GoldCoast/12-4-6-northcliffe-terrace/12-4-6-northcliffe-terrace.jpg';
 
 const HomePage = () => {
     const [loading, setLoading] = useState(true);

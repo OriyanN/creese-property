@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 import ScrollToTop from './ScrollToTop';
 
-import logo from "../assets/Creese Property Logo- White White.png";
+import logo from "../../public/assets/Creese Property Logo- White White.png";
 
-import facebook_blue from "../assets/facebook-blue.png";
-import facebook_white from "../assets/facebook-white.png";
-import instagram_blue from "../assets/icons8-instagram-48 (1).png";
-import instagram_white from "../assets/icons8-instagram-48.png";
-import linkedin_blue from "../assets/icons8-linkedin-48.png";
-import linkedin_white from "../assets/icons8-linkedin-48 (1).png";
+import facebook_blue from "../../public/assets/facebook-blue.png";
+import facebook_white from "../../public/assets/facebook-white.png";
+import instagram_blue from "../../public/assets/icons8-instagram-48 (1).png";
+import instagram_white from "../../public/assets/icons8-instagram-48.png";
+import linkedin_blue from "../../public/assets/icons8-linkedin-48.png";
+import linkedin_white from "../../public/assets/icons8-linkedin-48 (1).png";
 
 import './Footer.css';
 

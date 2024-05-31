@@ -5,6 +5,10 @@ import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import LazyImageAbout from '../components/LazyImageAbout';
 
+import aboutImage from '../../public/assets/about-image.jpg';
+import lachie from '../../public/assets/Lachie Black.png';
+import kym from '../../public/assets/Kym (1).png';
+
 import "./ContactAboutPage.css"
 
 function AboutPage() {
@@ -44,13 +48,13 @@ function AboutPage() {
             <ScrollToTop />
             <div>
                 <div className="contact-about-header">
-                    <img src="src/assets/about-image.jpg" alt="Creese Property Lachlan Creese" />
+                    <img src={aboutImage} alt="Creese Property Lachlan Creese" />
                     <h1>About Us</h1>
                     <div className="overlay"></div>
                 </div>
                 <div className="about-body">
                     <div>
-                        <img className="about-image" src="src/assets/Lachie Black.png" alt="Creese Property About Us" />
+                        <img className="about-image" src={lachie} alt="Creese Property About Us" />
                     </div>
                     <div className="about-text">
                         <h2>Our History</h2>
@@ -69,7 +73,7 @@ function AboutPage() {
                     <h2>Team</h2>
                     <div className="team">
                         <div className="team-member">
-                            <LazyImageAbout src="src/assets/Lachie Black.png" alt="Creese Property Lachlan Creese" />
+                            <LazyImageAbout src={lachie} alt="Creese Property Lachlan Creese" />
                             <div className="team-headings">
                                 <h3>Lachlan Creese</h3>
                                 <h4>Managing Director</h4>
@@ -77,7 +81,7 @@ function AboutPage() {
                             <p>Lachlan Creese, Managing Director of Creese Property, although originally from Tasmania has an undeniable love for the Gold Coast. A Bond University graduate, Lachlan is familiar with all things business and understands the importance of a good network. His love for property began all the way back in his early childhood. Growing up on the street his dad developed; Lachlan is well versed in the property sector. Over the years, he has built up his own personal portfolio, having started and sold multiple businesses. However, Lachlan is certain he has found his forever career in property. Turning his childhood passion into a long-life endeavour, Lachlan is well informed and ready to help others discover their dream of having their own property portfolio.</p>
                         </div>
                         <div className="team-member">
-                            <LazyImageAbout src="src/assets/Kym (1).png" alt="Creese Property Kym Bayley" />
+                            <LazyImageAbout src={kym} alt="Creese Property Kym Bayley" />
                             <div className="team-headings">
                                 <h3>Kym Bayley</h3>
                                 <h4>Property Manager</h4>
@@ -85,7 +89,7 @@ function AboutPage() {
                             <p>Kym Bayley, Senior Property Manager at Creese Property is the perfect asset to our team. Victorian born, Kym now resides in Northern NSW, and spends her free time in nature and as a deputy unit commander in the SES. Her nurturing heart and kind spirit is reflected in her work. Kym strives to achieve the absolute best for all her clients and has a true passion for Property Management. Previously she was a debt collector for 20 years and then transitioned into Property Management where she has found her ground for the last 10 years. An all rounder and go-getter, Kym also organised a virtual run for men’s mental health working alongside R U OK? Her selflessness is a true testament to who she is. She is the perfect fit for Creese Property Team.</p>
                         </div>
                         <div className="team-member">
-                            <LazyImageAbout src="src/assets/Lachie Black.png" alt="Creese Property Lachlan Creese" />
+                            <LazyImageAbout src={lachie} alt="Creese Property Lachlan Creese" />
                             <div className="team-headings">
                                 <h3>Kirby & Otto Creese</h3>
                                 <h4>Lorem ipsum</h4>

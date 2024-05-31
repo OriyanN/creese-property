@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 
+import careersImage from '../../public/assets/careers-image.jpg';
+
 import "./ContactAboutPage.css"
 
 function CareersPage() {
@@ -73,7 +75,7 @@ function CareersPage() {
             <ScrollToTop />
             <div>
             <div className="contact-about-header">
-                    <img src="src/assets/gold-coast.jpg" alt="Creese Property Lachlan Creese" />
+                    <img src={careersImage} alt="Creese Property Careers Page" />
                     <h1>Careers</h1>
                     <div className="overlay"></div>
                 </div>

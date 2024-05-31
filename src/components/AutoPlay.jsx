@@ -4,16 +4,16 @@ import { Autoplay, FreeMode } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 
-import ABC from '../assets/Featured/9.png';
-import Australian_Financial_Review from '../assets/Featured/10.png';
-import Australian_Property_Institute from '../assets/Featured/7.png';
-import COHORT_Innovation_Spaces from '../assets/Featured/8.png';
-import Gold_Coast_Bulletin from '../assets/Featured/6.png';
-import Property_Investment_Professionals_of_Australia from '../assets/Featured/5.png';
-import Real_Estate_Institute_of_Queensland from '../assets/Featured/4.png';
-import Realestate_com_au from '../assets/Featured/3.png';
-import The_Australian from '../assets/Featured/2.png';
-import The_Urban_Developer from '../assets/Featured/1.png';
+import ABC from '../../public/assets/Featured/9.png';
+import Australian_Financial_Review from '../../public/assets/Featured/10.png';
+import Australian_Property_Institute from '../../public/assets/Featured/7.png';
+import COHORT_Innovation_Spaces from '../../public/assets/Featured/8.png';
+import Gold_Coast_Bulletin from '../../public/assets/Featured/6.png';
+import Property_Investment_Professionals_of_Australia from '../../public/assets/Featured/5.png';
+import Real_Estate_Institute_of_Queensland from '../../public/assets/Featured/4.png';
+import Realestate_com_au from '../../public/assets/Featured/3.png';
+import The_Australian from '../../public/assets/Featured/2.png';
+import The_Urban_Developer from '../../public/assets/Featured/1.png';
 
 import './AutoPlay.css';
 

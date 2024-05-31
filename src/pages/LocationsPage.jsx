@@ -16,11 +16,11 @@ import IpswichPropertiesData from '../pages/Ipswich/IpswichPropertiesData';
 import LoganPropertiesData from '../pages/Logan/LoganPropertiesData';
 import "./LocationsPage.css";
 
-import mainInitialImage from "../assets/gold-coast4.png";
-import mainGoldCoast from "../assets/GoldCoast/gold-coast.jpg";
-import mainBrisbane from "../assets/Brisbane/brisbane.jpg";
-import mainIpswich from "../assets/Ipswich/ipswich.jpg";
-import mainLogan from "../assets/Logan/logan.jpg";
+import mainInitialImage from "../../public/assets/leasing-image.jpg";
+import mainGoldCoast from "../../public/assets/GoldCoast/gold-coast.jpg";
+import mainBrisbane from "../../public/assets/Brisbane/brisbane.jpg";
+import mainIpswich from "../../public/assets/Ipswich/ipswich.jpg";
+import mainLogan from "../../public/assets/Logan/logan.jpg";
 
 const LocationsPage = () => {
     const allPropertiesData = [
