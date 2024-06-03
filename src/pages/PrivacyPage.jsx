@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import ScrollToTop from "../components/ScrollToTop.jsx";
 
 import './PrivacyTermsPage.css';
+import Footer from "../components/Footer.jsx";
 
 function PrivacyPage() {
     return (
@@ -199,6 +200,7 @@ function PrivacyPage() {
                         </li>
                     </ol>
                 </div>
+                <Footer />
             </div>
         </>
     );

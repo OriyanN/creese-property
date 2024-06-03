@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import ScrollToTop from "../components/ScrollToTop.jsx";
 
 import './PrivacyTermsPage.css';
+import Footer from "../components/Footer.jsx";
 
 function TermsConditionPage() {
     return (
@@ -535,6 +536,7 @@ function TermsConditionPage() {
                         </li>
                     </ol>
                 </div>
+                <Footer />
             </div>
         </>
     );
