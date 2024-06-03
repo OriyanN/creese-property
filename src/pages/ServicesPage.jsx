@@ -5,10 +5,10 @@ import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import ContactForm from '../components/ContactForm';
 
-import serviceImage from '../../public/assets/service-image.jpg';
-import service1 from '../../public/assets/Residential Property Management.png';
-import service2 from '../../public/assets/Buyers Agency.png';
-import service3 from '../../public/assets/Property Consultancy.png';
+import serviceImage from '/assets/service-image.jpg';
+import service1 from '/assets/Residential Property Management.png';
+import service2 from '/assets/Buyers Agency.png';
+import service3 from '/assets/Property Consultancy.png';
 
 import "./ServicePage.css";
 import "./HomePage.css";

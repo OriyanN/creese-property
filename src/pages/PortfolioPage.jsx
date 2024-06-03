@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import LazyImage from '../components/LazyImage';
 
-import portfolioImage from '../../public/assets/portfolio-image.jpg';
+import portfolioImage from '/assets/portfolio-image.jpg';
 
 import "./PortfolioPage.css"
 

@@ -5,9 +5,9 @@ import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import LazyImageAbout from '../components/LazyImageAbout';
 
-import aboutImage from '../../public/assets/about-image.jpg';
-import lachie from '../../public/assets/Lachie Black.png';
-import kym from '../../public/assets/Kym (1).png';
+import aboutImage from '/assets/about-image.jpg';
+import lachie from '/assets/Lachie Black.png';
+import kym from '/assets/Kym (1).png';
 
 import "./ContactAboutPage.css"
 

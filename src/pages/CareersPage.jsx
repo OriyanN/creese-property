@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 
-import careersImage from '../../public/assets/careers-image.jpg';
+import careersImage from '/assets/careers-image.jpg';
 
 import "./ContactAboutPage.css"
 

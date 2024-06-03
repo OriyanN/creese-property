@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import "./NavBar.css";
 import "/src/index.css";
 
-import logoWhite from "../../public/assets/Creese Property Logo- White White2.webp";
+import logoWhite from "/assets/Creese Property Logo- White White2.webp";
 import ScrollToTop from "./ScrollToTop";
 
 function NavBar() {

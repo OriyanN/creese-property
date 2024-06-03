@@ -7,7 +7,7 @@ import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 
-import contactImage from '../../public/assets/contact-image.jpg';
+import contactImage from '/assets/contact-image.jpg';
 
 import "./ContactAboutPage.css"
 
