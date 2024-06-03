@@ -11,19 +11,19 @@ import "./HomePage.css";
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop.jsx';
 import AutoPlay from '../components/AutoPlay.jsx';
-import AnimatedButton from '../components/AnimatedButton.jsx';
 import Accordion from '../components/Accordion.jsx';
 import HomeDividerSection from '../components/HomeDividerSection.jsx';
 
-import videoBg from "../../public/assets/CreeseHomePageVideo3.mp4";
-import preloaderImage from '../../public/assets/CP Transparent(2).png';
+import videoBg from "/assets/CreeseHomePageVideo3.mp4";
+import preloaderImage from '/assets/CP Transparent(2).png';
 
-import AvalineEstate170 from '../../public/assets/Brisbane/170-avaline-estate/170-avaline-estate.jpg';
-import TysonStreet9 from '../../public/assets/Ipswich/832-9-tyson-street/832-9-tyson-street.jpg';
-import MilanCourt9 from '../../public/assets/GoldCoast/9-milan-court/9-milan-court.jpeg';
-import BrindisiAvenue17 from '../../public/assets/GoldCoast/17-brindisi-ave/17-brindisi-ave.jpeg';
-import MilanCourt7 from '../../public/assets/GoldCoast/7-milan-court/7-milan-court.jpeg';
-import NorthcliffeTerrace12_4 from '../../public/assets/GoldCoast/12-4-6-northcliffe-terrace/12-4-6-northcliffe-terrace.jpg';
+import AvalineEstate170 from '/assets/Brisbane/170-avaline-estate/170-avaline-estate.jpg';
+import TysonStreet9 from '/assets/Ipswich/832-9-tyson-street/832-9-tyson-street.jpg';
+import MilanCourt9 from '/assets/GoldCoast/9-milan-court/9-milan-court.jpeg';
+import BrindisiAvenue17 from '/assets/GoldCoast/17-brindisi-ave/17-brindisi-ave.jpeg';
+import MilanCourt7 from '/assets/GoldCoast/7-milan-court/7-milan-court.jpeg';
+import NorthcliffeTerrace12_4 from '/assets/GoldCoast/12-4-6-northcliffe-terrace/12-4-6-northcliffe-terrace.jpg';
+import RentalAppraisalForm from '../components/RentalAppraisalForm.jsx';
 
 const HomePage = () => {
     const [loading, setLoading] = useState(true);
@@ -67,10 +67,6 @@ const HomePage = () => {
             }
         };
     }, []);
-
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
-    };
 
     const images = [
         { id: 1, url: TysonStreet9, address: '832/9 Tyson Street, Whiterock Ripley', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/leasing/ipswich/properties/832-9-tyson-street' },
@@ -216,48 +212,7 @@ const HomePage = () => {
                         <div className="overlay-content"></div>
                     </div>
                     <div className='contact-form'>
-                        <h2>REQUEST A RENTAL APPRAISAL</h2>
-                        <form onSubmit={handleFormSubmit}>
-                            <div className="name-section">
-                                <input 
-                                    type="text"
-                                    name="firstName"
-                                    placeholder='First Name'
-                                />
-                                <input 
-                                    type="text"
-                                    name="lastName"
-                                    className='lastName'
-                                    placeholder='Last Name'
-                                />
-                            </div>
-                            <div className="details-section">
-                                <input 
-                                    type="email"
-                                    name="email"
-                                    placeholder='Contact Email'
-                                />
-                                <input 
-                                    type="number"
-                                    name="phoneNumber"
-                                    className='phoneNumber'
-                                    placeholder='Phone Number'
-                                />
-                            </div>
-                            <div className='address-section'>
-                                <input type="text" name='address' rows='1' placeholder='Address of Property to Be Appraised'/>
-                            </div>
-                            <div className='message-section'>
-                                <textarea type="text" name='message' rows='6' placeholder='Message'/>
-                            </div>
-                            <div className="newsletter-signup">
-                                <label htmlFor="">
-                                    <input type="checkbox" name="newsletterSignup" id="newsletterSignup" />
-                                    I  would like to sign up for news and updates from Creese Property and agree to the Privacy Policy.
-                                </label>
-                            </div>
-                            <AnimatedButton onSubmit={handleFormSubmit} />
-                        </form>
+                        <RentalAppraisalForm />
                     </div>
                     <AutoPlay />
                     <Accordion />

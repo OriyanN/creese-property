@@ -73,6 +73,22 @@
     transition-delay: 1s;
 }
 
+.verification-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.5rem;
+    padding-bottom: 4rem;
+}
+
+.verification-message.appraisal-message p {
+    color: white;
+}
+
+.verification-message p {
+    padding-bottom: 1rem;
+}
+
 @media (max-width: 1000px) {
     .wrapper button {
         width: 27.5vw;

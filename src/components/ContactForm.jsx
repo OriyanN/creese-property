@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import Select from 'react-select';
 
-import "./ContactForm.css"
-
-import AnimatedButton from './AnimatedButton.jsx';
+import "./ContactForm.css";
+import './AnimatedButton.css';
 
 import GoldCoastPropertiesData from "../pages/GoldCoast/GoldCoastPropertiesData.js";
 import BrisbanePropertiesData from "../pages/Brisbane/BrisbanePropertiesData.js";
@@ -36,10 +36,17 @@ function ContactForm() {
         setSelectedProperty('');
     }, [selectedLocation]);
 
-    const handleFormSubmit = (e) => {
-        e.preventDefault(); // Prevent default form submission behavior
-        // Form submission logic here
-    };
+    const [state, handleSubmit] = useForm("mkndlbbq");
+    if (state.succeeded) {
+        return (
+            <>
+                <div className="verification-message">
+                    <p>Thank you for contacting us.</p>
+                    <p>Our team will reach out to you within the next 24 to 48 hours.</p>
+                </div>
+            </>
+        );
+    }
 
     const customStyles = {
         option: (provided, state) => ({
@@ -63,18 +70,20 @@ function ContactForm() {
     return (
         <div className='contact-form'>
             <h2>Contact Us</h2>
-            <form onSubmit={handleFormSubmit}>
+            <form onSubmit={handleSubmit}>
                 <div className="name-section">
                     <input 
                         type="text"
                         name="firstName"
                         placeholder='First Name'
+                        required
                     />
                     <input 
                         type="text"
                         name="lastName"
                         className='lastName'
                         placeholder='Last Name'
+                        required
                     />
                 </div>
                 <div className="details-section">
@@ -82,6 +91,12 @@ function ContactForm() {
                         type="email"
                         name="email"
                         placeholder='Contact Email'
+                        required
+                    />
+                    <ValidationError 
+                        prefix="Email" 
+                        field="email"
+                        errors={state.errors}
                     />
                     <input 
                         type="number"
@@ -103,6 +118,7 @@ function ContactForm() {
                         onChange={option => setEnquiryType(option ? option.value : '')}
                         placeholder="Select Enquiry Type"
                         isClearable
+                        name="typeOfEnquiry"
                     />
                 </div>
                 {enquiryType === "propertyNotification" && (
@@ -114,6 +130,7 @@ function ContactForm() {
                                 onChange={option => setLocationProperty(option ? option.value : '')}
                                 placeholder="Location"
                                 isClearable={true}
+                                name="location"
                                 className="additional-selects-dropdown location"
                             />
                             <span style={{ position:'absolute', marginLeft:'10.5rem', marginTop:'1.6rem', fontSize:'2.5rem'}}>$</span>
@@ -132,6 +149,7 @@ function ContactForm() {
                                 placeholder="Beds"
                                 isClearable={true}
                                 className="additional-selects-dropdown beds"
+                                name="beds"
                             />
                             <Select
                                 options={bathsOptions}
@@ -140,6 +158,7 @@ function ContactForm() {
                                 placeholder="Baths"
                                 isClearable={true}
                                 className="additional-selects-dropdown baths"
+                                name="baths"
                             />
                         </div>
                     </div>
@@ -166,7 +185,11 @@ function ContactForm() {
                         I  would like to sign up for news and updates from Creese Property and agree to the Privacy Policy.
                     </label>
                 </div>
-                <AnimatedButton onSubmit={handleFormSubmit} />
+                <div className="wrapper">
+                    <button type="submit" disabled={state.submitting}>
+                        Submit
+                    </button>
+                </div>
             </form>
         </div>
     );
