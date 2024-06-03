@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
+import { useForm, ValidationError } from '@formspree/react';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 import Lightbox from "yet-another-react-lightbox";
@@ -10,18 +11,21 @@ import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 
-import AnimatedButton from '../../components/AnimatedButton.jsx';
 import Footer from '../../components/Footer.jsx';
 import ScrollToTop from '../../components/ScrollToTop.jsx';
 import LazyImage from '../../components/LazyImage.jsx';
 
 import GoldCoastPropertiesData from "./GoldCoastPropertiesData.js";
 import '../LocationsPropertyDetailsPage.css';
+import '../../components/AnimatedButton.css';
+import GoldCoastPropertyForm from './GoldCoastPropertyForm.jsx';
 
 const GoldCoastPropertyDetailsPage = () => {
   const { propertyId } = useParams();
   const property = GoldCoastPropertiesData.find((p) => p.id === propertyId);
   const [suggestedProperties, setSuggestedProperties] = useState([]);
+
+  const [state, handleSubmit] = useForm("mbjnvyqq");
 
   const [open, setOpen] = React.useState(false);
   const galleryButtonRef = useRef(null);
@@ -81,6 +85,17 @@ const GoldCoastPropertyDetailsPage = () => {
       [name]: value,
     }));
   };
+
+  if (state.succeeded) {
+    return (
+        <>
+            <div className="verification-message">
+                <p>Thank you for contacting us.</p>
+                <p>Our team will reach out to you within the next 24 to 48 hours.</p>
+            </div>
+        </>
+    );
+  }
 
   useEffect(() => {
     const getThreeRandomProperties = () => {
@@ -176,57 +191,8 @@ const GoldCoastPropertyDetailsPage = () => {
 
         <div ref={mapContainerRef} className='map-property' style={{ margin: '2rem 26%', height: '60vh', width: '48%', borderRadius: '0.25rem', padding: '1rem 0'}}></div>
         
-        <div className='property-contact-form'>
-          <h2>Enquire Now</h2>
-          <form action=''>
-            <div className="property-name-section">
-                <input 
-                  type="text"
-                  name="firstName"
-                  placeholder='First Name'
-                />
-                <input 
-                  type="text"
-                  name="lastName"
-                  placeholder='Last Name'
-                />
-            </div>
-            <div className="property-details-section">
-                <input 
-                  type="email"
-                  name="email"
-                  placeholder='Contact Email'
-                />
-                <input 
-                  type="number"
-                  name="phoneNumber"
-                  placeholder='Phone Number'
-                />
-            </div>
-            <div className="property-dropdowns-section">
-              <select className="property-dropdown-section" name="location" value={contactForm.location} onChange={handleChange} disabled>
-                <option value={contactForm.location}>{contactForm.location}</option>
-              </select>
-              
-              <select className="property-dropdown-section" name="property" value={contactForm.property} onChange={handleChange} disabled>
-                <option value={contactForm.property}>{contactForm.property}</option>
-              </select>
-            </div>
-
-            <div className='property-message-section'>
-              <textarea type="text" name='message' rows='6' placeholder='Message'/>
-            </div>
-            
-            <AnimatedButton />
-          </form>
-          <div className="disclaimer">
-            <p>PLEASE NOTE: You must register for inspections. If you do not register for inspections, we cannot notify you of time changes or cancellations to inspections. The property must be inspected prior to an application being submitted.
-              <br />
-              <br />
-              ADVERTISING DISCLAIMER - Please note - All parties should make and rely upon their own enquiries in order to determine the accuracy of the information supplied. Some file photographs in use may have been taken some time ago. Please rely on your own inspection and investigations as the property may have changed since the photographs were taken. Creese Property bears no liability for any loss sustained due to inaccuracy or omission.
-            </p>
-          </div>
-        </div>
+        <GoldCoastPropertyForm />
+        
         <div className="you-may-also-like-section images-container">
           <h3>You May Also Like</h3>
           <div className="images-container">
