@@ -10,6 +10,7 @@ import lachie from '/assets/Lachie Black.png';
 import kym from '/assets/Kym (1).png';
 
 import "./ContactAboutPage.css"
+import Testimonials from '../components/Testimonials';
 
 function AboutPage() {
 
@@ -69,6 +70,7 @@ function AboutPage() {
                         </p>
                     </div>
                 </div>
+                <Testimonials />
                 <div className="team-container">
                     <h2>Team</h2>
                     <div className="team">
