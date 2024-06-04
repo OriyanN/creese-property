@@ -64,11 +64,13 @@ const IpswichPropertyForm = () => {
                     type="text"
                     name="firstName"
                     placeholder='First Name'
+                    required
                   />
                   <input 
                     type="text"
                     name="lastName"
                     placeholder='Last Name'
+                    required
                   />
               </div>
               <div className="property-details-section">
@@ -76,6 +78,7 @@ const IpswichPropertyForm = () => {
                     type="email"
                     name="email"
                     placeholder='Contact Email'
+                    required
                   />
                   <ValidationError 
                       prefix="Email" 
@@ -83,9 +86,11 @@ const IpswichPropertyForm = () => {
                       errors={state.errors}
                   />
                   <input 
-                    type="number"
+                    type="tel"
                     name="phoneNumber"
+                    className='phoneNumber'
                     placeholder='Phone Number'
+                    minLength={10}
                   />
               </div>
               <div className="property-dropdowns-section">
@@ -97,6 +102,27 @@ const IpswichPropertyForm = () => {
               <div className='property-message-section'>
                 <textarea type="text" name='message' rows='6' placeholder='Message'/>
               </div>
+              <div className="radio-buttons-section">
+                    <div className="radio-buttons property-radio-buttons">
+                        <p>Preferred method of conatct</p>
+                        <div className="radio-buttons-mini-section property-radio-select">
+                            <label htmlFor="" className='radio-button'>
+                                <input type="radio" name="PreferredMethod" value="phoneNumber" checked />
+                                Phone number
+                            </label>
+                            <label htmlFor="" className='radio-button'>
+                                <input type="radio" name="PreferredMethod" value="email" />
+                                Email
+                            </label>
+                        </div>
+                    </div>
+              </div>
+              <div className="newsletter-signup">
+                <label htmlFor="">
+                  <input type="checkbox" id="newsletterSignup" checked />
+                  I agree to the Privacy Policy and the Terms and Conditions.
+                </label>
+                </div>
               <div className="wrapper">
                 <button type="submit" disabled={state.submitting}>
                     Submit

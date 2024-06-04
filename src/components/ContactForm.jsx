@@ -99,10 +99,11 @@ function ContactForm() {
                         errors={state.errors}
                     />
                     <input 
-                        type="number"
+                        type="tel"
                         name="phoneNumber"
                         className='phoneNumber'
                         placeholder='Phone Number'
+                        minLength={10}
                     />
                 </div>
                 <div className="dropdowns-section">
@@ -179,10 +180,25 @@ function ContactForm() {
                 <div className='message-section'>
                     <textarea type="text" name='message' rows='6' placeholder='Message'/>
                 </div>
+                <div className="radio-buttons-section">
+                    <div className="radio-buttons">
+                        <p>Preferred method of conatct</p>
+                        <div className="radio-buttons-mini-section">
+                            <label htmlFor="" className='radio-button'>
+                                <input type="radio" name="PreferredMethod" value="phoneNumber" checked />
+                                Phone number
+                            </label>
+                            <label htmlFor="" className='radio-button'>
+                                <input type="radio" name="PreferredMethod" value="email" />
+                                Email
+                            </label>
+                        </div>
+                    </div>
+                </div>
                 <div className="newsletter-signup">
-                    <label htmlFor="">
-                        <input type="checkbox" name="newsletterSignup" id="newsletterSignup" />
-                        I  would like to sign up for news and updates from Creese Property and agree to the Privacy Policy.
+                <label htmlFor="">
+                        <input type="checkbox" id="newsletterSignup" checked />
+                        I agree to the Privacy Policy and the Terms and Conditions.
                     </label>
                 </div>
                 <div className="wrapper">

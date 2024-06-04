@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 
 import "../pages/HomePage.css";
@@ -27,12 +27,14 @@ function RentalAppraisalForm() {
                         type="text"
                         name="firstName"
                         placeholder='First Name'
+                        required
                     />
                     <input 
                         type="text"
                         name="lastName"
                         className='lastName'
                         placeholder='Last Name'
+                        required
                     />
                 </div>
                 <div className="details-section">
@@ -40,6 +42,7 @@ function RentalAppraisalForm() {
                         type="email"
                         name="email"
                         placeholder='Contact Email'
+                        required
                     />
                     <ValidationError 
                         prefix="Email" 
@@ -47,10 +50,11 @@ function RentalAppraisalForm() {
                         errors={state.errors}
                     />
                     <input 
-                        type="number"
+                        type="tel"
                         name="phoneNumber"
                         className='phoneNumber'
                         placeholder='Phone Number'
+                        minLength={10}
                     />
                 </div>
                 <div className='address-section'>
@@ -59,10 +63,25 @@ function RentalAppraisalForm() {
                 <div className='message-section'>
                     <textarea type="text" name='message' rows='6' placeholder='Message'/>
                 </div>
+                <div className="radio-buttons-section">
+                    <div className="radio-buttons rental-app-form">
+                        <p>Preferred method of conatct</p>
+                        <div className="radio-buttons-mini-section">
+                            <label htmlFor="" className='radio-button'>
+                                <input type="radio" name="PreferredMethod" value="phoneNumber" checked />
+                                Phone number
+                            </label>
+                            <label htmlFor="" className='radio-button'>
+                                <input type="radio" name="PreferredMethod" value="email" />
+                                Email
+                            </label>
+                        </div>
+                    </div>
+                </div>
                 <div className="newsletter-signup">
                     <label htmlFor="">
-                        <input type="checkbox" name="newsletterSignup" id="newsletterSignup" />
-                        I  would like to sign up for news and updates from Creese Property and agree to the Privacy Policy.
+                        <input type="checkbox" id="newsletterSignup" checked />
+                        I agree to the Privacy Policy and the Terms and Conditions.
                     </label>
                 </div>
                 <div className="wrapper">

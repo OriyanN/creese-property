@@ -90,6 +90,51 @@
     text-align: center;
 }
 
+.radio-buttons-section {
+    display: flex;
+    justify-content: center;
+}
+
+.radio-buttons-mini-section {
+    display: flex;
+}
+
+.radio-buttons {
+    width: 95%;
+    display: flex;
+    padding: 3rem 0;
+}
+
+.radio-buttons.rental-app-form p, .radio-buttons.rental-app-form label {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.radio-buttons p, .radio-buttons label {
+    font-size: 2.5rem;
+}
+
+.radio-buttons p {
+    padding-right: 5rem;
+}
+
+.radio-buttons label {
+    padding-right: 3rem;
+}
+
+.radio-buttons-section .radio-buttons input {
+    margin: 0 !important;
+    accent-color: var(--light-blue) !important;
+    margin-right: 1rem !important;
+    width: 2rem !important;
+}
+
+@media (max-width: 1450px) {
+    .property-radio-select {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 1000px) {
     .wrapper button {
         width: 27.5vw;
@@ -102,8 +147,64 @@
     }
 }
 
+@media (max-width: 770px) {
+    .radio-buttons {
+        flex-direction: column;
+    }
+
+    .property-radio-select {
+        flex-direction: row;
+    }
+
+    .radio-buttons p {
+        padding-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .radio-buttons-mini-section {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 600px) {
     .wrapper button {
         width: 45vw;
+    }
+}
+
+@media (max-width: 540px) {
+    .radio-buttons p {
+        padding-right: 3rem;
+    }
+    
+    .radio-buttons label {
+        padding-right: 0rem;
+    }
+
+    .radio-buttons p, .radio-buttons label {
+        font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 440px) {
+    .radio-buttons {
+        flex-direction: column;
+    }
+
+    .radio-buttons p {
+        padding-bottom: 1.5rem;
+    }
+    
+    .radio-buttons label {
+        padding-right: 5rem;
+    }
+
+    .radio-buttons-mini-section {
+        flex-direction: row;
+    }
+
+    .radio-buttons.property-radio-buttons label {
+        padding-right: 3rem;
     }
 }

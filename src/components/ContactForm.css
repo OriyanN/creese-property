@@ -110,7 +110,7 @@
     width: 95%;
 }
 
-.contact-form .newsletter-signup input {
+.contact-form .newsletter-signup input, .property-contact-form .newsletter-signup input {
     width: 1.5rem;
     margin-right: 1.5rem;
     accent-color: var(--light-blue);
