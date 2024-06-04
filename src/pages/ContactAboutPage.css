@@ -55,6 +55,7 @@
     width: 30%; 
     height: 100%;
     padding: 1rem 4rem 1rem 0;
+    border-radius: 0.25rem;
 }
 
 .contact-map {
@@ -100,8 +101,10 @@
     padding: 0rem 2rem;
 }
 
-.team-member img {
+.team-member .team-member-image {
     width: 100%;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.4rem 0.8rem rgba(0,0,0,0.25);
 }
 
 .team-headings {
