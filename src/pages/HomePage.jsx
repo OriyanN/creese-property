@@ -13,6 +13,7 @@ import ScrollToTop from '../components/ScrollToTop.jsx';
 import AutoPlay from '../components/AutoPlay.jsx';
 import Accordion from '../components/Accordion.jsx';
 import HomeDividerSection from '../components/HomeDividerSection.jsx';
+import ScrollRevealContainer from '../components/ScrollReveal.jsx'; 
 
 import videoBg from "/assets/CreeseHomePageVideo3.mp4";
 import preloaderImage from '/assets/CP Transparent(2).png';
@@ -70,11 +71,11 @@ const HomePage = () => {
 
     const images = [
         { id: 1, url: TysonStreet9, address: '832/9 Tyson Street, Whiterock Ripley', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/leasing/ipswich/properties/832-9-tyson-street' },
-        { id: 2, url: AvalineEstate170, address: '170 Avaline Estate, Burpengary East', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/leasing/brisbane/properties/170-avaline-estate' },
+        { id: 2, url: AvalineEstate170, address: '170 Avaline Estate, Burpengary East', description: 'Executive Family Home in Beautiful Burpengary', link: '/leasing/brisbane/properties/170-avaline-estate' },
         { id: 3, url: NorthcliffeTerrace12_4, address: '12/4-6 Northcliffe Terrace, Surfers Paradise', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/leasing/gold-coast/properties/12-4-6-northcliffe-terrace' },
         { id: 4, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/leasing/gold-coast/properties/7-milan-court' },
         { id: 5, url: BrindisiAvenue17, address: '17 Brindisi Avenue, Surfers Paradise', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/leasing/gold-coast/properties/17-brindisi-ave' },
-        { id: 6, url: MilanCourt9, address: '9 Milan Court, Surfers Paradise', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/leasing/gold-coast/properties/9-milan-court' },
+        { id: 6, url: MilanCourt9, address: '9 Milan Court, Surfers Paradise', description: 'SHORT STROLL TO CURRUMBIN BEACH', link: '/leasing/gold-coast/properties/9-milan-court' },
         
     ];
 
@@ -153,13 +154,15 @@ const HomePage = () => {
                         <video className="header-video" ref={videoRef} autoPlay loop muted playsInline alt="Creese Property Video" />
                         <div className="overlay-home"></div>
                     </div>
-                    <div className="text-home">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A nulla fugiat, esse dolor excepturi ea sit nihil reprehenderit accusantium dolorum laboriosam eum quae sed!</p>
-                    </div>
-                    <div className="home-property-slide"> 
-                        <div className="text-example">
-                            <h4>Most Recent Leasings</h4>
+                        <div className="text-home">
+                            <p>Communication and authenticity guides us. Through innovation and a people first focus we believe we can create outcomes that change expectations of your property investment experience.</p>
                         </div>
+                    <div className="home-property-slide"> 
+                            <div className="text-example">
+                                <ScrollRevealContainer move="5rem" duration={900} delay={500} origin={'left'}>
+                                    <h4>Most Recent Leasings</h4>
+                                </ScrollRevealContainer>
+                            </div>
                         <Swiper
                             modules={[Mousewheel, Scrollbar, FreeMode]}
                             scrollbar={{
