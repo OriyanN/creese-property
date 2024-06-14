@@ -64,7 +64,10 @@
     display: flex;
     width: 100vw;
     padding: 1.2rem 0 4rem 9%;
-    cursor: url('src/assets/right-arrow-home-page3.png'), auto;
+}
+
+.home-property-slide, .home-property-slide a {
+    cursor: url('public/assets/icons8-arrow-50.png'), auto;
 }
 
 .text-example {
