@@ -72,10 +72,10 @@ const HomePage = () => {
     const images = [
         { id: 1, url: TysonStreet9, address: '832/9 Tyson Street, Whiterock Ripley', description: 'Stunning 4 Bedroom Home in Lovely Deebing Heights, QLD', link: '/leasing/ipswich/properties/832-9-tyson-street' },
         { id: 2, url: AvalineEstate170, address: '170 Avaline Estate, Burpengary East', description: 'Executive Family Home in Beautiful Burpengary, QLD', link: '/leasing/brisbane/properties/170-avaline-estate' },
-        { id: 3, url: NorthcliffeTerrace12_4, address: '12/4-6 Northcliffe Terrace, Surfers Paradise', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/leasing/gold-coast/properties/12-4-6-northcliffe-terrace' },
-        { id: 4, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/leasing/gold-coast/properties/7-milan-court' },
-        { id: 5, url: BrindisiAvenue17, address: '17 Brindisi Avenue, Surfers Paradise', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/leasing/gold-coast/properties/17-brindisi-ave' },
-        { id: 6, url: MilanCourt9, address: '9 Milan Court, Surfers Paradise', description: 'SHORT STROLL TO CURRUMBIN BEACH', link: '/leasing/gold-coast/properties/9-milan-court' },
+        { id: 3, url: NorthcliffeTerrace12_4, address: '12/4-6 Northcliffe Terrace, Surfers Paradise', description: 'Beachside Apartment for Rent in Surfers Paradise', link: '/leasing/gold-coast/properties/12-4-6-northcliffe-terrace' },
+        { id: 4, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Spacious 4-Bedroom Home in Beautiful Isle of Capri', link: '/leasing/gold-coast/properties/7-milan-court' },
+        { id: 5, url: BrindisiAvenue17, address: '17 Brindisi Avenue, Surfers Paradise', description: '4 Bedroom, 2 Bathroom Home with Inground Swimming Pool', link: '/leasing/gold-coast/properties/17-brindisi-ave' },
+        { id: 6, url: MilanCourt9, address: '9 Milan Court, Surfers Paradise', description: 'Short Stroll to Currumbin Beach', link: '/leasing/gold-coast/properties/9-milan-court' },
         
     ];
 
