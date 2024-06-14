@@ -50,7 +50,7 @@ function AboutPage() {
             <div>
                 <div className="contact-about-header">
                     <img src={aboutImage} alt="Creese Property Lachlan Creese" />
-                    <h1>About Us</h1>
+                        <h1>About Us</h1>
                     <div className="overlay"></div>
                 </div>
                 <div className="about-body">
@@ -96,7 +96,7 @@ function AboutPage() {
                                 <h3>Kirby & Otto Creese</h3>
                                 <h4>Lorem ipsum</h4>
                             </div>
-                            <p>Kirby & Otto Creese are an integral part of the Creese Property team. From quality assurance to tenant screening, they ensure that standards in all aspects of the business are upheld to the highest standard. Sniffing out anything that doesn’t quite add up is their forte, while also keeping Managing Director Lachlan busy and on his toes. Their unique sixth sense also ensuring that tenants match the perfect profile for your investment property.</p>
+                            <p>Kirby and Otto Creese are an integral part of the Creese Property team. From quality assurance to tenant screening, they ensure that standards in all aspects of the business are upheld to the highest standard. Sniffing out anything that doesn’t quite add up is their forte, while also keeping Managing Director Lachlan on his toes. Their unique sixth sense also ensures that tenants match the perfect profile for your investment property. The excellent outcomes that Creese Property are creating, in their opinion, is nothing to sniff about. With the help of Kirby and Otto we are hoping that all Creese Property landlords and tenants have a pawsitive experience.</p>
                         </div>
                     </div>
                 </div>
