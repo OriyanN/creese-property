@@ -6,8 +6,10 @@ import ScrollToTop from '../components/ScrollToTop';
 import LazyImageAbout from '../components/LazyImageAbout';
 
 import aboutImage from '/assets/about-image.jpg';
-import lachie from '/assets/Lachie Black.png';
-import kym from '/assets/Kym (1).png';
+import davidCreese from '/assets/David Creese.png';
+import lachieSweather from '/assets/Lachie Sweater.jpg';
+import kym from '/assets/Kym.jpg';
+import kirbyOtto from '/assets/Kirby Otto Black Smaller.jpg';
 
 import "./ContactAboutPage.css"
 import Testimonials from '../components/Testimonials';
@@ -55,7 +57,7 @@ function AboutPage() {
                 </div>
                 <div className="about-body">
                     <div>
-                        <img className="about-image" src={lachie} alt="Creese Property About Us" />
+                        <img className="about-image" src={davidCreese} alt="Creese Property About Us" />
                     </div>
                     <div className="about-text">
                         <h2>Our History</h2>
@@ -75,7 +77,7 @@ function AboutPage() {
                     <h2>Team</h2>
                     <div className="team">
                         <div className="team-member">
-                            <LazyImageAbout className="team-member-image" src={lachie} alt="Creese Property Lachlan Creese" />
+                            <LazyImageAbout className="team-member-image" src={lachieSweather} alt="Creese Property Lachlan Creese" />
                             <div className="team-headings">
                                 <h3>Lachlan Creese</h3>
                                 <h4>Managing Director</h4>
@@ -91,10 +93,10 @@ function AboutPage() {
                             <p>Kym Bayley, Senior Property Manager at Creese Property is the perfect asset to our team. Victorian born, Kym now resides in Northern NSW, and spends her free time with family, friends, on the beach, and in nature. She is also passionate about her position as Deputy Unit Commander with NSW SES. Her nurturing heart and kind spirit is reflected in her work. Kym strives to achieve the absolute best for all her clients with a true passion for people and Property Management. Kym’s Property Management career is built upon the foundation of 20 years in managing a debt collection agency. An all-rounder and go-getter, Kym also organised a virtual run for men’s mental health working alongside R U OK? Her selflessness is a true testament to who she is, and why she has found the perfect fit as part of the Creese Property Team.</p>
                         </div>
                         <div className="team-member">
-                            <LazyImageAbout className="team-member-image" src={lachie} alt="Creese Property Lachlan Creese" />
+                            <LazyImageAbout className="team-member-image" src={kirbyOtto} alt="Creese Property Lachlan Creese" />
                             <div className="team-headings">
                                 <h3>Kirby & Otto Creese</h3>
-                                <h4>Lorem ipsum</h4>
+                                <h4>Quality Control Officers</h4>
                             </div>
                             <p>Kirby and Otto Creese are an integral part of the Creese Property team. From quality assurance to tenant screening, they ensure that standards in all aspects of the business are upheld to the highest standard. Sniffing out anything that doesn’t quite add up is their forte, while also keeping Managing Director Lachlan on his toes. Their unique sixth sense also ensures that tenants match the perfect profile for your investment property. The excellent outcomes that Creese Property are creating, in their opinion, is nothing to sniff about. With the help of Kirby and Otto we are hoping that all Creese Property landlords and tenants have a pawsitive experience.</p>
                         </div>
