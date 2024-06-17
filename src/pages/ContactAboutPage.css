@@ -164,7 +164,8 @@
 
 .description-mini-section ul {
     list-style-position: inside;
-    list-style-type: circle;
+    list-style-type: "- ";
+    text-align: left;
 }
 
 @media (max-width: 1385px) {
