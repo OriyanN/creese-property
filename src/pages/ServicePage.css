@@ -48,3 +48,19 @@
     width: 100%;
     margin-bottom: 5rem;
 }
+
+@media (max-width: 1366px) {
+    .services-section .parallax-section {
+        display: none;
+    }
+
+    .services-section  .parallax-mobile-section {
+        position: relative;
+        height: 40vh;
+        background-image: url('../../public/assets/services-middle-image.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+}

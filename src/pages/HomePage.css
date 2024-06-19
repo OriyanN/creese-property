@@ -330,6 +330,22 @@
     background-color: var(--white);
 }
 
+@media (max-width: 1366px) {
+    .parallax-section {
+        display: none;
+    }
+
+    .parallax-mobile-section {
+        position: relative;
+        height: 40vh;
+        background-image: url('../../public/assets/home-page-gold-coast.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+}
+
 @media (max-width: 1130px) {
     .video-text {
         font-size: 6rem;

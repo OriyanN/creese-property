@@ -214,6 +214,9 @@ const HomePage = () => {
                     <div className="parallax-section">
                         <div className="overlay-content"></div>
                     </div>
+                    <div className="parallax-mobile-section">
+                        <div className="overlay-content"></div>
+                    </div>
                     <div className='contact-form'>
                         <RentalAppraisalForm />
                     </div>
