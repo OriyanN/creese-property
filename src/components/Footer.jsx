@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import ScrollToTop from './ScrollToTop';
 
-import logo from "public/assets/Creese Property Logo- White White.png";
+import logo from "../../public/assets/Creese Property Logo- White White.png";
 
 import facebook_blue from "/assets/facebook-blue.png";
 import facebook_white from "/assets/facebook-white.png";

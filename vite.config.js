@@ -21,6 +21,11 @@ export default defineConfig({
         drop_console: true,
       },
     },
+    rollupOptions: {
+      external: [
+        // List any external dependencies here if needed
+      ]
+    },
   },
   server: {
     compression: true, // Enable Brotli or Gzip compression

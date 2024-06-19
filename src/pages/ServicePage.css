@@ -35,7 +35,7 @@
 .services-section .parallax-section {
     position: relative;
     height: 40vh;
-    background-image: url('public/assets/services-middle-image.jpg');
+    background-image: url('../../public/assets/services-middle-image.jpg');
     background-attachment: fixed;
     background-position: left;
     background-repeat: no-repeat;

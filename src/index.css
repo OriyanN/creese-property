@@ -1,7 +1,7 @@
 @font-face {
   font-family: "VersaillesRegular";
   src: local("VersaillesRegular"),
-  url("public/fonts/Versailles-Regular.ttf") format("opentype");
+  url("../public/fonts/Versailles-Regular.ttf") format("opentype");
   font-weight: normal;
 }
 
