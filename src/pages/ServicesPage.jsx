@@ -84,7 +84,7 @@ function ServicePage() {
                     <div className="overlay-content"></div>
                 </div>
                 <div className="parallax-mobile-section">
-                    <div className="overlay-content"></div>
+                    <div className="overlay-content-mobile"></div>
                 </div>
                 <ContactForm />
                 <Footer />
