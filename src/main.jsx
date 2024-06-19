@@ -14,6 +14,7 @@ import PortfolioPage from './pages/PortfolioPage.jsx';
 import LocationsPage from './pages/LocationsPage.jsx';
 import BrisbanePropertyDetailsPage from './pages/Brisbane/BrisbanePropertyDetailsPage.jsx';
 import IpswichPropertyDetailsPage from './pages/Ipswich/IpswichPropertyDetailsPage.jsx';
+import AssistantPropertyManagerPage from './pages/AssistantPropertyManager.jsx';
 // const AboutPage = lazy(() => import("./pages/AboutPage.jsx"));
 // const ServicesPage = lazy(() => import("./pages/ServicesPage.jsx"));
 const GoldCoastPropertyDetailsPage = lazy(() => import('./pages/GoldCoast/GoldCoastPropertyDetailsPage.jsx'));
@@ -38,6 +39,7 @@ const router = createBrowserRouter([
       { path: "/leasing/ipswich/properties/:propertyId", element: <IpswichPropertyDetailsPage /> },
       { path: "/contact", element: <ContactPage /> },
       { path: "/careers", element: <CareersPage /> },
+      { path: "/careers/assistant-property-manager", element: <AssistantPropertyManagerPage /> },
       { path: "/privacy", element: <PrivacyPage /> },
       { path: "/terms-conditions", element: <TermsConditionPage /> },
       { path: "*", element: <NotFoundPage /> },

@@ -130,6 +130,12 @@ const GoldCoastPropertyForm = () => {
               </div>
             </form>
             <div className="disclaimer">
+              <p>The tenant is responsible for all water usage. This is charged at the current rates set by the local City Council.</p>
+                <br />
+                <br />
+              <p>Before applying, it is the tenant’s responsibility to ensure that the property can accommodate any services they require (e.g. phone, internet, pay TV etc). The agent cannot provide information beyond general guidance on the connection of non-essential services.</p>
+                <br />
+                <br />
               <p>PLEASE NOTE: You must register for inspections. If you do not register for inspections, we cannot notify you of time changes or cancellations to inspections. The property must be inspected prior to an application being submitted.
                 <br />
                 <br />
