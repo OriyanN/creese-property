@@ -15,7 +15,7 @@ const HomeDividerSection = () => {
             <ScrollRevealContainer move="5rem" duration={900} delay={300} origin={'bottom'}>
                 <h2>The <span>Creese Property</span> Promise</h2>
             </ScrollRevealContainer>
-            <div className="services">
+            <div className="services home-promise-section">
                 <ScrollRevealContainer move="5rem" duration={900} delay={500} origin={'bottom'}>
                     <div className="service home-promise">
                         <img src={process1} height={100} alt="Creese Property Experience" />

@@ -70,12 +70,12 @@ function ServicePage() {
                         
                         <div className="service">
                             <img src={service2} height={100} alt="Creese Property Expert Advice" />
-                            <h3>Buyers Agency</h3>
+                            <h3>Tailored Buyers Agency</h3>
                             <p>Our Buyers Agent service caters to all prospective homeowners within the Gold Coast region and potential investors throughout South-East Queensland.</p>
                         </div>
                         <div className="service">
                             <img src={service3} height={100} alt="Creese Property Community Focus" />
-                            <h3>Property Consultancy</h3>
+                            <h3>Strategic Property Consultancy</h3>
                             <p>The Property Consultancy service provides clients with valuable advice and recommendations when looking to purchase or develop their property.</p>
                         </div>
                     </div>

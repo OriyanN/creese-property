@@ -198,11 +198,16 @@
 }
 
 .divider-section {
-    height: 67.5vh;
-    padding: 4rem 9% 2rem 9%;
+    height: 100% !important;
+    padding: 0 9%;
+    margin: 4rem 0 4rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.home-promise-section {
+    align-items: flex-start;
 }
 
 .divider-section h2, .divider-section span {
@@ -217,11 +222,11 @@
 }
 
 .home-promise {
-    height: 47.5vh !important;
+    height: 100% !important;
 }
 
 .home-promise img, .home-promise h3 {
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .preloader {
@@ -353,7 +358,7 @@
     }
 
     .divider-section {
-        padding: 2rem 3%;
+        padding: 0 3%;
     }
 
     .service img {
@@ -374,10 +379,6 @@
         font-size: 3.25rem;
     }
 
-    .divider-section {
-        height: 65vh;
-    }
-
     .divider-section h2, .divider-section span {
         font-size: 5rem;
     }
@@ -391,14 +392,6 @@
     .preloader {
         display: none;
     }
-
-    .divider-section {
-        height: 75vh;
-    }
-
-    .home-promise {
-        height: 50vh !important;
-    }
 }
 
 @media (max-width: 768px) {
@@ -410,16 +403,8 @@
         font-size: 4rem;
     }
 
-    .service {
-        height: 42.5vh !important;
-    }
-
     .service img {
         height: 8rem;
-    }
-
-    .home-promise {
-        height: 52.5vh !important;
     }
 }
 
@@ -443,10 +428,6 @@
     .services {
         flex-direction: column;
         justify-content: space-evenly;
-    }
-
-    .service {
-        height: 32.5vh !important;
     }
 
     .service img {
@@ -498,10 +479,6 @@
         flex-direction: column;
         justify-content: space-evenly;
     }
-
-    .service {
-        height: 35vh !important;
-    }
 }
 
 @media (max-width: 530px) {
@@ -536,10 +513,6 @@
     .divider-section {
         height: 100%;
     }
-
-    .service {
-        height: 37.5vh !important;
-    }
 }
 
 @media (max-width: 500px) {
@@ -555,10 +528,6 @@
 
     .text-home p {
         font-size: 2.75rem;
-    }
-
-    .service {
-        height: 42.5vh !important;
     }
 }
 

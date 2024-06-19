@@ -20,11 +20,16 @@
     align-items: center;
     justify-content: space-around;
     padding: 2rem;
-    height: 40vh;
+    height: 100% !important;
+}
+
+.service img, .service h3 {
+    margin-bottom: 2rem;
 }
 
 .service h3 {
     font-size: 3rem;
+    text-align: center;
 }
 
 .service p {
