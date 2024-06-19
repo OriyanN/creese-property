@@ -1,14 +1,7 @@
 @font-face {
-  font-family: "VersaillesBold";
-  src: local("VersaillesBold"),
-  url("/src/fonts/Versailles\ Bold.ttf") format("opentype");
-  font-weight: bold;
-}
-
-@font-face {
   font-family: "VersaillesRegular";
   src: local("VersaillesRegular"),
-  url("/src/fonts/Versailles-Regular.ttf") format("opentype");
+  url("public/fonts/Versailles-Regular.ttf") format("opentype");
   font-weight: normal;
 }
 
