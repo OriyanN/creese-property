@@ -138,7 +138,7 @@ const GoldCoastPropertyDetailsPage = () => {
                 </ul>
                 <ul>
                   <li>{property.beds} Beds -</li>
-                  <li>{property.car} Baths -</li>
+                  <li>{property.baths} Baths -</li>
                   <li>{property.car} Cars</li>
                 </ul>
               </div>
