@@ -2,8 +2,8 @@ import React from 'react';
 import { Helmet as ReactHelmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 
-import CreeseLogo from '/assets/Creese Property Logo- White White.png';
-import CreeseFavicon from '/assets/SocialSharingImage.png';
+import CreeseLogo from '/assets/SocialSharingImage.png';
+import CreeseFavicon from '/assets/CP Icon White.png';
 
 const DOMAIN = "https://creeseproperty.com";
 const MAIN_KEYWORDS = "property management, property, properties";
