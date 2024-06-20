@@ -36,8 +36,8 @@ function ContactPage() {
         <>
             <Helmet>
                 <title>Contact | Creese Property</title>
+                <link rel="canonical" href="https://creeseproperty.com/contact" />
                 <meta name="description" content="Connect with Creese Property for expert property solutions and personalised support." />
-                <link rel="canonical" href="/contact" />
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org/",

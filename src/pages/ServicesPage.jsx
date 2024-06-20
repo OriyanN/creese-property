@@ -19,8 +19,8 @@ function ServicePage() {
         <>
             <Helmet>
                 <title>Services | Creese Property</title>
+                <link rel="canonical" href="https://creeseproperty.com/services" />
                 <meta name="description" content="Explore the comprehensive property services offered by Creese Property, tailored to your needs." />
-                <link rel="canonical" href="/services" />
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org/",

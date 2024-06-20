@@ -17,8 +17,8 @@ function CareersPage() {
     <>
         <Helmet>
           <title>Careers | Creese Property</title>
+          <link rel="canonical" href="https://creeseproperty.com/careers" />
           <meta name="description" content="Join the Creese Property team and build a rewarding career in property management. Join our growing team!" />
-          <link rel="canonical" href="/careers" />
           <script type="application/ld+json">
               {JSON.stringify({
                   "@context": "https://schema.org/",

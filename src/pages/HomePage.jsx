@@ -121,8 +121,8 @@ const HomePage = () => {
         <>
             <Helmet>
                 <title>Home | Creese Property</title>
+                <link rel="canonical" href="https://creeseproperty.com/" />
                 <meta name="description" content="Creese Property: Your expert partner in residential property management, buyer’s agency, and consultancy." />
-                <link rel="canonical" href="/" />
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org/",
