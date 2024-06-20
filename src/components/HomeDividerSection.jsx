@@ -34,7 +34,7 @@ const HomeDividerSection = () => {
                     <div className="service home-promise">
                         <img src={process3} height={100} alt="Creese Property Specialisation" />
                         <h3>Authenticity</h3>
-                        <p>Creese Property values genuine relationships with clients and tenants. We believe in straightforward communication and ethical business practices. Our team is approachable and committed to providing personalised service, ensuring that every client feels listened to, respected, and valued.</p>
+                        <p>Creese Property values genuine relationships with clients and tenants. We believe in straightforward communication and ethical business practices. Our team is approachable and committed to providing personalised service, ensuring that every client feels listened to, respected and valued.</p>
                     </div>
                 </ScrollRevealContainer>
             </div>
