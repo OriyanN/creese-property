@@ -73,7 +73,7 @@ const tenantFAQs = [
   },
   {
     question: "What happens if I want to break my lease?",
-    answer: "Should you wish to leave during a fixed-term lease, we require your notice in writing. In the case of breaking a fixed-term lease, the following costs will be incurred: Rent until a tenant approved by the landlord takes possession, or the lease expires (whichever occurs first). Reletting fees and marketing costs to relet the premises. Should the premises be vacant before a new tenant is secured, it is also your responsibility to ensure the grounds are watered and maintained for this period and you remain responsible for the property until a new tenant takes possession. Cleaning and normal exit costs associated with returning the property back to its original state when you moved in.",
+    answer: "Should you wish to leave during a fixed-term lease, we require your notice in writing. In the case of breaking a fixed-term lease, the following costs will be incurred: rent until a tenant approved by the landlord takes possession, or the lease expires (whichever occurs first). Reletting fees and marketing costs to relet the premises. Should the premises be vacant before a new tenant is secured, it is also your responsibility to ensure the grounds are watered and maintained for this period and you remain responsible for the property until a new tenant takes possession. Cleaning and normal exit costs associated with returning the property back to its original state when you moved in.",
     open: false
   },
   {
