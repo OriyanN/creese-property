@@ -34,10 +34,12 @@ function ContactPage() {
 
     return (
         <>
-            <Helmet>
-                <title>Contact | Creese Property</title>
-                <link rel="canonical" href="https://creeseproperty.com/contact" />
-                <meta name="description" content="Connect with Creese Property for expert property solutions and personalised support." />
+            <Helmet
+                title="Contact"
+                description="Connect with Creese Property for expert property solutions and personalised support."
+                link="/contact"
+                addPostfixTitle
+            >
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org/",

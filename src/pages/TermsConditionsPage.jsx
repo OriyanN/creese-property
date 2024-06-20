@@ -9,11 +9,12 @@ import Footer from "../components/Footer.jsx";
 function TermsConditionPage() {
     return (
         <>
-            <Helmet>
-                <title>Terms and Conditions | Creese Property</title>
-                <meta name="description" content="Creese Property: Your expert partner in residential property management, buyer’s agency, and consultancy." />
-                <meta name="robots" content="noindex"/>
-                <link rel="canonical" href="/terms-conditions" />
+            <Helmet
+                title="Terms and Conditions"
+                link="/terms-conditions"
+                addPostfixTitle
+                noindex
+            >
             </Helmet>
             <ScrollToTop />
             <div>

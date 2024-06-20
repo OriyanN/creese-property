@@ -8,11 +8,12 @@ function NotFoundPage() {
 
     return (
         <>
-            <Helmet>
-                <title>404</title>
-                <meta name="description" content="Creese Property: Your expert partner in residential property management, buyer’s agency, and consultancy." />
-                <meta name="robots" content="noindex"/>
-                <link rel="canonical" href="*" />
+            <Helmet
+                title="404"
+                link="*"
+                addPostfixTitle
+                noindex
+            >
             </Helmet>
             <div className='notfound-background'>
                 <h1 className='notfound-header'>404</h1>

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import ContactForm from '../components/ContactForm';
+import Helmet from '../components/Helmet.jsx';
 
 import serviceImage from '/assets/service-image.jpg';
 import service1 from '/assets/Residential Property Management.png';
@@ -17,10 +17,12 @@ function ServicePage() {
 
     return (
         <>
-            <Helmet>
-                <title>Services | Creese Property</title>
-                <link rel="canonical" href="https://creeseproperty.com/services" />
-                <meta name="description" content="Explore the comprehensive property services offered by Creese Property, tailored to your needs." />
+            <Helmet
+                title="Services"
+                description="Explore the comprehensive property services offered by Creese Property, tailored to your needs."
+                link="/services"
+                addPostfixTitle
+            >
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org/",

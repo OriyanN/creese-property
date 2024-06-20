@@ -10,11 +10,13 @@ function AssistantPropertyManagerPage() {
 
     return (
         <> 
-            <Helmet>
-                <title>Careers | Creese Property</title>
-                <meta name="description" content="Browse Creese Property's portfolio of expertly managed residential properties." />
-                <meta name="robots" content="noindex"/>
-                <link rel="canonical" href="/assistant-property-manager" />
+            <Helmet
+                title="Careers"
+                description="Join the Creese Property team and build a rewarding career in property management. Join our growing team!"
+                link="/careers/assistant-property-manager"
+                addPostfixTitle
+                noIndex
+            >
             </Helmet>
             <ScrollToTop />
             <div>

@@ -29,10 +29,12 @@ function PortfolioPage() {
 
     return (
         <> 
-            <Helmet>
-                <title>Portfolio | Creese Property</title>
-                <meta name="description" content="Browse Creese Property's portfolio of expertly managed residential properties." />
-                <link rel="canonical" href="/portfolio" />
+            <Helmet
+                title="Portfolio"
+                description="Browse Creese Property's portfolio of expertly managed residential properties."
+                link="/portfolio"
+                addPostfixTitle
+            >
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org/",

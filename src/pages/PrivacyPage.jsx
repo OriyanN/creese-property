@@ -9,11 +9,12 @@ import Footer from "../components/Footer.jsx";
 function PrivacyPage() {
     return (
         <>
-            <Helmet>
-                <title>Privacy | Creese Property</title>
-                <meta name="description" content="Creese Property: Your expert partner in residential property management, buyer’s agency, and consultancy." />
-                <meta name="robots" content="noindex"/>
-                <link rel="canonical" href="/privacy" />
+            <Helmet
+                title="Privacy"
+                link="/privacy"
+                addPostfixTitle
+                noindex
+            >
             </Helmet>
             <ScrollToTop />
             <div>
