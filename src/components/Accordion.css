@@ -19,6 +19,7 @@
     font-size: 3rem;
     padding-right: 2rem;
     display: flex;
+    align-items: flex-end;
     color: var(--grey-blue);
 }
 
@@ -27,7 +28,9 @@
 }
 
 .accordion-label input[type="radio"] {
-    accent-color: var(--blue); 
+    accent-color: var(--blue);
+    height: 1.25rem;
+    margin-bottom: 1rem;
 }
   
 .faqs .faq {
