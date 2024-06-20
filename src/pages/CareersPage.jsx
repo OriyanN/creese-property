@@ -97,7 +97,7 @@ function CareersPage() {
                 <h3>Why Creese Property?</h3>
                 <p>At Creese Property, our culture first priority and focus on innovation drives us. We believe in fostering an environment where every team member is not just an employee, but a valued individual where aspirations can flourish. Operating within an open plan office, we embrace a flat management system that encourages collaboration and ensures that no one’s voice goes unheard. With a different approach to the property profession we have no requirement to follow the herd, and a determination to create a service level that outstrips current standards.</p>
             </div>
-            <p>Join us at Creese Property where dynamicity, collaboration, and a culture first focus grounds us in who we are and aspire to expand on becoming.</p>
+            <p>Join us at Creese Property where dynamicity, collaboration and a culture first focus grounds us in who we are and aspire to expand on becoming.</p>
           </div>
           <div className="careers-listings">
             <div className="careers-listing">
