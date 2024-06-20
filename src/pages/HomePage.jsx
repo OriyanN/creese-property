@@ -14,6 +14,7 @@ import AutoPlay from '../components/AutoPlay.jsx';
 import Accordion from '../components/Accordion.jsx';
 import HomeDividerSection from '../components/HomeDividerSection.jsx';
 import ScrollRevealContainer from '../components/ScrollReveal.jsx'; 
+import Helmet from '../components/Helmet.jsx';
 
 import videoBg from "/assets/CreeseHomePageVideo3.mp4";
 import preloaderImage from '/assets/CP Transparent(2).png';
@@ -119,10 +120,12 @@ const HomePage = () => {
 
     return (
         <>
-            <Helmet>
-                <title>Home | Creese Property</title>
-                <link rel="canonical" href="https://creeseproperty.com/" />
-                <meta name="description" content="Creese Property: Your expert partner in residential property management, buyer’s agency, and consultancy." />
+            <Helmet
+                title="Home"
+                description="Creese Property: Your expert partner in residential property management, buyer’s agency, and consultancy."
+                link="/"
+                addPostfixTitle
+            >
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org/",
