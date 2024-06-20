@@ -1,9 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import LazyImageAbout from '../components/LazyImageAbout';
+import Helmet from '../components/Helmet.jsx';
 
 import aboutImage from '/assets/about-image.jpg';
 import davidCreese from '/assets/David Creese.png';
