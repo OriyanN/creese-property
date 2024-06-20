@@ -2,7 +2,7 @@ import * as TysonStreet9 from '../../../public/assets/Ipswich/832-9-tyson-street
 
 const IpswichPropertiesData = [
   {
-    id: '832-9-tyson-street',
+    id: '9-tyson-street',
     images: Object.values(TysonStreet9),
     address: '9 Tyson Street, Whiterock Ripley',
     price: 750,
