@@ -16,7 +16,7 @@ import ScrollRevealContainer from '../components/ScrollReveal.jsx';
 import Helmet from '../components/Helmet.jsx';
 
 import videoBg from "/assets/CreeseHomePageVideo3.mp4";
-import preloaderImage from '/assets/CP Transparent(2).png';
+import preloaderImage from '/assets/CreesePropertyInitialImage.png';
 
 import AvalineEstate170 from '/assets/Brisbane/170-avaline-estate/170-avaline-estate.jpg';
 import TysonStreet9 from '/assets/Ipswich/832-9-tyson-street/832-9-tyson-street.jpg';
@@ -70,7 +70,7 @@ const HomePage = () => {
     }, []);
 
     const images = [
-        { id: 1, url: TysonStreet9, address: '832/9 Tyson Street, Whiterock Ripley', description: 'Stunning 4 Bedroom Home in Lovely Deebing Heights, QLD', link: '/leasing/ipswich/properties/832-9-tyson-street' },
+        { id: 1, url: TysonStreet9, address: '9 Tyson Street, Whiterock Ripley', description: 'Stunning 4 Bedroom Home in Lovely Deebing Heights, QLD', link: '/leasing/ipswich/properties/9-tyson-street' },
         { id: 2, url: AvalineEstate170, address: '170 Avaline Estate, Burpengary East', description: 'Executive Family Home in Beautiful Burpengary, QLD', link: '/leasing/brisbane/properties/170-avaline-estate' },
         { id: 3, url: NorthcliffeTerrace12_4, address: '12/4-6 Northcliffe Terrace, Surfers Paradise', description: 'Beachside Apartment for Rent in Surfers Paradise', link: '/leasing/gold-coast/properties/12-4-6-northcliffe-terrace' },
         { id: 4, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Spacious 4-Bedroom Home in Beautiful Isle of Capri', link: '/leasing/gold-coast/properties/7-milan-court' },
