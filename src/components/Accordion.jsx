@@ -7,7 +7,7 @@ import FAQS from './FAQS';
 const generalFAQs = [
   {
     question: "What services does Creese Property offer to property owners?",
-    answer: "Creese Property provides comprehensive property management services aimed at maximising property value and streamlining ownership. Our services include effective marketing of properties, precise tenant screening, prompt and reliable rent collection, detailed financial reporting, and ensuring legal compliance in all landlord-tenant matters.",
+    answer: "Creese Property provides comprehensive property management services aimed at maximising property value and streamlining ownership. Our services include effective marketing of properties, precise tenant screening, prompt and reliable rent collection, detailed financial reporting and ensuring legal compliance in all landlord-tenant matters.",
     open: false
   },
   {
@@ -22,7 +22,7 @@ const generalFAQs = [
   },
   {
     question: "What should I look out for when choosing a property manager?",
-    answer: "The right property manager will have a deep understanding of the local real estate market, including rental rates, vacancy rates, and any trends that may affect your property's value. Additionally, a competent property manager should offer a comprehensive range of services that cover all aspects of managing your property effectively. This includes marketing your property, screening tenants, handling lease agreements, managing rent collection, addressing maintenance and repair issues, and providing detailed financial reporting.",
+    answer: "The right property manager will have a deep understanding of the local real estate market, including rental rates, vacancy rates and any trends that may affect your property's value. Additionally, a competent property manager should offer a comprehensive range of services that cover all aspects of managing your property effectively. This includes marketing your property, screening tenants, handling lease agreements, managing rent collection, addressing maintenance and repair issues and providing detailed financial reporting.",
     open: false
   },
   {
@@ -55,7 +55,7 @@ const landlordFAQs = [
   },
   {
     question: "What legal compliances does Creese Property manage for property owners?",
-    answer: "We ensure all properties are managed in accordance with local, state, and federal laws, including tenant-landlord laws, safety regulations, and fair housing mandates. We also keep property owners updated on legal changes that might affect their properties.",
+    answer: "We ensure all properties are managed in accordance with local, state and federal laws, including tenant-landlord laws, safety regulations and fair housing mandates. We also keep property owners updated on legal changes that might affect their properties.",
     open: false
   }
 ];
