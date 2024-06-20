@@ -65,7 +65,7 @@
 }
 
 .social-media ul li {
-    padding: 2rem 2rem 2rem 1rem;
+    padding: 2rem 1rem;
     cursor: pointer;
 }
 
@@ -77,6 +77,10 @@
 .social-media-white:hover {
     opacity: 0;
     cursor: pointer;
+}
+
+.footer .logo-footer img {
+    padding: 0 !important;
 }
 
 @media (max-width: 900px) {
