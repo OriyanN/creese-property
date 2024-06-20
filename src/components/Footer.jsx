@@ -26,15 +26,9 @@ const Footer = () => {
     <>
       <ScrollToTop />
       <footer className="footer">
-        <Link to="/" className="logo"><img src={logo} alt="Creese Property Logo" /></Link>
+        <Link to="/" className="logo logo-footer"><img src={logo} alt="Creese Property Logo" /></Link>
         <div className="social-media">
           <ul>
-            <li className="facebook-icon">
-              <Link href="">
-                <img className="social-media-white" width="20" height="20" src={facebook_white} alt="facebook Icon (icon8)"/>
-                <img className="social-media-blue" width="20" height="20" src={facebook_blue} alt="facebook Icon (icon8)"/>
-              </Link>
-            </li>
             <li className="linkedin-icon">
               <div className="linkedin-icon">
                 <Link href="">
@@ -42,6 +36,12 @@ const Footer = () => {
                   <img className="social-media-blue" width="20" height="20" src={linkedin_blue} alt="Linkedin Icon (icon8)"/>
                 </Link>
               </div>
+            </li>
+            <li className="facebook-icon">
+              <Link href="">
+                <img className="social-media-white" width="20" height="20" src={facebook_white} alt="facebook Icon (icon8)"/>
+                <img className="social-media-blue" width="20" height="20" src={facebook_blue} alt="facebook Icon (icon8)"/>
+              </Link>
             </li>
             <li className="instagram-icon">
               <Link href="">
