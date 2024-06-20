@@ -4,7 +4,7 @@ const IpswichPropertiesData = [
   {
     id: '832-9-tyson-street',
     images: Object.values(TysonStreet9),
-    address: '832/9 Tyson Street, Whiterock Ripley',
+    address: '9 Tyson Street, Whiterock Ripley',
     price: 750,
     beds: 4,
     baths: 2,
