@@ -31,23 +31,23 @@ const Footer = () => {
           <ul>
             <li className="linkedin-icon">
               <div className="linkedin-icon">
-                <Link href="https://www.linkedin.com/company/creeseproperty?trk=blended-typeahead">
+                <a href="https://www.linkedin.com/company/creeseproperty/" target="_blank" rel="noopener noreferrer">
                   <img className="social-media-white" width="20" height="20" src={linkedin_white} alt="Linkedin Icon (icon8)"/>
                   <img className="social-media-blue" width="20" height="20" src={linkedin_blue} alt="Linkedin Icon (icon8)"/>
-                </Link>
+                </a>
               </div>
             </li>
             <li className="facebook-icon">
-              <Link href="https://m.facebook.com/creesepropertyau/">
-                <img className="social-media-white" width="20" height="20" src={facebook_white} alt="facebook Icon (icon8)"/>
-                <img className="social-media-blue" width="20" height="20" src={facebook_blue} alt="facebook Icon (icon8)"/>
-              </Link>
+              <a href="https://www.facebook.com/creesepropertyau/" target="_blank" rel="noopener noreferrer">
+                <img className="social-media-white" width="20" height="20" src={facebook_white} alt="Facebook Icon (icon8)"/>
+                <img className="social-media-blue" width="20" height="20" src={facebook_blue} alt="Facebook Icon (icon8)"/>
+              </a>
             </li>
             <li className="instagram-icon">
-              <Link href="https://www.instagram.com/creeseproperty/">
-                  <img className="social-media-white" width="20" height="20" src={instagram_white} alt="Instagram Icon (icon8)"/>
-                  <img className="social-media-blue" width="20" height="20" src={instagram_blue} alt="Instagram Icon (icon8)"/>
-              </Link>
+              <a href="https://www.instagram.com/creeseproperty/" target="_blank" rel="noopener noreferrer">
+                <img className="social-media-white" width="20" height="20" src={instagram_white} alt="Instagram Icon (icon8)"/>
+                <img className="social-media-blue" width="20" height="20" src={instagram_blue} alt="Instagram Icon (icon8)"/>
+              </a>
             </li>
           </ul> 
         </div>
