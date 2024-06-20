@@ -21,7 +21,7 @@ function AboutPage() {
             <Helmet>
                 <title>About | Creese Property</title>
                 <meta name="description" content="Discover Creese Property, specialising in residential property management, buyer’s agency, and consultancy." />
-                <link rel="canonical" href="/about" />
+                <link rel="canonical" href="https://creeseproperty.com/about" />
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org/",
