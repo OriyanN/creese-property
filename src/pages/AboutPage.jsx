@@ -18,10 +18,12 @@ function AboutPage() {
 
     return (
         <>
-            <Helmet>
-                <title>About | Creese Property</title>
-                <link rel="canonical" href="https://creeseproperty.com/about" />
-                <meta name="description" content="Discover Creese Property, specialising in residential property management, buyer’s agency, and consultancy." />
+            <Helmet
+                title="About"
+                description="Discover Creese Property, specialising in residential property management, buyer’s agency, and consultancy."
+                link="/about"
+                addPostfixTitle
+            >
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org/",
