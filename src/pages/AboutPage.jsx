@@ -21,7 +21,7 @@ function AboutPage() {
             <Helmet
                 title="About"
                 description="Discover Creese Property, specialising in residential property management, buyer’s agency, and consultancy."
-                link="/about/"
+                link="/about"
                 addPostfixTitle
             >
                 <meta name="robots" content="index, follow" />
