@@ -24,7 +24,6 @@ function AboutPage() {
                 link="/about"
                 addPostfixTitle
             >
-                <meta name="robots" content="index, follow" />
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org/",
