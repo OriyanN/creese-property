@@ -1,0 +1,8 @@
+# Redirect all paths to index.html
+/*    /index.html   200
+
+# Redirect old paths to new paths
+/old-path    /new-path   301
+
+# Redirect HTTP to HTTPS
+http://www.creeseproperty.com/*  https://www.creeseproperty.com/:splat  301!
