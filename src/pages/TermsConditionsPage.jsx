@@ -1,10 +1,10 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-
-import ScrollToTop from "../components/ScrollToTop.jsx";
 
 import './PrivacyTermsPage.css';
+
+import ScrollToTop from "../components/ScrollToTop.jsx";
 import Footer from "../components/Footer.jsx";
+import Helmet from '../components/Helmet.jsx';
 
 function TermsConditionPage() {
     return (

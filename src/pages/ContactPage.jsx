@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
+import Helmet from '../components/Helmet.jsx';
 
 import contactImage from '/assets/contact-image.jpg';
 

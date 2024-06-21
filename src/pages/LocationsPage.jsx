@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import Select from 'react-select';
 
 import mapboxgl from 'mapbox-gl';
@@ -9,6 +8,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import LazyImage from '../components/LazyImage';
+import Helmet from '../components/Helmet.jsx';
 
 import GoldCoastPropertiesData from '../pages/GoldCoast/GoldCoastPropertiesData';
 import BrisbanePropertiesData from '../pages/Brisbane/BrisbanePropertiesData';
