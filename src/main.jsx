@@ -57,4 +57,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </Suspense>
     </HelmetProvider>
   </React.StrictMode>,
-)
+);
