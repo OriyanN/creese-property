@@ -24,7 +24,7 @@ export default defineConfig({
     rollupOptions: {
       external: [
         // List any external dependencies here if needed
-      ]
+      ],
     },
   },
   server: {
