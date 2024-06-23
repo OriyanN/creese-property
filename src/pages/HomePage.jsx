@@ -17,6 +17,7 @@ import Helmet from '../components/Helmet.jsx';
 
 import videoBg from "/assets/CreeseHomePageVideo3.mp4";
 import preloaderImage from '/assets/CreesePropertyInitialImage.png';
+import CustomCursor from '../../public/assets/icons8-arrow-50.png';
 
 import AvalineEstate170 from '/assets/Brisbane/170-avaline-estate/170-avaline-estate.jpg';
 import TysonStreet9 from '/assets/Ipswich/832-9-tyson-street/832-9-tyson-street.jpg';
@@ -159,7 +160,7 @@ const HomePage = () => {
                         <div className="text-home">
                             <p>Communication and authenticity guides us. Through innovation and a people first focus we believe we can create outcomes that change expectations of your property investment experience.</p>
                         </div>
-                    <div className="home-property-slide"> 
+                    <div className="home-property-slide" style={{ cursor: "url(" + CustomCursor + "), auto" }}> 
                             <div className="text-example">
                                 <ScrollRevealContainer move="5rem" duration={900} delay={500} origin={'left'}>
                                     <h4>Most Recent Leasings</h4>
