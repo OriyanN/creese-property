@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import CreeseLogo from '/assets/SocialSharingImage.png';
 import CreeseFavicon from '/assets/CP Icon White.png';
 
-const DOMAIN = "https://creeseproperty.com";
+const DOMAIN = "https://www.creeseproperty.com";
 const MAIN_KEYWORDS = "property management, property, properties";
 
 const DEFAULT_IMAGE_CARD = CreeseLogo;
