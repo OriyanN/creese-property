@@ -198,7 +198,7 @@ const HomePage = () => {
                                                 <h4>{image.address}</h4>
                                             </div>
                                         </div>
-                                        <Link to={image.link}>
+                                        <Link to={image.link} style={{ cursor: "url(" + CustomCursor + "), auto" }}>
                                             <div className="image-overlay">
                                                 <div className="address">
                                                     <h4>{image.address}</h4>
