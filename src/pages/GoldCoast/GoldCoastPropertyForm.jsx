@@ -104,7 +104,7 @@ const GoldCoastPropertyForm = () => {
               </div>
               <div className="radio-buttons-section">
                     <div className="radio-buttons">
-                        <p>Preferred method of conatct</p>
+                      <p>Preferred method of contact</p>
                         <div className="radio-buttons-mini-section">
                             <label htmlFor="" className='radio-button'>
                                 <input type="radio" name="PreferredMethod" value="phoneNumber" checked />
