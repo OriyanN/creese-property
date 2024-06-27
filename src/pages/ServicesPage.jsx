@@ -6,6 +6,10 @@ import ContactForm from '../components/ContactForm';
 import Helmet from '../components/Helmet.jsx';
 
 import serviceImage from '/assets/service-image.jpg';
+// import service1 from '/assets/service1.svg';
+// import service2 from '/assets/service2.svg';
+// import service3 from '/assets/service3.svg';
+
 import service1 from '/assets/Residential Property Management.png';
 import service2 from '/assets/Buyers Agency.png';
 import service3 from '/assets/Property Consultancy.png';
@@ -29,7 +33,7 @@ function ServicePage() {
                         "@graph": [
                           {
                             "@type": "BreadcrumbList",
-                            "@id": "https://www.creeseproperty.com/about/#breadcrumb",
+                            "@id": "https://www.creeseproperty.com/#breadcrumb",
                             "itemListElement": [
                               {
                                 "@type": "ListItem",

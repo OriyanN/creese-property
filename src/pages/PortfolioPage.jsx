@@ -41,7 +41,7 @@ function PortfolioPage() {
                         "@graph": [
                           {
                             "@type": "BreadcrumbList",
-                            "@id": "https://www.creeseproperty.com/about/#breadcrumb",
+                            "@id": "https://www.creeseproperty.com/#breadcrumb",
                             "itemListElement": [
                               {
                                 "@type": "ListItem",
