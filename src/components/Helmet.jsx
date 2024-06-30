@@ -3,16 +3,16 @@ import { Helmet as ReactHelmet } from 'react-helmet-async';
 import PropTypes from 'prop-types';
 
 import CreeseLogo from '/assets/SocialSharingImage.png';
-import CreeseFavicon from '/assets/CP Icon White.png';
+import CreeseFavicon from '/assets/CPIconWhite.png';
 
 const DOMAIN = "https://www.creeseproperty.com";
 const MAIN_KEYWORDS = "property management, property, properties";
 
-const DEFAULT_IMAGE_CARD = CreeseLogo;
+const DEFAULT_IMAGE_CARD = "https://www.creeseproperty.com/assets//SocialSharingImage.png";
 const DEFAULT_TITLE = "Creese Property";
 const DEFAULT_DESCRIPTION = "Creese Property: Your expert partner in residential property management, buyer’s agency, and consultancy.";
 
-const FAVICON_SOURCE = CreeseFavicon;
+const FAVICON_SOURCE = "https://www.creeseproperty.com/assets/CPIconWhite.png";
 
 const POSTFIX_TITLE = " | Creese Property";
 
