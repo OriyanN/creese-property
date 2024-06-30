@@ -49,6 +49,7 @@ function AboutPage() {
                         ]
                     })}
                 </script>
+                <meta name="description" content="Discover Creese Property, specialising in residential property management, buyer’s agency, and consultancy." />
             </Helmet>
             <ScrollToTop />
             <div>

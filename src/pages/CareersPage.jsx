@@ -76,6 +76,7 @@ function CareersPage() {
                   ]
               })}
           </script>
+          <meta name="description" content="Join the Creese Property team and build a rewarding career in property management. Join our growing team!" />
         </Helmet>
         <ScrollToTop />
         <div>

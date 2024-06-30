@@ -89,6 +89,7 @@ function ContactPage() {
                         ]
                     })}
                 </script>
+                <meta name="description" content="Connect with Creese Property for expert property solutions and personalised support." />
             </Helmet>
             <ScrollToTop />
             <div>

@@ -124,7 +124,7 @@ const HomePage = () => {
                 title="Home"
                 description="Creese Property: Your expert partner in residential property management, buyer’s agency, and consultancy."
                 link="/"
-                addPostfixTitle
+                // addPostfixTitle
             >
                 <script type="application/ld+json">
                     {JSON.stringify({
@@ -144,6 +144,7 @@ const HomePage = () => {
                         ]
                     })}
                 </script>
+                <meta name="description" content="Creese Property: Your expert partner in residential property management, buyer’s agency, and consultancy." />
             </Helmet>
             <ScrollToTop />
                 {loading && (

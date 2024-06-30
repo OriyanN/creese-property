@@ -58,6 +58,7 @@ function ServicePage() {
                         ]
                     })}
                 </script>
+                <meta name="description" content="Explore the comprehensive property services offered by Creese Property, tailored to your needs." />
             </Helmet>
             <ScrollToTop />
             <div className='services-section'>
