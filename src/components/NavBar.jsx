@@ -71,8 +71,8 @@ function NavBar() {
                         { to: "/", label: "Home" },
                         { to: "/about", label: "About" },
                         { to: "/services", label: "Services" },
+                        // { to: "/rentals", label: "Rentals" },
                         // { to: "/portfolio", label: "Portfolio" },
-                        // { to: "/leasing", label: "Leasing" },
                         { to: "/contact", label: "Contact" },
                     ].map(({ to, label }) => (
                         <Link

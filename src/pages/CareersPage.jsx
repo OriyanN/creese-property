@@ -55,9 +55,9 @@ function CareersPage() {
                         },
                         {
                           "@type": "ListItem",
-                          "name": "Leasing",
+                          "name": "Rentals",
                           "position": "5",
-                          "item": "https://www.creeseproperty.com/leasing/"
+                          "item": "https://www.creeseproperty.com/rentals/"
                         },
                         {
                           "@type": "ListItem",

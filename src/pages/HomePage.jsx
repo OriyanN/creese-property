@@ -21,6 +21,7 @@ import CustomCursor from '../../public/assets/icons8-arrow-50.png';
 
 import AvalineEstate170 from '/assets/Brisbane/170-avaline-estate/170-avaline-estate.jpg';
 import TysonStreet9 from '/assets/Ipswich/832-9-tyson-street/832-9-tyson-street.jpg';
+import EndeavourCres7 from '/assets/Ipswich/7-endevour-cresent/1.jpg';
 import MilanCourt9 from '/assets/GoldCoast/9-milan-court/9-milan-court.jpeg';
 import BrindisiAvenue17 from '/assets/GoldCoast/17-brindisi-ave/17-brindisi-ave.jpeg';
 import MilanCourt7 from '/assets/GoldCoast/7-milan-court/7-milan-court.jpeg';
@@ -71,12 +72,13 @@ const HomePage = () => {
     }, []);
 
     const images = [
-        { id: 1, url: TysonStreet9, address: '9 Tyson Street, Whiterock Ripley', description: 'Stunning 4 Bedroom Home in Lovely Deebing Heights, QLD', link: '/leasing/ipswich/properties/9-tyson-street' },
-        { id: 2, url: AvalineEstate170, address: '170 Avaline Estate, Burpengary East', description: 'Executive Family Home in Beautiful Burpengary, QLD', link: '/leasing/brisbane/properties/170-avaline-estate' },
-        { id: 3, url: NorthcliffeTerrace12_4, address: '12/4-6 Northcliffe Terrace, Surfers Paradise', description: 'Beachside Apartment for Rent in Surfers Paradise', link: '/leasing/gold-coast/properties/12-4-6-northcliffe-terrace' },
-        { id: 4, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Spacious 4-Bedroom Home in Beautiful Isle of Capri', link: '/leasing/gold-coast/properties/7-milan-court' },
-        { id: 5, url: BrindisiAvenue17, address: '17 Brindisi Avenue, Surfers Paradise', description: '4 Bedroom, 2 Bathroom Home with Inground Swimming Pool', link: '/leasing/gold-coast/properties/17-brindisi-ave' },
-        { id: 6, url: MilanCourt9, address: '9 Milan Court, Surfers Paradise', description: 'Short Stroll to Roma Park', link: '/leasing/gold-coast/properties/9-milan-court' },
+        { id: 1, url: EndeavourCres7, address: '7 Endeavour Cres, Pallara', description: 'Stunning 2-Storey Brand New Home In Hideaway Estate', link: '/rentals/ipswich/properties/7-endevour-cresent' },
+        { id: 2, url: TysonStreet9, address: '9 Tyson Street, Whiterock Ripley', description: 'Stunning 4 Bedroom Home in Lovely Deebing Heights, QLD', link: '/rentals/ipswich/properties/9-tyson-street' },
+        { id: 3, url: AvalineEstate170, address: '170 Avaline Estate, Burpengary East', description: 'Executive Family Home in Beautiful Burpengary, QLD', link: '/rentals/brisbane/properties/170-avaline-estate' },
+        { id: 4, url: NorthcliffeTerrace12_4, address: '12/4-6 Northcliffe Terrace, Surfers Paradise', description: 'Beachside Apartment for Rent in Surfers Paradise', link: '/rentals/gold-coast/properties/12-4-6-northcliffe-terrace' },
+        { id: 5, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Spacious 4-Bedroom Home in Beautiful Isle of Capri', link: '/rentals/gold-coast/properties/7-milan-court' },
+        { id: 6, url: BrindisiAvenue17, address: '17 Brindisi Avenue, Surfers Paradise', description: '4 Bedroom, 2 Bathroom Home with Inground Swimming Pool', link: '/rentals/gold-coast/properties/17-brindisi-ave' },
+        { id: 7, url: MilanCourt9, address: '9 Milan Court, Surfers Paradise', description: 'Short Stroll to Roma Park', link: '/rentals/gold-coast/properties/9-milan-court' },
         
     ];
 
@@ -124,7 +126,7 @@ const HomePage = () => {
                 title="Home"
                 description="Creese Property: Your expert partner in residential property management, buyer’s agency, and consultancy."
                 link="/"
-                addPostfixTitle
+                addPostfixTitle 
             >
                 <script type="application/ld+json">
                     {JSON.stringify({
@@ -164,7 +166,7 @@ const HomePage = () => {
                     <div className="home-property-slide" style={{ cursor: "url(" + CustomCursor + "), auto" }}> 
                             <div className="text-example">
                                 <ScrollRevealContainer move="5rem" duration={900} delay={500} origin={'left'}>
-                                    <h4>Most Recent Leasings</h4>
+                                    <h4>Most Recent Rentals</h4>
                                 </ScrollRevealContainer>
                             </div>
                         <Swiper

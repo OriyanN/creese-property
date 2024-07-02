@@ -104,7 +104,7 @@ const BrisbanePropertyDetailsPage = () => {
           <title>Brisbane | Creese Property</title>
           <meta name="description" content="Discover Creese Property's expert residential management and consultancy services in the Brisbane area." />
           <meta name="robots" content="noindex"/>
-          <link rel="canonical" href={'/leasing/brisbane/properties/${property.id}'} />
+          <link rel="canonical" href={'/rentals/brisbane/properties/${property.id}'} />
       </Helmet>
       <ScrollToTop />
       <div>
@@ -184,7 +184,7 @@ const BrisbanePropertyDetailsPage = () => {
             {suggestedProperties.length > 0 ? (
               suggestedProperties.map((p) => (
                 <div key={p.id} className="image-item-container">
-                  <Link to={`/leasing/gold-coast/properties/${p.id}`}>
+                  <Link to={`/rentals/brisbane/properties/${p.id}`}>
                     <LazyImage src={p.images[0]} alt={p.address} className="image-item" />
                   </Link>
                   <div className="location-details">
