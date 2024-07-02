@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
+import { useForm, ValidationError } from '@formspree/react';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 import Lightbox from "yet-another-react-lightbox";
@@ -104,7 +105,7 @@ const IpswichPropertyDetailsPage = () => {
           <title>Ipswich | Creese Property</title>
           <meta name="description" content="Discover Creese Property's expert residential management and consultancy services in the Ipswich area." />
           <meta name="robots" content="noindex"/>
-          <link rel="canonical" href={'/leasing/ipswich/properties/${property.id}'} />
+          <link rel="canonical" href={'/rentals/ipswich/properties/${property.id}'} />
       </Helmet>
       <ScrollToTop />
       <div>
@@ -184,7 +185,7 @@ const IpswichPropertyDetailsPage = () => {
             {suggestedProperties.length > 0 ? (
               suggestedProperties.map((p) => (
                 <div key={p.id} className="image-item-container">
-                  <Link to={`/leasing/gold-coast/properties/${p.id}`}>
+                  <Link to={`/rentals/ipswich/properties/${p.id}`}>
                     <LazyImage src={p.images[0]} alt={p.address} className="image-item" />
                   </Link>
                   <div className="location-details">
