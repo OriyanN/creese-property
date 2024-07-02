@@ -140,6 +140,20 @@
     border-radius: 0.25rem;
 }
 
+.image-item-container {
+    position: relative;
+}
+
+.availability-banner {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 0.3rem;
+    font-size: 2rem;
+    z-index: 1;
+}
+
 .map-container {
     position: fixed; 
     top: 11.5%;

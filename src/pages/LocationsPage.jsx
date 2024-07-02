@@ -34,8 +34,9 @@ const LocationsPage = () => {
         { value: 'Air conditioning', label: 'Air conditioning' },
         { value: 'Outdoor area', label: 'Outdoor area' },
         { value: 'Pool', label: 'Pool' },
-        { value: 'Garage', label: 'Garage' },
-        { value: 'Pets conceded', label: 'Pets conceded' }
+        { value: 'Single Garage', label: 'Single Garage' },
+        { value: 'Double Garage', label: 'Double Garage' },
+        { value: 'Ensuite', label: 'Ensuite' }
     ];
 
     const [filters, setFilters] = useState({
@@ -177,9 +178,9 @@ const LocationsPage = () => {
     return (
         <>
             <Helmet
-                title="Leasing"
+                title="Rentals"
                 description="Discover where Creese Property excels in residential property management across prime locations."
-                link="/leasing"
+                link="/rentals"
                 addPostfixTitle
             >
                 <script type="application/ld+json">
@@ -216,9 +217,9 @@ const LocationsPage = () => {
                               },
                               {
                                 "@type": "ListItem",
-                                "name": "Leasing",
+                                "name": "Rentals",
                                 "position": "5",
-                                "item": "https://www.creeseproperty.com/leasing/"
+                                "item": "https://www.creeseproperty.com/rentals/"
                               }
                             ]
                           }
@@ -228,7 +229,7 @@ const LocationsPage = () => {
             </Helmet>
             <ScrollToTop />
             <section className="section location">
-                <h1 className='location-name'>Leasing</h1>
+                <h1 className='location-name'>Rentals</h1>
                 <div className="initial-image">
                     <img src={currentMainImage} alt="Creese Property - Gold Coast" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     <div className="overlay"></div>
@@ -302,7 +303,10 @@ const LocationsPage = () => {
                         {filteredProperties.length > 0 ? (
                             filteredProperties.map((property) => (
                                 <div key={property.id} className="image-item-container">
-                                    <Link to={`/leasing/gold-coast/properties/${property.id}`}>
+                                    <div className="availability-banner">
+                                        {property.availability}
+                                    </div>
+                                    <Link to={`/rentals/${property.location.toLowerCase().replace(' ', '-')}/properties/${property.id}`}>
                                         <LazyImage src={property.images[0]} alt={`Property ${property.id}`} className="image-item" />
                                     </Link>
                                     <div className="location-details">
