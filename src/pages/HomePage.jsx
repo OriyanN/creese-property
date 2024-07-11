@@ -19,10 +19,9 @@ import videoBg from "/assets/CreeseHomePageVideo3.mp4";
 import preloaderImage from '/assets/CreesePropertyInitialImage.png';
 import CustomCursor from '../../public/assets/icons8-arrow-50.png';
 
-import AvalineEstate170 from '/assets/Brisbane/170-avaline-estate/170-avaline-estate.jpg';
-import TysonStreet9 from '/assets/Ipswich/832-9-tyson-street/832-9-tyson-street.jpg';
+import AspireStreet26 from '/assets/Ipswich/26-aspire-street/1.jpg';
+import AspireStreet27 from '/assets/Ipswich/27-aspire-street/1.jpg';
 import EndeavourCres7 from '/assets/Ipswich/7-endevour-cresent/1.jpg';
-import MilanCourt9 from '/assets/GoldCoast/9-milan-court/9-milan-court.jpeg';
 import BrindisiAvenue17 from '/assets/GoldCoast/17-brindisi-ave/17-brindisi-ave.jpeg';
 import MilanCourt7 from '/assets/GoldCoast/7-milan-court/7-milan-court.jpeg';
 import NorthcliffeTerrace12_4 from '/assets/GoldCoast/12-4-6-northcliffe-terrace/12-4-6-northcliffe-terrace.jpg';
@@ -73,13 +72,11 @@ const HomePage = () => {
 
     const images = [
         { id: 1, url: EndeavourCres7, address: '7 Endeavour Cres, Pallara', description: 'Stunning 2-Storey Brand New Home In Hideaway Estate', link: '/rentals/ipswich/properties/7-endevour-cresent' },
-        { id: 2, url: TysonStreet9, address: '9 Tyson Street, Whiterock Ripley', description: 'Stunning 4 Bedroom Home in Lovely Deebing Heights, QLD', link: '/rentals/ipswich/properties/9-tyson-street' },
-        { id: 3, url: AvalineEstate170, address: '170 Avaline Estate, Burpengary East', description: 'Executive Family Home in Beautiful Burpengary, QLD', link: '/rentals/brisbane/properties/170-avaline-estate' },
+        { id: 2, url: AspireStreet26, address: '26 Aspire St, Ripley', description: 'Brand New - Low Maintenance Living', link: '/rentals/ipswich/properties/26-aspire-street' },
+        { id: 3, url: AspireStreet27, address: '27 Aspire St, Ripley', description: 'Brand New Family Home - Bellevue Estate, Ripley', link: '/rentals/ipswich/properties/27-aspire-street' },
         { id: 4, url: NorthcliffeTerrace12_4, address: '12/4-6 Northcliffe Terrace, Surfers Paradise', description: 'Beachside Apartment for Rent in Surfers Paradise', link: '/rentals/gold-coast/properties/12-4-6-northcliffe-terrace' },
         { id: 5, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Spacious 4-Bedroom Home in Beautiful Isle of Capri', link: '/rentals/gold-coast/properties/7-milan-court' },
         { id: 6, url: BrindisiAvenue17, address: '17 Brindisi Avenue, Surfers Paradise', description: '4 Bedroom, 2 Bathroom Home with Inground Swimming Pool', link: '/rentals/gold-coast/properties/17-brindisi-ave' },
-        { id: 7, url: MilanCourt9, address: '9 Milan Court, Surfers Paradise', description: 'Short Stroll to Roma Park', link: '/rentals/gold-coast/properties/9-milan-court' },
-        
     ];
 
     useEffect(() => {
