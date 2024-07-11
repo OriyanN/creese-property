@@ -13,21 +13,21 @@ import Helmet from '../components/Helmet.jsx';
 import GoldCoastPropertiesData from '../pages/GoldCoast/GoldCoastPropertiesData';
 import BrisbanePropertiesData from '../pages/Brisbane/BrisbanePropertiesData';
 import IpswichPropertiesData from '../pages/Ipswich/IpswichPropertiesData';
-import LoganPropertiesData from '../pages/Logan/LoganPropertiesData';
+// import LoganPropertiesData from '../pages/Logan/LoganPropertiesData';
 import "./LocationsPage.css";
 
 import mainInitialImage from "/assets/leasing-image.jpg";
 import mainGoldCoast from "/assets/GoldCoast/gold-coast.jpg";
 import mainBrisbane from "/assets/Brisbane/brisbane.jpg";
 import mainIpswich from "/assets/Ipswich/ipswich.jpg";
-import mainLogan from "/assets/Logan/logan.jpg";
+// import mainLogan from "/assets/Logan/logan.jpg";
 
 const LocationsPage = () => {
     const allPropertiesData = [
         ...GoldCoastPropertiesData.map(item => ({ ...item, location: 'Gold Coast' })),
-        ...BrisbanePropertiesData.map(item => ({ ...item, location: 'Brisbane' })),
+        // ...BrisbanePropertiesData.map(item => ({ ...item, location: 'Brisbane' })),
         ...IpswichPropertiesData.map(item => ({ ...item, location: 'Ipswich' })),
-        ...LoganPropertiesData.map(item => ({ ...item, location: 'Logan' })),
+        // ...LoganPropertiesData.map(item => ({ ...item, location: 'Logan' })),
     ];
 
     const featureOptions = [
@@ -52,9 +52,9 @@ const LocationsPage = () => {
     const locationImages = {
         "All": mainInitialImage,
         "Gold Coast": mainGoldCoast,
-        "Brisbane": mainBrisbane,
+        // "Brisbane": mainBrisbane,
         "Ipswich": mainIpswich,
-        "Logan": mainLogan,
+        // "Logan": mainLogan,
     };
 
     const [selectedLocation, setSelectedLocation] = useState({ value: 'All', label: 'All Locations' });
@@ -62,9 +62,9 @@ const LocationsPage = () => {
     const locationOptions = [
         { value: 'All', label: 'All Locations' },
         { value: 'Gold Coast', label: 'Gold Coast' },
-        { value: 'Brisbane', label: 'Brisbane' },
+        // { value: 'Brisbane', label: 'Brisbane' },
         { value: 'Ipswich', label: 'Ipswich' },
-        { value: 'Logan', label: 'Logan' },
+        // { value: 'Logan', label: 'Logan' },
     ];
 
     const bedsOptions = Array.from(new Set(allPropertiesData.map(p => p.beds)))
@@ -303,9 +303,11 @@ const LocationsPage = () => {
                         {filteredProperties.length > 0 ? (
                             filteredProperties.map((property) => (
                                 <div key={property.id} className="image-item-container">
-                                    <div className="availability-banner">
-                                        {property.availability}
-                                    </div>
+                                    {property.availability && (
+                                        <div className="availability-banner">
+                                            {property.availability}
+                                        </div>
+                                    )}
                                     <Link to={`/rentals/${property.location.toLowerCase().replace(' ', '-')}/properties/${property.id}`}>
                                         <LazyImage src={property.images[0]} alt={`Property ${property.id}`} className="image-item" />
                                     </Link>
