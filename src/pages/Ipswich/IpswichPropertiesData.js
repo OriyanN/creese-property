@@ -17,22 +17,22 @@ const IpswichPropertiesData = [
   //   lat: -27.416270,
   //   lng: 153.032310
   // },
-  {
-    id: '7-endevour-cresent',
-    images: Object.values(EndeavourCres7),
-    address: '7 Endeavour Cres, Pallara',
-    price: 835,
-    beds: 4,
-    baths: 2.5,
-    car: 2,
-    // availability: 'Available 25 Aug',
-    inspectionStartTime: '2024-07-01T08:00:00Z',
-    inspectionEndTime: '2024-07-01T08:30:00Z',
-    features: ['Air conditioning', 'Roller Blinds', 'Quality Carpets', 'Driveway', 'Outdoor area', 'Stone Benchtops', 'Dishwasher', 'Double Garage', 'Built-in wardrobes'],
-    description: ["Discover your dream home at Hideaway Estate! This magnificent 4-bedroom, 2-bathrooms PLUS Powder Room residence offers the perfect blend of luxury and comfort.", "", "Downstairs:", "- Entry", "- Family room", "- Separate dining room", "- Modern kitchen with Smeg dishwasher, Smeg Oven and Cooktop", "- Walk In Pantry", "- Laundry", "- Powder room with Frameless Mirrors", "- Alfresco area for outdoor entertaining or for a relaxing weekend", "- Spacious garage", "", "Upstairs:", "- 4 bedrooms, including:", "- Master bedroom with walk-in robe and ensuite", "- Frameless Mirrors to Ensuite and Main Bathroom", "- Sitting area at the top of the stairs", "- Main Bathroom with Bath", "- Separate toilet", "- Study nook", "", "Additional Features:", "- Ducted air conditioning throughout for year-round comfort", "Brand new community, close to Pallara Childcare, Pallara Early Learning Centre, Pallara Park, Pallara State School, St John's Anglican College, Forest Lake State High School, Pallara Shopping Village with Coles, Public Transport. The suburb features local parks with playgrounds, BBQ areas, and sports fields, providing opportunities for relaxation and family gatherings. Additionally, nearby natural reserves such as Karawatha Forest offer residents walking trails and wildlife viewing experiences", "Approximately 30 minutes to Brisbane CBD and 55 minutes to Surfers Paradise", "Don’t miss the opportunity to make it yours! Contact us today to arrange a viewing."],
-    lat: -27.619210,
-    lng: 152.996900
-  },
+  // {
+  //   id: '7-endevour-cresent',
+  //   images: Object.values(EndeavourCres7),
+  //   address: '7 Endeavour Cres, Pallara',
+  //   price: 835,
+  //   beds: 4,
+  //   baths: 2.5,
+  //   car: 2,
+  //   // availability: 'Available 25 Aug',
+  //   inspectionStartTime: '2024-07-01T08:00:00Z',
+  //   inspectionEndTime: '2024-07-01T08:30:00Z',
+  //   features: ['Air conditioning', 'Roller Blinds', 'Quality Carpets', 'Driveway', 'Outdoor area', 'Stone Benchtops', 'Dishwasher', 'Double Garage', 'Built-in wardrobes'],
+  //   description: ["Discover your dream home at Hideaway Estate! This magnificent 4-bedroom, 2-bathrooms PLUS Powder Room residence offers the perfect blend of luxury and comfort.", "", "Downstairs:", "- Entry", "- Family room", "- Separate dining room", "- Modern kitchen with Smeg dishwasher, Smeg Oven and Cooktop", "- Walk In Pantry", "- Laundry", "- Powder room with Frameless Mirrors", "- Alfresco area for outdoor entertaining or for a relaxing weekend", "- Spacious garage", "", "Upstairs:", "- 4 bedrooms, including:", "- Master bedroom with walk-in robe and ensuite", "- Frameless Mirrors to Ensuite and Main Bathroom", "- Sitting area at the top of the stairs", "- Main Bathroom with Bath", "- Separate toilet", "- Study nook", "", "Additional Features:", "- Ducted air conditioning throughout for year-round comfort", "Brand new community, close to Pallara Childcare, Pallara Early Learning Centre, Pallara Park, Pallara State School, St John's Anglican College, Forest Lake State High School, Pallara Shopping Village with Coles, Public Transport. The suburb features local parks with playgrounds, BBQ areas, and sports fields, providing opportunities for relaxation and family gatherings. Additionally, nearby natural reserves such as Karawatha Forest offer residents walking trails and wildlife viewing experiences", "Approximately 30 minutes to Brisbane CBD and 55 minutes to Surfers Paradise", "Don’t miss the opportunity to make it yours! Contact us today to arrange a viewing."],
+  //   lat: -27.619210,
+  //   lng: 152.996900
+  // },
   {
     id: '26-aspire-street',
     images: Object.values(AspireStreet26),
