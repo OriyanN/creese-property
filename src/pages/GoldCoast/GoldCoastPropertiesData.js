@@ -1,22 +1,22 @@
-import * as MilanCourt9 from '../../../public/assets/GoldCoast/9-milan-court';
+// import * as MilanCourt9 from '../../../public/assets/GoldCoast/9-milan-court';
 import * as BrindisiAvenue17 from '../../../public/assets/GoldCoast/17-brindisi-ave';
 import * as MilanCourt7 from '../../../public/assets/GoldCoast/7-milan-court';
 import * as NorthcliffeTerrace12_4 from '../../../public/assets/GoldCoast/12-4-6-northcliffe-terrace';
 
 const GoldCoastPropertiesData = [
-  {
-    id: '9-milan-court',
-    images: Object.values(MilanCourt9),
-    address: '9 Milan Court, Surfers Paradise',
-    price: 1200,
-    beds: 3,
-    baths: 2,
-    car: 2,
-    features: ['Air conditioning', 'Ceiling Fans', 'Brand new carpet', 'freshly painted', 'Kitchen + Dining Room', 'Tiled Flooring', 'Fully Fenced Yard', 'Garage', 'Outdoor area'],
-    description: ["Enjoy the perfect blend of convenience and leisure from this popular location just a short walk to Surfers Paradise and the beach, making everyday a seaside escape. Moments to Shopping Centre and vibrant Surfers Paradise dining precinct, with public transport nearby, all the amenities you could desire are right on your doorstep. Boasting 3 generous bedrooms equipped with built in robes and ceiling fans, the large living area flows outdoors to your own private alfresco area, perfect for your morning coffee or a night cap. The spacious tiled lounge and Dining room is air conditioned to cool hot summer days or warm up winter evenings.", "", "Features:", "- 3 Bedrooms", "- A/C and Ceiling Fans", "- 2 Bathrooms", "- Brand new carpet & freshly painted throughout", "- Kitchen plus Dining Room", "- Tiled Flooring with Carpet in Bedrooms", "- Fully Fenced Yard", "- Double Lock Up Garage", "- Close to Shops, Schools, Café’/Restaurants and Medical Centre", "- 500m to the Surfers Paradise Beach"],
-    lat: -28.013090,
-    lng: 153.423090
-  },
+  // {
+  //   id: '9-milan-court',
+  //   images: Object.values(MilanCourt9),
+  //   address: '9 Milan Court, Surfers Paradise',
+  //   price: 1200,
+  //   beds: 3,
+  //   baths: 2,
+  //   car: 2,
+  //   features: ['Air conditioning', 'Ceiling Fans', 'Brand new carpet', 'freshly painted', 'Kitchen + Dining Room', 'Tiled Flooring', 'Fully Fenced Yard', 'Garage', 'Outdoor area'],
+  //   description: ["Enjoy the perfect blend of convenience and leisure from this popular location just a short walk to Surfers Paradise and the beach, making everyday a seaside escape. Moments to Shopping Centre and vibrant Surfers Paradise dining precinct, with public transport nearby, all the amenities you could desire are right on your doorstep. Boasting 3 generous bedrooms equipped with built in robes and ceiling fans, the large living area flows outdoors to your own private alfresco area, perfect for your morning coffee or a night cap. The spacious tiled lounge and Dining room is air conditioned to cool hot summer days or warm up winter evenings.", "", "Features:", "- 3 Bedrooms", "- A/C and Ceiling Fans", "- 2 Bathrooms", "- Brand new carpet & freshly painted throughout", "- Kitchen plus Dining Room", "- Tiled Flooring with Carpet in Bedrooms", "- Fully Fenced Yard", "- Double Lock Up Garage", "- Close to Shops, Schools, Café’/Restaurants and Medical Centre", "- 500m to the Surfers Paradise Beach"],
+  //   lat: -28.013090,
+  //   lng: 153.423090
+  // },
   {
     id: '12-4-6-northcliffe-terrace',
     images: Object.values(NorthcliffeTerrace12_4),
