@@ -18,6 +18,7 @@ import AssistantPropertyManagerPage from './pages/AssistantPropertyManager.jsx';
 // const AboutPage = lazy(() => import("./pages/AboutPage.jsx"));
 // const ServicesPage = lazy(() => import("./pages/ServicesPage.jsx"));
 const GoldCoastPropertyDetailsPage = lazy(() => import('./pages/GoldCoast/GoldCoastPropertyDetailsPage.jsx'));
+const MoretonBayPropertyDetailsPage = lazy(() => import('./pages/MoretonBay/MoretonBayPropertyDetailsPage.jsx'));
 const ContactPage = lazy(() => import("./pages/ContactPage.jsx"));
 const CareersPage = lazy(() => import('./pages/CareersPage.jsx'));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage.jsx'));
@@ -37,6 +38,7 @@ const router = createBrowserRouter([
       { path: "/rentals/gold-coast/properties/:propertyId", element: <GoldCoastPropertyDetailsPage /> },
       { path: "/rentals/brisbane/properties/:propertyId", element: <BrisbanePropertyDetailsPage /> },
       { path: "/rentals/ipswich/properties/:propertyId", element: <IpswichPropertyDetailsPage /> },
+      { path: "/rentals/moreton-bay/properties/:propertyId", element: <MoretonBayPropertyDetailsPage /> },
       { path: "/contact", element: <ContactPage /> },
       { path: "/careers", element: <CareersPage /> },
       { path: "/careers/assistant-property-manager", element: <AssistantPropertyManagerPage /> },
