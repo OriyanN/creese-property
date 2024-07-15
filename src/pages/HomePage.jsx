@@ -73,7 +73,7 @@ const HomePage = () => {
     const images = [
         { id: 1, url: AspireStreet26, address: '26 Aspire St, Ripley', description: 'Brand New - Low Maintenance Living', link: '/rentals/ipswich/properties/26-aspire-street' },
         { id: 2, url: AspireStreet27, address: '27 Aspire St, Ripley', description: 'Brand New Family Home - Bellevue Estate, Ripley', link: '/rentals/ipswich/properties/27-aspire-street' },
-        { id: 3, url: AbbeyWay6, address: '6 Abbey Way, Warner', description: 'Brand New Family Home - Bellevue Estate, Ripley', link: '/rentals/moreton-bay/properties/6-abbey-way' },
+        { id: 3, url: AbbeyWay6, address: '6 Abbey Way, Warner', description: 'Low Maintenance Lifestyle', link: '/rentals/moreton-bay/properties/6-abbey-way' },
         { id: 4, url: NorthcliffeTerrace12_4, address: '12/4-6 Northcliffe Terrace, Surfers Paradise', description: 'Beachside Apartment for Rent in Surfers Paradise', link: '/rentals/gold-coast/properties/12-4-6-northcliffe-terrace' },
         { id: 5, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Spacious 4-Bedroom Home in Beautiful Isle of Capri', link: '/rentals/gold-coast/properties/7-milan-court' },
         { id: 6, url: BrindisiAvenue17, address: '17 Brindisi Avenue, Surfers Paradise', description: '4 Bedroom, 2 Bathroom Home with Inground Swimming Pool', link: '/rentals/gold-coast/properties/17-brindisi-ave' },
