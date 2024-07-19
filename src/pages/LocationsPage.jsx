@@ -27,7 +27,7 @@ import mainMoretonBay from "/assets/Logan/logan.jpg";
 const LocationsPage = () => {
     const allPropertiesData = [
         ...GoldCoastPropertiesData.map(item => ({ ...item, location: 'Gold Coast' })),
-        // ...BrisbanePropertiesData.map(item => ({ ...item, location: 'Brisbane' })),
+        ...BrisbanePropertiesData.map(item => ({ ...item, location: 'Brisbane' })),
         ...IpswichPropertiesData.map(item => ({ ...item, location: 'Ipswich' })),
         // ...LoganPropertiesData.map(item => ({ ...item, location: 'Logan' })),
         ...MoretonBayPropertiesData.map(item => ({ ...item, location: 'Moreton Bay' })),
@@ -55,7 +55,7 @@ const LocationsPage = () => {
     const locationImages = {
         "All": mainInitialImage,
         "Gold Coast": mainGoldCoast,
-        // "Brisbane": mainBrisbane,
+        "Brisbane": mainBrisbane,
         "Ipswich": mainIpswich,
         // "Logan": mainLogan,
         "Moreton Bay": mainMoretonBay,
@@ -66,7 +66,7 @@ const LocationsPage = () => {
     const locationOptions = [
         { value: 'All', label: 'All Locations' },
         { value: 'Gold Coast', label: 'Gold Coast' },
-        // { value: 'Brisbane', label: 'Brisbane' },
+        { value: 'Brisbane', label: 'Brisbane' },
         { value: 'Ipswich', label: 'Ipswich' },
         // { value: 'Logan', label: 'Logan' },
         { value: 'Moreton Bay', label: 'Moreton Bay' },
