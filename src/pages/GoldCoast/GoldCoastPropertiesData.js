@@ -18,23 +18,6 @@ const GoldCoastPropertiesData = [
   //   lng: 153.423090
   // },
   {
-    id: '12-4-6-northcliffe-terrace',
-    images: Object.values(NorthcliffeTerrace12_4),
-    address: '12/4-6 Northcliffe Terrace, Surfers Paradise',
-    price: 1050,
-    beds: 3,
-    baths: 2,
-    car: 2,
-    features: ['Air conditioning', 'Built-in wardrobes', 'Ensuite', 'Dishwasher', 'Balcony', 'Heated Pool and Spa', 'Solar panels', 'Undercover BBQ', 'Undercover Outdoor Area'],
-    description: [
-      "Directly opposite the beach and prime for future re-development (given that there is a housing block), this could this be your opportunity to “enjoy now” and landbank for future gain. One of only six 3-bedroom lots in this boutique complex of 18 apartments, Unit 12 boasts a perfect N/E aspect with ocean views and a large floor plan simply not found in newly built apartments.", 
-      "", "Features:", "- 3 Spacious Bedrooms", "- 2 Modern Bathrooms", "- 2 Car Garage", "- Open Plan Living/Dining Area", "- Air Conditioning", "- Contemporary kitchen with electric cooktop, stainless steel appliances, and ample storage", "- Separate laundry", "- Full security and intercom FB system", "- Outdoor heated swimming pool", "- BBQ entertainment area", "- Close to Surfers Centro Shopping Center", "- Walk to Gold Coast's world-famous beaches", "- Conveniently near quality restaurants",
-      "", "Situated in prestigious Northcliffe Terrace, some would call this the 'civilised end of Surfers Paradise'. You are bordering Broadbeach and are just a short walk to the tram to take you up and down the coast. Apartments of this size, in this price bracket with this kind of offering do not come about often. There is much to get excited about here. An inspection is an absolute must!"
-    ],
-    lat: -28.008261,
-    lng: 153.430939
-  },
-  {
     id: '17-brindisi-ave',
     images: Object.values(BrindisiAvenue17),
     address: '17 Brindisi Avenue, Surfers Paradise',
