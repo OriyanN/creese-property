@@ -22,8 +22,8 @@ import CustomCursor from '../../public/assets/icons8-arrow-50.png';
 import AspireStreet26 from '/assets/Ipswich/26-aspire-street/1.jpg';
 import AspireStreet27 from '/assets/Ipswich/27-aspire-street/1.jpg';
 import AbbeyWay6 from '/assets/MoretonBay/AbbeyWay6/1.jpg';
+import AbbeyWay8 from '/assets/MoretonBay/AbbeyWay8/1.jpg';
 import BaturaStreet10 from '/assets/Brisbane/10-Batura-Street/1.jpg';
-import BrindisiAvenue17 from '/assets/GoldCoast/17-brindisi-ave/17-brindisi-ave.jpeg';
 import MilanCourt7 from '/assets/GoldCoast/7-milan-court/7-milan-court.jpeg';
 import RentalAppraisalForm from '../components/RentalAppraisalForm.jsx';
 
@@ -71,12 +71,12 @@ const HomePage = () => {
     }, []);
 
     const images = [
-        { id: 1, url: BaturaStreet10, address: '10 Batura Street, Pallara', description: 'Peaceful Lifestyle', link: '/rentals/brisbane/properties/10-Batura-Street' },
-        { id: 2, url: AspireStreet26, address: '26 Aspire St, Ripley', description: 'Brand New - Low Maintenance Living', link: '/rentals/ipswich/properties/26-aspire-street' },
-        { id: 3, url: AbbeyWay6, address: '6 Abbey Way, Warner', description: 'Low Maintenance Lifestyle', link: '/rentals/moreton-bay/properties/6-abbey-way' },
-        { id: 4, url: AspireStreet27, address: '27 Aspire St, Ripley', description: 'Brand New Family Home - Bellevue Estate, Ripley', link: '/rentals/ipswich/properties/27-aspire-street' },
-        { id: 5, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Spacious 4-Bedroom Home in Beautiful Isle of Capri', link: '/rentals/gold-coast/properties/7-milan-court' },
-        { id: 6, url: BrindisiAvenue17, address: '17 Brindisi Avenue, Surfers Paradise', description: '4 Bedroom, 2 Bathroom Home with Inground Swimming Pool', link: '/rentals/gold-coast/properties/17-brindisi-ave' },
+        { id: 1, url: AbbeyWay8, address: '8 Abbey Way, Warner', description: 'Relaxing Lifestyle', link: '/rentals/moreton-bay/properties/8-abbey-way' },
+        { id: 2, url: BaturaStreet10, address: '10 Batura Street, Pallara', description: 'Peaceful Lifestyle', link: '/rentals/brisbane/properties/10-Batura-Street' },
+        { id: 3, url: AspireStreet26, address: '26 Aspire St, Ripley', description: 'Brand New - Low Maintenance Living', link: '/rentals/ipswich/properties/26-aspire-street' },
+        { id: 4, url: AbbeyWay6, address: '6 Abbey Way, Warner', description: 'Low Maintenance Lifestyle', link: '/rentals/moreton-bay/properties/6-abbey-way' },
+        { id: 5, url: AspireStreet27, address: '27 Aspire St, Ripley', description: 'Brand New Family Home - Bellevue Estate, Ripley', link: '/rentals/ipswich/properties/27-aspire-street' },
+        { id: 6, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Spacious 4-Bedroom Home in Beautiful Isle of Capri', link: '/rentals/gold-coast/properties/7-milan-court' },
     ];
 
     useEffect(() => {
