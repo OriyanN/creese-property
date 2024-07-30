@@ -113,6 +113,27 @@ const MoretonBayPropertyDetailsPage = () => {
     return <div>There are no current similar properties.</div>;
   }
 
+  const isInspectionDateValid = (inspectionStartTime) => {
+    if (!inspectionStartTime) return false;
+    const currentDate = new Date();
+    const inspectionDateObj = new Date(inspectionStartTime);
+    return inspectionDateObj > currentDate;
+  };
+
+  const formatInspectionTimeRange = (start, end) => {
+    const options = { 
+      weekday: 'long', 
+      year: 'numeric', 
+      month: 'numeric', 
+      day: 'numeric', 
+      hour: '2-digit', 
+      minute: '2-digit' 
+    };
+    const startTime = new Date(start).toLocaleString('en-AU', options);
+    const endTime = new Date(end).toLocaleTimeString('en-AU', { hour: '2-digit', minute: '2-digit' });
+    return `${startTime} - ${endTime}`;
+  };
+
   return (
     <>
       <Helmet>
@@ -170,6 +191,11 @@ const MoretonBayPropertyDetailsPage = () => {
                 }}
                 />
             </div>
+          </div>
+          <div className="inspection">
+            {isInspectionDateValid(property.inspectionStartTime) && (
+              <p>Open for Inspection: {formatInspectionTimeRange(property.inspectionStartTime, property.inspectionEndTime)}</p>
+            )}
           </div>
           <div className="property-description">
             {Array.isArray(property.description) ? (
