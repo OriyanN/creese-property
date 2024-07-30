@@ -17,19 +17,19 @@ const GoldCoastPropertiesData = [
   //   lat: -28.013090,
   //   lng: 153.423090
   // },
-  {
-    id: '17-brindisi-ave',
-    images: Object.values(BrindisiAvenue17),
-    address: '17 Brindisi Avenue, Surfers Paradise',
-    price: 1100,
-    beds: 4,
-    baths: 2,
-    car: 1,
-    features: ['Single level brick home', 'Renovated kitchen', 'Pool', 'Garage', 'Air conditioning', 'Fence', 'Water tank', 'Outdoor area', 'Solar panels'],
-    description: ["Perfectly placed close to the Isle of Capri boat ramp, parks and schools, it also spoils you with being mere minutes by foot to upscale Capri on Via Roma. A lively waterside precinct, it boasts delightful boutiques, restaurants, cafes, health and medical amenities as well as Harris Farm Markets – the Gold Coast's flagship store. For a change of scenery, head to the heart of Surfers Paradise, with world-famous beaches and non-stop entertainment just a 10 minute walk from your front door. Capitalise on this exceptional property prospect and reap the returns in the future. Arrange your inspection today.", "", "Features:", "- 4 bedrooms (4th bedroom can be used as a media room or office)", "- 2 bathrooms", "- 1 car garage", "- Inground swimming pool", "- Low maintenance yard", "- Air conditioning", "- Ceiling fans", "- Electric front gate", "- Solar panels", "- Open plan lounge and dining", "- Loads of storage space", "", "Great opportunity for easy living! Contact us today for Inspection Times."],
-    lat: -28.012240,
-    lng: 153.425910
-  },
+  // {
+  //   id: '17-brindisi-ave',
+  //   images: Object.values(BrindisiAvenue17),
+  //   address: '17 Brindisi Avenue, Surfers Paradise',
+  //   price: 1100,
+  //   beds: 4,
+  //   baths: 2,
+  //   car: 1,
+  //   features: ['Single level brick home', 'Renovated kitchen', 'Pool', 'Garage', 'Air conditioning', 'Fence', 'Water tank', 'Outdoor area', 'Solar panels'],
+  //   description: ["Perfectly placed close to the Isle of Capri boat ramp, parks and schools, it also spoils you with being mere minutes by foot to upscale Capri on Via Roma. A lively waterside precinct, it boasts delightful boutiques, restaurants, cafes, health and medical amenities as well as Harris Farm Markets – the Gold Coast's flagship store. For a change of scenery, head to the heart of Surfers Paradise, with world-famous beaches and non-stop entertainment just a 10 minute walk from your front door. Capitalise on this exceptional property prospect and reap the returns in the future. Arrange your inspection today.", "", "Features:", "- 4 bedrooms (4th bedroom can be used as a media room or office)", "- 2 bathrooms", "- 1 car garage", "- Inground swimming pool", "- Low maintenance yard", "- Air conditioning", "- Ceiling fans", "- Electric front gate", "- Solar panels", "- Open plan lounge and dining", "- Loads of storage space", "", "Great opportunity for easy living! Contact us today for Inspection Times."],
+  //   lat: -28.012240,
+  //   lng: 153.425910
+  // },
   {
     id: '7-milan-court',
     images: Object.values(MilanCourt7),
