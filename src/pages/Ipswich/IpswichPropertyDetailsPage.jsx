@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
-import { useForm } from '@formspree/react';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 import Lightbox from "yet-another-react-lightbox";
@@ -17,7 +16,6 @@ import LazyImage from '../../components/LazyImage.jsx';
 
 import IpswichPropertiesData from "./IpswichPropertiesData.js";
 import '../LocationsPropertyDetailsPage.css';
-import '../../components/AnimatedButton.css';
 import IpswichPropertyForm from './IpswichPropertyForm.jsx';
 import NotFoundPage from '../NotFoundPage.jsx';
 
@@ -36,7 +34,7 @@ const IpswichPropertyDetailsPage = () => {
 
   useEffect(() => {
     if (!property || !property.images || slides.length === 0) {
-      navigate(<NotFoundPage />);
+      navigate('/404');
     }
   }, [property, navigate, slides.length]);
 
@@ -59,25 +57,6 @@ const IpswichPropertyDetailsPage = () => {
       .addTo(map);
 
     return () => map.remove();
-  }, [propertyId, property]);
-
-  const [contactForm, setContactForm] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    location: '', 
-    property: '', 
-  });
-
-  useEffect(() => {
-    if (property) {
-      setContactForm(prev => ({
-        ...prev,
-        location: 'Ipswich',
-        property: property.address,
-      }));
-    }
   }, [propertyId, property]);
 
   useEffect(() => {

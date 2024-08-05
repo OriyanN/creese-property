@@ -35,14 +35,6 @@ const GoldCoastPropertyForm = () => {
         }
     }, [propertyId, property]);
   
-    const handleChange = (e) => {
-      const { name, value } = e.target;
-      setContactForm(prevForm => ({
-        ...prevForm,
-        [name]: value,
-      }));
-    };
-  
     if (state.succeeded) {
       return (
           <>

@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
-import { useForm, ValidationError } from '@formspree/react';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 import Lightbox from "yet-another-react-lightbox";
@@ -17,7 +16,6 @@ import LazyImage from '../../components/LazyImage.jsx';
 
 import MoretonBayPropertiesData from "./MoretonBayPropertiesData.js";
 import '../LocationsPropertyDetailsPage.css';
-import '../../components/AnimatedButton.css';
 import MoretonBayPropertyForm from './MoretonBayPropertyForm.jsx';
 import NotFoundPage from '../NotFoundPage.jsx';
 
@@ -26,8 +24,6 @@ const MoretonBayPropertyDetailsPage = () => {
   const navigate = useNavigate();
   const property = MoretonBayPropertiesData.find((p) => p.id === propertyId);
   const [suggestedProperties, setSuggestedProperties] = useState([]);
-
-  const [state, handleSubmit] = useForm("mbjnvyqq");
 
   const [open, setOpen] = React.useState(false);
   const galleryButtonRef = useRef(null);
@@ -38,7 +34,7 @@ const MoretonBayPropertyDetailsPage = () => {
 
   useEffect(() => {
     if (!property || !property.images || slides.length === 0) {
-      navigate(<NotFoundPage />);
+      navigate('/404');
     }
   }, [property, navigate, slides.length]);
 
@@ -62,36 +58,6 @@ const MoretonBayPropertyDetailsPage = () => {
 
     return () => map.remove();
   }, [propertyId, property]);
-
-  const [contactForm, setContactForm] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    location: '', 
-    property: '', 
-  });
-
-  useEffect(() => {
-    if (property) {
-      setContactForm(prev => ({
-        ...prev,
-        location: 'Moreton Bay',
-        property: property.address,
-      }));
-    }
-  }, [propertyId, property]);
-
-  if (state.succeeded) {
-    return (
-        <>
-            <div className="verification-message">
-                <p>Thank you for contacting us.</p>
-                <p>Our team will reach out to you within the next 24 to 48 hours.</p>
-            </div>
-        </>
-    );
-  }
 
   useEffect(() => {
     const getThreeRandomProperties = () => {
