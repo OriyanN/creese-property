@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
+import { useForm } from '@formspree/react';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 import Lightbox from "yet-another-react-lightbox";
@@ -16,10 +17,13 @@ import LazyImage from '../../components/LazyImage.jsx';
 
 import BrisbanePropertiesData from "./BrisbanePropertiesData.js";
 import '../LocationsPropertyDetailsPage.css';
+import '../../components/AnimatedButton.css';
 import BrisbanePropertyForm from './BrisbanePropertyForm.jsx';
+import NotFoundPage from '../NotFoundPage.jsx';
 
 const BrisbanePropertyDetailsPage = () => {
   const { propertyId } = useParams();
+  const navigate = useNavigate();
   const property = BrisbanePropertiesData.find((p) => p.id === propertyId);
   const [suggestedProperties, setSuggestedProperties] = useState([]);
 
@@ -28,11 +32,13 @@ const BrisbanePropertyDetailsPage = () => {
   const fullscreenRef = React.useRef(null);
   const slideshowRef = React.useRef(null);
   const thumbnailsRef = React.useRef(null);
-  const slides = property.images.map(src => ({ src }));
+  const slides = property ? property.images.map(src => ({ src })) : [];
 
-  if (!property) {
-    return <div>Property not found</div>;
-  }
+  useEffect(() => {
+    if (!property || !property.images || slides.length === 0) {
+      navigate(<NotFoundPage />);
+    }
+  }, [property, navigate, slides.length]);
 
   const mapContainerRef = useRef(null);
 
@@ -74,13 +80,16 @@ const BrisbanePropertyDetailsPage = () => {
     }
   }, [propertyId, property]);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setContactForm(prevForm => ({
-      ...prevForm,
-      [name]: value,
-    }));
-  };
+  if (state.succeeded) {
+    return (
+        <>
+            <div className="verification-message">
+                <p>Thank you for contacting us.</p>
+                <p>Our team will reach out to you within the next 24 to 48 hours.</p>
+            </div>
+        </>
+    );
+  }
 
   useEffect(() => {
     const getThreeRandomProperties = () => {
@@ -92,10 +101,10 @@ const BrisbanePropertyDetailsPage = () => {
     if (property) {
         setSuggestedProperties(getThreeRandomProperties());
     }
-  }, [propertyId]);
-  
+  }, [propertyId, property]);
+
   if (!property) {
-    return <div>There are no current similar properties.</div>;
+    return <NotFoundPage />;
   }
 
   return (
@@ -104,7 +113,7 @@ const BrisbanePropertyDetailsPage = () => {
           <title>Brisbane | Creese Property</title>
           <meta name="description" content="Discover Creese Property's expert residential management and consultancy services in the Brisbane area." />
           <meta name="robots" content="noindex"/>
-          <link rel="canonical" href={'/rentals/brisbane/properties/${property.id}'} />
+          <link rel="canonical" href={`/rentals/brisbane/properties/${property.id}`} />
       </Helmet>
       <ScrollToTop />
       <div>

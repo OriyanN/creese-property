@@ -44,8 +44,11 @@ const router = createBrowserRouter([
       { path: "/careers/assistant-property-manager", element: <AssistantPropertyManagerPage /> },
       { path: "/privacy", element: <PrivacyPage /> },
       { path: "/terms-conditions", element: <TermsConditionPage /> },
-      { path: "*", element: <NotFoundPage /> },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFoundPage />,
   },
 ]);
 

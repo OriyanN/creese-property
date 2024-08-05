@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm } from '@formspree/react';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 import Lightbox from "yet-another-react-lightbox";
@@ -14,13 +14,16 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 import Footer from '../../components/Footer.jsx';
 import ScrollToTop from '../../components/ScrollToTop.jsx';
 import LazyImage from '../../components/LazyImage.jsx';
-import IpswichPropertyForm from './IpswichPropertyForm.jsx';
 
 import IpswichPropertiesData from "./IpswichPropertiesData.js";
 import '../LocationsPropertyDetailsPage.css';
+import '../../components/AnimatedButton.css';
+import IpswichPropertyForm from './IpswichPropertyForm.jsx';
+import NotFoundPage from '../NotFoundPage.jsx';
 
 const IpswichPropertyDetailsPage = () => {
   const { propertyId } = useParams();
+  const navigate = useNavigate();
   const property = IpswichPropertiesData.find((p) => p.id === propertyId);
   const [suggestedProperties, setSuggestedProperties] = useState([]);
 
@@ -29,11 +32,13 @@ const IpswichPropertyDetailsPage = () => {
   const fullscreenRef = React.useRef(null);
   const slideshowRef = React.useRef(null);
   const thumbnailsRef = React.useRef(null);
-  const slides = property.images.map(src => ({ src }));
+  const slides = property ? property.images.map(src => ({ src })) : [];
 
-  if (!property) {
-    return <div>Property not found</div>;
-  }
+  useEffect(() => {
+    if (!property || !property.images || slides.length === 0) {
+      navigate(<NotFoundPage />);
+    }
+  }, [property, navigate, slides.length]);
 
   const mapContainerRef = useRef(null);
 
@@ -75,14 +80,6 @@ const IpswichPropertyDetailsPage = () => {
     }
   }, [propertyId, property]);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setContactForm(prevForm => ({
-      ...prevForm,
-      [name]: value,
-    }));
-  };
-
   useEffect(() => {
     const getThreeRandomProperties = () => {
         const otherProperties = IpswichPropertiesData.filter(p => p.id !== propertyId);
@@ -93,10 +90,10 @@ const IpswichPropertyDetailsPage = () => {
     if (property) {
         setSuggestedProperties(getThreeRandomProperties());
     }
-  }, [propertyId]);
-  
+  }, [propertyId, property]);
+
   if (!property) {
-    return <div>There are no current similar properties.</div>;
+    return <NotFoundPage />;
   }
 
   const isInspectionDateValid = (inspectionStartTime) => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm } from '@formspree/react';
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 import Lightbox from "yet-another-react-lightbox";
@@ -19,9 +19,11 @@ import GoldCoastPropertiesData from "./GoldCoastPropertiesData.js";
 import '../LocationsPropertyDetailsPage.css';
 import '../../components/AnimatedButton.css';
 import GoldCoastPropertyForm from './GoldCoastPropertyForm.jsx';
+import NotFoundPage from '../NotFoundPage.jsx';
 
 const GoldCoastPropertyDetailsPage = () => {
   const { propertyId } = useParams();
+  const navigate = useNavigate();
   const property = GoldCoastPropertiesData.find((p) => p.id === propertyId);
   const [suggestedProperties, setSuggestedProperties] = useState([]);
 
@@ -32,11 +34,13 @@ const GoldCoastPropertyDetailsPage = () => {
   const fullscreenRef = React.useRef(null);
   const slideshowRef = React.useRef(null);
   const thumbnailsRef = React.useRef(null);
-  const slides = property.images.map(src => ({ src }));
+  const slides = property ? property.images.map(src => ({ src })) : [];
 
-  if (!property) {
-    return <div>Property not found</div>;
-  }
+  useEffect(() => {
+    if (!property || !property.images || slides.length === 0) {
+      navigate(<NotFoundPage />);
+    }
+  }, [property, navigate, slides.length]);
 
   const mapContainerRef = useRef(null);
 
@@ -107,10 +111,10 @@ const GoldCoastPropertyDetailsPage = () => {
     if (property) {
         setSuggestedProperties(getThreeRandomProperties());
     }
-  }, [propertyId]);
+  }, [propertyId, property]);
   
   if (!property) {
-    return <div>There are no current similar properties.</div>;
+    return <NotFoundPage />;
   }
 
   return (
@@ -119,7 +123,7 @@ const GoldCoastPropertyDetailsPage = () => {
           <title>Gold Coast | Creese Property</title>
           <meta name="description" content="Discover Creese Property's expert residential management and consultancy services in the Gold Coast area." />
           <meta name="robots" content="noindex"/>
-          <link rel="canonical" href={'/rentals/gold-coast/properties/${property.id}'} />
+          <link rel="canonical" href={`/rentals/gold-coast/properties/${property.id}`} />
       </Helmet>
       <ScrollToTop />
       <div>
@@ -212,7 +216,9 @@ const GoldCoastPropertyDetailsPage = () => {
                 </div>
               ))
             ) : (
-              <p>There are no current similar properties.</p>
+              <div className="no-other-properties">
+                <p>There are no current similar properties.</p>
+              </div>
             )}
           </div>
         </div>

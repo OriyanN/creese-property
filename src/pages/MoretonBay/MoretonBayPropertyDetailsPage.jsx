@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
 import { useForm, ValidationError } from '@formspree/react';
 
@@ -19,9 +19,11 @@ import MoretonBayPropertiesData from "./MoretonBayPropertiesData.js";
 import '../LocationsPropertyDetailsPage.css';
 import '../../components/AnimatedButton.css';
 import MoretonBayPropertyForm from './MoretonBayPropertyForm.jsx';
+import NotFoundPage from '../NotFoundPage.jsx';
 
 const MoretonBayPropertyDetailsPage = () => {
   const { propertyId } = useParams();
+  const navigate = useNavigate();
   const property = MoretonBayPropertiesData.find((p) => p.id === propertyId);
   const [suggestedProperties, setSuggestedProperties] = useState([]);
 
@@ -32,11 +34,13 @@ const MoretonBayPropertyDetailsPage = () => {
   const fullscreenRef = React.useRef(null);
   const slideshowRef = React.useRef(null);
   const thumbnailsRef = React.useRef(null);
-  const slides = property.images.map(src => ({ src }));
+  const slides = property ? property.images.map(src => ({ src })) : [];
 
-  if (!property) {
-    return <div>Property not found</div>;
-  }
+  useEffect(() => {
+    if (!property || !property.images || slides.length === 0) {
+      navigate(<NotFoundPage />);
+    }
+  }, [property, navigate, slides.length]);
 
   const mapContainerRef = useRef(null);
 
@@ -78,14 +82,6 @@ const MoretonBayPropertyDetailsPage = () => {
     }
   }, [propertyId, property]);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setContactForm(prevForm => ({
-      ...prevForm,
-      [name]: value,
-    }));
-  };
-
   if (state.succeeded) {
     return (
         <>
@@ -107,10 +103,10 @@ const MoretonBayPropertyDetailsPage = () => {
     if (property) {
         setSuggestedProperties(getThreeRandomProperties());
     }
-  }, [propertyId]);
-  
+  }, [propertyId, property]);
+
   if (!property) {
-    return <div>There are no current similar properties.</div>;
+    return <NotFoundPage />;
   }
 
   const isInspectionDateValid = (inspectionStartTime) => {
@@ -238,7 +234,9 @@ const MoretonBayPropertyDetailsPage = () => {
                 </div>
               ))
             ) : (
-              <p>There are no current similar properties.</p>
+              <div className="no-other-properties">
+                <p>There are no current similar properties.</p>
+              </div>
             )}
           </div>
         </div>
