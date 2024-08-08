@@ -17,7 +17,6 @@ import LazyImage from '../../components/LazyImage.jsx';
 import GoldCoastPropertiesData from "./GoldCoastPropertiesData.js";
 import '../LocationsPropertyDetailsPage.css';
 import GoldCoastPropertyForm from './GoldCoastPropertyForm.jsx';
-import NotFoundPage from '../NotFoundPage.jsx';
 
 const GoldCoastPropertyDetailsPage = () => {
   const { propertyId } = useParams();
@@ -70,10 +69,6 @@ const GoldCoastPropertyDetailsPage = () => {
         setSuggestedProperties(getThreeRandomProperties());
     }
   }, [propertyId, property]);
-  
-  if (!property) {
-    return <NotFoundPage />;
-  }
 
   return (
     <>

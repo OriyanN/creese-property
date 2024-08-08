@@ -19,7 +19,7 @@ const BrisbanePropertiesData = [
     id: '10-Batura-Street',
     images: Object.values(BaturaStreet10),
     address: '10 Batura Street, Pallara',
-    price: 750,
+    price: 710,
     beds: 4,
     baths: 2,
     car: 2,

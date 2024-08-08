@@ -73,10 +73,7 @@ const HomePage = () => {
     const images = [
         { id: 1, url: AbbeyWay8, address: '8 Abbey Way, Warner', description: 'Relaxing Lifestyle', link: '/rentals/moreton-bay/properties/8-abbey-way' },
         { id: 2, url: BaturaStreet10, address: '10 Batura Street, Pallara', description: 'Peaceful Lifestyle', link: '/rentals/brisbane/properties/10-Batura-Street' },
-        { id: 3, url: AspireStreet26, address: '26 Aspire St, Ripley', description: 'Brand New - Low Maintenance Living', link: '/rentals/ipswich/properties/26-aspire-street' },
-        { id: 4, url: AbbeyWay6, address: '6 Abbey Way, Warner', description: 'Low Maintenance Lifestyle', link: '/rentals/moreton-bay/properties/6-abbey-way' },
-        { id: 5, url: AspireStreet27, address: '27 Aspire St, Ripley', description: 'Brand New Family Home - Bellevue Estate, Ripley', link: '/rentals/ipswich/properties/27-aspire-street' },
-        { id: 6, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Spacious 4-Bedroom Home in Beautiful Isle of Capri', link: '/rentals/gold-coast/properties/7-milan-court' },
+        { id: 3, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Spacious 4-Bedroom Home in Beautiful Isle of Capri', link: '/rentals/gold-coast/properties/7-milan-court' },
     ];
 
     useEffect(() => {

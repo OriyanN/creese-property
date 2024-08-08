@@ -17,7 +17,6 @@ import LazyImage from '../../components/LazyImage.jsx';
 import IpswichPropertiesData from "./IpswichPropertiesData.js";
 import '../LocationsPropertyDetailsPage.css';
 import IpswichPropertyForm from './IpswichPropertyForm.jsx';
-import NotFoundPage from '../NotFoundPage.jsx';
 
 const IpswichPropertyDetailsPage = () => {
   const { propertyId } = useParams();
@@ -71,10 +70,6 @@ const IpswichPropertyDetailsPage = () => {
     }
   }, [propertyId, property]);
 
-  if (!property) {
-    return <NotFoundPage />;
-  }
-
   const isInspectionDateValid = (inspectionStartTime) => {
     if (!inspectionStartTime) return false;
     const currentDate = new Date();
@@ -102,7 +97,7 @@ const IpswichPropertyDetailsPage = () => {
           <title>Ipswich | Creese Property</title>
           <meta name="description" content="Discover Creese Property's expert residential management and consultancy services in the Ipswich area." />
           <meta name="robots" content="noindex"/>
-          <link rel="canonical" href={'/rentals/ipswich/properties/${property.id}'} />
+          <link rel="canonical" href={`/rentals/ipswich/properties/${property.id}`} />
       </Helmet>
       <ScrollToTop />
       <div>

@@ -34,7 +34,7 @@ const GoldCoastPropertiesData = [
     id: '7-milan-court',
     images: Object.values(MilanCourt7),
     address: '7 Milan Court, Surfers Paradise',
-    price: 1300,
+    price: 1400,
     beds: 4,
     baths: 2,
     car: 2,

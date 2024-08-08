@@ -17,7 +17,6 @@ import LazyImage from '../../components/LazyImage.jsx';
 import BrisbanePropertiesData from "./BrisbanePropertiesData.js";
 import '../LocationsPropertyDetailsPage.css';
 import BrisbanePropertyForm from './BrisbanePropertyForm.jsx';
-import NotFoundPage from '../NotFoundPage.jsx';
 
 const BrisbanePropertyDetailsPage = () => {
   const { propertyId } = useParams();
@@ -70,10 +69,6 @@ const BrisbanePropertyDetailsPage = () => {
         setSuggestedProperties(getThreeRandomProperties());
     }
   }, [propertyId, property]);
-
-  if (!property) {
-    return <NotFoundPage />;
-  }
 
   return (
     <>

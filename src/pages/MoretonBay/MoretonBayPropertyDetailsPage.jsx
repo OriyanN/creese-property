@@ -17,7 +17,6 @@ import LazyImage from '../../components/LazyImage.jsx';
 import MoretonBayPropertiesData from "./MoretonBayPropertiesData.js";
 import '../LocationsPropertyDetailsPage.css';
 import MoretonBayPropertyForm from './MoretonBayPropertyForm.jsx';
-import NotFoundPage from '../NotFoundPage.jsx';
 
 const MoretonBayPropertyDetailsPage = () => {
   const { propertyId } = useParams();
@@ -71,10 +70,6 @@ const MoretonBayPropertyDetailsPage = () => {
     }
   }, [propertyId, property]);
 
-  if (!property) {
-    return <NotFoundPage />;
-  }
-
   const isInspectionDateValid = (inspectionStartTime) => {
     if (!inspectionStartTime) return false;
     const currentDate = new Date();
@@ -102,7 +97,7 @@ const MoretonBayPropertyDetailsPage = () => {
           <title>Moreton Bay | Creese Property</title>
           <meta name="description" content="Discover Creese Property's expert residential management and consultancy services in the Moreton Bay area." />
           <meta name="robots" content="noindex"/>
-          <link rel="canonical" href={'/rentals/moreton-bay/properties/${property.id}'} />
+          <link rel="canonical" href={`/rentals/moreton-bay/properties/${property.id}`} />
       </Helmet>
       <ScrollToTop />
       <div>
