@@ -110,7 +110,7 @@ function ContactPage() {
                         <br></br>
                         <br></br>
                         <h4>GENERAL CONTACT</h4>
-                        <p>hello@creeseproperty.com.au</p>
+                        <p>hello@creeseproperty.com</p>
                         <p>0458 672 572</p>
                     </div>
                 </div>
