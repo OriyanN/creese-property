@@ -6,6 +6,7 @@ import './index.css';
 
 import NavBar from './components/NavBar.jsx';
 import ScrollToTop from './components/ScrollToTop.jsx';
+import ErrorBoundary from './components/ErrorBoundary.jsx';
 
 const HomePage = lazy(() => import("./pages/HomePage.jsx"));
 import AboutPage from './pages/AboutPage.jsx';
@@ -15,10 +16,13 @@ import LocationsPage from './pages/LocationsPage.jsx';
 import BrisbanePropertyDetailsPage from './pages/Brisbane/BrisbanePropertyDetailsPage.jsx';
 import IpswichPropertyDetailsPage from './pages/Ipswich/IpswichPropertyDetailsPage.jsx';
 import AssistantPropertyManagerPage from './pages/AssistantPropertyManager.jsx';
-// const AboutPage = lazy(() => import("./pages/AboutPage.jsx"));
-// const ServicesPage = lazy(() => import("./pages/ServicesPage.jsx"));
+import FallbackPage from './components/FallbackPage.jsx';
 const GoldCoastPropertyDetailsPage = lazy(() => import('./pages/GoldCoast/GoldCoastPropertyDetailsPage.jsx'));
 const MoretonBayPropertyDetailsPage = lazy(() => import('./pages/MoretonBay/MoretonBayPropertyDetailsPage.jsx'));
+const GoldCoastPropertyPortfolioDetailsPage = lazy(() => import('./pages/GoldCoast/GoldCoastPropertyPortfolioDetailsPage.jsx'));
+const BrisbanePropertyPortfolioDetailsPage = lazy(() => import('./pages/Brisbane/BrisbanePropertyPortfolioDetailsPage.jsx'));
+const IpswichPropertyPortfolioDetailsPage = lazy(() => import('./pages/Ipswich/IpswichPropertyPortfolioDetailsPage.jsx'));
+const MoretonBayPropertyPortfolioDetailsPage = lazy(() => import('./pages/MoretonBay/MoretonBayPropertyPortfolioDetailsPage.jsx'));
 const ContactPage = lazy(() => import("./pages/ContactPage.jsx"));
 const CareersPage = lazy(() => import('./pages/CareersPage.jsx'));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage.jsx'));
@@ -34,6 +38,10 @@ const router = createBrowserRouter([
       { path: "/about", element: <AboutPage /> },
       { path: "/services", element: <ServicesPage /> },
       { path: "/portfolio", element: <PortfolioPage /> },
+      { path: "/portfolio/gold-coast/properties/:propertyId", element: <GoldCoastPropertyPortfolioDetailsPage /> },
+      { path: "/portfolio/brisbane/properties/:propertyId", element: <BrisbanePropertyPortfolioDetailsPage /> },
+      { path: "/portfolio/ipswich/properties/:propertyId", element: <IpswichPropertyPortfolioDetailsPage /> },
+      { path: "/portfolio/moreton-bay/properties/:propertyId", element: <MoretonBayPropertyPortfolioDetailsPage /> },
       { path: "/rentals", element: <LocationsPage /> },
       { path: "/rentals/gold-coast/properties/:propertyId", element: <GoldCoastPropertyDetailsPage /> },
       { path: "/rentals/brisbane/properties/:propertyId", element: <BrisbanePropertyDetailsPage /> },
@@ -55,11 +63,13 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
-      <Suspense fallback={<div>Loading...</div>}>
-        <RouterProvider router={router}>
-          <ScrollToTop />
-        </RouterProvider>
-      </Suspense>
+      <ErrorBoundary >
+        <Suspense fallback={FallbackPage}>
+          <RouterProvider router={router}>
+            <ScrollToTop />
+          </RouterProvider>
+        </Suspense>
+      </ErrorBoundary>
     </HelmetProvider>
   </React.StrictMode>,
 );
