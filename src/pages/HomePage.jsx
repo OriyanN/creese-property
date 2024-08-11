@@ -16,12 +16,10 @@ import ScrollRevealContainer from '../components/ScrollReveal.jsx';
 import Helmet from '../components/Helmet.jsx';
 
 import videoBg from "/assets/CreeseHomePageVideo3.mp4";
+import imgBg from "/assets/Creese-Property-Home-Image.png";
 import preloaderImage from '/assets/CreesePropertyInitialImage.png';
 import CustomCursor from '../../public/assets/icons8-arrow-50.png';
 
-import AspireStreet26 from '/assets/Ipswich/26-aspire-street/1.jpg';
-import AspireStreet27 from '/assets/Ipswich/27-aspire-street/1.jpg';
-import AbbeyWay6 from '/assets/MoretonBay/AbbeyWay6/1.jpg';
 import AbbeyWay8 from '/assets/MoretonBay/AbbeyWay8/1.jpg';
 import BaturaStreet10 from '/assets/Brisbane/10-Batura-Street/1.jpg';
 import MilanCourt7 from '/assets/GoldCoast/7-milan-court/7-milan-court.jpeg';
@@ -152,7 +150,7 @@ const HomePage = () => {
                     <div className="video-text">Creese Property</div>
                     <div className="welcome">
                         <video className="header-video" ref={videoRef} autoPlay loop muted playsInline alt="Creese Property Video" />
-                        <div className="overlay-home"></div>
+                        <img src={imgBg} alt="Creese Property Video" className="home-image" />
                     </div>
                         <div className="text-home">
                             <p>Communication and authenticity guides us. Through innovation and a people first focus we believe we can create outcomes that change expectations of your property investment experience.</p>
