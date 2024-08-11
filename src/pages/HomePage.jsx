@@ -150,7 +150,7 @@ const HomePage = () => {
                     <div className="video-text">Creese Property</div>
                     <div className="welcome">
                         <video className="header-video" ref={videoRef} autoPlay loop muted playsInline alt="Creese Property Video" />
-                        {/* <img src={imgBg} alt="Creese Property Video" className="home-image" /> */}
+                        <img src={imgBg} alt="Creese Property Video" className="home-image" />
                     </div>
                         <div className="text-home">
                             <p>Communication and authenticity guides us. Through innovation and a people first focus we believe we can create outcomes that change expectations of your property investment experience.</p>
