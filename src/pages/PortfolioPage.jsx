@@ -10,26 +10,17 @@ import portfolioImage from '/assets/portfolio-image.jpg';
 
 import "./PortfolioPage.css"
 
-import GoldCoastPropertiesData from '../pages/GoldCoast/GoldCoastPropertiesData';
-import BrisbanePropertiesData from '../pages/Brisbane/BrisbanePropertiesData';
-import IpswichPropertiesData from '../pages/Ipswich/IpswichPropertiesData';
-import LoganPropertiesData from '../pages/Logan/LoganPropertiesData';
+import GoldCoastPropertiesDataPortfolio from '../pages/GoldCoast/GoldCoastPropertiesDataPortfolio.js'
+import BrisbanePropertiesDataPortfolio from '../pages/Brisbane/BrisbanePropertiesDataPortfolio.js';
+import IpswichPropertiesDataPortfolio from '../pages/Ipswich/IpswichPropertiesDataPortfolio.js';
+import MoretonBayPropertiesDataPortfolio from '../pages/MoretonBay/MoretonBayPropertiesDataPortfolio.js';
 
 function PortfolioPage() {
-    // const data = [
-        // { id: 1, image: bri1, address: '1003/66 Manning Street, South Brisbane', link: '/locations/brisbane/properties/bri1' },
-        // { id: 2, image: bri2, address: '402/22 Station Street, Nundah', link: '/locations/brisbane/properties/bri2' },
-        // { id: 3, image: gc1, address: '4/48 Macadie Way, Merrimac', link: '/locations/gold-coast/properties/gc1' },
-        // { id: 4, image: gc2, address: '128 Salerno Street, Surfers Paradise', link: '/locations/gold-coast/properties/gc2' },
-        // { id: 5, image: ips1, address: '22 Kingsmill Road, Coalfalls', link: '/locations/ipswich/properties/ips1' },
-        // { id: 6, image: ips2, address: '2/187 WARWICK ROAD, Churchill', link: '/locations/ipswich/properties/ips2' },
-    // ];
-
     const allPropertiesData = [
-        // ...GoldCoastPropertiesData.map(item => ({ ...item, location: 'Gold Coast' })),
-        // ...BrisbanePropertiesData.map(item => ({ ...item, location: 'Brisbane' })),
-        ...IpswichPropertiesData.map(item => ({ ...item, location: 'Ipswich' })),
-        // ...LoganPropertiesData.map(item => ({ ...item, location: 'Logan' })),
+        ...GoldCoastPropertiesDataPortfolio.map(item => ({ ...item, location: 'Gold Coast' })),
+        ...BrisbanePropertiesDataPortfolio.map(item => ({ ...item, location: 'Brisbane' })),
+        ...IpswichPropertiesDataPortfolio.map(item => ({ ...item, location: 'Ipswich' })),
+        ...MoretonBayPropertiesDataPortfolio.map(item => ({ ...item, location: 'Moreton Bay' })),
     ];
 
     return (
@@ -91,10 +82,7 @@ function PortfolioPage() {
                 <div className="images-container images-container-portfolio">
                     {allPropertiesData.map((property) => (
                         <div key={property.id} className="image-item-container">
-                            <div className="availability-banner">
-                                {property.availability}
-                            </div>
-                            <Link to={`/rentals/${property.location.toLowerCase().replace(' ', '-')}/properties/${property.id}`}>
+                            <Link to={`/portfolio/${property.location.toLowerCase().replace(' ', '-')}/properties/${property.id}`}>
                                 <LazyImage src={property.images[0]} alt={`Property ${property.id}`} className="image-item" />
                             </Link>
                             <div className="location-details">

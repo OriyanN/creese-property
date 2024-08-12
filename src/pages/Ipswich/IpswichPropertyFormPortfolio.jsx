@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import { useForm, ValidationError } from '@formspree/react';
 
-import BrisbanePropertiesData from "./BrisbanePropertiesData.js";
+import IpswichPropertiesDataPortfolio from "./IpswichPropertiesDataPortfolio.js";
 import '../LocationsPropertyDetailsPage.css';
 import '../../components/AnimatedButton.css';
 
-const BrisbanePropertyForm = () => {
+const IpswichPropertyFormPortfolio = () => {
     const { propertyId } = useParams();
-    const property = BrisbanePropertiesData.find((p) => p.id === propertyId);
+    const property = IpswichPropertiesDataPortfolio.find((p) => p.id === propertyId);
   
-    const [state, handleSubmit] = useForm("mpzvgrer");
+    const [state, handleSubmit] = useForm("mwkgdbjr");
   
     if (!property) {
       return <div>No form is available for this property</div>;
@@ -29,7 +29,7 @@ const BrisbanePropertyForm = () => {
         if (property) {
           setContactForm(prev => ({
             ...prev,
-            location: 'Brisbane',
+            location: 'Ipswich',
             property: property.address,
           }));
         }
@@ -95,9 +95,9 @@ const BrisbanePropertyForm = () => {
                 <textarea type="text" name='message' rows='6' placeholder='Message'/>
               </div>
               <div className="radio-buttons-section">
-                    <div className="radio-buttons">
+                    <div className="radio-buttons property-radio-buttons">
                       <p>Preferred method of contact</p>
-                        <div className="radio-buttons-mini-section">
+                        <div className="radio-buttons-mini-section property-radio-select">
                             <label htmlFor="" className='radio-button'>
                                 <input type="radio" name="PreferredMethod" value="phoneNumber" checked />
                                 Phone number
@@ -139,4 +139,4 @@ const BrisbanePropertyForm = () => {
     );
   };
   
-  export default BrisbanePropertyForm;
+  export default IpswichPropertyFormPortfolio;

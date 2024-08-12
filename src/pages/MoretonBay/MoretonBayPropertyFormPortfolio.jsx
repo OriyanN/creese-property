@@ -2,19 +2,19 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import { useForm, ValidationError } from '@formspree/react';
 
-import BrisbanePropertiesData from "./BrisbanePropertiesData.js";
+import MoretonBayPropertiesDataPortfolio from './MoretonBayPropertiesDataPortfolio.js';
 import '../LocationsPropertyDetailsPage.css';
 import '../../components/AnimatedButton.css';
 
-const BrisbanePropertyForm = () => {
+const MoretonBayPropertyFormPortfolio = () => {
     const { propertyId } = useParams();
-    const property = BrisbanePropertiesData.find((p) => p.id === propertyId);
+    const property = MoretonBayPropertiesDataPortfolio.find((p) => p.id === propertyId);
   
-    const [state, handleSubmit] = useForm("mpzvgrer");
+    const [state, handleSubmit] = useForm("xwpepvbr");
   
-    if (!property) {
-      return <div>No form is available for this property</div>;
-    }
+    // if (!property) {
+    //   return <div>No form is available for this property</div>;
+    // }
   
     const [contactForm, setContactForm] = useState({
       firstName: '',
@@ -29,12 +29,12 @@ const BrisbanePropertyForm = () => {
         if (property) {
           setContactForm(prev => ({
             ...prev,
-            location: 'Brisbane',
+            location: 'Moreton Bay',
             property: property.address,
           }));
         }
     }, [propertyId, property]);
-  
+
     if (state.succeeded) {
       return (
           <>
@@ -78,11 +78,11 @@ const BrisbanePropertyForm = () => {
                       errors={state.errors}
                   />
                   <input 
-                    type="tel"
-                    name="phoneNumber"
-                    className='phoneNumber'
-                    placeholder='Phone Number'
-                    minLength={10}
+                      type="tel"
+                      name="phoneNumber"
+                      className='phoneNumber'
+                      placeholder='Phone Number'
+                      minLength={10}
                   />
               </div>
               <div className="property-dropdowns-section">
@@ -111,14 +111,14 @@ const BrisbanePropertyForm = () => {
               </div>
               <div className="newsletter-signup">
                 <label htmlFor="">
-                  <input type="checkbox" id="newsletterSignup" checked />
-                  I agree to the Privacy Policy and the Terms and Conditions.
-                </label>
+                        <input type="checkbox" id="newsletterSignup" checked />
+                        I agree to the Privacy Policy and the Terms and Conditions.
+                    </label>
                 </div>
               <div className="wrapper">
-                <button type="submit" disabled={state.submitting}>
-                    Submit
-                </button>
+                    <button type="submit" disabled={state.submitting}>
+                        Submit
+                    </button>
               </div>
             </form>
             <div className="disclaimer">
@@ -139,4 +139,4 @@ const BrisbanePropertyForm = () => {
     );
   };
   
-  export default BrisbanePropertyForm;
+  export default MoretonBayPropertyFormPortfolio;

@@ -13,7 +13,7 @@ const GoldCoastPropertyForm = () => {
     const [state, handleSubmit] = useForm("mbjnvyqq");
   
     if (!property) {
-      return <div>Property not found</div>;
+      return <div>No form is available for this property</div>;
     }
   
     const [contactForm, setContactForm] = useState({

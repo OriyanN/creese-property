@@ -12,25 +12,25 @@ import Loader from './components/Loader.jsx';
 const HomePage = lazy(() => import("./pages/HomePage.jsx"));
 const AboutPage = lazy(() =>  import("./pages/AboutPage.jsx"))
 const ContactPage = lazy(() => import("./pages/ContactPage.jsx"));
+import ServicesPage from './pages/ServicesPage.jsx';
 // const ServicesPage = lazy(() => import("./pages/ServicesPage.jsx"));
-const PortfolioPage = lazy(() => import("./pages/PortfolioPage.jsx"));
-const LocationsPage = lazy(() => import("./pages/LocationsPage.jsx"));
+// const PortfolioPage = lazy(() => import("./pages/PortfolioPage.jsx"));
+// const LocationsPage = lazy(() => import("./pages/LocationsPage.jsx"));
 const BrisbanePropertyDetailsPage = lazy(() => import("./pages/Brisbane/BrisbanePropertyDetailsPage.jsx"));
 const IpswichPropertyDetailsPage = lazy(() => import("./pages/Ipswich/IpswichPropertyDetailsPage.jsx"));
 const AssistantPropertyManagerPage = lazy(() => import("./pages/AssistantPropertyManager.jsx"));
 // import AboutPage from './pages/AboutPage.jsx';
-import ServicesPage from './pages/ServicesPage.jsx';
-// import PortfolioPage from './pages/PortfolioPage.jsx';
-// import LocationsPage from './pages/LocationsPage.jsx';
+import PortfolioPage from './pages/PortfolioPage.jsx';
+import LocationsPage from './pages/LocationsPage.jsx';
 // import BrisbanePropertyDetailsPage from './pages/Brisbane/BrisbanePropertyDetailsPage.jsx';
 // import IpswichPropertyDetailsPage from './pages/Ipswich/IpswichPropertyDetailsPage.jsx';
 // import AssistantPropertyManagerPage from './pages/AssistantPropertyManager.jsx';
 const GoldCoastPropertyDetailsPage = lazy(() => import('./pages/GoldCoast/GoldCoastPropertyDetailsPage.jsx'));
 const MoretonBayPropertyDetailsPage = lazy(() => import('./pages/MoretonBay/MoretonBayPropertyDetailsPage.jsx'));
-// const GoldCoastPropertyPortfolioDetailsPage = lazy(() => import('./pages/GoldCoast/GoldCoastPropertyPortfolioDetailsPage.jsx'));
-// const BrisbanePropertyPortfolioDetailsPage = lazy(() => import('./pages/Brisbane/BrisbanePropertyPortfolioDetailsPage.jsx'));
-// const IpswichPropertyPortfolioDetailsPage = lazy(() => import('./pages/Ipswich/IpswichPropertyPortfolioDetailsPage.jsx'));
-// const MoretonBayPropertyPortfolioDetailsPage = lazy(() => import('./pages/MoretonBay/MoretonBayPropertyPortfolioDetailsPage.jsx'));
+const GoldCoastPropertyPortfolioDetailsPage = lazy(() => import('./pages/GoldCoast/GoldCoastPropertyPortfolioDetailsPage.jsx'));
+const BrisbanePropertyPortfolioDetailsPage = lazy(() => import('./pages/Brisbane/BrisbanePropertyPortfolioDetailsPage.jsx'));
+const IpswichPropertyPortfolioDetailsPage = lazy(() => import('./pages/Ipswich/IpswichPropertyPortfolioDetailsPage.jsx'));
+const MoretonBayPropertyPortfolioDetailsPage = lazy(() => import('./pages/MoretonBay/MoretonBayPropertyPortfolioDetailsPage.jsx'));
 const CareersPage = lazy(() => import('./pages/CareersPage.jsx'));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage.jsx'));
 const TermsConditionPage = lazy(() => import('./pages/TermsConditionsPage.jsx'));
@@ -45,10 +45,10 @@ const router = createBrowserRouter([
       { path: "/about", element: <AboutPage /> },
       { path: "/services", element: <ServicesPage /> },
       { path: "/portfolio", element: <PortfolioPage /> },
-      // { path: "/portfolio/gold-coast/properties/:propertyId", element: <GoldCoastPropertyPortfolioDetailsPage /> },
-      // { path: "/portfolio/brisbane/properties/:propertyId", element: <BrisbanePropertyPortfolioDetailsPage /> },
-      // { path: "/portfolio/ipswich/properties/:propertyId", element: <IpswichPropertyPortfolioDetailsPage /> },
-      // { path: "/portfolio/moreton-bay/properties/:propertyId", element: <MoretonBayPropertyPortfolioDetailsPage /> },
+      { path: "/portfolio/gold-coast/properties/:propertyId", element: <GoldCoastPropertyPortfolioDetailsPage /> },
+      { path: "/portfolio/brisbane/properties/:propertyId", element: <BrisbanePropertyPortfolioDetailsPage /> },
+      { path: "/portfolio/ipswich/properties/:propertyId", element: <IpswichPropertyPortfolioDetailsPage /> },
+      { path: "/portfolio/moreton-bay/properties/:propertyId", element: <MoretonBayPropertyPortfolioDetailsPage /> },
       { path: "/rentals", element: <LocationsPage /> },
       { path: "/rentals/gold-coast/properties/:propertyId", element: <GoldCoastPropertyDetailsPage /> },
       { path: "/rentals/brisbane/properties/:propertyId", element: <BrisbanePropertyDetailsPage /> },

@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import { useForm, ValidationError } from '@formspree/react';
 
-import BrisbanePropertiesData from "./BrisbanePropertiesData.js";
+import BrisbanePropertiesDataPortfolio from "./BrisbanePropertiesDataPortfolio.js";
 import '../LocationsPropertyDetailsPage.css';
 import '../../components/AnimatedButton.css';
 
 const BrisbanePropertyForm = () => {
     const { propertyId } = useParams();
-    const property = BrisbanePropertiesData.find((p) => p.id === propertyId);
+    const property = BrisbanePropertiesDataPortfolio.find((p) => p.id === propertyId);
   
     const [state, handleSubmit] = useForm("mpzvgrer");
   

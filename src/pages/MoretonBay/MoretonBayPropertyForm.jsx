@@ -13,7 +13,7 @@ const MoretonBayPropertyForm = () => {
     const [state, handleSubmit] = useForm("xwpepvbr");
   
     if (!property) {
-      return <div>Property not found</div>;
+      return <div>No form is available for this property</div>;
     }
   
     const [contactForm, setContactForm] = useState({
