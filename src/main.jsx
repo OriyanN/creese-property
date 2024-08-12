@@ -12,14 +12,14 @@ import Loader from './components/Loader.jsx';
 const HomePage = lazy(() => import("./pages/HomePage.jsx"));
 const AboutPage = lazy(() =>  import("./pages/AboutPage.jsx"))
 const ContactPage = lazy(() => import("./pages/ContactPage.jsx"));
-// const ServicesPage = lazy(() => import("./pages/ServicesPage.jsx"));
+const ServicesPage = lazy(() => import("./pages/ServicesPage.jsx"));
 // const PortfolioPage = lazy(() => import("./pages/PortfolioPage.jsx"));
 // const LocationsPage = lazy(() => import("./pages/LocationsPage.jsx"));
 // const BrisbanePropertyDetailsPage = lazy(() => import("./pages/Brisbane/BrisbanePropertyDetailsPage.jsx"));
 // const IpswichPropertyDetailsPage = lazy(() => import("./pages/Ipswich/IpswichPropertyDetailsPage.jsx"));
 // const AssistantPropertyManagerPage = lazy(() => import("./pages/AssistantPropertyManager.jsx"));
 // import AboutPage from './pages/AboutPage.jsx';
-import ServicesPage from './pages/ServicesPage.jsx';
+// import ServicesPage from './pages/ServicesPage.jsx';
 import PortfolioPage from './pages/PortfolioPage.jsx';
 import LocationsPage from './pages/LocationsPage.jsx';
 import BrisbanePropertyDetailsPage from './pages/Brisbane/BrisbanePropertyDetailsPage.jsx';
