@@ -27,10 +27,10 @@ const AssistantPropertyManagerPage = lazy(() => import("./pages/AssistantPropert
 // import AssistantPropertyManagerPage from './pages/AssistantPropertyManager.jsx';
 const GoldCoastPropertyDetailsPage = lazy(() => import('./pages/GoldCoast/GoldCoastPropertyDetailsPage.jsx'));
 const MoretonBayPropertyDetailsPage = lazy(() => import('./pages/MoretonBay/MoretonBayPropertyDetailsPage.jsx'));
-const GoldCoastPropertyPortfolioDetailsPage = lazy(() => import('./pages/GoldCoast/GoldCoastPropertyPortfolioDetailsPage.jsx'));
-const BrisbanePropertyPortfolioDetailsPage = lazy(() => import('./pages/Brisbane/BrisbanePropertyPortfolioDetailsPage.jsx'));
-const IpswichPropertyPortfolioDetailsPage = lazy(() => import('./pages/Ipswich/IpswichPropertyPortfolioDetailsPage.jsx'));
-const MoretonBayPropertyPortfolioDetailsPage = lazy(() => import('./pages/MoretonBay/MoretonBayPropertyPortfolioDetailsPage.jsx'));
+// const GoldCoastPropertyPortfolioDetailsPage = lazy(() => import('./pages/GoldCoast/GoldCoastPropertyPortfolioDetailsPage.jsx'));
+// const BrisbanePropertyPortfolioDetailsPage = lazy(() => import('./pages/Brisbane/BrisbanePropertyPortfolioDetailsPage.jsx'));
+// const IpswichPropertyPortfolioDetailsPage = lazy(() => import('./pages/Ipswich/IpswichPropertyPortfolioDetailsPage.jsx'));
+// const MoretonBayPropertyPortfolioDetailsPage = lazy(() => import('./pages/MoretonBay/MoretonBayPropertyPortfolioDetailsPage.jsx'));
 const CareersPage = lazy(() => import('./pages/CareersPage.jsx'));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage.jsx'));
 const TermsConditionPage = lazy(() => import('./pages/TermsConditionsPage.jsx'));
