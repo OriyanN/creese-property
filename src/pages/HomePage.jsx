@@ -14,15 +14,16 @@ import Accordion from '../components/Accordion.jsx';
 import HomeDividerSection from '../components/HomeDividerSection.jsx';
 import ScrollRevealContainer from '../components/ScrollReveal.jsx'; 
 import Helmet from '../components/Helmet.jsx';
+import RentalAppraisalForm from '../components/RentalAppraisalForm.jsx';
 
 import videoBg from "/assets/CreeseHomePageVideo3.mp4";
-import preloaderImage from '/assets/CreesePropertyInitialImage.png';
+import preloaderImage from '../../public/assets/CreesePropertyInitialImage.png';
+import posterImage from '../../public/assets/Creese-Property-Home-Image.png'
 import CustomCursor from '../../public/assets/icons8-arrow-50.png';
 
 import AbbeyWay8 from '/assets/MoretonBay/AbbeyWay8/1.jpg';
 import BaturaStreet10 from '/assets/Brisbane/10-Batura-Street/1.jpg';
 import MilanCourt7 from '/assets/GoldCoast/7-milan-court/7-milan-court.jpeg';
-import RentalAppraisalForm from '../components/RentalAppraisalForm.jsx';
 
 const HomePage = () => {
     const [loading, setLoading] = useState(true);
@@ -148,7 +149,17 @@ const HomePage = () => {
                 <section className="section home">
                     <div className="video-text">Creese Property</div>
                     <div className="welcome">
-                        <video className="header-video" ref={videoRef} autoPlay loop muted playsInline alt="Creese Property Video" />
+                        <video
+                            className="header-video"
+                            ref={videoRef}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            preload="auto"
+                            poster={posterImage}
+                            alt="Creese Property Video"
+                        />
                     </div>
                         <div className="text-home">
                             <p>Communication and authenticity guides us. Through innovation and a people first focus we believe we can create outcomes that change expectations of your property investment experience.</p>
