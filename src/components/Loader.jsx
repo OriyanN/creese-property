@@ -31,7 +31,6 @@ const Loader = () => (
           />
         </circle>
       </svg>
-      <p>Loading...</p>
     </div>
   );  
 
