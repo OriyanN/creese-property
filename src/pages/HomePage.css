@@ -3,15 +3,10 @@
     overflow: hidden;
 }
 
-.header-video, .home-image {
+.header-video {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-}
-
-.home-image {
-    position: absolute;
-    z-index: -1;
 }
 
 @keyframes zoomInFadeOut {

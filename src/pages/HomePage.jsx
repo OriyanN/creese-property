@@ -16,7 +16,6 @@ import ScrollRevealContainer from '../components/ScrollReveal.jsx';
 import Helmet from '../components/Helmet.jsx';
 
 import videoBg from "/assets/CreeseHomePageVideo3.mp4";
-import imgBg from "/assets/Creese-Property-Home-Image.png";
 import preloaderImage from '/assets/CreesePropertyInitialImage.png';
 import CustomCursor from '../../public/assets/icons8-arrow-50.png';
 
@@ -150,7 +149,6 @@ const HomePage = () => {
                     <div className="video-text">Creese Property</div>
                     <div className="welcome">
                         <video className="header-video" ref={videoRef} autoPlay loop muted playsInline alt="Creese Property Video" />
-                        <img src={imgBg} alt="Creese Property Video" className="home-image" />
                     </div>
                         <div className="text-home">
                             <p>Communication and authenticity guides us. Through innovation and a people first focus we believe we can create outcomes that change expectations of your property investment experience.</p>
