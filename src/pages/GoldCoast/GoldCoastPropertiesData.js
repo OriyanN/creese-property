@@ -37,7 +37,7 @@ const GoldCoastPropertiesData = [
     baths: 2,
     car: 2,
     availability: 'Available 29 August',
-    features: ['Air conditioning', 'Fans', 'Outdoor BBQ', 'Garage', 'Dishwasher','Undercover Outdoor area'],
+    features: ['Air conditioning', 'Fans', 'Outdoor BBQ', 'Garage', 'Dishwasher','Undercover Outdoor area', 'Pool', 'Fence', 'Driveway'],
     description: ["Discover the charm of this older-style gem, offering everything you need for comfortable and convenient living. Nestled in a peaceful cul-de-sac on the sought-after Isle of Capri, this home features generously sized rooms throughout, making it ideal for both relaxed living and entertaining.", 
       "",
       "Features You Will Love:", "- 4 Large Bedrooms: Each with built-in robes (BIRs), providing ample storage.", "- Well-Equipped Entertaining Kitchen: Perfect for culinary creations and family gatherings.", "- Dining Area: Ideal for enjoying meals with loved ones.", "- 2 Bathrooms: Including a main bathroom with a luxurious spa bath.", "- Huge Living Area: Designed for relaxation and entertaining.", "- Ceiling Fans Throughout: Stay comfortable year-round.", "- Split Systems in Bedrooms: Ensuring a cool, comfortable sleep.", "- Privacy: Enjoy peace and tranquillity in a quiet location.", "- In-Ground Pool: A private oasis to enjoy during the warmer months.", "- Outdoor BBQ and Undercover Area: Perfect for alfresco dining and entertaining.", "- Large Block: Plenty of space for outdoor activities and family fun.", "- Ample Car Spaces: Convenient parking options, including a workshop/storage room.", 
