@@ -4,6 +4,8 @@ Allow: /
 Disallow: /privacy
 Disallow: /terms-conditions
 Disallow: /rentals/*
+Disallow: /portfolio/*
+Disallow: /careers/*
 
 Sitemap: https://www.creeseproperty.com/sitemap.xml
 Host: https://www.creeseproperty.com
