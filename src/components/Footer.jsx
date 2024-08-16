@@ -62,7 +62,7 @@ const Footer = () => {
             Services
           </Link>
           <Link to="/rentals" onClick={scrollToTop}>
-            Services
+            Rentals
           </Link>
           {/* <Link to="/portfolio" onClick={scrollToTop}>
             Portfolio
