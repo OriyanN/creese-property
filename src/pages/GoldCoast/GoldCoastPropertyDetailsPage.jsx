@@ -69,6 +69,8 @@ const GoldCoastPropertyDetailsPage = () => {
         setSuggestedProperties(getThreeRandomProperties());
     }
   }, [propertyId, property]);
+  
+  if (!property) return null;
 
   return (
     <>

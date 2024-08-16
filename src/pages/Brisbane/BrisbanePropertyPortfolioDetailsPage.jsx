@@ -48,6 +48,8 @@ const BrisbanePropertyPortfolioDetailsPage = () => {
     }
   }, [propertyId, property]);
 
+  if (!property) return null;
+
   return (
     <>
       <Helmet>

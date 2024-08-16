@@ -58,6 +58,8 @@ const MoretonBayPropertyDetailsPage = () => {
     return () => map.remove();
   }, [propertyId, property]);
 
+  if (!property) return null;
+
   useEffect(() => {
     const getThreeRandomProperties = () => {
         const otherProperties = MoretonBayPropertiesData.filter(p => p.id !== propertyId);

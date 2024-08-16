@@ -30,18 +30,11 @@ const IpswichPropertyPortfolioDetailsPage = () => {
   const thumbnailsRef = React.useRef(null);
   const slides = property ? property.images.map(src => ({ src })) : [];
   
-  const [error, setError] = useState(false);
-
   useEffect(() => {
-    try {
-      if (!property || !property.images || slides.length === 0 || !property.id) {
-        throw new Error('Property data is incomplete or invalid');
-      }
-    } catch (error) {
-      console.error('Error:', error.message);
-      setError(true);
+    if (!property || !property.images || slides.length === 0) {
+      navigate('/404');
     }
-  }, [property, slides.length]);
+  }, [property, navigate, slides.length]);
 
   useEffect(() => {
     try {
@@ -60,11 +53,7 @@ const IpswichPropertyPortfolioDetailsPage = () => {
     }
   }, [propertyId, property]);
 
-  useEffect(() => {
-    if (error) {
-      navigate('/404');
-    }
-  }, [error, navigate]);
+  if (!property) return null;
 
   return (
     <>

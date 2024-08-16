@@ -70,6 +70,8 @@ const IpswichPropertyDetailsPage = () => {
     }
   }, [propertyId, property]);
 
+  if (!property) return null;
+
   const isInspectionDateValid = (inspectionStartTime) => {
     if (!inspectionStartTime) return false;
     const currentDate = new Date();

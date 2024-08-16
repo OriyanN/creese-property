@@ -36,7 +36,6 @@ const MoretonBayPropertyPortfolioDetailsPage = () => {
     }
   }, [property, navigate, slides.length]);
 
-
   useEffect(() => {
     const getThreeRandomProperties = () => {
         const otherProperties = MoretonBayPropertiesDataPortfolio.filter(p => p.id !== propertyId);
@@ -48,6 +47,8 @@ const MoretonBayPropertyPortfolioDetailsPage = () => {
         setSuggestedProperties(getThreeRandomProperties());
     }
   }, [propertyId, property]);
+
+  if (!property) return null;
 
   return (
     <>

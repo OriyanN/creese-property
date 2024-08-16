@@ -48,6 +48,8 @@ const GoldCoastPropertyPortfolioDetailsPage = () => {
     }
   }, [propertyId, property]);
 
+  if (!property) return null;
+
   return (
     <>
       <Helmet>
