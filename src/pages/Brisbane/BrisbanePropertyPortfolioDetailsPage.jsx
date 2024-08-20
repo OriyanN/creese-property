@@ -52,10 +52,12 @@ const BrisbanePropertyPortfolioDetailsPage = () => {
 
   return (
     <>
-      <Helmet>
-          <title>Brisbane | Creese Property</title>
-          <meta name="description" content="Discover Creese Property's expert residential management and consultancy services in the Brisbane area." />
-          <meta name="robots" content="noindex"/>
+      <Helmet
+        title="Brisbane | Creese Property"
+        description="Discover Creese Property's expert residential management and consultancy services in the Brisbane area."
+        link={`/portfolio/brisbane/properties/${property.id}`}
+        noIndex
+      >
           <link rel="canonical" href={`/portfolio/brisbane/properties/${property.id}`} />
       </Helmet>
       <ScrollToTop />

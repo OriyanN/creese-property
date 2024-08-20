@@ -52,10 +52,12 @@ const GoldCoastPropertyPortfolioDetailsPage = () => {
 
   return (
     <>
-      <Helmet>
-          <title>Gold Coast | Creese Property</title>
-          <meta name="description" content="Discover Creese Property's expert residential management and consultancy services in the Gold Coast area." />
-          <meta name="robots" content="noindex"/>
+      <Helmet
+        title="Gold Coast | Creese Property"
+        description="Discover Creese Property's expert residential management and consultancy services in the Gold Coast area."
+        link={`/portfolio/gold-coast/properties/${property.id}`}
+        noIndex
+      >
           <link rel="canonical" href={`/portfolio/gold-coast/properties/${property.id}`} />
       </Helmet>
       <ScrollToTop />

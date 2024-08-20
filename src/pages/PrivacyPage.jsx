@@ -13,7 +13,7 @@ function PrivacyPage() {
                 title="Privacy"
                 link="/privacy"
                 addPostfixTitle
-                noindex
+                noIndex
             >
             </Helmet>
             <ScrollToTop />

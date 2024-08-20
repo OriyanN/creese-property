@@ -13,7 +13,7 @@ function NotFoundPage() {
                 title="404"
                 link="*"
                 addPostfixTitle
-                noindex
+                noIndex
             >
             </Helmet>
             <div className='notfound-background'>

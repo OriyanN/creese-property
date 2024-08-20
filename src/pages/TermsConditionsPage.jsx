@@ -13,7 +13,7 @@ function TermsConditionPage() {
                 title="Terms and Conditions"
                 link="/terms-conditions"
                 addPostfixTitle
-                noindex
+                noIndex
             >
             </Helmet>
             <ScrollToTop />

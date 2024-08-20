@@ -57,10 +57,12 @@ const IpswichPropertyPortfolioDetailsPage = () => {
 
   return (
     <>
-      <Helmet>
-          <title>Ipswich | Creese Property</title>
-          <meta name="description" content="Discover Creese Property's expert residential management and consultancy services in the Ipswich area." />
-          <meta name="robots" content="noindex"/>
+      <Helmet
+        title="Ipswich | Creese Property"
+        description="Discover Creese Property's expert residential management and consultancy services in the Ipswich area."
+        link={`/portfolio/ipswich/properties/${property.id}`}
+        noIndex
+      >
           <link rel="canonical" href={`/portfolio/ipswich/properties/${property.id}`} />
       </Helmet>
       <ScrollToTop />

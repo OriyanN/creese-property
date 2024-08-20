@@ -95,10 +95,12 @@ const MoretonBayPropertyDetailsPage = () => {
 
   return (
     <>
-      <Helmet>
-          <title>Moreton Bay | Creese Property</title>
-          <meta name="description" content="Discover Creese Property's expert residential management and consultancy services in the Moreton Bay area." />
-          <meta name="robots" content="noindex"/>
+      <Helmet
+        title="Moreton Bay | Creese Property"
+        description="Discover Creese Property's expert residential management and consultancy services in the Moreton Bay area."
+        link={`/rentals/moreton-bay/properties/${property.id}`}
+        noIndex
+      >
           <link rel="canonical" href={`/rentals/moreton-bay/properties/${property.id}`} />
       </Helmet>
       <ScrollToTop />
