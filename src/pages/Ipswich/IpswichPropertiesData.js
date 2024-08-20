@@ -1,5 +1,5 @@
 // import * as TysonStreet9 from '../../../public/assets/Ipswich/832-9-tyson-street';
-import * as EndeavourCres7 from '../../../public/assets/Ipswich/7-endevour-cresent';
+import * as BeamingRoad32 from '../../../public/assets/Ipswich/32-beaming-road';
 import * as AspireStreet26 from '../../../public/assets/Ipswich/26-aspire-street';
 import * as AspireStreet27 from '../../../public/assets/Ipswich/27-aspire-street';
 
@@ -17,22 +17,34 @@ const IpswichPropertiesData = [
   //   lat: -27.416270,
   //   lng: 153.032310
   // },
-  // {
-  //   id: '7-endevour-cresent',
-  //   images: Object.values(EndeavourCres7),
-  //   address: '7 Endeavour Cres, Pallara',
-  //   price: 835,
-  //   beds: 4,
-  //   baths: 2.5,
-  //   car: 2,
-  //   // availability: 'Available 25 Aug',
-  //   inspectionStartTime: '2024-07-01T08:00:00Z',
-  //   inspectionEndTime: '2024-07-01T08:30:00Z',
-  //   features: ['Air conditioning', 'Roller Blinds', 'Quality Carpets', 'Driveway', 'Outdoor area', 'Stone Benchtops', 'Dishwasher', 'Double Garage', 'Built-in wardrobes'],
-  //   description: ["Discover your dream home at Hideaway Estate! This magnificent 4-bedroom, 2-bathrooms PLUS Powder Room residence offers the perfect blend of luxury and comfort.", "", "Downstairs:", "- Entry", "- Family room", "- Separate dining room", "- Modern kitchen with Smeg dishwasher, Smeg Oven and Cooktop", "- Walk In Pantry", "- Laundry", "- Powder room with Frameless Mirrors", "- Alfresco area for outdoor entertaining or for a relaxing weekend", "- Spacious garage", "", "Upstairs:", "- 4 bedrooms, including:", "- Master bedroom with walk-in robe and ensuite", "- Frameless Mirrors to Ensuite and Main Bathroom", "- Sitting area at the top of the stairs", "- Main Bathroom with Bath", "- Separate toilet", "- Study nook", "", "Additional Features:", "- Ducted air conditioning throughout for year-round comfort", "Brand new community, close to Pallara Childcare, Pallara Early Learning Centre, Pallara Park, Pallara State School, St John's Anglican College, Forest Lake State High School, Pallara Shopping Village with Coles, Public Transport. The suburb features local parks with playgrounds, BBQ areas, and sports fields, providing opportunities for relaxation and family gatherings. Additionally, nearby natural reserves such as Karawatha Forest offer residents walking trails and wildlife viewing experiences", "Approximately 30 minutes to Brisbane CBD and 55 minutes to Surfers Paradise", "Don’t miss the opportunity to make it yours! Contact us today to arrange a viewing."],
-  //   lat: -27.619210,
-  //   lng: 152.996900
-  // },
+  {
+    id: '32-beaming-road',
+    images: Object.values(BeamingRoad32),
+    address: '32 Beaming Rd, Ripley',
+    price: 750,
+    beds: 4,
+    baths: 2.5,
+    car: 2,
+    // availability: 'Available 25 Aug',
+    inspectionStartTime: '2024-08-22T09:30:00',
+    inspectionEndTime: '2024-08-22T09:45:00',
+    features: ['Air conditioning', 'Ensuite', 'Breakfast bar', 'Driveway', 'Outdoor area', 'Fans', 'Dishwasher', 'Double Garage', 'Built-in wardrobes'],
+    description: ["Welcome to your new home in the vibrant and rapidly growing community of Ripley! This stunning 4-bedroom, 2-bathroom house is located in a brand-new estate, offering modern living with all the comforts and conveniences you desire.", 
+      "", 
+      "Features you will love:", "- Four generous-sized bedrooms, each with built-in wardrobes and plenty of natural light.", "- Master Bedroom with Walk In Robe and Ensuite", "- Air Conditioning to Master Bedroom and Living Area - Stay comfortable year-round.", "- Beautifully designed bathrooms, featuring contemporary fixtures and finishes.", "- Open plan living and dining area perfect for entertaining or relaxing with family.", "- Fully equipped with high-quality appliances, Gas 5 burner Stove, ample storage, and a breakfast bar.", "- A covered alfresco area and a landscaped backyard, ideal for outdoor dining and activities.", "- Alfresco area for outdoor entertaining or for a relaxing weekend", "- Double Garage - parking for two vehicles with internal access to the home.", 
+      "", 
+      "Highlights:", "- Brand new estate in a sought-after area", "- Proximity to essential amenities", "- Family-friendly neighbourhood", "- High-quality finishes and modern design", 
+      "", 
+      "Ripley is a family friendly suburb, so close to all Amenities, Shops, Cafés , Hairdressers and Schools, also there is easy access to the M1 for a quick commute to either Brisbane or the Gold Coast.", 
+      "4.5 kms Ripley Town Centre", 
+      "6.5 kms Ripley Valley State School", 
+      "6.0 kms Ripley Valley State Secondary College", 
+      "6.4 kms Ripley Satellite Hospital",
+      "7.6 kms to Willowtree Park Flinders View",
+      "Don't miss out on this fantastic opportunity to live in a brand-new home in Ripley's latest estate. Move in and enjoy the lifestyle you deserve!"],
+    lat: -27.675480,
+    lng: 152.790010
+  },
   // {
   //   id: '26-aspire-street',
   //   images: Object.values(AspireStreet26),
