@@ -70,10 +70,10 @@ const HomePage = () => {
     }, []);
 
     const images = [
-        { id: 1, url: AbbeyWay8, address: '8 Abbey Way, Warner', description: 'Relaxing Lifestyle', link: '/rentals/moreton-bay/properties/8-abbey-way' },
-        { id: 2, url: BaturaStreet10, address: '10 Batura Street, Pallara', description: 'Peaceful Lifestyle', link: '/rentals/brisbane/properties/10-Batura-Street' },
-        { id: 3, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Spacious 4-bedroom Family Home in Prime Isle of Capri Location', link: '/rentals/gold-coast/properties/7-milan-court' },
-        { id: 4, url: BeamingRoad32, address: '32 Beaming Road, Ripley', description: 'This Home is “BEAMING”', link: '/rentals/ipswich/properties/32-beaming-road' },
+        { id: 1, url: BeamingRoad32, address: '32 Beaming Road, Ripley', description: 'This Home is “BEAMING”', link: '/rentals/ipswich/properties/32-beaming-road' },
+        { id: 2, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Spacious 4-bedroom Family Home in Prime Isle of Capri Location', link: '/rentals/gold-coast/properties/7-milan-court' },
+        { id: 3, url: AbbeyWay8, address: '8 Abbey Way, Warner', description: 'Relaxing Lifestyle', link: '/rentals/moreton-bay/properties/8-abbey-way' },
+        { id: 4, url: BaturaStreet10, address: '10 Batura Street, Pallara', description: 'Peaceful Lifestyle', link: '/rentals/brisbane/properties/10-Batura-Street' },
     ];
 
     useEffect(() => {
