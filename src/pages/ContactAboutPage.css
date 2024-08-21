@@ -16,7 +16,7 @@
 
 .career-ad-specific h1 {
     font-size: 12rem;
-    padding: 35vh 3% 0 3%;
+    padding: 35vh 9% 0 9%;
 }
 
 .contact-about-header .overlay {
@@ -171,7 +171,7 @@
 @media (max-width: 1385px) {
     .career-ad-specific h1 {
         font-size: 12rem;
-        padding: 30vh 3% 0 3%;
+        padding: 30vh 9% 0 9%;
     }
 }
 
