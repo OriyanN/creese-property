@@ -117,7 +117,6 @@ const HomePage = () => {
     return (
         <>
             <Helmet
-                title="Home"
                 description="Creese Property: Your expert partner in residential property management, buyer’s agency, and consultancy."
                 link="/"
                 addPostfixTitle 
