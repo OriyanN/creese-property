@@ -42,16 +42,4 @@
         <lastmod>2024-06-21</lastmod>
         <priority>0.5</priority>
     </url>
-    <!-- Privacy Page -->
-    <url>
-        <loc>https://www.creeseproperty.com/privacy/</loc>
-        <lastmod>2024-06-21</lastmod>
-        <priority>0.3</priority>
-    </url>
-    <!-- Terms and Conditions Page -->
-    <url>
-        <loc>https://www.creeseproperty.com/terms-conditions/</loc>
-        <lastmod>2024-06-21</lastmod>
-        <priority>0.3</priority>
-    </url>
 </urlset>
