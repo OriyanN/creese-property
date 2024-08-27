@@ -31,5 +31,10 @@
     "eslint-plugin-react-refresh": "^0.4.7",
     "vite": "^5.2.11",
     "vite-plugin-html-minifier": "^1.0.4"
-  }
+  },
+  "main": "generateAssetsIndex.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
