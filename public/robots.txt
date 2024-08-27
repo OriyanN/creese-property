@@ -1,11 +1,27 @@
 User-agent: *
-Allow: /
+Allow: /about
+Allow: /services
+Allow: /rentals
+Allow: /contact
+Allow: /careers
 
 Disallow: /privacy
 Disallow: /terms-conditions
+Disallow: /locations/*
+Disallow: /leasing
+Disallow: /leasing/*
 Disallow: /rentals/*
+Disallow: /rentals/brisbane/properties/*
+Disallow: /rentals/gold-coast/properties/*
+Disallow: /rentals/ipswich/properties/*
+Disallow: /rentals/moreton-bay/properties/*
 Disallow: /portfolio/*
+Disallow: /portfolio/brisbane/properties/*
+Disallow: /portfolio/gold-coast/properties/*
+Disallow: /portfolio/ipswich/properties/*
+Disallow: /portfolio/moreton-bay/properties/*
 Disallow: /careers/*
+Disallow: /careers/assistant-property-manager
 
 Sitemap: https://www.creeseproperty.com/sitemap.xml
 Host: https://www.creeseproperty.com
