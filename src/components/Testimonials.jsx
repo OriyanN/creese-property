@@ -56,7 +56,7 @@ function Testimonials() {
                 <Swiper
                     modules = {[ Autoplay, Pagination ]}
                     slidesPerView={2}
-                    spaceBetween={50}
+                    spaceBetween={75}
                     centeredSlides={true}
                     grabCursor={true}
                     loop={true}
