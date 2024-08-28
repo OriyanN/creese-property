@@ -17,6 +17,7 @@ import PortfolioPage from './pages/PortfolioPage.jsx';
 const ContactPage = lazy(() => import("./pages/ContactPage.jsx"));
 import GoldCoastPropertyDetailsPage from './pages/GoldCoast/GoldCoastPropertyDetailsPage.jsx';
 import MoretonBayPropertyDetailsPage from './pages/MoretonBay/MoretonBayPropertyDetailsPage.jsx';
+import LeasedPropertyPage from './pages/LeasedProperty.jsx';
 const BrisbanePropertyDetailsPage = lazy(() => import("./pages/Brisbane/BrisbanePropertyDetailsPage.jsx"));
 const IpswichPropertyDetailsPage = lazy(() => import("./pages/Ipswich/IpswichPropertyDetailsPage.jsx"));
 const AssistantPropertyManagerPage = lazy(() => import("./pages/AssistantPropertyManager.jsx"));
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
   {
     path: "*",
     element: <NotFoundPage />,
+  },
+  {
+    path: "/leased-property",
+    element: <LeasedPropertyPage />,
   },
 ]);
 

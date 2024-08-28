@@ -33,7 +33,7 @@ const BrisbanePropertyDetailsPage = () => {
 
   useEffect(() => {
     if (!property || !property.images || slides.length === 0) {
-      navigate('/404');
+      navigate('/leased-property');
     }
   }, [property, navigate, slides.length]);
 

@@ -14,12 +14,49 @@
     font-size: 2.25rem;
     color: var(--white);
     padding: 0.5rem 0 3rem 0;
+    font-family: Versailles;
+}
+
+.notfound-background a.leased-button {
+    color: var(--white);
+    font-size: 2.75rem;
+    font-family: Versailles;
+}
+
+.leased-button {
+    color: var(--beige);
+    text-decoration: underline var(--beige) !important;
+    background-image: linear-gradient(
+    to right,
+    #294162,
+    #294162 50%,
+    #d6d0c8 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+.leased-button:hover {
+    background-position: 0;
+}
+
+.leasedproperty-header {
+    font-size: 8rem;
+    color: var(--white);
     font-family: VersaillesBold;
 }
 
-.notfound-background a.gallery-button {
-    color: var(--white);
-    font-size: 2.5rem;
-    font-family: VersaillesBold;
-    text-decoration: underline !important;
+@media (max-width: 650px) {
+    .leasedproperty-header {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .leasedproperty-header {
+        font-size: 4.5rem;
+    }
 }
