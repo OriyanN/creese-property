@@ -27,31 +27,31 @@ const MoretonBayPropertiesData = [
   //   lat: -28.005650,
   //   lng: 153.322500
   // },
-  {
-    id: '8-abbey-way',
-    images: Object.values(AbbeyWay8),
-    address: '8 Abbey Way, Warner',
-    price: 700,
-    beds: 4,
-    baths: 2,
-    car: 2,
-    features: ['Air conditioning', 'Fully fenced', 'Outdoor area', 'Hot water service', 'Dishwasher', 'Double garage', 'Built-in wardrobes', 'Ensuite', '2 Toilets'],
-    description: [
-      "A Brand New Community and Brand New Home To Make Your Own. Move in and enjoy the lifestyle that Warner has to offer. Entertain on the weekends or just sit back, put your feet up and relax, in the wonderful Alfresco area.", 
-      "", 
-      "Features you will love:", "- Master bedroom with Walk In Robe and en-suite", "- 3 additional bedrooms all have built in wardrobes", "- Elegant Stone Benchtops in your Kitchen", "- Dishwasher", "- 5 Burner Gas Stove", "- Great size family bathroom with shower, separate bath plus toilet", "- Ducted Air Conditioning for year round comfort", "- Double car garage", "- Ceiling Fans Throughout", "- Low maintenance garden would suit busy families or executive couple", 
-      "", 
-      "Warner is a family friendly suburb, so close to all Amenities, Shops, Cafés, Hairdressers and Schools, also there is easy access to the M1 for a quick commute to either Brisbane or the Gold Coast.", 
-      "", 
-      "5.6 kms MarketPlace Warner", "6.5 kms Strathpine West State School", "4.6 kms Bray Park State High School", "3.1 kms Warner Lakes Family Medical", "3.1 kms Green Leaves Early Learning Warner Lakes", 
-      "",
-      "Move in and enjoy the lifestyle you deserve!"
-    ],
-    inspectionStartTime: '2024-08-01T10:00:00',
-    inspectionEndTime: '2024-08-01T10:15:00',
-    lat: -28.005620,
-    lng: 153.322310
-  },
+  // {
+  //   id: '8-abbey-way',
+  //   images: Object.values(AbbeyWay8),
+  //   address: '8 Abbey Way, Warner',
+  //   price: 700,
+  //   beds: 4,
+  //   baths: 2,
+  //   car: 2,
+  //   features: ['Air conditioning', 'Fully fenced', 'Outdoor area', 'Hot water service', 'Dishwasher', 'Double garage', 'Built-in wardrobes', 'Ensuite', '2 Toilets'],
+  //   description: [
+  //     "A Brand New Community and Brand New Home To Make Your Own. Move in and enjoy the lifestyle that Warner has to offer. Entertain on the weekends or just sit back, put your feet up and relax, in the wonderful Alfresco area.", 
+  //     "", 
+  //     "Features you will love:", "- Master bedroom with Walk In Robe and en-suite", "- 3 additional bedrooms all have built in wardrobes", "- Elegant Stone Benchtops in your Kitchen", "- Dishwasher", "- 5 Burner Gas Stove", "- Great size family bathroom with shower, separate bath plus toilet", "- Ducted Air Conditioning for year round comfort", "- Double car garage", "- Ceiling Fans Throughout", "- Low maintenance garden would suit busy families or executive couple", 
+  //     "", 
+  //     "Warner is a family friendly suburb, so close to all Amenities, Shops, Cafés, Hairdressers and Schools, also there is easy access to the M1 for a quick commute to either Brisbane or the Gold Coast.", 
+  //     "", 
+  //     "5.6 kms MarketPlace Warner", "6.5 kms Strathpine West State School", "4.6 kms Bray Park State High School", "3.1 kms Warner Lakes Family Medical", "3.1 kms Green Leaves Early Learning Warner Lakes", 
+  //     "",
+  //     "Move in and enjoy the lifestyle you deserve!"
+  //   ],
+  //   inspectionStartTime: '2024-08-01T10:00:00',
+  //   inspectionEndTime: '2024-08-01T10:15:00',
+  //   lat: -28.005620,
+  //   lng: 153.322310
+  // },
 ];
   
 export default MoretonBayPropertiesData;
