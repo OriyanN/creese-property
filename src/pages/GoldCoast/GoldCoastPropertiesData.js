@@ -36,7 +36,7 @@ const GoldCoastPropertiesData = [
     beds: 4,
     baths: 2,
     car: 2,
-    availability: 'Available 29 August',
+    // availability: 'Available 29 August',
     features: ['Air conditioning', 'Fans', 'Outdoor BBQ', 'Garage', 'Dishwasher','Undercover Outdoor area', 'Pool', 'Fence', 'Driveway'],
     description: ["Discover the charm of this older-style gem, offering everything you need for comfortable and convenient living. Nestled in a peaceful cul-de-sac on the sought-after Isle of Capri, this home features generously sized rooms throughout, making it ideal for both relaxed living and entertaining.", 
       "",
