@@ -13,7 +13,7 @@ import Helmet from '../components/Helmet.jsx';
 import GoldCoastPropertiesData from '../pages/GoldCoast/GoldCoastPropertiesData';
 import BrisbanePropertiesData from '../pages/Brisbane/BrisbanePropertiesData';
 import IpswichPropertiesData from '../pages/Ipswich/IpswichPropertiesData';
-// import LoganPropertiesData from '../pages/Logan/LoganPropertiesData';
+import LoganPropertiesData from '../pages/Logan/LoganPropertiesData';
 import MoretonBayPropertiesData from './MoretonBay/MoretonBayPropertiesData.js';
 import "./LocationsPage.css";
 
@@ -21,15 +21,15 @@ import mainInitialImage from "/assets/leasing-image.jpg";
 import mainGoldCoast from "/assets/GoldCoast/gold-coast.jpg";
 import mainBrisbane from "/assets/Brisbane/brisbane.jpg";
 import mainIpswich from "/assets/Ipswich/ipswich.jpg";
-// import mainLogan from "/assets/Logan/logan.jpg";
-import mainMoretonBay from "/assets/Logan/logan.jpg";
+import mainLogan from "/assets/Logan/logan.jpg";
+import mainMoretonBay from "/assets/MoretonBay/moreton-bay.jpg";
 
 const LocationsPage = () => {
     const allPropertiesData = [
         ...GoldCoastPropertiesData.map(item => ({ ...item, location: 'Gold Coast' })),
         ...BrisbanePropertiesData.map(item => ({ ...item, location: 'Brisbane' })),
         ...IpswichPropertiesData.map(item => ({ ...item, location: 'Ipswich' })),
-        // ...LoganPropertiesData.map(item => ({ ...item, location: 'Logan' })),
+        ...LoganPropertiesData.map(item => ({ ...item, location: 'Logan' })),
         ...MoretonBayPropertiesData.map(item => ({ ...item, location: 'Moreton Bay' })),
     ];
 
@@ -57,7 +57,7 @@ const LocationsPage = () => {
         "Gold Coast": mainGoldCoast,
         "Brisbane": mainBrisbane,
         "Ipswich": mainIpswich,
-        // "Logan": mainLogan,
+        "Logan": mainLogan,
         "Moreton Bay": mainMoretonBay,
     };
 
@@ -68,7 +68,7 @@ const LocationsPage = () => {
         { value: 'Gold Coast', label: 'Gold Coast' },
         { value: 'Brisbane', label: 'Brisbane' },
         { value: 'Ipswich', label: 'Ipswich' },
-        // { value: 'Logan', label: 'Logan' },
+        { value: 'Logan', label: 'Logan' },
         { value: 'Moreton Bay', label: 'Moreton Bay' },
     ];
 
