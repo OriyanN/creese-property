@@ -141,6 +141,9 @@ const GoldCoastPropertyDetailsPage = () => {
               <p>{property.description}</p>
             )}
           </div>
+          <div>
+            <p><a className='apply-link' href="https://snug.com/apply/creeseproperty">PLEASE APPLY VIA SNUG</a></p>
+          </div>
           <div className="property-features">
             {property.features.map((feature, index) => (
               <div key={index} className="feature-box">
