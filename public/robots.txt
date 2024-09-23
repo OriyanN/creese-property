@@ -23,5 +23,5 @@ Disallow: /portfolio/moreton-bay/properties/*
 Disallow: /careers/*
 Disallow: /careers/assistant-property-manager
 
-Sitemap: https://www.creeseproperty.com/sitemap.xml
+Sitemap: https://creeseproperty.com/sitemap.xml
 Host: https://www.creeseproperty.com

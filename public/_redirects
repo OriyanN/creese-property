@@ -5,4 +5,4 @@
 /old-path    /new-path   301
 
 # Redirect HTTP to HTTPS
-http://www.creeseproperty.com/*  https://www.creeseproperty.com/:splat  301!
+http://www.creeseproperty.com/*  https://creeseproperty.com/:splat  301!

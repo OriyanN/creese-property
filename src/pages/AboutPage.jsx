@@ -30,19 +30,19 @@ function AboutPage() {
                         "@graph": [
                           {
                             "@type": "BreadcrumbList",
-                            "@id": "https://www.creeseproperty.com/#breadcrumb",
+                            "@id": "https://creeseproperty.com/#breadcrumb",
                             "itemListElement": [
                               {
                                 "@type": "ListItem",
                                 "name": "Home",
                                 "position": "1",
-                                "item": "https://www.creeseproperty.com/"
+                                "item": "https://creeseproperty.com/"
                               },
                               {
                                 "@type": "ListItem",
                                 "name": "About",
                                 "position": "2",
-                                "item": "https://www.creeseproperty.com/about/"
+                                "item": "https://creeseproperty.com/about/"
                               }
                             ]
                           },

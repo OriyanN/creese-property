@@ -125,7 +125,7 @@ const HomePage = () => {
                         "@graph": [
                           {
                             "@type": "BreadcrumbList",
-                            "@id": "https://www.creeseproperty.com/#breadcrumb",
+                            "@id": "https://creeseproperty.com/#breadcrumb",
                             "itemListElement": [
                               {
                                 "@type": "ListItem",

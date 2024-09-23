@@ -27,49 +27,49 @@ function CareersPage() {
                   "@graph": [
                     {
                       "@type": "BreadcrumbList",
-                      "@id": "https://www.creeseproperty.com/#breadcrumb",
+                      "@id": "https://creeseproperty.com/#breadcrumb",
                       "itemListElement": [
                         {
                           "@type": "ListItem",
                           "name": "Home",
                           "position": "1",
-                          "item": "https://www.creeseproperty.com/"
+                          "item": "https://creeseproperty.com/"
                         },
                         {
                           "@type": "ListItem",
                           "name": "About",
                           "position": "2",
-                          "item": "https://www.creeseproperty.com/about/"
+                          "item": "https://creeseproperty.com/about/"
                         },
                         {
                           "@type": "ListItem",
                           "name": "Services",
                           "position": "3",
-                          "item": "https://www.creeseproperty.com/services/"
+                          "item": "https://creeseproperty.com/services/"
                         },
                         {
                           "@type": "ListItem",
                           "name": "Portfolio",
                           "position": "4",
-                          "item": "https://www.creeseproperty.com/portfolio/"
+                          "item": "https://creeseproperty.com/portfolio/"
                         },
                         {
                           "@type": "ListItem",
                           "name": "Rentals",
                           "position": "5",
-                          "item": "https://www.creeseproperty.com/rentals/"
+                          "item": "https://creeseproperty.com/rentals/"
                         },
                         {
                           "@type": "ListItem",
                           "name": "Contact",
                           "position": "6",
-                          "item": "https://www.creeseproperty.com/contact/"
+                          "item": "https://creeseproperty.com/contact/"
                         },
                         {
                           "@type": "ListItem",
                           "name": "Careers",
                           "position": "7",
-                          "item": "https://www.creeseproperty.com/careers/"
+                          "item": "https://creeseproperty.com/careers/"
                         }
                       ]
                     }

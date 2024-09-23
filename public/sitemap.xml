@@ -2,43 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Homepage -->
     <url>
-        <loc>https://www.creeseproperty.com/</loc>
+        <loc>https://creeseproperty.com/</loc>
         <lastmod>2024-06-21</lastmod>
         <priority>1.0</priority>
     </url>
     <!-- About Page -->
     <url>
-        <loc>https://www.creeseproperty.com/about/</loc>
+        <loc>https://creeseproperty.com/about/</loc>
         <lastmod>2024-06-21</lastmod>
         <priority>0.8</priority>
     </url>
     <!-- Services Page -->
     <url>
-        <loc>https://www.creeseproperty.com/services/</loc>
+        <loc>https://creeseproperty.com/services/</loc>
         <lastmod>2024-06-21</lastmod>
         <priority>0.8</priority>
     </url>
     <!-- Portfolio Page -->
     <url>
-        <loc>https://www.creeseproperty.com/portfolio/</loc>
+        <loc>https://creeseproperty.com/portfolio/</loc>
         <lastmod>2024-06-21</lastmod>
         <priority>0.8</priority>
     </url>
     <!-- Locations Page -->
     <url>
-        <loc>https://www.creeseproperty.com/rentals/</loc>
+        <loc>https://creeseproperty.com/rentals/</loc>
         <lastmod>2024-06-21</lastmod>
         <priority>0.8</priority>
     </url>
     <!-- Contact Page -->
     <url>
-        <loc>https://www.creeseproperty.com/contact/</loc>
+        <loc>https://creeseproperty.com/contact/</loc>
         <lastmod>2024-06-21</lastmod>
         <priority>0.8</priority>
     </url>
     <!-- Careers Page -->
     <url>
-        <loc>https://www.creeseproperty.com/careers/</loc>
+        <loc>https://creeseproperty.com/careers/</loc>
         <lastmod>2024-06-21</lastmod>
         <priority>0.5</priority>
     </url>
