@@ -23,7 +23,7 @@ import CustomCursor from '../../public/assets/icons8-arrow-50.png';
 
 import ChatswoodRoad425 from '/assets/Logan/425-chatswood-road/1.jpg';
 import BaturaStreet10 from '/assets/Brisbane/10-Batura-Street/1.jpg';
-import MilanCourt7 from '/assets/GoldCoast/7-milan-court/7-milan-court.jpeg';
+// import MilanCourt7 from '/assets/GoldCoast/7-milan-court/7-milan-court.jpeg';
 import BeamingRoad32 from '/assets/Ipswich/32-beaming-road/1.jpg';
 
 const HomePage = () => {
@@ -71,7 +71,7 @@ const HomePage = () => {
 
     const images = [
         { id: 1, url: BeamingRoad32, address: '32 Beaming Road, Ripley', description: 'This Home is “BEAMING”', link: '/rentals/ipswich/properties/32-beaming-road' },
-        { id: 2, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Spacious 4-bedroom Family Home in Prime Isle of Capri Location', link: '/rentals/gold-coast/properties/7-milan-court' },
+        // { id: 2, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Spacious 4-bedroom Family Home in Prime Isle of Capri Location', link: '/rentals/gold-coast/properties/7-milan-court' },
         { id: 3, url: BaturaStreet10, address: '10 Batura Street, Pallara', description: 'Peaceful Lifestyle', link: '/rentals/brisbane/properties/10-Batura-Street' },
     ];
 
