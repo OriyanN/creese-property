@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import htmlMinifier from 'vite-plugin-html-minifier';
+import viteCompression from 'vite-plugin-compression';
 
 export default defineConfig({
   plugins: [
@@ -13,8 +14,15 @@ export default defineConfig({
       removeStyleLinkTypeAttributes: true,
       useShortDoctype: true,
     }),
+    viteCompression({
+      algorithm: 'brotliCompress',
+      ext: '.br',         
+      threshold: 10240,   
+      deleteOriginFile: false,    
+    }),  
   ],
   build: {
+    sourcemap: true,
     minify: 'terser',
     terserOptions: {
       compress: {
