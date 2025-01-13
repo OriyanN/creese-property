@@ -22,6 +22,7 @@ export default defineConfig({
     }),
   ],
   build: {
+    sourcemap: true,
     cssCodeSplit: true,
     minify: 'terser',
     terserOptions: {

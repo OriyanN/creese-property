@@ -5,7 +5,7 @@ import url from 'url';
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
 // Define the root assets directory
-const assetsDirRoot = path.join(__dirname, 'public', 'assets');
+const assetsDirRoot = path.join(__dirname, 'src', 'assets');
 
 async function generateIndexForDir(directory) {
   try {

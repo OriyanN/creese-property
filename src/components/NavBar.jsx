@@ -60,7 +60,7 @@ function NavBar() {
                     isSpecialPage && !state.isShrunk ? "transparent" : ""
                 }`}
             >
-                <Link rel="preload" to="/" className="logo">
+                <Link rel="preload" to="/" className="logo" as="image">
                     <img src={logoWhite} alt="Creese Property Logo"/>
                 </Link>
                 <div className="menu-btn" onClick={toggleMenu}>

@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 
-import assistantManager from '/assets/assistant-property-manager.jpg';
+import assistantManager from '../assets/assistant-property-manager.jpg';
 
 function AssistantPropertyManagerPage() {
 

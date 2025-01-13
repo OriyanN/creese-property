@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 import Helmet from '../components/Helmet.jsx';
 
-import contactImage from '/assets/contact-image.jpg';
+import contactImage from '../assets/contact-image.jpg';
 
 import "./ContactAboutPage.css"
 

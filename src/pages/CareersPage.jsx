@@ -6,8 +6,8 @@ import ScrollToTop from '../components/ScrollToTop';
 import LazyImage from '../components/LazyImage';
 import Helmet from '../components/Helmet.jsx';
 
-import careersImage from '/assets/careers-image.jpg';
-import assistantManager from '/assets/assistant-property-manager.jpg';
+import careersImage from '../assets/careers-image.jpg';
+import assistantManager from '../assets/assistant-property-manager.jpg';
 
 import "./ContactAboutPage.css"
 
