@@ -1,8 +1,9 @@
 @font-face {
   font-family: "VersaillesRegular";
-  src: local("VersaillesRegular"),
-  url("../public/fonts/Versailles-Regular.ttf") format("opentype");
+  src: url('/fonts/Versailles-Regular.woff2') format('woff2'),
+  url('/fonts/Versailles-Regular.woff') format('woff');
   font-weight: normal;
+  font-display: swap;
 }
 
 * {
