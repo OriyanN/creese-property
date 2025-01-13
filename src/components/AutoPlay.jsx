@@ -4,16 +4,16 @@ import { Autoplay, FreeMode } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 
-import ABC from '/assets/Featured/9.png';
-import Australian_Financial_Review from '/assets/Featured/10.png';
-import Australian_Property_Institute from '/assets/Featured/7.png';
-import COHORT_Innovation_Spaces from '/assets/Featured/8.png';
-import Gold_Coast_Bulletin from '/assets/Featured/6.png';
-import Property_Investment_Professionals_of_Australia from '/assets/Featured/5.png';
-import Real_Estate_Institute_of_Queensland from '/assets/Featured/4.png';
-import Realestate_com_au from '/assets/Featured/3.png';
-import The_Australian from '/assets/Featured/2.png';
-import The_Urban_Developer from '/assets/Featured/1.png';
+import ABC from '../assets/Featured/9.webp';
+import Australian_Financial_Review from '../assets/Featured/10.webp';
+import Australian_Property_Institute from '../assets/Featured/7.webp';
+import COHORT_Innovation_Spaces from '../assets/Featured/8.webp';
+import Gold_Coast_Bulletin from '../assets/Featured/6.webp';
+import Property_Investment_Professionals_of_Australia from '../assets/Featured/5.webp';
+import Real_Estate_Institute_of_Queensland from '../assets/Featured/4.webp';
+import Realestate_com_au from '../assets/Featured/3.webp';
+import The_Australian from '../assets/Featured/2.webp';
+import The_Urban_Developer from '../assets/Featured/1.webp';
 
 import './AutoPlay.css';
 
@@ -63,7 +63,7 @@ function AutoPlay() {
                 >
                     {images.map((image, index) => (
                         <SwiperSlide key={index}>
-                            <img src={image.src} width={'100%'} height={'auto'} alt={image.alt} />
+                            <img src={image.src} width={'100%'} height={'auto'} alt={image.alt} loading='lazy'/>
                         </SwiperSlide>
                     ))}
                 </Swiper>

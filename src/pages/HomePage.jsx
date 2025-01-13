@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Scrollbar, FreeMode } from 'swiper/modules';
@@ -16,15 +16,15 @@ import ScrollRevealContainer from '../components/ScrollReveal.jsx';
 import Helmet from '../components/Helmet.jsx';
 import RentalAppraisalForm from '../components/RentalAppraisalForm.jsx';
 
-import videoBg from "/assets/CreeseHomePageVideo3.mp4";
-import preloaderImage from '../../public/assets/CreesePropertyInitialImage.png';
-import posterImage from '../../public/assets/Creese-Property-Home-Image.png'
-import CustomCursor from '../../public/assets/icons8-arrow-50.png';
+import videoBg from "../assets/CreeseHomePageVideo3.mp4";
+import preloaderImage from '../assets/CreesePropertyInitialImage.png';
+import posterImage from '../assets/Creese-Property-Home-Image.png'
+import CustomCursor from '../assets/icons8-arrow-50.png';
 
-import ChatswoodRoad425 from '/assets/Logan/425-chatswood-road/1.jpg';
-import BaturaStreet10 from '/assets/Brisbane/10-Batura-Street/1.jpg';
-// import MilanCourt7 from '/assets/GoldCoast/7-milan-court/7-milan-court.jpeg';
-import BeamingRoad32 from '/assets/Ipswich/32-beaming-road/1.jpg';
+import ChatswoodRoad425 from '../assets/Logan/425-chatswood-road/1.jpg';
+import BaturaStreet10 from '../assets/Brisbane/10-Batura-Street/1.jpg';
+import MilanCourt7 from '../assets/GoldCoast/7-milan-court/7-milan-court.jpeg';
+import BeamingRoad32 from '../assets/Ipswich/32-beaming-road/1.jpg';
 
 const HomePage = () => {
     const [loading, setLoading] = useState(true);
@@ -69,11 +69,11 @@ const HomePage = () => {
         };
     }, []);
 
-    const images = [
+    const images = useMemo(() => [
         { id: 1, url: BeamingRoad32, address: '32 Beaming Road, Ripley', description: 'This Home is “BEAMING”', link: '/rentals/ipswich/properties/32-beaming-road' },
-        // { id: 2, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Spacious 4-bedroom Family Home in Prime Isle of Capri Location', link: '/rentals/gold-coast/properties/7-milan-court' },
+        { id: 2, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Spacious 4-bedroom Family Home in Prime Isle of Capri Location', link: '/rentals/gold-coast/properties/7-milan-court' },
         { id: 3, url: BaturaStreet10, address: '10 Batura Street, Pallara', description: 'Peaceful Lifestyle', link: '/rentals/brisbane/properties/10-Batura-Street' },
-    ];
+    ], []);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -108,10 +108,14 @@ const HomePage = () => {
                 parallax.style.backgroundPositionY = -offset * 0.5 + 'px';
             }
         };
-
-        window.addEventListener('scroll', parallaxEffect);
-        return () => window.removeEventListener('scroll', parallaxEffect);
-    }, []);
+    
+        const handleScroll = () => {
+            requestAnimationFrame(parallaxEffect);
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);    
 
     return (
         <>
@@ -134,51 +138,6 @@ const HomePage = () => {
                               }
                             ]
                           },
-                        //   {
-                        //     "@type": "FAQPage",
-                        //     "mainEntity": [
-                        //       {
-                        //         "@type": "Question",
-                        //         "name": "What services does Creese Property offer to property owners?",
-                        //         "acceptedAnswer": {
-                        //           "@type": "Answer",
-                        //           "text": "Creese Property provides comprehensive property management services aimed at maximising property value and streamlining ownership. Our services include effective marketing of properties, precise tenant screening, prompt and reliable rent collection, detailed financial reporting and ensuring legal compliance in all landlord-tenant matters."
-                        //         }
-                        //       },
-                        //       {
-                        //         "@type": "Question",
-                        //         "name": "What types of properties does Creese Property manage?",
-                        //         "acceptedAnswer": {
-                        //           "@type": "Answer",
-                        //           "text": "Creese Property manages a variety of residential property types. We tailor our management strategies to fit the unique needs of each property. Our broad expertise not only allows us to effectively manage these properties but also to advise property owners on how to maximise their investments."
-                        //         }
-                        //       },
-                        //       {
-                        //         "@type": "Question",
-                        //         "name": "What area does Creese Property service?",
-                        //         "acceptedAnswer": {
-                        //           "@type": "Answer",
-                        //           "text": "Creese Property services properties across South-East Queensland. Based out of the Gold Coast, we cover a wide area that includes major urban centres. Our reach extends to both coastal and inland areas, allowing us to offer a diverse range of properties that cater to different lifestyles. Our team is familiar with the unique characteristics of each area, ensuring we provide expert advice and tailored services to both property owners and tenants."
-                        //         }
-                        //       },
-                        //       {
-                        //         "@type": "Question",
-                        //         "name": "What should I look out for when choosing a property manager?",
-                        //         "acceptedAnswer": {
-                        //           "@type": "Answer",
-                        //           "text": "The right property manager will have a deep understanding of the local real estate market, including rental rates, vacancy rates and any trends that may affect your property's value. Additionally, a competent property manager should offer a comprehensive range of services that cover all aspects of managing your property effectively. This includes marketing your property, screening tenants, handling lease agreements, managing rent collection, addressing maintenance and repair issues and providing detailed financial reporting."
-                        //         }
-                        //       },
-                        //       {
-                        //         "@type": "Question",
-                        //         "name": "I’ve found a property manager with lower fees, why should I go with Creese Property?",
-                        //         "acceptedAnswer": {
-                        //           "@type": "Answer",
-                        //           "text": "At Creese Property, our fees reflect the high quality and comprehensive nature of our services. Unlike some competitors who may offer lower fees, we ensure that every aspect of property management is handled with the utmost professionalism and attention to detail. Our team of experienced professionals use their knowledge and expertise to successfully manage your property, from conducting thorough tenant screenings to maintaining timely communication and managing financial transactions with precision."
-                        //         }
-                        //       }
-                        //     ]
-                        //   }
                         ]
                     })}
                 </script>
@@ -187,7 +146,7 @@ const HomePage = () => {
             <ScrollToTop />
                 {loading && (
                     <div className="preloader">
-                        <img src={preloaderImage} width={'100%'} height={'auto'} alt="Loading" />
+                        <img src={preloaderImage} width={'100%'} height={'auto'} alt="Loading" loading='lazy'/>
                     </div>
                 )}
                 <section className="section home">
@@ -200,10 +159,12 @@ const HomePage = () => {
                             loop
                             muted
                             playsInline
-                            preload="auto"
+                            preload="metadata"
                             poster={posterImage}
                             alt="Creese Property Video"
-                        />
+                        >
+                            <source src={videoBg} type="video/mp4" />
+                        </video>
                     </div>
                         <div className="text-home">
                             <p>Communication and authenticity guides us. Through innovation and a people first focus we believe we can create outcomes that change expectations of your property investment experience.</p>

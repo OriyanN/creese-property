@@ -6,7 +6,7 @@ import ScrollToTop from '../components/ScrollToTop';
 import LazyImage from '../components/LazyImage';
 import Helmet from '../components/Helmet.jsx';
 
-import portfolioImage from '/assets/portfolio-image.jpg';
+import portfolioImage from '../assets/portfolio-image.jpg';
 
 import "./PortfolioPage.css"
 

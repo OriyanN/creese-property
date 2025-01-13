@@ -1,5 +1,5 @@
-// import * as AbbeyWay6 from '../../../public/assets/MoretonBay/AbbeyWay6';
-import * as AbbeyWay8 from '../../../public/assets/MoretonBay/AbbeyWay8';
+// import * as AbbeyWay6 from '../../../src/assets/MoretonBay/AbbeyWay6';
+import * as AbbeyWay8 from '../../../src/assets/MoretonBay/AbbeyWay8';
 
 const MoretonBayPropertiesData = [
   // {

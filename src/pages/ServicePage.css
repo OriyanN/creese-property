@@ -40,7 +40,7 @@
 .services-section .parallax-section {
     position: relative;
     height: 40vh;
-    background-image: url('../../public/assets/services-middle-image.jpg');
+    background-image: url('../../src/assets/services-middle-image.jpg');
     background-attachment: fixed;
     background-position: left;
     background-repeat: no-repeat;
@@ -57,7 +57,7 @@
     .services-section  .parallax-mobile-section {
         position: relative;
         height: 40vh;
-        background-image: url('../../public/assets/services-middle-image.jpg');
+        background-image: url('../../src/assets/services-middle-image.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

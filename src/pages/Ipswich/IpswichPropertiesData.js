@@ -1,7 +1,7 @@
-// import * as TysonStreet9 from '../../../public/assets/Ipswich/832-9-tyson-street';
-import * as BeamingRoad32 from '../../../public/assets/Ipswich/32-beaming-road';
-import * as AspireStreet26 from '../../../public/assets/Ipswich/26-aspire-street';
-import * as AspireStreet27 from '../../../public/assets/Ipswich/27-aspire-street';
+// import * as TysonStreet9 from '../../../src/assets/Ipswich/832-9-tyson-street';
+import * as BeamingRoad32 from '../../../src/assets/Ipswich/32-beaming-road';
+import * as AspireStreet26 from '../../../src/assets/Ipswich/26-aspire-street';
+import * as AspireStreet27 from '../../../src/assets/Ipswich/27-aspire-street';
 
 const IpswichPropertiesData = [
   // {

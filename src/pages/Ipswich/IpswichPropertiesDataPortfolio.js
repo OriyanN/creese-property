@@ -1,6 +1,6 @@
-import * as EndeavourCres7 from '../../../public/assets/Ipswich/7-endevour-cresent';
-import * as AspireStreet26 from '../../../public/assets/Ipswich/26-aspire-street';
-import * as AspireStreet27 from '../../../public/assets/Ipswich/27-aspire-street';
+import * as EndeavourCres7 from '../../../src/assets/Ipswich/7-endevour-cresent';
+import * as AspireStreet26 from '../../../src/assets/Ipswich/26-aspire-street';
+import * as AspireStreet27 from '../../../src/assets/Ipswich/27-aspire-street';
 
 const IpswichPropertiesDataPortfolio = [
   {

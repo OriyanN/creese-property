@@ -1,4 +1,4 @@
-import * as MilanCourt7 from '../../../public/assets/GoldCoast/7-milan-court';
+import * as MilanCourt7 from '../../../src/assets/GoldCoast/7-milan-court';
 
 
 const GoldCoastPropertiesDataPortfolio = [

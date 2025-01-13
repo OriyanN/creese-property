@@ -5,11 +5,11 @@ import ScrollToTop from '../components/ScrollToTop';
 import LazyImageAbout from '../components/LazyImageAbout';
 import Helmet from '../components/Helmet.jsx';
 
-import aboutImage from '/assets/about-image.jpg';
-import davidCreese from '/assets/David Creese.png';
-import lachieSweather from '/assets/Lachie Sweater.jpg';
-import kym from '/assets/Kym.jpg';
-import kirbyOtto from '/assets/Kirby Otto Black Smaller.jpg';
+import aboutImage from '../assets/about-image.jpg';
+import davidCreese from '../assets/David Creese.png';
+import lachieSweather from '../assets/Lachie Sweater.jpg';
+import kym from '../assets/Kym.jpg';
+import kirbyOtto from '../assets/Kirby Otto Black Smaller.jpg';
 
 import "./ContactAboutPage.css"
 import Testimonials from '../components/Testimonials';

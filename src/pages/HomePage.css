@@ -57,7 +57,7 @@
 }
 
 .home-property-slide, .home-property-slide a {
-    cursor: url('public/assets/icons8-arrow-50.png'), auto;
+    cursor: url('../assets/icons8-arrow-50.png'), auto;
 }
 
 .text-example {
@@ -252,7 +252,7 @@
 .parallax-section {
     position: relative;
     height: 40vh;
-    background-image: url('../../public/assets/home-page-gold-coast.jpg');
+    background-image: url('../../src/assets/home-page-gold-coast.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -328,7 +328,7 @@
     .parallax-mobile-section {
         position: relative;
         height: 40vh;
-        background-image: url('../../public/assets/home-page-gold-coast.jpg');
+        background-image: url('../../src/assets/home-page-gold-coast.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

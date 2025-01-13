@@ -1,4 +1,4 @@
-import * as BaturaStreet10 from '../../../public/assets/Brisbane/10-Batura-Street';
+import * as BaturaStreet10 from '../../../src/assets/Brisbane/10-Batura-Street';
 
 const BrisbanePropertiesDataPortfolio = [
   // {

@@ -1,4 +1,4 @@
-import * as ChatswoodRoad425 from '../../../public/assets/Logan/425-chatswood-road';
+import * as ChatswoodRoad425 from '../../../src/assets/Logan/425-chatswood-road';
 
 const LoganPropertiesData = [
   // {
