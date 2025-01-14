@@ -16,26 +16,33 @@ export default defineConfig({
     }),
     viteCompression({
       algorithm: 'brotliCompress',
-      ext: '.br',         
-      threshold: 10240,   
-      deleteOriginFile: false,    
-    }),  
+      ext: '.br',
+      threshold: 5120, // Compress files larger than 5 KB
+      compressionOptions: {
+        level: 11, // Max compression level for Brotli
+      },
+      deleteOriginFile: false, // Keep uncompressed files
+      filter: /\.(js|css|html|svg|json|wasm|woff2?)$/,
+    }),
   ],
   build: {
     sourcemap: true,
     minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
+    target: 'esnext', // Modern output for better optimization
+    outDir: 'dist',
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        },
       },
     },
-    rollupOptions: {
-      external: [
-        // List any external dependencies here if needed
-      ],
-    },
+    cssCodeSplit: true, // Split CSS for better caching
   },
   server: {
-    compression: true, // Enable Brotli or Gzip compression
+    cors: true,   // Allow cross-origin requests
+    compression: true, // Ensure compression is enabled
   },
 });
