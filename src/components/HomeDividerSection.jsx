@@ -2,9 +2,9 @@ import React from 'react';
 
 import ScrollRevealContainer from './ScrollReveal';
 
-import process1 from '../assets/process1.png';
-import process2 from '../assets/process2.png';
-import process3 from '../assets/process3.png';
+import process1 from '../assets/process1.webp';
+import process2 from '../assets/process2.webp';
+import process3 from '../assets/process3.webp';
 
 import "../pages/HomePage.css";
 

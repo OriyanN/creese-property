@@ -12,7 +12,7 @@ import LazyImage from '../../components/LazyImage';
 import IpswichPropertiesData from './IpswichPropertiesData';
 import "../LocationsPage.css";
 
-import mainInitialImage from "../../assets/Ipswich/ipswich.jpg";
+import mainInitialImage from "../../assets/Ipswich/ipswich.webp";
 
 const IpswichPage = () => {
 

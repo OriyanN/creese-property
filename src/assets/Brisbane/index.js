@@ -1,5 +1,5 @@
-import image0_brisbane_jpg from './brisbane.jpg';
+import image0_brisbane_webp from './brisbane.webp';
 
 export {
-  image0_brisbane_jpg
+  image0_brisbane_webp
 };

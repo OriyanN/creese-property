@@ -12,7 +12,7 @@ import LazyImage from '../../components/LazyImage';
 import BrisbanePropertiesData from './BrisbanePropertiesData';
 import "../LocationsPage.css";
 
-import mainInitialImage from "../../assets/Brisbane/brisbane.jpg";
+import mainInitialImage from "../../assets/Brisbane/brisbane.webp";
 
 const BrisbanePage = () => {
 

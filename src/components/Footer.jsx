@@ -5,12 +5,12 @@ import ScrollToTop from './ScrollToTop';
 
 import logo from "../assets/Creese Property Logo- White White2.webp";
 
-import facebook_blue from "../assets/facebook-blue.png";
-import facebook_white from "../assets/facebook-white.png";
-import instagram_blue from "../assets/icons8-instagram-48 (1).png";
-import instagram_white from "../assets/icons8-instagram-48.png";
-import linkedin_blue from "../assets/icons8-linkedin-48.png";
-import linkedin_white from "../assets/icons8-linkedin-48 (1).png";
+import facebook_blue from "../assets/facebook-blue.webp";
+import facebook_white from "../assets/facebook-white.webp";
+import instagram_blue from "../assets/icons8-instagram-48 (1).webp";
+import instagram_white from "../assets/icons8-instagram-48.webp";
+import linkedin_blue from "../assets/icons8-linkedin-48.webp";
+import linkedin_white from "../assets/icons8-linkedin-48 (1).webp";
 
 import './Footer.css';
 

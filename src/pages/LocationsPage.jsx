@@ -17,12 +17,12 @@ import LoganPropertiesData from '../pages/Logan/LoganPropertiesData';
 import MoretonBayPropertiesData from './MoretonBay/MoretonBayPropertiesData.js';
 import "./LocationsPage.css";
 
-import mainInitialImage from "../assets/leasing-image.jpg";
-import mainGoldCoast from "../assets/GoldCoast/gold-coast.jpg";
-import mainBrisbane from "../assets/Brisbane/brisbane.jpg";
-import mainIpswich from "../assets/Ipswich/ipswich.jpg";
-import mainLogan from "../assets/Logan/logan.jpg";
-import mainMoretonBay from "../assets/MoretonBay/moreton-bay.jpg";
+import mainInitialImage from "../assets/leasing-image.webp";
+import mainGoldCoast from "../assets/GoldCoast/gold-coast.webp";
+import mainBrisbane from "../assets/Brisbane/brisbane.webp";
+import mainIpswich from "../assets/Ipswich/ipswich.webp";
+import mainLogan from "../assets/Logan/logan.webp";
+import mainMoretonBay from "../assets/MoretonBay/moreton-bay.webp";
 
 const LocationsPage = () => {
     const allPropertiesData = [

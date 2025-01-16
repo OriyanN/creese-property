@@ -3,13 +3,13 @@ import { useNavigate, Link } from 'react-router-dom';
 
 import './Slider.css';
 
-import LeftArrow from "../assets/left-arrow.png";
-import RightArrow from "../assets/right-arrow.png";
+import LeftArrow from "../assets/left-arrow.webp";
+import RightArrow from "../assets/right-arrow.webp";
 
-import GoldCoastProperty from '../assets/GoldCoast/gc1/1.jpg';
-import BrisbaneProperty from '../assets/Brisbane/bri1/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.jpg';
-import LoganProperty from '../assets/Logan/log1/modern-house-facade-2023-11-27-05-11-48-utc.jpg';
-import IpswichProperty from '../assets/Ipswich/ips1/modern-house-exterior-2023-11-27-05-11-35-utc.jpg';
+import GoldCoastProperty from '../assets/GoldCoast/gc1/1.webp';
+import BrisbaneProperty from '../assets/Brisbane/bri1/aerial-view-of-the-big-luxury-homes-on-the-hill-du-2023-11-27-04-49-28-utc.webp';
+import LoganProperty from '../assets/Logan/log1/modern-house-facade-2023-11-27-05-11-48-utc.webp';
+import IpswichProperty from '../assets/Ipswich/ips1/modern-house-exterior-2023-11-27-05-11-35-utc.webp';
 
 const images = [
     { id: 1, url: GoldCoastProperty, address: '4/48 Macadie Way, Merrimac', description: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', link: '/locations/gold-coast/properties/gc1' },

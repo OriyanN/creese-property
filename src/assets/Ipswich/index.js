@@ -1,5 +1,5 @@
-import image0_ipswich_jpg from './ipswich.jpg';
+import image0_ipswich_webp from './ipswich.webp';
 
 export {
-  image0_ipswich_jpg
+  image0_ipswich_webp
 };

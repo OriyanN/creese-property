@@ -5,11 +5,11 @@ import ScrollToTop from '../components/ScrollToTop';
 import ContactForm from '../components/ContactForm';
 import Helmet from '../components/Helmet.jsx';
 
-import serviceImage from '../assets/service-image.jpg';
+import serviceImage from '../assets/service-image.webp';
 
-import service1 from '../assets/Residential Property Management.png';
-import service2 from '../assets/Buyers Agency.png';
-import service3 from '../assets/Property Consultancy.png';
+import service1 from '../assets/Residential Property Management.webp';
+import service2 from '../assets/Buyers Agency.webp';
+import service3 from '../assets/Property Consultancy.webp';
 
 import "./ServicePage.css";
 import "./HomePage.css";

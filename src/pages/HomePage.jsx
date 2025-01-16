@@ -17,14 +17,14 @@ import Helmet from '../components/Helmet.jsx';
 import RentalAppraisalForm from '../components/RentalAppraisalForm.jsx';
 
 import videoBg from "../assets/CreeseHomePageVideo3.mp4";
-import preloaderImage from '../assets/CreesePropertyInitialImage.png';
-import posterImage from '../assets/Creese-Property-Home-Image.png'
-import CustomCursor from '../assets/icons8-arrow-50.png';
+import preloaderImage from '../assets/CreesePropertyInitialImage.webp';
+import posterImage from '../assets/Creese-Property-Home-Image.webp'
+import CustomCursor from '../assets/icons8-arrow-50.webp';
 
-import ChatswoodRoad425 from '../assets/Logan/425-chatswood-road/1.jpg';
-import BaturaStreet10 from '../assets/Brisbane/10-Batura-Street/1.jpg';
-import MilanCourt7 from '../assets/GoldCoast/7-milan-court/7-milan-court.jpeg';
-import BeamingRoad32 from '../assets/Ipswich/32-beaming-road/1.jpg';
+import ChatswoodRoad425 from '../assets/Logan/425-chatswood-road/1.webp';
+import BaturaStreet10 from '../assets/Brisbane/10-Batura-Street/1.webp';
+import MilanCourt7 from '../assets/GoldCoast/7-milan-court/7-milan-court.webp';
+import BeamingRoad32 from '../assets/Ipswich/32-beaming-road/1.webp';
 
 const HomePage = () => {
     const [loading, setLoading] = useState(true);
@@ -73,6 +73,7 @@ const HomePage = () => {
         { id: 1, url: BeamingRoad32, address: '32 Beaming Road, Ripley', description: 'This Home is “BEAMING”', link: '/rentals/ipswich/properties/32-beaming-road' },
         { id: 2, url: MilanCourt7, address: '7 Milan Court, Surfers Paradise', description: 'Spacious 4-bedroom Family Home in Prime Isle of Capri Location', link: '/rentals/gold-coast/properties/7-milan-court' },
         { id: 3, url: BaturaStreet10, address: '10 Batura Street, Pallara', description: 'Peaceful Lifestyle', link: '/rentals/brisbane/properties/10-Batura-Street' },
+        { id: 4, url: ChatswoodRoad425, address: '425 Chatswood Rd, Logan', description: 'Peaceful Lifestyle', link: '/rentals/logan/properties/425-chatswood-road' },
     ], []);
 
     useEffect(() => {

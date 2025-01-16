@@ -12,7 +12,7 @@ import LazyImage from '../../components/LazyImage';
 import LoganPropertiesData from './LoganPropertiesData';
 import "../LocationsPage.css";
 
-import mainInitialImage from "../../assets/Logan/logan.jpg";
+import mainInitialImage from "../../assets/Logan/logan.webp";
 
 const LoganPage = () => {
 

@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Accordion.css";
 
-import arrowDown from '../assets/icons8-forward-100.png';
+import arrowDown from '../assets/icons8-forward-100.webp';
 
 const FAQS = ({ faq, index, toggleFAQ }) => {
     return (

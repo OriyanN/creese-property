@@ -1,5 +1,5 @@
-import image0_logan_jpg from './logan.jpg';
+import image0_logan_webp from './logan.webp';
 
 export {
-  image0_logan_jpg
+  image0_logan_webp
 };

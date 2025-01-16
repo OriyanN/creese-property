@@ -12,7 +12,7 @@ import LazyImage from '../../components/LazyImage';
 import GoldCoastPropertiesData from './GoldCoastPropertiesData';
 import "../LocationsPage.css";
 
-import mainInitialImage from "../../assets/GoldCoast/gold-coast.jpg";
+import mainInitialImage from "../../assets/GoldCoast/gold-coast.webp";
 
 const GoldCoastPage = () => {
 
