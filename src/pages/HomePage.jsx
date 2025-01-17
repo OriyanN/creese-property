@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useMemo, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Scrollbar, FreeMode } from 'swiper/modules';
@@ -38,36 +38,21 @@ const HomePage = () => {
     }, []);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const video = videoRef.current;
-                        if (video && !video.src) {
-                            video.src = videoBg;
-                            video.load();
-                            video.play().catch(e => console.log('Auto-play was prevented:', e));
-                            observer.unobserve(entry.target);
-                        }
-                    }
-                });
-            },
-            {
-                rootMargin: "100px",
-                threshold: 0.25
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const video = videoRef.current;
+              if (video) {
+                video.src = videoBg; // Set video source only when in view
+                video.play().catch(e => console.log('Auto-play prevented:', e));
+              }
             }
-        );
-
-        if (videoRef.current) {
-            observer.observe(videoRef.current);
-        }
-
-        return () => {
-            if (videoRef.current) {
-                observer.unobserve(videoRef.current);
-            }
-        };
-    }, []);
+          });
+        });
+        if (videoRef.current) observer.observe(videoRef.current);
+      
+        return () => observer.disconnect();
+      }, []);      
 
     const images = useMemo(() => [
         { id: 1, url: BeamingRoad32, address: '32 Beaming Road, Ripley', description: 'This Home is “BEAMING”', link: '/rentals/ipswich/properties/32-beaming-road' },
@@ -103,20 +88,18 @@ const HomePage = () => {
 
     useEffect(() => {
         const parallaxEffect = () => {
-            const parallax = document.querySelector('.parallax');
-            if (parallax) {
-                const offset = window.scrollY - parallax.offsetTop;
-                parallax.style.backgroundPositionY = -offset * 0.5 + 'px';
-            }
+          const parallax = document.querySelector('.parallax');
+          if (parallax) {
+            const offset = window.scrollY - parallax.offsetTop;
+            parallax.style.backgroundPositionY = `${-offset * 0.5}px`;
+          }
         };
-    
-        const handleScroll = () => {
-            requestAnimationFrame(parallaxEffect);
-        };
-    
+      
+        const handleScroll = () => requestAnimationFrame(parallaxEffect);
+      
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);    
+      }, []);         
 
     return (
         <>
@@ -171,57 +154,59 @@ const HomePage = () => {
                             <p>Communication and authenticity guides us. Through innovation and a people first focus we believe we can create outcomes that change expectations of your property investment experience.</p>
                         </div>
                     <div className="home-property-slide" style={{ cursor: "url(" + CustomCursor + "), auto" }}> 
-                            <div className="text-example">
-                                <ScrollRevealContainer move="5rem" duration={900} delay={500} origin={'left'}>
-                                    <h4>Most Recent Rentals</h4>
-                                </ScrollRevealContainer>
-                            </div>
-                        <Swiper
-                            modules={[Mousewheel, Scrollbar, FreeMode]}
-                            scrollbar={{
-                                hide: false,
-                                draggable: true,
-                            }}
-                            direction={"horizontal"}
-                            slidesPerView={3}
-                            mousewheel={true}
-                            freeMode={true}
-                            freeModeMomentum={false}
-                            breakpoints={{
-                                250: {
-                                    slidesPerView: 1,
-                                }, 
-                                400: {
-                                    slidesPerView: 2,
-                                },  
-                                750: {
-                                    slidesPerView: 3,
-                                },
-                            }}
-                            className="mySwiper"
-                        >
-                            {images.map((image, index) => (
-                                <SwiperSlide key={index}>
-                                    <div className="home-page-image-container" style={{ backgroundImage: `url(${image.url})` }}>
-                                        <div className="address-overlay">
-                                            <div className="address">
-                                                <h4>{image.address}</h4>
-                                            </div>
-                                        </div>
-                                        <Link to={image.link} style={{ cursor: "url(" + CustomCursor + "), auto" }}>
-                                            <div className="image-overlay">
+                        <div className="text-example">
+                            <ScrollRevealContainer move="5rem" duration={900} delay={500} origin={'left'}>
+                                <h4>Most Recent Rentals</h4>
+                            </ScrollRevealContainer>
+                        </div>
+                        <Suspense fallback={<div>Loading Properties...</div>}>
+                            <Swiper
+                                modules={[Mousewheel, Scrollbar, FreeMode]}
+                                scrollbar={{
+                                    hide: false,
+                                    draggable: true,
+                                }}
+                                direction={"horizontal"}
+                                slidesPerView={3}
+                                mousewheel={true}
+                                freeMode={true}
+                                freeModeMomentum={false}
+                                breakpoints={{
+                                    250: {
+                                        slidesPerView: 1,
+                                    }, 
+                                    400: {
+                                        slidesPerView: 2,
+                                    },  
+                                    750: {
+                                        slidesPerView: 3,
+                                    },
+                                }}
+                                className="mySwiper"
+                            >
+                                {images.map((image, index) => (
+                                    <SwiperSlide key={index}>
+                                        <div className="home-page-image-container" style={{ backgroundImage: `url(${image.url})` }}>
+                                            <div className="address-overlay">
                                                 <div className="address">
                                                     <h4>{image.address}</h4>
                                                 </div>
-                                                <div className="des">
-                                                    <h5>{image.description}</h5>
-                                                </div>
                                             </div>
-                                        </Link>
-                                    </div>
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
+                                            <Link to={image.link} style={{ cursor: "url(" + CustomCursor + "), auto" }}>
+                                                <div className="image-overlay">
+                                                    <div className="address">
+                                                        <h4>{image.address}</h4>
+                                                    </div>
+                                                    <div className="des">
+                                                        <h5>{image.description}</h5>
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </Suspense>
                     </div>
                     <HomeDividerSection />
                     <div className="parallax-section">
@@ -233,8 +218,12 @@ const HomePage = () => {
                     <div className='contact-form'>
                         <RentalAppraisalForm />
                     </div>
-                    <AutoPlay />
-                    <Accordion />
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <AutoPlay />
+                    </Suspense>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <Accordion />
+                    </Suspense>
                     <Footer />
                 </section>
         </>
